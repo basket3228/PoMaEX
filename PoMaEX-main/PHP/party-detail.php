@@ -6,8 +6,9 @@ if (isset($_GET['party_id'])) {
 } else {
     echo "トレーナーIDが指定されていません。";
 }
-
-$charcter1 = charcter1();
+//party名クリック時にparty_idを飛ばす必要がある
+//それを受けてcharacterの引数となる。
+$charcter1 = charcter1($party_id);
 $charcter2 = charcter2();
 $charcter3 = charcter3();
 ?>

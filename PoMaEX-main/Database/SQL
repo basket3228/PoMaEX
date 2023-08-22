@@ -921,8 +921,14 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_flg, potential, stars) V
     ('主人公', 390, 3, false, 0, 4);
 
 INSERT INTO party (party_name, category_id) VALUES
+    ('第10回レジェアド', 1),
+    ('第10回レジェアド', 1),
+    ('第10回レジェアド', 1),
     ('第10回レジェアド', 1);
 
 INSERT INTO partyDetails (party_id, trainer_id1, trainer_id2, trainer_id3, lucky_skill_id1, lucky_skill_id2, lucky_skill_id3, PoMaTool_URL)
 VALUES
-    (1, 2, 46, 60, 1, 2, 3, 'URL');
+    (1, 2, 46, 60, 1, 2, 3, 'URL'),
+    (2, 263, 89, 300, 4, 5, 6, 'URL'),
+    (3, 67, 222, 165, 7, 8, 9, 'URL'),
+    (4, 2, 9, 199, 106, 23, 13, 'URL');
