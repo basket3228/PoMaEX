@@ -1,0 +1,76 @@
+SET foreign_key_checks = 0;
+
+create database pokemas;
+use pokemas;
+
+CREATE TABLE enemy (
+    enemy_id INT PRIMARY KEY AUTO_INCREMENT,
+    enemy_name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE lucky_skills (
+    lucky_skill_id INT PRIMARY KEY AUTO_INCREMENT,
+    lucky_skill_name VARCHAR(255) not NULL
+);
+
+CREATE table type (
+    type_id int PRIMARY KEY AUTO_INCREMENT,
+    type_name VARCHAR (50) not null
+);
+
+CREATE TABLE sync (
+    sync_id INT PRIMARY KEY AUTO_INCREMENT,
+    sync_name VARCHAR(255) NOT NULL,
+    type_id int not null,
+    FOREIGN KEY (type_id) REFERENCES type(type_id)
+);
+
+CREATE TABLE partyCategory (
+    category_id INT PRIMARY KEY AUTO_INCREMENT,
+    category_name VARCHAR (50) not null,
+    enemy_id INT,
+    FOREIGN KEY (enemy_id) REFERENCES enemy(enemy_id)
+);
+
+CREATE table role (
+    role_id int PRIMARY KEY AUTO_INCREMENT,
+    role_name VARCHAR (50) not null
+);
+
+CREATE TABLE trainer (
+    trainer_id INT PRIMARY KEY AUTO_INCREMENT,
+    trainer_name VARCHAR(50) NOT NULL,
+    sync_id INT NOT NULL,
+    role_id int not NULL,
+    EX_flg boolean not null,
+    potential int not null,
+    stars int not null,
+    FOREIGN KEY (sync_id) REFERENCES sync(sync_id),
+    FOREIGN KEY (role_id) REFERENCES role(role_id)
+);
+
+CREATE TABLE party (
+    party_id INT PRIMARY KEY AUTO_INCREMENT,
+    party_name VARCHAR (50) not NULL,
+    category_id INT not NULL,
+    FOREIGN KEY (category_id) REFERENCES partyCategory(category_id)
+);
+
+CREATE TABLE partyDetails (
+    detail_id INT PRIMARY KEY AUTO_INCREMENT,
+    party_id INT not NULL,
+    trainer_id1 int not null,
+    trainer_id2 int not null,
+    trainer_id3 int not null,
+    lucky_skill_id1 INT not null,
+    lucky_skill_id2 INT not null,
+    lucky_skill_id3 INT not null,
+    PoMaTool_URL VARCHAR (255) not null,
+    FOREIGN KEY (party_id) REFERENCES party(party_id),
+    FOREIGN key (trainer_id1) REFERENCES trainer(trainer_id),
+    FOREIGN key (trainer_id2) REFERENCES trainer(trainer_id),
+    FOREIGN key (trainer_id3) REFERENCES trainer(trainer_id),
+    FOREIGN KEY (lucky_skill_id1) REFERENCES lucky_skills(lucky_skill_id),
+    FOREIGN KEY (lucky_skill_id2) REFERENCES lucky_skills(lucky_skill_id),
+    FOREIGN KEY (lucky_skill_id3) REFERENCES lucky_skills(lucky_skill_id)
+);
