@@ -27,9 +27,29 @@ CREATE TABLE sync (
 
 CREATE TABLE partyCategory (
     category_id INT PRIMARY KEY AUTO_INCREMENT,
-    category_name VARCHAR (50) not null,
-    enemy_id INT,
-    FOREIGN KEY (enemy_id) REFERENCES enemy(enemy_id)
+    category_name VARCHAR (50) not null
+);
+
+create table legendary_gauntlet (
+    legendary_gauntlet_id int PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) not null,
+    eventNumber int not null,
+    enemy_id1 int not null,
+    enemy_id2 int not null,
+    enemy_id3 int not null,
+    category_id int not null,
+    FOREIGN KEY (enemy_id1) REFERENCES enemy (enemy_id),
+    FOREIGN KEY (enemy_id2) REFERENCES enemy (enemy_id),
+    FOREIGN KEY (enemy_id3) REFERENCES enemy (enemy_id),
+    FOREIGN KEY (category_id) REFERENCES partyCategory (category_id)
+);
+
+create table champion_stadium (
+    champion_stadium_id int PRIMARY KEY AUTO_INCREMENT,
+    category_id int not null,
+    type_id int not null,
+    FOREIGN KEY (category_id) REFERENCES partyCategory (category_id)
+    FOREIGN KEY (type_id) REFERENCES type(type_id),
 );
 
 CREATE table role (
@@ -51,14 +71,16 @@ CREATE TABLE trainer (
 
 CREATE TABLE party (
     party_id INT PRIMARY KEY AUTO_INCREMENT,
-    party_name VARCHAR (50) not NULL,
     category_id INT not NULL,
+    legendary_gauntlet_id int,
+    champion_stadium_id int,
     FOREIGN KEY (category_id) REFERENCES partyCategory(category_id)
 );
 
 CREATE TABLE partyDetails (
     detail_id INT PRIMARY KEY AUTO_INCREMENT,
     party_id INT not NULL,
+    enemy_id int not null,
     trainer_id1 int not null,
     trainer_id2 int not null,
     trainer_id3 int not null,

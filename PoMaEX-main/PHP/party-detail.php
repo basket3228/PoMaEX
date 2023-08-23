@@ -6,11 +6,11 @@ if (isset($_GET['party_id'])) {
 } else {
     echo "トレーナーIDが指定されていません。";
 }
-//party名クリック時にparty_idを飛ばす必要がある
-//それを受けてcharacterの引数となる。
+
+$party_id = $_GET['party_id'];
 $charcter1 = charcter1($party_id);
-$charcter2 = charcter2();
-$charcter3 = charcter3();
+$charcter2 = charcter2($party_id);
+$charcter3 = charcter3($party_id);
 ?>
 
 <!DOCTYPE html>
@@ -31,14 +31,13 @@ $charcter3 = charcter3();
             <h1 class="h1"><a href="../HTML/index.html"><img src="../img/logo.png"></a></h1>
             <nav>
                 <ul id="nav-list">
-                    <li id="list1"><a href="../PHP/list-party.php">編成一覧</a></li>
-                    <li id="liat2"><a href="../PHP/list-trainers.php">バディーズ一覧</a></li>
+                    <li id="list1"><a href="../PHP/party-list.php">編成一覧</a></li>
+                    <li id="liat2"><a href="../PHP/trainer-list.php">バディーズ一覧</a></li>
                     <li id="list3"><a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">PoMaTool</a></li>
                     <li id="list4"><a href="../PHP/create-random-party.php">乱数編成生成</a></li>
                 </ul>
             </nav>
         </header>
-
 
         <main class="main">
             <div class="content">
@@ -50,10 +49,10 @@ $charcter3 = charcter3();
                                     <?php echo 'EX'; ?>
                                 <?php } ?>
                                 <img src="../pokemas/<?= special($c1['t1']) ?>.png">
+                                <img src="../pokemas/<?= special($c1['s1']) ?>.png">
                                 <?php echo special($c1['potential']) ?><br>
-                                <?php echo special($c1['lucky_skill_name']) ?>
-                                <!-- ボード情報 -->
-                                <!-- リセット機能 -->
+                                <?php echo special($c1['lucky_skill_name']) ?><br>
+                                <?php echo special($c1['PoMaTool_URL']) ?>
                             </li>
                         <?php } ?>
                         <?php foreach ($charcter2 as $c2) { ?>
@@ -62,10 +61,10 @@ $charcter3 = charcter3();
                                     <?php echo 'EX'; ?>
                                 <?php } ?>
                                 <img src="../pokemas/<?= special($c2['t2']) ?>.png">
+                                <img src="../pokemas/<?= special($c2['s2']) ?>.png">
                                 <?php echo special($c2['potential']) ?><br>
-                                <?php echo special($c2['lucky_skill_name']) ?>
-                                <!-- ボード情報 -->
-                                <!-- リセット機能 -->
+                                <?php echo special($c2['lucky_skill_name']) ?><br>
+                                <?php echo special($c2['PoMaTool_URL']) ?>
                             </li>
                         <?php } ?>
                         <?php foreach ($charcter3 as $c3) { ?>
@@ -74,10 +73,10 @@ $charcter3 = charcter3();
                                     <?php echo 'EX'; ?>
                                 <?php } ?>
                                 <img src="../pokemas/<?= special($c3['t3']) ?>.png">
+                                <img src="../pokemas/<?= special($c3['s3']) ?>.png">
                                 <?php echo special($c3['potential']) ?><br>
-                                <?php echo special($c3['lucky_skill_name']) ?>
-                                <!-- ボード情報 -->
-                                <!-- リセット機能 -->
+                                <?php echo special($c3['lucky_skill_name']) ?><br>
+                                <?php echo special($c3['PoMaTool_URL']) ?>
                             </li>
                         <?php } ?>
                     <?php } ?>
