@@ -35,21 +35,7 @@ $parties = get_party();
                 <ul>
                     <?php foreach ($parties as $party) { ?>
                         <li><a href="party-detail.php?party_id=<?= special($party['party_id']) ?>"><?= special($party['party_name']) ?></a>
-                            <?php if (!empty($parties)) {
-                                $randomParty = $parties[array_rand($parties)];
-                                $randomTrainer = '';
-                                $randomTrainerIndex = rand(1, 3);
-                                if ($randomTrainerIndex == 1) {
-                                    $randomTrainer = $randomParty['t1'];
-                                } elseif ($randomTrainerIndex == 2) {
-                                    $randomTrainer = $randomParty['t2'];
-                                } elseif ($randomTrainerIndex == 3) {
-                                    $randomTrainer = $randomParty['t3'];
-                                } ?>
-                                <img src="../pokemas/<?= $randomTrainer ?>.png">
-                            <?php } else {
-                                echo "パーティが見つかりませんでした。";
-                            } ?>
+                            <img src="../pokemas/<?= special($party['trainer_name']) ?>.png">
                         </li>
                     <?php } ?>
                 </ul>

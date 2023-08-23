@@ -60,11 +60,9 @@ function get_lucky_skill()
 function get_party()
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select party.party_id, party_name, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, partycategory.category_name from party
+    $st = $pdo->prepare("select party.party_id, party_name, trainer.trainer_name, partycategory.category_name from party
     left join partydetails on partydetails.party_id = party.party_id
-    left join trainer as t1 on t1.trainer_id = partydetails.trainer_id1
-    left join trainer as t2 on t2.trainer_id = partydetails.trainer_id2
-    left join trainer as t3 on t3.trainer_id = partydetails.trainer_id3
+    left join trainer on trainer.trainer_id = partydetails.trainer_id3
     left join partycategory on partycategory.category_id = party.category_id");
     $st->execute();
     $party = $st->fetchAll();
@@ -144,14 +142,15 @@ function get_type()
     return $type;
 }
 
-function charcter1()
+function charcter1($party_id)
 {
     $pdo = get_connection();
     $st = $pdo->prepare("select details.party_id, t1.trainer_name as t1, t1.EX_flg, lucky_skills.lucky_skill_name, t1.potential, details.PoMaTool_URL from partydetails as details
     left join party on party.party_id = details.party_id
-    left join trainer on trainer.trainer_id = party.trainer_id
     left join trainer as t1 on t1.trainer_id = details.trainer_id1
-    left join lucky_skills on lucky_skills.lucky_skill_id = details.lucky_skill_id1");
+    left join lucky_skills on lucky_skills.lucky_skill_id = details.lucky_skill_id1
+    where party.party_id = ?");
+    $st->bindValue(1, '$party_id');
     $st->execute();
     $charcter1 = $st->fetchAll();
 
@@ -167,7 +166,6 @@ function charcter2()
     $pdo = get_connection();
     $st = $pdo->prepare("select details.party_id, t2.trainer_name as t2, t2.EX_flg, lucky_skills.lucky_skill_name, t2.potential, details.PoMaTool_URL from partydetails as details
     left join party on party.party_id = details.party_id
-    left join trainer on trainer.trainer_id = party.trainer_id
     left join trainer as t2 on t2.trainer_id = details.trainer_id2
     left join lucky_skills on lucky_skills.lucky_skill_id = details.lucky_skill_id2");
     $st->execute();
@@ -185,7 +183,6 @@ function charcter3()
     $pdo = get_connection();
     $st = $pdo->prepare("select details.party_id, t3.trainer_name as t3, t3.EX_flg, lucky_skills.lucky_skill_name, t3.potential, details.PoMaTool_URL from partydetails as details
     left join party on party.party_id = details.party_id
-    left join trainer on trainer.trainer_id = party.trainer_id
     left join trainer as t3 on t3.trainer_id = details.trainer_id3
     left join lucky_skills on lucky_skills.lucky_skill_id = details.lucky_skill_id3");
     $st->execute();
