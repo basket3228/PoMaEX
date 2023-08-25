@@ -12,7 +12,7 @@ $lucky_skill = get_lucky_skill();
     <title>Add-Sync</title>
     <link rel="icon" href="../img/logo.ico" />
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="../CSS/party-detail.css">
+    <link rel="stylesheet" href="../CSS/add-sync.css">
 </head>
 
 <body>
@@ -21,8 +21,8 @@ $lucky_skill = get_lucky_skill();
             <h1 class="h1"><a href="../HTML/index.html"><img src="../img/logo.png"></a></h1>
             <nav>
                 <ul id="nav-list">
-                    <li id="list1"><a href="../PHP/list-party.php">編成一覧</a></li>
-                    <li id="liat2"><a href="../PHP/list-trainers.php">バディーズ一覧</a></li>
+                    <li id="list1"><a href="../PHP/party-list.php">編成一覧</a></li>
+                    <li id="liat2"><a href="../PHP/trainer-list.php">バディーズ一覧</a></li>
                     <li id="list3"><a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">PoMaTool</a></li>
                     <li id="list4"><a href="../PHP/create-random-party.php">乱数編成生成</a></li>
                 </ul>

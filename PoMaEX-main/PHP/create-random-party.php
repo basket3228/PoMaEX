@@ -24,8 +24,8 @@ $random3 = $trainer[array_rand($trainer)];
             <h1 class="h1"><a href="../HTML/index.html"><img src="../img/logo.png"></a></h1>
             <nav>
                 <ul id="nav-list">
-                    <li id="list1"><a href="../PHP/list-party.php">編成一覧</a></li>
-                    <li id="liat2"><a href="../PHP/list-trainers.php">バディーズ一覧</a></li>
+                    <li id="list1"><a href="../PHP/party-list.php">編成一覧</a></li>
+                    <li id="liat2"><a href="../PHP/trainer-list.php">バディーズ一覧</a></li>
                     <li id="list3"><a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">PoMaTool</a></li>
                     <li id="list4"><a href="../PHP/create-random-party.php">乱数編成生成</a></li>
                 </ul>
@@ -34,17 +34,21 @@ $random3 = $trainer[array_rand($trainer)];
 
         <main class="main">
             <div class="content">
+                <h2>ランダム編成生成</h2>
                 <ul>
-                    <li><img src="../pokemas/<?= special($random1['trainer_name']) ?>.png">
-                        <img src="../pokemas/<?= special($random1['sync_name']) ?>.png">
+                    <!-- 選びなおすボタンでそれぞれで再度乱数生成をする(JSで操作)
+                    初期表示はロール被りなし、主人公被りは二枠までという条件で表示(主人公二枠なら残りは必ずEXキャラ) -->
+                    <li><img src="../trainer/<?= special($random1['trainer_name']) ?>.png">
+                        <img src="../sync/<?= special($random1['sync_name']) ?>.png">
+                        <button class="btn">選びなおす</button>
                     </li>
-                    <li>
-                    <li><img src="../pokemas/<?= special($random2['trainer_name']) ?>.png">
-                        <img src="../pokemas/<?= special($random2['sync_name']) ?>.png">
+                    <li><img src="../trainer/<?= special($random2['trainer_name']) ?>.png">
+                        <img src="../sync/<?= special($random2['sync_name']) ?>.png">
+                        <button class="btn">選びなおす</button>
                     </li>
-                    <li>
-                    <li><img src="../pokemas/<?= special($random3['trainer_name']) ?>.png">
-                        <img src="../pokemas/<?= special($random3['sync_name']) ?>.png">
+                    <li><img src="../trainer/<?= special($random3['trainer_name']) ?>.png">
+                        <img src="../sync/<?= special($random3['sync_name']) ?>.png">
+                        <button class="btn">選びなおす</button>
                     </li>
                 </ul>
             </div>

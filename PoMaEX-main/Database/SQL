@@ -493,12 +493,35 @@ INSERT INTO sync (sync_name, type_id) VALUES
     ('ニドキング', '8'),
     ('ヤドラン', '11');
 
-
-INSERT INTO partyCategory (category_name, enemy_id)
+INSERT INTO partyCategory (category_name)
 VALUES
-    ('レジェンドアドベンチャー', 1),
-    ('チャンピオンバトル', NULL),
-    ('その他', NULL);
+    ('レジェンドアドベンチャー'),
+    ('チャンピオンバトル'),
+    ('その他');
+
+insert into legendary_gauntlet (name, eventNumber, enemy_id1, enemy_id2, enemy_id3, category_id) values
+    ('第10回', 10, 1, 2, 3, 1),
+    ('第10回', 10, 4, 5, 6, 1);
+
+insert into champion_stadium (category_id, type_id) VALUES
+    (2, 1),
+    (2, 2),
+    (2, 3),
+    (2, 4),
+    (2, 5),
+    (2, 6),
+    (2, 7),
+    (2, 8),
+    (2, 9),
+    (2, 10),
+    (2, 11),
+    (2, 12),
+    (2, 13),
+    (2, 14),
+    (2, 15),
+    (2, 16),
+    (2, 17),
+    (2, 18);
 
 INSERT INTO role (role_name) VALUES
     ('アタッカー'),
@@ -920,15 +943,21 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_flg, potential, stars) V
     ('主人公', 389, 3, false, 0, 4),
     ('主人公', 390, 3, false, 0, 4);
 
-INSERT INTO party (party_name, category_id) VALUES
-    ('第10回レジェアド', 1),
-    ('第10回レジェアド', 1),
-    ('第10回レジェアド', 1),
-    ('第10回レジェアド', 1);
+    INSERT INTO party (category_id, legendary_gauntlet_id, champion_stadium_id, enemy_id, type_id) VALUES
+    (1, 1, null, 1, null),
+    (1, 1, null, 2, null),
+    (1, 1, null, 3, null),
+    (1, 2, null, 1, null),
+    (2, null, 1, null, 1),
+    (2, null, 2, null, 2),
+    (2, null, 3, null, 3);
 
-INSERT INTO partyDetails (party_id, trainer_id1, trainer_id2, trainer_id3, lucky_skill_id1, lucky_skill_id2, lucky_skill_id3, PoMaTool_URL)
+    INSERT INTO partyDetails (party_id, enemy_id, trainer_id1, trainer_id2, trainer_id3, lucky_skill_id1, lucky_skill_id2, lucky_skill_id3, PoMaTool_URL)
 VALUES
-    (1, 2, 46, 60, 1, 2, 3, 'URL'),
-    (2, 263, 89, 300, 4, 5, 6, 'URL'),
-    (3, 67, 222, 165, 7, 8, 9, 'URL'),
-    (4, 2, 9, 199, 106, 23, 13, 'URL');
+    (1, 1, 91, 346, 162, 19, 27, 31, 'URL'),
+    (2, 2, 263, 89, 300, 4, 5, 6, 'URL'),
+    (3, 3, 67, 222, 165, 7, 8, 9, 'URL'),
+    (4, 4, 8, 49, 81, 11, 4, 1, 'URL'),
+    (5, 5, 82, 25, 269, 33, 29, 2, 'URL'),
+    (6, 6, 66, 146, 182, 3, 15, 18, 'URL'),
+    (7, 7, 2, 9, 199, 16, 23, 13, 'URL');
