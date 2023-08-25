@@ -34,19 +34,20 @@ $random3 = $trainer[array_rand($trainer)];
 
         <main class="main">
             <div class="content">
+                <h2>ランダム編成生成</h2>
                 <ul>
                     <!-- 選びなおすボタンでそれぞれで再度乱数生成をする(JSで操作)
                     初期表示はロール被りなし、主人公被りは二枠までという条件で表示(主人公二枠なら残りは必ずEXキャラ) -->
-                    <li><img src="../pokemas/<?= special($random1['trainer_name']) ?>.png">
-                        <img src="../pokemas/<?= special($random1['sync_name']) ?>.png">
+                    <li><img src="../trainer/<?= special($random1['trainer_name']) ?>.png">
+                        <img src="../sync/<?= special($random1['sync_name']) ?>.png">
                         <button class="btn">選びなおす</button>
                     </li>
-                    <li><img src="../pokemas/<?= special($random2['trainer_name']) ?>.png">
-                        <img src="../pokemas/<?= special($random2['sync_name']) ?>.png">
+                    <li><img src="../trainer/<?= special($random2['trainer_name']) ?>.png">
+                        <img src="../sync/<?= special($random2['sync_name']) ?>.png">
                         <button class="btn">選びなおす</button>
                     </li>
-                    <li><img src="../pokemas/<?= special($random3['trainer_name']) ?>.png">
-                        <img src="../pokemas/<?= special($random3['sync_name']) ?>.png">
+                    <li><img src="../trainer/<?= special($random3['trainer_name']) ?>.png">
+                        <img src="../sync/<?= special($random3['sync_name']) ?>.png">
                         <button class="btn">選びなおす</button>
                     </li>
                 </ul>

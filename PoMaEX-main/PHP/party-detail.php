@@ -40,45 +40,69 @@ $charcter3 = charcter3($party_id);
         </header>
 
         <main class="main">
-            <div class="content">
+            <div class="trainer">
+                <h2>パーティ詳細</h2>
                 <?php foreach ($charcter1 as $c1) { ?>
                     <?php if ($party_id == $c1['party_id']) { ?>
                         <ul>
-                            <li>1 <br>
-                                <?php if ($c1['EX_flg'] == true) { ?>
-                                    <?php echo 'EX'; ?>
-                                <?php } ?>
-                                <img src="../pokemas/<?= special($c1['t1']) ?>.png">
-                                <img src="../pokemas/<?= special($c1['s1']) ?>.png">
-                                <?php echo special($c1['potential']) ?><br>
-                                <?php echo special($c1['lucky_skill_name']) ?><br>
-                                <?php echo special($c1['PoMaTool_URL']) ?>
-                            </li>
+                            <?php if ($c1['t1'] != null) { ?>
+                                <li>
+                                    <p>1</p>
+                                    <div class="EX">
+                                        <?php if ($c1['EX_flg'] == true) { ?>
+                                            <img src="../img/EX.png">
+                                        <?php } else { ?>
+                                            <img src="../img/NotEX.png">
+                                        <?php } ?>
+                                    </div>
+                                    <img src="../trainer/<?= special($c1['t1']) ?>.png">
+                                    <img src="../sync/<?= special($c1['s1']) ?>.png">
+                                    <div class="potential">
+                                        <?php echo special($c1['potential']) ?>
+                                    </div>
+                                    <div class="skill">
+                                        <?php echo special($c1['lucky_skill_name']) ?>
+                                    </div>
+                                    <button><a href="<?php echo special($c1['PoMaTool_URL']) ?>"></a>ボード情報</button>
+                                    <button id="delete"><a href="delete-party.php?party_id=<?= $c1['party_id'] ?>&trainer_id=<?= special($c1['ti1']) ?>">Delete</a></button>
+                                </li>
+                            <?php } ?>
                         <?php } ?>
                         <?php foreach ($charcter2 as $c2) { ?>
-                            <li>2 <br>
-                                <?php if ($c2['EX_flg'] == true) { ?>
-                                    <?php echo 'EX'; ?>
-                                <?php } ?>
-                                <img src="../pokemas/<?= special($c2['t2']) ?>.png">
-                                <img src="../pokemas/<?= special($c2['s2']) ?>.png">
-                                <?php echo special($c2['potential']) ?><br>
-                                <?php echo special($c2['lucky_skill_name']) ?><br>
-                                <?php echo special($c2['PoMaTool_URL']) ?>
-                            </li>
+                            <?php if ($c2['t2'] != null) { ?>
+                                <li>2 <br>
+                                    <?php if ($c2['EX_flg'] == true) { ?>
+                                        <img src="../img/EX.png">
+                                    <?php } else { ?>
+                                        <img src="../img/NotEX.png">
+                                    <?php } ?>
+                                    <img src="../trainer/<?= special($c2['t2']) ?>.png">
+                                    <img src="../sync/<?= special($c2['s2']) ?>.png">
+                                    <?php echo special($c2['potential']) ?><br>
+                                    <?php echo special($c2['lucky_skill_name']) ?><br>
+                                    <button><a href="<?php echo special($c2['PoMaTool_URL']) ?>"></a>ボード情報</button>
+                                    <button id="delete"><a href="delete-party.php?party_id=<?= $c2['party_id'] ?>&trainer_id=<?= special($c2['ti2']) ?>">Delete</a></button>
+                                </li>
+                            <?php } ?>
                         <?php } ?>
                         <?php foreach ($charcter3 as $c3) { ?>
-                            <li>3 <br>
-                                <?php if ($c3['EX_flg'] == true) { ?>
-                                    <?php echo 'EX'; ?>
-                                <?php } ?>
-                                <img src="../pokemas/<?= special($c3['t3']) ?>.png">
-                                <img src="../pokemas/<?= special($c3['s3']) ?>.png">
-                                <?php echo special($c3['potential']) ?><br>
-                                <?php echo special($c3['lucky_skill_name']) ?><br>
-                                <?php echo special($c3['PoMaTool_URL']) ?>
-                            </li>
+                            <?php if ($c3['t3'] != null) { ?>
+                                <li>3 <br>
+                                    <?php if ($c3['EX_flg'] == true) { ?>
+                                        <img src="../img/EX.png">
+                                    <?php } else { ?>
+                                        <img src="../img/NotEX.png">
+                                    <?php } ?>
+                                    <img src="../trainer/<?= special($c3['t3']) ?>.png">
+                                    <img src="../sync/<?= special($c3['s3']) ?>.png">
+                                    <?php echo special($c3['potential']) ?><br>
+                                    <?php echo special($c3['lucky_skill_name']) ?><br>
+                                    <button><a href="<?php echo special($c3['PoMaTool_URL']) ?>"></a>ボード情報</button>
+                                    <button id="delete"><a href="delete-party.php?party_id=<?= $c3['party_id'] ?>&trainer_id=<?= special($c3['ti3']) ?>">Delete</a></button>
+                                </li>
+                            <?php } ?>
                         <?php } ?>
+                        </ul>
                     <?php } ?>
             </div>
         </main>

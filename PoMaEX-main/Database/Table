@@ -74,20 +74,24 @@ CREATE TABLE party (
     category_id INT not NULL,
     legendary_gauntlet_id int,
     champion_stadium_id int,
-    FOREIGN KEY (category_id) REFERENCES partyCategory(category_id)
+    enemy_id int,
+    type_id int,
+    FOREIGN KEY (category_id) REFERENCES partyCategory(category_id),
+    FOREIGN KEY (enemy_id) REFERENCES enemy(enemy_id),
+    FOREIGN KEY (type_id) REFERENCES type(type_id)
 );
 
 CREATE TABLE partyDetails (
     detail_id INT PRIMARY KEY AUTO_INCREMENT,
     party_id INT not NULL,
     enemy_id int not null,
-    trainer_id1 int not null,
-    trainer_id2 int not null,
-    trainer_id3 int not null,
-    lucky_skill_id1 INT not null,
-    lucky_skill_id2 INT not null,
-    lucky_skill_id3 INT not null,
-    PoMaTool_URL VARCHAR (255) not null,
+    trainer_id1 int, 
+    trainer_id2 int,
+    trainer_id3 int,
+    lucky_skill_id1 INT,
+    lucky_skill_id2 INT,
+    lucky_skill_id3 INT,
+    PoMaTool_URL VARCHAR (255),
     FOREIGN KEY (party_id) REFERENCES party(party_id),
     FOREIGN key (trainer_id1) REFERENCES trainer(trainer_id),
     FOREIGN key (trainer_id2) REFERENCES trainer(trainer_id),

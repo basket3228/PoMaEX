@@ -31,10 +31,11 @@ $trainers = get_trainer();
 
     <main class="main">
       <div class="content">
+        <h2>バディーズ一覧</h2>
         <ul>
           <?php foreach ($trainers as $trainer) { ?>
-            <li><img src="../pokemas/<?= special($trainer['trainer_name']) ?>.png">
-              <img src="../pokemas/<?= special($trainer['sync_name']) ?>.png">
+            <li><img src="../trainer/<?= special($trainer['trainer_name']) ?>.png">
+              <img src="../sync/<?= special($trainer['sync_name']) ?>.png">
             </li>
           <?php } ?>
         </ul>

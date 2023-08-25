@@ -32,11 +32,12 @@ $parties = get_partyList();
 
         <main class="main">
             <div class="content">
-                <button id="btn"></button>
+                <h2>編成一覧</h2>
                 <ul>
                     <?php foreach ($parties as $party) { ?>
                         <?php if ($party['category_id'] == 1) { ?>
                             <li>
+                                <p><?php echo special($party['name']) ?></p>
                                 <a href="LG-party-list.php?category_id=<?= special($party['category_id']) ?>&eventnumber=<?= special($party['eventnumber']) ?>">
                                     <?= special($party['category_name']) ?></a>
                                 <img src="../img/LG<?= $party['eventnumber'] ?>.png">

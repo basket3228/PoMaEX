@@ -3,6 +3,9 @@ require('../function.php');
 $category_id = $_GET['category_id'];
 $eventnumber = $_GET['eventnumber'];
 $parties = get_LGParty($category_id, $eventnumber);
+$e1 = get_enemy1($eventnumber);
+$e2 = get_enemy2($eventnumber);
+$e3 = get_enemy3($eventnumber);
 
 ?>
 <!DOCTYPE html>
@@ -30,19 +33,38 @@ $parties = get_LGParty($category_id, $eventnumber);
                 </ul>
             </nav>
         </header>
+
         <main>
             <div class="content">
-                <button id="btn"></button>
+                <h2><?= LG ?></h2>
                 <ul>
-                    <?php foreach ($parties as $party) { ?>
-                        <?php if ($party['eventnumber'] == $eventnumber) { ?>
-                            <li>
-                                <?php special($party['e1']) ?>
-                                <a href="party-detail.php?party_id=<?= special($party['party_id']) ?>">編成詳細へ</a>
-                                <img src="../pokemas/<?= special($party['trainer_name']) ?>.png">
-                            </li>
+                    <div class="enemy">
+                        <li><button><a href="search.php?enemy_id=<?= special($e1['enemy_id']) ?>"><?php echo special($e1['e1']) ?></a></button></li>
+                        <li><button><a href="search.php?enemy_id=<?= special($e2['enemy_id']) ?>"><?php echo special($e2['e2']) ?></a></button></li>
+                        <li><button><a href="search.php?enemy_id=<?= special($e3['enemy_id']) ?>"><?php echo special($e3['e3']) ?></a></button></li>
+                    </div>
+                    <div class="trainer">
+                        <?php foreach ($parties as $party) { ?>
+                            <?php if ($party['eventnumber'] == $eventnumber) { ?>
+                                <li>
+                                    <?php if ($party['trainer_id2'] != null) { ?>
+                                        <?php if ($party['enemy_id'] == $e1['enemy_id']) { ?>
+                                            <a href="party-detail.php?party_id=<?= special($party['party_id']) ?>">編成詳細へ</a>
+                                            <img src="../trainer/<?= special($party['trainer_name']) ?>.png">
+                                        <?php } ?>
+                                        <?php if ($party['enemy_id'] == $e2['enemy_id']) { ?>
+                                            <a href="party-detail.php?party_id=<?= special($party['party_id']) ?>">編成詳細へ</a>
+                                            <img src="../trainer/<?= special($party['trainer_name']) ?>.png">
+                                        <?php } ?>
+                                        <?php if ($party['enemy_id'] == $e3['enemy_id']) { ?>
+                                            <a href="party-detail.php?party_id=<?= special($party['party_id']) ?>">編成詳細へ</a>
+                                            <img src="../trainer/<?= special($party['trainer_name']) ?>.png">
+                                        <?php } ?>
+                                    <?php } ?>
+                                </li>
+                            <?php } ?>
                         <?php } ?>
-                    <?php } ?>
+                    </div>
                 </ul>
             </div>
         </main>
