@@ -69,11 +69,7 @@ nav a {
   padding: 8px;
 }
 
-.main h2 {
-  font-size: 2.5em;
-}
-
-.main ul {
+.content ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -83,36 +79,24 @@ nav a {
   gap: 8px;
 }
 
-.trainer {
+.type {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 520px;
   padding-left: 0;
   gap: 8px;
 }
 
-.trainer li {
-  font-size: 0.9%;
+.type li {
+  font-size: 20px;
   width: 30%;
+  display: inline;
   background-color: #d3d3d3;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   border-radius: 30px;
   text-align: center;
-  padding: 8px;
+  padding: 6px;
   font-weight: bold;
   font-family: sans-serif;
   margin: 0 auto;
-}
-
-.trainer a {
-  text-decoration: none;
-}
-
-.trainer img {
-  margin: 0 auto;
-  border-radius: 30px;
 }

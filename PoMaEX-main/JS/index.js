@@ -7,3 +7,7 @@ function FixedAnime() {
     $("#header").removeClass("fixed");
   }
 }
+
+$(window).scroll(function () {
+  FixedAnime();
+});

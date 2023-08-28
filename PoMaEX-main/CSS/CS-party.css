@@ -83,7 +83,7 @@ nav a {
   gap: 8px;
 }
 
-.trainer {
+.content {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -93,7 +93,7 @@ nav a {
   gap: 8px;
 }
 
-.trainer li {
+.content li {
   font-size: 0.9%;
   width: 30%;
   background-color: #d3d3d3;
@@ -108,11 +108,11 @@ nav a {
   margin: 0 auto;
 }
 
-.trainer a {
+.content a {
   text-decoration: none;
 }
 
-.trainer img {
+.content img {
   margin: 0 auto;
   border-radius: 30px;
 }

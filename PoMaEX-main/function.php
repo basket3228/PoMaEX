@@ -101,7 +101,7 @@ function get_lucky_skill()
 function get_LGParty($category_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select party.party_id, party.enemy_id, partydetails.trainer_id2, eventnumber, trainer.trainer_name, partycategory.category_name from party
+    $st = $pdo->prepare("select distinct party.party_id, party.enemy_id, partydetails.trainer_id1, partydetails.trainer_id2, partydetails.trainer_id3, eventnumber, trainer.trainer_name, partycategory.category_name from party
     left join legendary_gauntlet as LG on LG.legendary_gauntlet_id = party.legendary_gauntlet_id
     left join enemy as e1 on e1.enemy_id = party.enemy_id
     left join enemy as e2 on e2.enemy_id = party.enemy_id
@@ -120,16 +120,15 @@ function get_LGParty($category_id)
     return $party;
 }
 
-function get_CSParty($category_id)
+function get_CSList($type_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select party.party_id, trainer.trainer_name, type_name, partycategory.category_name from party
-    left join partycategory on partycategory.category_id = party.category_id
+    $st = $pdo->prepare("select party.party_id, trainer.trainer_name, party.type_id, type_name from party
     left join partydetails on partydetails.party_id = party.party_id
     left join type on type.type_id = party.type_id
     left join trainer on trainer.trainer_id = partydetails.trainer_id3
-    where party.category_id = ?");
-    $st->bindValue(1, $category_id);
+    where party.type_id = ?");
+    $st->bindValue(1, $type_id);
     $st->execute();
     $party = $st->fetchAll();
 

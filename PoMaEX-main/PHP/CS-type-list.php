@@ -1,8 +1,8 @@
 <?php
 require('../function.php');
 $category_id = $_GET['category_id'];
-$parties = get_CSParty($category_id);
 $types = get_type();
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $types = get_type();
     <title>CS:Party-List</title>
     <link rel="icon" href="../img/logo.ico" />
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="../CSS/LG-party-list.css">
+    <link rel="stylesheet" href="../CSS/CS-type-list.css">
 </head>
 
 <body>
@@ -36,17 +36,18 @@ $types = get_type();
                 <h2><?= CS ?></h2>
                 <ul>
                     <?php foreach ($types as $type) { ?>
-                        <li><img src="../type/<?= special($type['type_name']) ?>.png"></li>
-                        <?php foreach ($parties as $party) { ?>
-                            <?php if ($type['type_name'] == $party['type_name']) { ?>
-                                <li><img src="../trainer/<?= special($party['trainer_name']) ?>.png"></li>
-                            <?php } ?>
-                        <?php } ?>
+                        <div class="type">
+                            <li><a href="CS-party.php?type_id=<?= special($type['type_id']) ?>">
+                                    <img src="../type/<?= special($type['type_name']) ?>.png"></li>
+                            </a>
+                        </div>
                     <?php } ?>
                 </ul>
             </div>
         </main>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../JS/CS-type-list.js"></script>
 </body>
 
 </html>

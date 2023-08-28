@@ -1,12 +1,6 @@
 <?php
 require('../function.php');
 
-if (isset($_GET['party_id'])) {
-    $party_id = $_GET['party_id'];
-} else {
-    echo "トレーナーIDが指定されていません。";
-}
-
 $party_id = $_GET['party_id'];
 $charcter1 = charcter1($party_id);
 $charcter2 = charcter2($party_id);
@@ -63,7 +57,7 @@ $charcter3 = charcter3($party_id);
                                     <div class="skill">
                                         <?php echo special($c1['lucky_skill_name']) ?>
                                     </div>
-                                    <button><a href="<?php echo special($c1['PoMaTool_URL']) ?>"></a>ボード情報</button>
+                                    <a href="<?php echo special($c1['PoMaTool_URL']) ?>"><button>ボード情報</button></a>
                                     <button id="delete"><a href="delete-party.php?party_id=<?= $c1['party_id'] ?>&trainer_id=<?= special($c1['ti1']) ?>">Delete</a></button>
                                 </li>
                             <?php } ?>
@@ -80,7 +74,7 @@ $charcter3 = charcter3($party_id);
                                     <img src="../sync/<?= special($c2['s2']) ?>.png">
                                     <?php echo special($c2['potential']) ?><br>
                                     <?php echo special($c2['lucky_skill_name']) ?><br>
-                                    <button><a href="<?php echo special($c2['PoMaTool_URL']) ?>"></a>ボード情報</button>
+                                    <a href="<?php echo special($c2['PoMaTool_URL']) ?>"><button>ボード情報</button></a>
                                     <button id="delete"><a href="delete-party.php?party_id=<?= $c2['party_id'] ?>&trainer_id=<?= special($c2['ti2']) ?>">Delete</a></button>
                                 </li>
                             <?php } ?>
@@ -97,7 +91,7 @@ $charcter3 = charcter3($party_id);
                                     <img src="../sync/<?= special($c3['s3']) ?>.png">
                                     <?php echo special($c3['potential']) ?><br>
                                     <?php echo special($c3['lucky_skill_name']) ?><br>
-                                    <button><a href="<?php echo special($c3['PoMaTool_URL']) ?>"></a>ボード情報</button>
+                                    <a href="<?php echo special($c3['PoMaTool_URL']) ?>"><button>ボード情報</button></a>
                                     <button id="delete"><a href="delete-party.php?party_id=<?= $c3['party_id'] ?>&trainer_id=<?= special($c3['ti3']) ?>">Delete</a></button>
                                 </li>
                             <?php } ?>
@@ -107,7 +101,8 @@ $charcter3 = charcter3($party_id);
             </div>
         </main>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../JS/party-detail.js"></script>
 </body>
-<script src="../JS/party-detail.js"></script>
 
 </html>
