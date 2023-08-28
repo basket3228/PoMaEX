@@ -85,7 +85,7 @@ CREATE TABLE partyDetails (
     detail_id INT PRIMARY KEY AUTO_INCREMENT,
     party_id INT not NULL,
     enemy_id int not null,
-    trainer_id1 int, 
+    trainer_id1 int,
     trainer_id2 int,
     trainer_id3 int,
     lucky_skill_id1 INT,

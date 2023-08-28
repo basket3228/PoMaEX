@@ -1,7 +1,8 @@
 <?php
 require('../function.php');
-$parties = get_partyList();
-
+$type_id = $_GET['type_id'];
+$parties = get_CSList($type_id);
+$types = get_type();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ $parties = get_partyList();
     <title>Party-list</title>
     <link rel="icon" href="../img/logo.ico" />
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="../CSS/party-list.css">
+    <link rel="stylesheet" href="../CSS/CS-party.css">
 </head>
 
 <body>
@@ -25,31 +26,25 @@ $parties = get_partyList();
                     <li id="list1"><a href="../PHP/party-list.php">編成一覧</a></li>
                     <li id="liat2"><a href="../PHP/trainer-list.php">バディーズ一覧</a></li>
                     <li id="list3"><a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">PoMaTool</a></li>
-                    <li id="list4"><a href="../PHP/create-random-party.php">乱数編成生成</a></li>
+                    <li id="list4"><a href="../PHP/CS-party.php">乱数編成生成</a></li>
                 </ul>
             </nav>
         </header>
-
         <main class="main">
             <div class="content">
-                <h2>編成一覧</h2>
-                <ul>
-                    <?php foreach ($parties as $party) { ?>
-                        <?php if ($party['category_id'] == 1) { ?>
-                            <li>
-                                <p><?php echo special($party['name']) ?></p>
-                                <a href="LG-party-list.php?category_id=<?= special($party['category_id']) ?>&eventnumber=<?= special($party['eventnumber']) ?>">
-                                    <?= special($party['category_name']) ?></a>
-                                <img src="../img/LG<?= $party['eventnumber'] ?>.png">
-                            </li>
+                <h2>
+                    <?php foreach ($types as $type) { ?>
+                        <?php if ($type['type_id'] == $type_id) { ?>
+                            <img src="../type/<?= special($type['type_name']) ?>.png">
                         <?php } ?>
                     <?php } ?>
+                </h2>
+                <ul>
                     <?php foreach ($parties as $party) { ?>
-                        <?php if ($party['category_id'] == 2) { ?>
+                        <?php if ($party['type_id'] == $type_id) { ?>
                             <li>
-                                <a href="../PHP/CS-type-list.php?category_id=<?= special($party['category_id']) ?>">
-                                    <?= special($party['category_name']) ?></a>
-                                <img src="../img/CS.png">
+                                <a href="party-detail.php?party_id=<?= special($party['party_id']) ?>">編成詳細へ</a>
+                                <img src="../trainer/<?= special($party['trainer_name']) ?>.png">
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -58,7 +53,7 @@ $parties = get_partyList();
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="party-list.js"></script>
+    <script src="../JS/CS-party.js"></script>
 </body>
 
 </html>

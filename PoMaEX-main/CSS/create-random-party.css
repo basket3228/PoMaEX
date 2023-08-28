@@ -29,6 +29,12 @@ body {
   border-radius: 10px;
 }
 
+#header.fixed {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+}
+
 .h1 {
   height: 100%;
 }

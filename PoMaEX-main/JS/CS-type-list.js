@@ -8,3 +8,7 @@ function FixedAnime() {
     }
   }
   
+  $(window).scroll(function () {
+    FixedAnime();
+  });
+  
