@@ -22,7 +22,7 @@ $lucky_skill = get_lucky_skill();
             <nav>
                 <ul id="nav-list">
                     <li id="list1"><a href="../PHP/party-list.php">編成一覧</a></li>
-                    <li id="liat2"><a href="../PHP/trainer-list.php">バディーズ一覧</a></li>
+                    <li id="list2"><a href="../PHP/trainer-list.php">バディーズ一覧</a></li>
                     <li id="list3"><a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">PoMaTool</a></li>
                     <li id="list4"><a href="../PHP/create-random-party.php">乱数編成生成</a></li>
                 </ul>
