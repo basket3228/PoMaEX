@@ -209,6 +209,56 @@ function get_trainer()
     return $trainer;
 }
 
+function get_attacker()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, role.role_name, EX_flg, potential, stars from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join role on role.role_id = trainer.role_id
+    where trainer.role_id = 1");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+
+function get_technical()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, role.role_name, EX_flg, potential, stars from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join role on role.role_id = trainer.role_id
+    where trainer.role_id = 2");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+
+function get_support()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, role.role_name, EX_flg, potential, stars from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join role on role.role_id = trainer.role_id
+    where trainer.role_id = 3");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
 function get_type()
 {
     $pdo = get_connection();
