@@ -1,6 +1,10 @@
 <?php
 require('../function.php');
 $lucky_skill = get_lucky_skill();
+$enemies = get_enemy();
+$trainers = get_trainer();
+// $party_id = $_GET['party_id'];
+
 ?>
 
 <!DOCTYPE html>
@@ -28,19 +32,70 @@ $lucky_skill = get_lucky_skill();
                 </ul>
             </nav>
         </header>
-
         <main>
-            <form action="add-sync.php">
-                <input type="text">
-                <input type="number" name="potential" id="potential" min="0" max="20">
-                <select name="lucky_skills" id="lucky_skills">
-                    <?php foreach ($lucky_skill as $skill) { ?>
-                        <option value="<?= special($skill['lucky_skill_id']) ?>"><?= special($skill['lucky_skill_name']) ?></option>
-                    <?php } ?>
-                </select>
-                <input type="text" name="URL" id="URL">
-                <input type="submit" value="登録">
-            </form>
+            <div class="content">
+                <form action="add-sync-post.php">
+                    <div class="content1">
+                        <label for="trainer-list">バディーズ</label>
+                        <button id="trainer-btn">バディーズ選択</button>
+                        <ul id="trainer-list" hidden>
+                            <?php foreach ($trainers as $trainer) { ?>
+                                <li><img src="../trainer/<?= special($trainer['trainer_name']) ?>.png">
+                                    <img src="../sync/<?= special($trainer['sync_name']) ?>.png">
+                                </li>
+                            <?php } ?>
+                        </ul>
+                        <select name="lucky_skill1" id="lucky_skill">
+                            <?php foreach ($lucky_skill as $skill) { ?>
+                                <option value="<?= special($skill['lucky_skill_id']) ?>"><?= special($skill['lucky_skill_name']) ?></option>
+                            <?php } ?>
+                        </select>
+                        <input type="text" name="URL1" id="URL">
+                    </div>
+                    <div class="content2">
+                        <label for="trainer-list">バディーズ</label>
+                        <button id="trainer-btn">バディーズ選択</button>
+                        <ul id="trainer-list" hidden>
+                            <?php foreach ($trainers as $trainer) { ?>
+                                <li><img src="../trainer/<?= special($trainer['trainer_name']) ?>.png">
+                                    <img src="../sync/<?= special($trainer['sync_name']) ?>.png">
+                                </li>
+                            <?php } ?>
+                        </ul>
+                        <select name="lucky_skill2" id="lucky_skill">
+                            <?php foreach ($lucky_skill as $skill) { ?>
+                                <option value="<?= special($skill['lucky_skill_id']) ?>"><?= special($skill['lucky_skill_name']) ?></option>
+                            <?php } ?>
+                        </select>
+                        <input type="text" name="URL2" id="URL">
+                    </div>
+                    <div class="content3">
+                        <label for="trainer-list">バディーズ</label>
+                        <button id="trainer-btn">バディーズ選択</button>
+                        <ul id="trainer-list" hidden>
+                            <?php foreach ($trainers as $trainer) { ?>
+                                <li><img src="../trainer/<?= special($trainer['trainer_name']) ?>.png">
+                                    <img src="../sync/<?= special($trainer['sync_name']) ?>.png">
+                                </li>
+                            <?php } ?>
+                        </ul>
+                        <select name="lucky_skill3" id="lucky_skill">
+                            <?php foreach ($lucky_skill as $skill) { ?>
+                                <option value="<?= special($skill['lucky_skill_id']) ?>"><?= special($skill['lucky_skill_name']) ?></option>
+                            <?php } ?>
+                        </select>
+                        <input type="text" name="URL3" id="URL">
+                        <input type="submit" value="登録">
+                    </div>
+                    <input type="text" value="<?= special($party_id) ?>">
+                    <select name="enemy_id" id="enemy_id">
+                        <?php foreach ($enemies as $enemy) { ?>
+                            <option value="<?= special($enemy['enemy_id']) ?>"><?= special($enemy['enemy_name']) ?></option>
+                        <?php } ?>
+                        <input type="number" min="1" max="13" name="enemy_id">
+                    </select>
+                </form>
+            </div>
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

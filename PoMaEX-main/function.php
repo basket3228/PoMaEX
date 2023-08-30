@@ -33,6 +33,19 @@ function show_error_message()
     exit();
 }
 
+function get_enemy()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select enemy.enemy_id, enemy.enemy_name from enemy");
+    $st->execute();
+    $enemy = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+
+    return $enemy;
+}
+
 function get_enemy1($eventnumber)
 {
     $pdo = get_connection();
@@ -358,6 +371,30 @@ function delete3($trainer_id3)
     $pdo = get_connection();
     $st = $pdo->prepare("update partydetails set trainer_id3 = null where trainer_id3 = ?");
     $st->bindValue(1, $trainer_id3);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function add_sync($sync)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("insert into pokemas(party_id, enemy_id, trainer_id1, trainer_id2, trainer_id3,
+    lucky_skill_id1, lucky_skill_id2, lucky_skill_id3,
+    PoMaTool_URL1, PoMaTool_URL2, PoMaTool_URL3) values(:party_id, :enemy_id, :trainer_id1, :trainer_id2, trainer_id3
+    :lucky_skill_id1, :lucky_skill_id2, :lucky_skill3, :PoMaTool_URL1, :PoMaTool_URL2, :PoMaTool_URL3)");
+    $st->bindValue(':party_id', $sync['party_id']);
+    $st->bindValue(':enemy_id', $sync['enemy_id']);
+    $st->bindValue(':trainer_id1', $sync['trainer_id1']);
+    $st->bindValue(':trainer_id2', $sync['trainer_id2']);
+    $st->bindValue(':trainer_id3', $sync['trainer_id3']);
+    $st->bindValue(':lucky_skill_id1', $sync['lucky_skill_id1']);
+    $st->bindValue(':lucky_skill_id2', $sync['lucky_skill_id2']);
+    $st->bindValue(':lucky_skill_id3', $sync['lucky_skill_id3']);
+    $st->bindValue(':PoMaTool_URL1', $sync['PoMaTool_URL1']);
+    $st->bindValue(':PoMaTool_URL2', $sync['PoMaTool_URL2']);
+    $st->bindValue(':PoMaTool_URL3', $sync['PoMaTool_URL3']);
     $st->execute();
 
     $pdo = null;
