@@ -28,6 +28,7 @@ $party_id = $_GET['party_id'];
                 </ul>
             </nav>
         </header>
+
         <main>
             <div class="content"></div>
         </main>

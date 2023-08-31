@@ -499,30 +499,6 @@ VALUES
     ('チャンピオンバトル'),
     ('その他');
 
-insert into legendary_gauntlet (name, eventNumber, enemy_id1, enemy_id2, enemy_id3, category_id) values
-    ('第10回', 10, 1, 2, 3, 1),
-    ('第10回', 10, 4, 5, 6, 1);
-
-insert into champion_stadium (category_id, type_id) VALUES
-    (2, 1),
-    (2, 2),
-    (2, 3),
-    (2, 4),
-    (2, 5),
-    (2, 6),
-    (2, 7),
-    (2, 8),
-    (2, 9),
-    (2, 10),
-    (2, 11),
-    (2, 12),
-    (2, 13),
-    (2, 14),
-    (2, 15),
-    (2, 16),
-    (2, 17),
-    (2, 18);
-
 INSERT INTO role (role_name) VALUES
     ('アタッカー'),
     ('テクニカル'),
@@ -943,57 +919,35 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_flg, potential, stars) V
     ('主人公', 389, 3, false, 0, 4),
     ('主人公', 390, 3, false, 0, 4);
 
-INSERT INTO party (category_id, legendary_gauntlet_id, champion_stadium_id, enemy_id, type_id) VALUES
-    (1, 1, null, 1, null),
-    (1, 1, null, 2, null),
-    (1, 1, null, 3, null),
-    (1, 2, null, 4, null),
-    (2, null, 1, null, 1),
-    (2, null, 2, null, 2),
-    (2, null, 3, null, 3),
-    (2, null, 1, null, 1),
-    (2, null, 2, null, 2),
-    (2, null, 3, null, 3),
-    (2, null, 1, null, 4),
-    (2, null, 2, null, 5),
-    (2, null, 3, null, 6),
-    (2, null, 1, null, 7),
-    (2, null, 2, null, 8),
-    (2, null, 3, null, 9),
-    (2, null, 1, null, 10),
-    (2, null, 2, null, 11),
-    (2, null, 3, null, 12),
-    (2, null, 2, null, 13),
-    (2, null, 3, null, 14),
-    (2, null, 1, null, 15),
-    (2, null, 2, null, 16),
-    (2, null, 3, null, 17),
-    (2, null, 3, null, 18);
+insert into CSparty (category_id, type_id)values
+    (2,1),
+    (2,2),
+    (2,3),
+    (2,4),
+    (2,5),
+    (2,6),
+    (2,7),
+    (2,8),
+    (2,9),
+    (2,10),
+    (2,11),
+    (2,12),
+    (2,13),
+    (2,14),
+    (2,15),
+    (2,16),
+    (2,17),
+    (2,18);
 
-        INSERT INTO partyDetails (party_id, enemy_id, trainer_id1, trainer_id2, trainer_id3, lucky_skill_id1, lucky_skill_id2, lucky_skill_id3, PoMaTool_URL1, PoMaTool_URL2, PoMaTool_URL3)
-    VALUES
-        (1, 1, 118, 274, 203, 22, 42, 54, 'URL', 'URL', 'URL'),
-        (2, 2, 55, 179, 88, 10, 37, 57, 'URL', 'URL', 'URL'),
-        (3, 3, 286, 65, 135, 50, 24, 3, 'URL', 'URL', 'URL'),
-        (4, 4, 142, 305, 197, 36, 16, 48, 'URL', 'URL', 'URL'),
-        (5, null, 239, 68, 117, 5, 38, 12, 'URL', 'URL', 'URL'),
-        (6, null, 77, 291, 56, 33, 9, 28, 'URL', 'URL', 'URL'),
-        (23, null, 12, 35, 127, 16, 6, 43, 'URL', 'URL', 'URL'),
-        (24, null, 39, 8, 17, 54, 39, 11, 'URL', 'URL', 'URL'),
-        (25, null, 177, 91, 5, 3, 59, 24, 'URL', 'URL', 'URL'),
-        (7, null, 10, 199, 125, 19, 52, 44, 'URL', 'URL', 'URL'),
-        (8, null, 28, 7, 186, 14, 45, 21, 'URL', 'URL', 'URL'),
-        (9, null, 67, 57, 8, 13, 32, 27, 'URL', 'URL', 'URL'),
-        (10, null, 175, 32, 146, 31, 49, 29, 'URL', 'URL', 'URL'),
-        (11, null, 291, 142, 51, 59, 34, 18, 'URL', 'URL', 'URL'),
-        (12, null, 99, 86, 76, 30, 40, 23, 'URL', 'URL', 'URL'),
-        (13, null, 5, 152, 63, 53, 39, 4, 'URL', 'URL', 'URL'),
-        (14, null, 180, 15, 187, 35, 6, 58, 'URL', 'URL', 'URL'),
-        (15, null, 60, 92, 74, 20, 47, 26, 'URL', 'URL', 'URL'),
-        (16, null, 108, 35, 117, 7, 41, 47, 'URL', 'URL', 'URL'),
-        (17, null, 135, 73, 176, 8, 51, 37, 'URL', 'URL', 'URL'),
-        (18, null, 184, 153, 180, 35, 6, 58, 'URL', 'URL', 'URL'),
-        (19, null, 10, 98, 72, 21, 57, 29, 'URL', 'URL', 'URL'),
-        (20, null, 8, 335, 217, 37, 4, 17, 'URL', 'URL', 'URL'),
-        (21, null, 15, 13, 196, 8, 5, 7, 'URL', 'URL', 'URL'),
-        (22, null, 4, 82, 30, 26, 52, 61, 'URL', 'URL', 'URL');
+insert into CSdetail (CS_party_id, trainer_id1, trainer_id2, trainer_id3, lucky_skill_id1, lucky_skill_id2, lucky_skill_id3, PoMaTool_URL1, PoMaTool_URL2, PoMaTool_URL3) values
+    (1, 1, 2, 3, 1, 2, 3, 'https://ng-pomatools.web.app/pairs/17000/54200', 'https://ng-pomatools.web.app/pairs/17001/17500', 'https://ng-pomatools.web.app/pairs/9200/61200');
+
+insert into LGparty(category_id, name, eventnumber, enemy_id1, enemy_id2, enemy_id3) values
+    (1, '第10回', 10, 12, 4, 7),
+    (1, '第10回', 10, 12, 4, 7),
+    (1, '第10回', 10, 12, 4, 7);
+
+insert into LGdetail (LGparty_id, trainer_id1, trainer_id2, trainer_id3, lucky_skill_id1, lucky_skill_id2, lucky_skill_id3, PoMaTool_URL1, PoMaTool_URL2, PoMaTool_URL3) values
+    (1, 4, 5, 6, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', 'https://ng-pomatools.web.app/pairs/9201/63500', 'https://ng-pomatools.web.app/pairs/19300/38200'),
+    (2, 7, 8, 9, 7, 8, 9, 'https://ng-pomatools.web.app/pairs/19401/48400', 'https://ng-pomatools.web.app/pairs/2600/24100', 'https://ng-pomatools.web.app/pairs/2601/58603'),
+    (3, 10, 11, 12, 10, 11, 12, 'https://ng-pomatools.web.app/pairs/19100/60100', 'https://ng-pomatools.web.app/pairs/19800/33600', 'https://ng-pomatools.web.app/pairs/2900/32400')
