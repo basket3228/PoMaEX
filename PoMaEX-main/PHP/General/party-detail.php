@@ -112,7 +112,7 @@ if (isset($_GET['LGparty_id'])) {
                                 <?php } ?>
                             <?php } ?>
                         <?php } ?>
-                    <?php } else { ?>
+                    <?php } else if ($category_id == 2) { ?>
                         <?php foreach ($CS1 as $c1) { ?>
                             <?php if ($CSparty_id == $c1['CSparty_id']) { ?>
                                 <?php if ($c1['t1'] != null) { ?>
