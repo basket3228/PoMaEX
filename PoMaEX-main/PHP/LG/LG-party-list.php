@@ -37,11 +37,12 @@ $e3 = get_enemy3($eventnumber);
         <main>
             <div class="content">
                 <h2><?= LG ?></h2>
+                <a href="add-LGparty.php?eventnumber=<?= $eventnumber ?>&category_id=<?= $category_id ?>"><button>追加</button></a>
                 <ul>
                     <div class="enemy">
-                        <li><a href="search.php?enemy_id=<?= special($e1['enemy_id']) ?>"><button><?php echo special($e1['e1']) ?></button></a></li>
-                        <li><a href="search.php?enemy_id=<?= special($e2['enemy_id']) ?>"><button><?php echo special($e2['e2']) ?></button></a></li>
-                        <li><a href="search.php?enemy_id=<?= special($e3['enemy_id']) ?>"><button><?php echo special($e3['e3']) ?></button></a></li>
+                        <li><a href="search.php?enemy_id=<?= special($e1['enemy_id1']) ?>"><button><?php echo special($e1['e1']) ?></button></a></li>
+                        <li><a href="search.php?enemy_id=<?= special($e2['enemy_id2']) ?>"><button><?php echo special($e2['e2']) ?></button></a></li>
+                        <li><a href="search.php?enemy_id=<?= special($e3['enemy_id3']) ?>"><button><?php echo special($e3['e3']) ?></button></a></li>
                     </div>
                     <div class="trainer">
                         <?php foreach ($parties as $party) { ?>
