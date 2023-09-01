@@ -393,10 +393,10 @@ function CS3($CSparty_id)
     return $CS3;
 }
 
-function delete1($LGparty_id)
+function deleteDetail($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("update LGdetail set trainer_id1 = null where LGparty_id = ?");
+    $st = $pdo->prepare("delete from LGdetail where LGparty_id = ?");
     $st->bindValue(1, $LGparty_id);
     $st->execute();
 
@@ -404,21 +404,10 @@ function delete1($LGparty_id)
     $st = null;
 }
 
-function delete2($LGparty_id)
+function deleteLGparty($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("update LGdetail set trainer_id2 = null where LGparty_id = ?");
-    $st->bindValue(1, $LGparty_id);
-    $st->execute();
-
-    $pdo = null;
-    $st = null;
-}
-
-function delete3($LGparty_id)
-{
-    $pdo = get_connection();
-    $st = $pdo->prepare("update LGdetail set trainer_id3 = null where LGparty_id = ?");
+    $st = $pdo->prepare("delete from LGparty where LGparty_id = ?");
     $st->bindValue(1, $LGparty_id);
     $st->execute();
 
@@ -429,7 +418,7 @@ function delete3($LGparty_id)
 function delete_LG($eventnumber)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare('delete from LGparty where eventnumber = ?');
+    $st = $pdo->prepare("delete from LGparty where eventnumber = ?");
     $st->bindValue(1, $eventnumber);
     $st->execute();
 
