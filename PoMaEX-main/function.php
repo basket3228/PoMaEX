@@ -51,7 +51,7 @@ function get_enemy()
 function get_enemy1($eventnumber)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select e1.enemy_id, e1.enemy_name as e1, eventnumber, LGparty.LGparty_id from LGparty
+    $st = $pdo->prepare("select LGparty.enemy_id1, e1.enemy_name as e1, eventnumber, LGparty.LGparty_id from LGparty
     left join enemy as e1 on e1.enemy_id = LGparty.enemy_id1
     where eventnumber = ?");
     $st->bindValue(1, $eventnumber);
@@ -68,7 +68,7 @@ function get_enemy1($eventnumber)
 function get_enemy2($eventnumber)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select e2.enemy_id, e2.enemy_name as e2, eventnumber, LGparty.LGparty_id from LGparty
+    $st = $pdo->prepare("select LGparty.enemy_id2, e2.enemy_name as e2, eventnumber, LGparty.LGparty_id from LGparty
     left join enemy as e2 on e2.enemy_id = LGparty.enemy_id2
     where eventnumber = ?");
     $st->bindValue(1, $eventnumber);
@@ -84,7 +84,7 @@ function get_enemy2($eventnumber)
 function get_enemy3($eventnumber)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select e3.enemy_id, e3.enemy_name as e3, eventnumber, LGparty.LGparty_id from LGparty
+    $st = $pdo->prepare("select LGparty.enemy_id3, e3.enemy_name as e3, eventnumber, LGparty.LGparty_id from LGparty
     left join enemy as e3 on e3.enemy_id = LGparty.enemy_id3
     where eventnumber = ?");
     $st->bindValue(1, $eventnumber);

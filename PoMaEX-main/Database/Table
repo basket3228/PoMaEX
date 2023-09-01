@@ -8,9 +8,9 @@ CREATE TABLE enemy (
     enemy_name VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE lucky_skills (
-    lucky_skill_id INT PRIMARY KEY AUTO_INCREMENT,
-    lucky_skill_name VARCHAR(255) not NULL
+CREATE TABLE luckyskill (
+    luckyskill_id INT PRIMARY KEY AUTO_INCREMENT,
+    luckyskill_name VARCHAR(255) not NULL
 );
 
 CREATE table type (
@@ -25,7 +25,7 @@ CREATE TABLE sync (
     FOREIGN KEY (type_id) REFERENCES type(type_id)
 );
 
-CREATE TABLE partyCategory (
+CREATE TABLE category (
     category_id INT PRIMARY KEY AUTO_INCREMENT,
     category_name VARCHAR (50) not null
 );
@@ -40,7 +40,7 @@ CREATE TABLE trainer (
     trainer_name VARCHAR(50) NOT NULL,
     sync_id INT NOT NULL,
     role_id int not NULL,
-    EX_flg boolean not null,
+    EX_Flg boolean not null,
     potential int not null,
     stars int not null,
     FOREIGN KEY (sync_id) REFERENCES sync(sync_id),
@@ -51,62 +51,56 @@ create table CSparty (
     CSparty_id int PRIMARY KEY AUTO_INCREMENT,
     category_id int not null,
     type_id int null,
-    FOREIGN KEY (category_id) REFERENCES partyCategory(category_id),
-    FOREIGN KEY (type_id) REFERENCES type(type_id)
-    );
-
-create table CSdetail (
-    CSdetail_id int PRIMARY KEY AUTO_INCREMENT,
-    CSparty_id int not null,
     trainer_id1 int,
     trainer_id2 int,
     trainer_id3 int,
     lucky_skill_id1 int not null,
     lucky_skill_id2 int not null,
     lucky_skill_id3 int not null,
-    PoMaTool_URL1 VARCHAR(255),
-    PoMaTool_URL2 VARCHAR(255),
-    PoMaTool_URL3 VARCHAR(255),
-    FOREIGN KEY (CSparty_id) REFERENCES CSparty(CSparty_id),
+    URL1 VARCHAR(255),
+    URL2 VARCHAR(255),
+    URL3 VARCHAR(255),
+    FOREIGN KEY (category_id) REFERENCES category(category_id),
+    FOREIGN KEY (type_id) REFERENCES type(type_id),
     FOREIGN KEY (trainer_id1) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id2) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id3) REFERENCES trainer(trainer_id),
-    FOREIGN KEY (lucky_skill_id1) REFERENCES lucky_skills(lucky_skill_id),
-    FOREIGN KEY (lucky_skill_id2) REFERENCES lucky_skills(lucky_skill_id),
-    FOREIGN KEY (lucky_skill_id3) REFERENCES lucky_skills(lucky_skill_id)
+    FOREIGN KEY (lucky_skill_id1) REFERENCES lucky_skill(lucky_skill_id),
+    FOREIGN KEY (lucky_skill_id2) REFERENCES lucky_skill(lucky_skill_id),
+    FOREIGN KEY (lucky_skill_id3) REFERENCES lucky_skill(lucky_skill_id)
     );
 
-create table LGparty(
-    LGparty_id int PRIMARY KEY AUTO_INCREMENT,
-    category_id int not null,
+create table LG(
+    LG_id int PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) not null,
     eventNumber int not null,
     enemy_id1 int not null,
     enemy_id2 int not null,
     enemy_id3 int not null,
-    FOREIGN KEY (category_id) REFERENCES partyCategory(category_id),
     FOREIGN KEY (enemy_id1) REFERENCES enemy(enemy_id),
     FOREIGN KEY (enemy_id2) REFERENCES enemy(enemy_id),
     FOREIGN KEY (enemy_id3) REFERENCES enemy(enemy_id)
     );
 
-create table LGdetail(
-    LGdetail_id int not null PRIMARY KEY AUTO_INCREMENT,
-    LGparty_id int not null,
+create table LGParty(
+    LGparty_id int not null PRIMARY KEY AUTO_INCREMENT,
+    category_id int not null,
+    LG_id int not null,
     trainer_id1 int,
     trainer_id2 int,
     trainer_id3 int,
     lucky_skill_id1 int not null,
     lucky_skill_id2 int not null,
     lucky_skill_id3 int not null,
-    PoMaTool_URL1 VARCHAR(255),
-    PoMaTool_URL2 VARCHAR(255),
-    PoMaTool_URL3 VARCHAR(255),
-    FOREIGN KEY (LGparty_id) REFERENCES LG_party(LGparty_id),
+    URL1 VARCHAR(255),
+    URL2 VARCHAR(255),
+    URL3 VARCHAR(255),
+    FOREIGN KEY (category_id) REFERENCES category(category_id),
+    FOREIGN KEY (LG_id) REFERENCES LG(LG_id),
     FOREIGN KEY (trainer_id1) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id2) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id3) REFERENCES trainer(trainer_id),
-    FOREIGN KEY (lucky_skill_id1) REFERENCES lucky_skills(lucky_skill_id),
-    FOREIGN KEY (lucky_skill_id2) REFERENCES lucky_skills(lucky_skill_id),
-    FOREIGN KEY (lucky_skill_id3) REFERENCES lucky_skills(lucky_skill_id)
+    FOREIGN KEY (lucky_skill_id1) REFERENCES lucky_skill(lucky_skill_id),
+    FOREIGN KEY (lucky_skill_id2) REFERENCES lucky_skill(lucky_skill_id),
+    FOREIGN KEY (lucky_skill_id3) REFERENCES lucky_skill(lucky_skill_id)
     );
