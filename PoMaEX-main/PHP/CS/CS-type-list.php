@@ -1,5 +1,6 @@
 <?php
 require('../../function.php');
+$category_id = $_GET['category_id'];
 $types = get_type();
 
 ?>
@@ -36,7 +37,7 @@ $types = get_type();
                 <ul>
                     <?php foreach ($types as $type) { ?>
                         <div class="type">
-                            <li><a href="CS-party-list.php?type_id=<?= special($type['type_id']) ?>">
+                            <li><a href="CS-party-list.php?type_id=<?= special($type['type_id']) ?>&category_id=<?= $category_id ?>">
                                     <img src="../../type/<?= special($type['type_name']) ?>.png"></li>
                             </a>
                         </div>

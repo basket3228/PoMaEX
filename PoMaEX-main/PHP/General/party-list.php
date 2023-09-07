@@ -1,6 +1,6 @@
 <?php
 require('../../function.php');
-$categories = get_partyCategory();
+$categories = get_category();
 
 ?>
 
@@ -34,13 +34,13 @@ $categories = get_partyCategory();
             <div class="content">
                 <?php foreach ($categories as $category) { ?>
                     <?php if ($category['category_name'] == 'レジェンドアドベンチャー') { ?>
-                        <a href="../LG/LGList.php"><?= special($category['category_name']) ?>
+                        <a href="../LG/LGList.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
                             <img src="../../img/LG.png"></a>
                     <?php } else if ($category['category_name'] == 'チャンピオンバトル') { ?>
-                        <a href="../CS/CS-type-list.php"><?= special($category['category_name']) ?>
+                        <a href="../CS/CS-type-list.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
                             <img src="../../img/CS.png"></a>
                     <?php } else { ?>
-                        <a href="../General/others.php"><?= special($category['category_name']) ?>
+                        <a href="../General/others.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
                             <img src="../../img/others.png"></a>
                     <?php } ?>
                 <?php } ?>

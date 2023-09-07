@@ -1,6 +1,7 @@
 <?php
 require('../../function.php');
 $parties = get_LGpartyList();
+$category_id = $_GET['category_id'];
 
 ?>
 
@@ -36,11 +37,10 @@ $parties = get_LGpartyList();
                 <a href="add-LG.php"><button id="btn">追加</button></a>
                 <ul>
                     <?php foreach ($parties as $party) { ?>
-                        <?php if ($party['category_id'] == 1) { ?>
+                        <?php if ($category_id == 1) { ?>
                             <li>
-                                <p><?php echo special($party['name']) ?></p>
-                                <a href="LG-party-list.php?category_id=<?= special($party['category_id']) ?>&eventnumber=<?= special($party['eventnumber']) ?>">
-                                    <?= special($party['category_name']) ?></a>
+                                <a href="LG-party-list.php?category_id=<?= $category_id ?>&eventnumber=<?= special($party['eventnumber']) ?>">
+                                    <?= special($party['name']) ?></a>
                                 <img src="../../img/LG<?= $party['eventnumber'] ?>.png">
                                 <a href="delete-LG.php?eventnumber=<?= special($party['eventnumber']) ?>"><button id="btn">削除</button></a>
                             </li>
