@@ -58,7 +58,7 @@ if (isset($_GET['LGparty_id'])) {
                                     <li>
                                         <p>1</p>
                                         <div class="EX">
-                                            <?php if ($c1['EX_flg'] == true) { ?>
+                                            <?php if ($c1['EX_Flg'] == true) { ?>
                                                 <img src="../../img/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/NotEX.png">
@@ -70,17 +70,17 @@ if (isset($_GET['LGparty_id'])) {
                                             <?php echo special($c1['potential']) ?>
                                         </div>
                                         <div class="skill">
-                                            <?php echo special($c1['lucky_skill_name']) ?>
+                                            <?php echo special($c1['luckyskill_name']) ?>
                                         </div>
-                                        <a href="<?php echo special($c1['PoMaTool_URL1']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c1['LGparty_id'] ?>&trainer_id=<?= special($c1['ti1']) ?>&category_id=<?= special($c1['category_id']) ?>"><button id="delete">Delete</button></a>
+                                        <a href="<?php echo special($c1['URL1']) ?>"><button>ボード情報</button></a>
+                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c1['LGparty_id'] ?>&trainer_id=<?= special($c1['ti1']) ?>&category_id=<?= $category_id ?>"><button id="delete">Delete</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
                             <?php foreach ($LG2 as $c2) { ?>
                                 <?php if ($c2['t2'] != null) { ?>
                                     <li>2 <br>
-                                        <?php if ($c2['EX_flg'] == true) { ?>
+                                        <?php if ($c2['EX_Flg'] == true) { ?>
                                             <img src="../../img/EX.png">
                                         <?php } else { ?>
                                             <img src="../../img/NotEX.png">
@@ -88,16 +88,16 @@ if (isset($_GET['LGparty_id'])) {
                                         <img src="../../trainer/<?= special($c2['t2']) ?>.png">
                                         <img src="../../sync/<?= special($c2['s2']) ?>.png">
                                         <?php echo special($c2['potential']) ?><br>
-                                        <?php echo special($c2['lucky_skill_name']) ?><br>
-                                        <a href="<?php echo special($c2['PoMaTool_URL2']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c2['LGparty_id'] ?>&trainer_id=<?= special($c2['ti2']) ?>&category_id=<?= special($c2['category_id']) ?>"><button id="delete">Delete</button></a>
+                                        <?php echo special($c2['luckyskill_name']) ?><br>
+                                        <a href="<?php echo special($c2['URL2']) ?>"><button>ボード情報</button></a>
+                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c2['LGparty_id'] ?>&trainer_id=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>"><button id="delete">Delete</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
                             <?php foreach ($LG3 as $c3) { ?>
                                 <?php if ($c3['t3'] != null) { ?>
                                     <li>3 <br>
-                                        <?php if ($c3['EX_flg'] == true) { ?>
+                                        <?php if ($c3['EX_Flg'] == true) { ?>
                                             <img src="../../img/EX.png">
                                         <?php } else { ?>
                                             <img src="../../img/NotEX.png">
@@ -105,9 +105,9 @@ if (isset($_GET['LGparty_id'])) {
                                         <img src="../../trainer/<?= special($c3['t3']) ?>.png">
                                         <img src="../../sync/<?= special($c3['s3']) ?>.png">
                                         <?php echo special($c3['potential']) ?><br>
-                                        <?php echo special($c3['lucky_skill_name']) ?><br>
-                                        <a href="<?php echo special($c3['PoMaTool_URL3']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c3['LGparty_id'] ?>&trainer_id=<?= special($c3['ti3']) ?>&category_id=<?= special($c3['category_id']) ?>"><button id="delete">Delete</button></a>
+                                        <?php echo special($c3['luckyskill_name']) ?><br>
+                                        <a href="<?php echo special($c3['URL3']) ?>"><button>ボード情報</button></a>
+                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c3['LGparty_id'] ?>&trainer_id=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>"><button id="delete">Delete</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -119,7 +119,7 @@ if (isset($_GET['LGparty_id'])) {
                                     <li>
                                         <p>1</p>
                                         <div class="EX">
-                                            <?php if ($c1['EX_flg'] == true) { ?>
+                                            <?php if ($c1['EX_Flg'] == true) { ?>
                                                 <img src="../../img/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/NotEX.png">
@@ -131,17 +131,17 @@ if (isset($_GET['LGparty_id'])) {
                                             <?php echo special($c1['potential']) ?>
                                         </div>
                                         <div class="skill">
-                                            <?php echo special($c1['lucky_skill_name']) ?>
+                                            <?php echo special($c1['luckyskill_name']) ?>
                                         </div>
-                                        <a href="<?php echo special($c1['PoMaTool_URL1']) ?>"><button>ボード情報</button></a>
-                                        <button id="delete"><a href="../CLUD/delete-party.php?CSparty_id=<?= $c1['CSparty_id'] ?>&trainer_id=<?= special($c1['ti1']) ?>">Delete</a></button>
+                                        <a href="<?php echo special($c1['URL1']) ?>"><button>ボード情報</button></a>
+                                        <a href="../CLUD/delete-party.php?CSparty_id=<?= $c1['CSparty_id'] ?>&trainer_id=<?= special($c1['ti1']) ?>&category_id=<?= $category_id ?>" <button id="delete">Delete</a></button>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
                             <?php foreach ($CS2 as $c2) { ?>
                                 <?php if ($c2['t2'] != null) { ?>
                                     <li>2 <br>
-                                        <?php if ($c2['EX_flg'] == true) { ?>
+                                        <?php if ($c2['EX_Flg'] == true) { ?>
                                             <img src="../../img/EX.png">
                                         <?php } else { ?>
                                             <img src="../../img/NotEX.png">
@@ -149,16 +149,16 @@ if (isset($_GET['LGparty_id'])) {
                                         <img src="../../trainer/<?= special($c2['t2']) ?>.png">
                                         <img src="../../sync/<?= special($c2['s2']) ?>.png">
                                         <?php echo special($c2['potential']) ?><br>
-                                        <?php echo special($c2['lucky_skill_name']) ?><br>
-                                        <a href="<?php echo special($c2['PoMaTool_URL2']) ?>"><button>ボード情報</button></a>
-                                        <button id="delete"><a href="../CLUD/delete-party.php?CSparty_id=<?= $c2['CSparty_id'] ?>&trainer_id=<?= special($c2['ti2']) ?>">Delete</a></button>
+                                        <?php echo special($c2['luckyskill_name']) ?><br>
+                                        <a href="<?php echo special($c2['URL2']) ?>"><button>ボード情報</button></a>
+                                        <a href="../CLUD/delete-party.php?CSparty_id=<?= $c2['CSparty_id'] ?>&trainer_id=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>" <button id="delete">Delete</a></button>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
                             <?php foreach ($CS3 as $c3) { ?>
                                 <?php if ($c3['t3'] != null) { ?>
                                     <li>3 <br>
-                                        <?php if ($c3['EX_flg'] == true) { ?>
+                                        <?php if ($c3['EX_Flg'] == true) { ?>
                                             <img src="../../img/EX.png">
                                         <?php } else { ?>
                                             <img src="../../img/NotEX.png">
@@ -166,9 +166,9 @@ if (isset($_GET['LGparty_id'])) {
                                         <img src="../../trainer/<?= special($c3['t3']) ?>.png">
                                         <img src="../../sync/<?= special($c3['s3']) ?>.png">
                                         <?php echo special($c3['potential']) ?><br>
-                                        <?php echo special($c3['lucky_skill_name']) ?><br>
-                                        <a href="<?php echo special($c3['PoMaTool_URL3']) ?>"><button>ボード情報</button></a>
-                                        <button id="delete"><a href="../CLUD/delete-party.php?CSparty_id=<?= $c3['CSparty_id'] ?>&trainer_id=<?= special($c3['ti3']) ?>">Delete</a></button>
+                                        <?php echo special($c3['luckyskill_name']) ?><br>
+                                        <a href="<?php echo special($c3['URL3']) ?>"><button>ボード情報</button></a>
+                                        <a href="../CLUD/delete-party.php?CSparty_id=<?= $c3['CSparty_id'] ?>&trainer_id=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>" <button id="delete">Delete</a></button>
                                     </li>
                                 <?php } ?>
                             <?php } ?>

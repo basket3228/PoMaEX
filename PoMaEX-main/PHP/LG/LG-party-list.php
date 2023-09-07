@@ -48,7 +48,7 @@ $e3 = get_enemy3($eventnumber);
                         <?php foreach ($parties as $party) { ?>
                             <?php if ($party['LGparty_id'] != null) { ?>
                                 <li>
-                                    <a href="../General/party-detail.php?LGparty_id=<?= special($party['LGparty_id']) ?>&category_id=<?= special($party['category_id']) ?>">編成詳細へ</a>
+                                    <a href="../General/party-detail.php?LGparty_id=<?= special($party['LGparty_id']) ?>&category_id=<?= $category_id ?>">編成詳細へ</a>
                                     <img src="../../trainer/<?= special($party['trainer_name']) ?>.png">
                                 </li>
                             <?php } ?>

@@ -1,5 +1,6 @@
 SET foreign_key_checks = 0;
 
+drop database pokemas;
 create database pokemas;
 use pokemas;
 
@@ -54,9 +55,9 @@ create table CSparty (
     trainer_id1 int,
     trainer_id2 int,
     trainer_id3 int,
-    lucky_skill_id1 int not null,
-    lucky_skill_id2 int not null,
-    lucky_skill_id3 int not null,
+    luckyskill_id1 int not null,
+    luckyskill_id2 int not null,
+    luckyskill_id3 int not null,
     URL1 VARCHAR(255),
     URL2 VARCHAR(255),
     URL3 VARCHAR(255),
@@ -65,9 +66,9 @@ create table CSparty (
     FOREIGN KEY (trainer_id1) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id2) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id3) REFERENCES trainer(trainer_id),
-    FOREIGN KEY (lucky_skill_id1) REFERENCES lucky_skill(lucky_skill_id),
-    FOREIGN KEY (lucky_skill_id2) REFERENCES lucky_skill(lucky_skill_id),
-    FOREIGN KEY (lucky_skill_id3) REFERENCES lucky_skill(lucky_skill_id)
+    FOREIGN KEY (luckyskill_id1) REFERENCES luckyskill(luckyskill_id),
+    FOREIGN KEY (luckyskill_id2) REFERENCES luckyskill(luckyskill_id),
+    FOREIGN KEY (luckyskill_id3) REFERENCES luckyskill(luckyskill_id)
     );
 
 create table LG(
@@ -89,9 +90,9 @@ create table LGParty(
     trainer_id1 int,
     trainer_id2 int,
     trainer_id3 int,
-    lucky_skill_id1 int not null,
-    lucky_skill_id2 int not null,
-    lucky_skill_id3 int not null,
+    luckyskill_id1 int not null,
+    luckyskill_id2 int not null,
+    luckyskill_id3 int not null,
     URL1 VARCHAR(255),
     URL2 VARCHAR(255),
     URL3 VARCHAR(255),
@@ -100,7 +101,7 @@ create table LGParty(
     FOREIGN KEY (trainer_id1) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id2) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id3) REFERENCES trainer(trainer_id),
-    FOREIGN KEY (lucky_skill_id1) REFERENCES lucky_skill(lucky_skill_id),
-    FOREIGN KEY (lucky_skill_id2) REFERENCES lucky_skill(lucky_skill_id),
-    FOREIGN KEY (lucky_skill_id3) REFERENCES lucky_skill(lucky_skill_id)
+    FOREIGN KEY (luckyskill_id1) REFERENCES luckyskill(luckyskill_id),
+    FOREIGN KEY (luckyskill_id2) REFERENCES luckyskill(luckyskill_id),
+    FOREIGN KEY (luckyskill_id3) REFERENCES luckyskill(luckyskill_id)
     );

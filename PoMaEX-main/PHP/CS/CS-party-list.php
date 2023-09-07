@@ -1,5 +1,6 @@
 <?php
 require('../../function.php');
+$category_id = $_GET['category_id'];
 $type_id = $_GET['type_id'];
 $parties = get_CSList($type_id);
 $types = get_type();
@@ -43,7 +44,7 @@ $types = get_type();
                     <?php foreach ($parties as $party) { ?>
                         <?php if ($party['CSparty_id'] != null) { ?>
                             <li>
-                                <a href="../General/party-detail.php?CSparty_id=<?= special($party['CSparty_id']) ?>&category_id=<?= special($party['category_id']) ?>">編成詳細へ</a>
+                                <a href="../General/party-detail.php?CSparty_id=<?= special($party['CSparty_id']) ?>&category_id=<?= $category_id ?>">編成詳細へ</a>
                                 <img src="../../trainer/<?= special($party['trainer_name']) ?>.png">
                             </li>
                         <?php } ?>
