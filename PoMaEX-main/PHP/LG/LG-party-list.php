@@ -1,11 +1,11 @@
 <?php
 require('../../function.php');
 $category_id = $_GET['category_id'];
-$eventnumber = $_GET['eventnumber'];
-$parties = get_LGParty($eventnumber);
-$e1 = get_enemy1($eventnumber);
-$e2 = get_enemy2($eventnumber);
-$e3 = get_enemy3($eventnumber);
+$LG_id = $_GET['LG_id'];
+$parties = get_LGParty($LG_id);
+$e1 = get_enemy1($LG_id);
+$e2 = get_enemy2($LG_id);
+$e3 = get_enemy3($LG_id);
 
 ?>
 <!DOCTYPE html>
@@ -37,7 +37,7 @@ $e3 = get_enemy3($eventnumber);
         <main>
             <div class="content">
                 <h2><?= LG ?></h2>
-                <a href="add-LGparty.php?eventnumber=<?= $eventnumber ?>&category_id=<?= $category_id ?>"><button>追加</button></a>
+                <a href="add-LGparty.php?LG_id=<?= special($e1['LG_id']) ?>&category_id=<?= $category_id ?>"><button>追加</button></a>
                 <ul>
                     <div class="enemy">
                         <li><a href="search.php?enemy_id=<?= special($e1['enemy_id1']) ?>"><button><?php echo special($e1['e1']) ?></button></a></li>
