@@ -1,7 +1,8 @@
 <?php
 require('../../function.php');
 $enemies = get_enemy();
-$categories = get_partyCategory();
+$category_id = $_GET['category_id'];
+$categories = get_category();
 
 ?>
 <!DOCTYPE html>
@@ -32,27 +33,30 @@ $categories = get_partyCategory();
 
         <main>
             <div class="content">
-                <form action="add-LG-post.php" autocomplete="off">
+                <form action="add-LG-post.php?>" autocomplete="off" method="get">
                     <label for="name">名前</label>
                     <input type="text" name="name" id="name">
                     <label for="eventnumber">第何回</label>
                     <input type="number" min="10" name="eventnumber" id="eventnumber">
                     <select name="enemy1" id="enemy1">
+                        <option value="">--選択してください--</option>
                         <?php foreach ($enemies as $enemy) { ?>
                             <option value="<?= special($enemy['enemy_id']) ?>"><?= special($enemy['enemy_name']) ?></option>
                         <?php } ?>
                     </select>
                     <select name="enemy2" id="enemy2">
+                        <option value="">--選択してください--</option>
                         <?php foreach ($enemies as $enemy) { ?>
                             <option value="<?= special($enemy['enemy_id']) ?>"><?= special($enemy['enemy_name']) ?></option>
                         <?php } ?>
                     </select>
                     <select name="enemy3" id="enemy3">
+                        <option value="">--選択してください--</option>
                         <?php foreach ($enemies as $enemy) { ?>
                             <option value="<?= special($enemy['enemy_id']) ?>"><?= special($enemy['enemy_name']) ?></option>
                         <?php } ?>
                     </select>
-                    <input type="hidden" value="1" name="category">
+                    <input type="hidden" value="1" name="category_id">
                     <input type="submit" value="登録">
                 </form>
             </div>

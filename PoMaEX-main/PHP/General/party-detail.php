@@ -73,7 +73,7 @@ if (isset($_GET['LGparty_id'])) {
                                             <?php echo special($c1['luckyskill_name']) ?>
                                         </div>
                                         <a href="<?php echo special($c1['URL1']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c1['LGparty_id'] ?>&trainer_id=<?= special($c1['ti1']) ?>&category_id=<?= $category_id ?>"><button id="delete">Delete</button></a>
+                                        <a href="delete.php">削除</a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>

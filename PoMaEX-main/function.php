@@ -48,13 +48,13 @@ function get_enemy()
     return $enemy;
 }
 
-function get_enemy1($eventnumber)
+function get_enemy1($LG_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LG.enemy_id1, e1.enemy_name as e1, LG.eventnumber from LG
+    $st = $pdo->prepare("select LG.enemy_id1, e1.enemy_name as e1, LG.LG_id from LG
     left join enemy as e1 on e1.enemy_id = LG.enemy_id1
-    where eventnumber = ?");
-    $st->bindValue(1, $eventnumber);
+    where LG_id = ?");
+    $st->bindValue(1, $LG_id);
     $st->execute();
     $enemy = $st->fetch();
 
@@ -65,13 +65,13 @@ function get_enemy1($eventnumber)
 }
 
 
-function get_enemy2($eventnumber)
+function get_enemy2($LG_id)
 {
     $pdo = get_connection();
     $st = $pdo->prepare("select LG.enemy_id2, e2.enemy_name as e2, LG.eventnumber from LG
     left join enemy as e2 on e2.enemy_id = LG.enemy_id2
-    where eventnumber = ?");
-    $st->bindValue(1, $eventnumber);
+    where LG_id = ?");
+    $st->bindValue(1, $LG_id);
     $st->execute();
     $enemy = $st->fetch();
 
@@ -81,13 +81,13 @@ function get_enemy2($eventnumber)
     return $enemy;
 }
 
-function get_enemy3($eventnumber)
+function get_enemy3($LG_id)
 {
     $pdo = get_connection();
     $st = $pdo->prepare("select LG.enemy_id3, e3.enemy_name as e3, LG.eventnumber from LG
     left join enemy as e3 on e3.enemy_id = LG.enemy_id3
-    where eventnumber = ?");
-    $st->bindValue(1, $eventnumber);
+    where LG_id = ?");
+    $st->bindValue(1, $LG_id);
     $st->execute();
     $enemy = $st->fetch();
 
@@ -97,10 +97,10 @@ function get_enemy3($eventnumber)
     return $enemy;
 }
 
-function get_lucky_skill()
+function get_luckyskill()
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select lucky_skill_id, lucky_skill_name from lucky_skills");
+    $st = $pdo->prepare("select luckyskill_id, luckyskill_name from luckyskill");
     $st->execute();
     $lucky_skill = $st->fetchAll();
 
@@ -110,14 +110,14 @@ function get_lucky_skill()
     return $lucky_skill;
 }
 
-function get_LGParty($eventnumber)
+function get_LGParty($LG_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct LGparty.LGparty_id, LG.eventnumber, LG.enemy_id1, LG.enemy_id2, LG.enemy_id3, trainer.trainer_name from LGparty
-    left join LG on LG.LG_id = Lgparty.LG_id
+    $st = $pdo->prepare("select distinct LGparty.LGparty_id, LG.enemy_id1, LG.enemy_id2, LG.enemy_id3, trainer.trainer_name from LG
+    left join LGparty on LGparty.LG_id = LG.LG_id
     left join trainer on trainer.trainer_id = LGparty.trainer_id1
-    where LG.eventnumber = ?");
-    $st->bindValue(1, $eventnumber);
+    where LG.LG_id = ?");
+    $st->bindValue(1, $LG_id);
     $st->execute();
     $party = $st->fetchAll();
 
@@ -147,7 +147,7 @@ function get_CSList($type_id)
 function get_LGpartyList()
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct LG.name, LG.eventnumber from LG");
+    $st = $pdo->prepare("select distinct LG_id, name, eventnumber from LG");
     $st->execute();
     $partyList = $st->fetchAll();
 
@@ -409,7 +409,7 @@ function deleteLGparty($LGparty_id)
 function delete_LG($eventnumber)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("delete from LGparty where eventnumber = ?");
+    $st = $pdo->prepare("delete from LG where eventnumber = ?");
     $st->bindValue(1, $eventnumber);
     $st->execute();
 
@@ -444,14 +444,35 @@ function add_sync($sync)
 function add_LG($LG)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("insert into LGparty (name, eventnumber, enemy_id1, enemy_id2, enemy_id3, category_id) values
-    (:name, :eventnumber, :enemy_id1, :enemy_id2, :enemy_id3, :category_id)");
+    $st = $pdo->prepare("insert into LG (name, eventnumber, enemy_id1, enemy_id2, enemy_id3) values
+    (:name, :eventnumber, :enemy_id1, :enemy_id2, :enemy_id3)");
     $st->bindValue(':name', $LG['name']);
     $st->bindValue(':eventnumber', $LG['eventnumber']);
     $st->bindValue(':enemy_id1', $LG['enemy_id1']);
     $st->bindValue(':enemy_id2', $LG['enemy_id2']);
     $st->bindValue(':enemy_id3', $LG['enemy_id3']);
-    $st->bindValue(':category_id', $LG['category_id']);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function add_LGparty($party)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("insert into LGparty (category_id, LG_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL1, URL2, URL3) values
+    (:category_id, :LG_id, :trainer_id1, :trainer_id2, :trainer_id3, :luckyskill_id1, :luckyskill_id2, :luckyskill_id3, :URL1, :URL2, :URL3)");
+    $st->bindValue(':category_id', $party['category_id']);
+    $st->bindValue(':LG_id', $party['LG_id']);
+    $st->bindValue(':trainer_id1', $party['trainer_id1']);
+    $st->bindValue(':trainer_id2', $party['trainer_id2']);
+    $st->bindValue(':trainer_id3', $party['trainer_id3']);
+    $st->bindValue(':luckyskill_id1', $party['luckyskill_id1']);
+    $st->bindValue(':luckyskill_id2', $party['luckyskill_id2']);
+    $st->bindValue(':luckyskill_id3', $party['luckyskill_id3']);
+    $st->bindValue(':URL1', $party['URL1']);
+    $st->bindValue(':URL2', $party['URL2']);
+    $st->bindValue(':URL3', $party['URL3']);
     $st->execute();
 
     $pdo = null;
