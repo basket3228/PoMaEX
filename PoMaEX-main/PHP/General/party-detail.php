@@ -96,7 +96,7 @@ if (isset($_GET['LGparty_id'])) {
                                             <?php echo special($c1['luckyskill_name']) ?>
                                         </div>
                                         <a href="<?php echo special($c1['URL1']) ?>"><button>ボード情報</button></a>
-                                        <!-- 削除機能(ボタン)必要なidデータを飛ばす。 -->
+                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&LG_id=<?= special($c1['LG_id']) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= $category_id ?>"><button class="delete">Delete</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -136,7 +136,7 @@ if (isset($_GET['LGparty_id'])) {
                                         <?php echo special($c2['potential']) ?><br>
                                         <?php echo special($c2['luckyskill_name']) ?><br>
                                         <a href="<?php echo special($c2['URL2']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c2['LGparty_id'] ?>&trainer_id=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>"><button id="delete">Delete</button></a>
+                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&LG_id=<?= special($c2['LG_id']) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>"><button class="delete">Delete</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -176,7 +176,7 @@ if (isset($_GET['LGparty_id'])) {
                                         <?php echo special($c3['potential']) ?><br>
                                         <?php echo special($c3['luckyskill_name']) ?><br>
                                         <a href="<?php echo special($c3['URL3']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c3['LGparty_id'] ?>&trainer_id=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>"><button id="delete">Delete</button></a>
+                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&LG_id=<?= special($c2['LG_id']) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>"><button class="delete">Delete</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
