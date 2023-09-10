@@ -69,29 +69,20 @@ nav a {
   padding: 8px;
 }
 
-.content ul {
+.party-list {
   list-style-type: none;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 520px;
+  justify-content: space-between;
   padding-left: 0;
-  gap: 8px;
 }
 
 .enemy {
   list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 520px;
-  padding-left: 0;
-  gap: 8px;
+  width: calc(100% / 3 - 8px);
 }
 
-.enemy li {
+.enemy h2 {
   font-size: 20px;
-  width: 30%;
   background-color: #d3d3d3;
   border-radius: 30px;
   text-align: center;
@@ -101,33 +92,14 @@ nav a {
   margin: 0 auto;
 }
 
-.trainer {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 520px;
+.party {
   padding-left: 0;
-  gap: 8px;
 }
 
-.trainer li {
-  font-size: 20px;
-  width: 30%;
-  background-color: #d3d3d3;
+.party li {
+  padding: 16px;
+  background: #d3d3d3;
   border-radius: 30px;
-  text-align: center;
-  padding: 8px;
-  font-weight: bold;
-  font-family: sans-serif;
-  margin: 0 auto;
-}
-
-.trainer a {
-  text-decoration: none;
-}
-
-.trainer img {
-  margin: 0 auto;
-  border-radius: 30px;
+  margin-bottom: 16px;
+  list-style: none;
 }

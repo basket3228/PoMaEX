@@ -113,7 +113,7 @@ function get_luckyskill()
 function get_LGParty($LG_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct LGparty.LGparty_id, LG.enemy_id1, LG.enemy_id2, LG.enemy_id3, trainer.trainer_name from LG
+    $st = $pdo->prepare("select distinct LGparty.LGparty_id, trainer.trainer_name, enemy_id from LG
     left join LGparty on LGparty.LG_id = LG.LG_id
     left join trainer on trainer.trainer_id = LGparty.trainer_id1
     where LG.LG_id = ?");
@@ -278,7 +278,7 @@ function get_type()
 function LG1($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty.LGparty_id, t1.trainer_id as ti1, t1.trainer_name as t1, s1.sync_name as s1, t1.EX_Flg, luckyskill.luckyskill_name, t1.potential, LGparty.URL1 from LGparty
+    $st = $pdo->prepare("select LGparty.LGparty_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, t1.EX_Flg, luckyskill.luckyskill_name, t1.potential, LGparty.URL1 from LGparty
     left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join luckyskill on luckyskill.luckyskill_id = LGparty.luckyskill_id1
@@ -296,7 +296,7 @@ function LG1($LGparty_id)
 function LG2($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty.LGparty_id, t2.trainer_id as ti2, t2.trainer_name as t2, s2.sync_name as s2, t2.EX_Flg, luckyskill.luckyskill_name, t2.potential, LGparty.URL2 from LGparty
+    $st = $pdo->prepare("select LGparty.LGparty_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, t2.EX_Flg, luckyskill.luckyskill_name, t2.potential, LGparty.URL2 from LGparty
     left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
     left join sync as s2 on s2.sync_id = t2.sync_id
     left join luckyskill on luckyskill.luckyskill_id = LGparty.luckyskill_id2
@@ -314,7 +314,7 @@ function LG2($LGparty_id)
 function LG3($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty.LGparty_id, t3.trainer_id as ti3, t3.trainer_name as t3, s3.sync_name as s3, t3.EX_Flg, luckyskill.luckyskill_name, t3.potential, LGparty.URL3 from LGparty
+    $st = $pdo->prepare("select LGparty.LGparty_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, t3.EX_Flg, luckyskill.luckyskill_name, t3.potential, LGparty.URL3 from LGparty
     left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
     left join sync as s3 on s3.sync_id = t3.sync_id
     left join luckyskill on luckyskill.luckyskill_id = LGparty.luckyskill_id3
@@ -332,7 +332,7 @@ function LG3($LGparty_id)
 function CS1($CSparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select CSparty.CSparty_id, t1.trainer_id as ti1, t1.trainer_name as t1, s1.sync_name as s1, t1.EX_Flg, luckyskill.luckyskill_name, t1.potential, CSparty.URL1 from CSparty
+    $st = $pdo->prepare("select CSparty.CSparty_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, t1.EX_Flg, luckyskill.luckyskill_name, t1.potential, CSparty.URL1 from CSparty
     left join trainer as t1 on t1.trainer_id = CSparty.trainer_id1
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join luckyskill on luckyskill.luckyskill_id = CSparty.luckyskill_id1
@@ -351,7 +351,7 @@ function CS1($CSparty_id)
 function CS2($CSparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select CSparty.CSparty_id, t2.trainer_id as ti2, t2.trainer_name as t2, s2.sync_name as s2, t2.EX_Flg, luckyskill.luckyskill_name, t2.potential, CSparty.URL2 from CSparty
+    $st = $pdo->prepare("select CSparty.CSparty_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, t2.EX_Flg, luckyskill.luckyskill_name, t2.potential, CSparty.URL2 from CSparty
     left join trainer as t2 on t2.trainer_id = CSparty.trainer_id2
     left join sync as s2 on s2.sync_id = t2.sync_id
     left join luckyskill on luckyskill.luckyskill_id = CSparty.luckyskill_id2
@@ -369,7 +369,7 @@ function CS2($CSparty_id)
 function CS3($CSparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select CSparty.CSparty_id, t3.trainer_id as ti3, t3.trainer_name as t3, s3.sync_name as s3, t3.EX_Flg, luckyskill.luckyskill_name, t3.potential, CSparty.URL3 from CSparty
+    $st = $pdo->prepare("select CSparty.CSparty_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, t3.EX_Flg, luckyskill.luckyskill_name, t3.potential, CSparty.URL3 from CSparty
     left join trainer as t3 on t3.trainer_id = CSparty.trainer_id3
     left join sync as s3 on s3.sync_id = t3.sync_id
     left join luckyskill on luckyskill.luckyskill_id = CSparty.luckyskill_id3

@@ -99,6 +99,8 @@ $luckyskills = get_luckyskill();
                             </div>
                         <li>
                             <div class="content4">
+                                <select name="" id=""></select>
+                                <!-- 選べる敵を限定できるように調整 -->
                                 <input type="submit" value="追加">
                             </div>
                         </li>
