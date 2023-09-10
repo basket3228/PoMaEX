@@ -57,6 +57,29 @@ if (isset($_GET['LGparty_id'])) {
                                 <?php if ($c1['t1'] != null) { ?>
                                     <li>
                                         <p>1</p>
+                                        <div class="stars">
+                                            <?php if ($c1['star1'] == 1) { ?>
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c1['star1'] == 2) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c1['star1'] == 3) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c1['star1'] == 4) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c1['star1'] == 5) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } ?>
+                                        </div>
                                         <div class="EX">
                                             <?php if ($c1['EX_Flg'] == true) { ?>
                                                 <img src="../../img/EX.png">
@@ -73,13 +96,36 @@ if (isset($_GET['LGparty_id'])) {
                                             <?php echo special($c1['luckyskill_name']) ?>
                                         </div>
                                         <a href="<?php echo special($c1['URL1']) ?>"><button>ボード情報</button></a>
-                                        <a href="delete.php">削除</a>
+                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&LG_id=<?= special($c1['LG_id']) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= $category_id ?>"><button class="delete">Delete</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
                             <?php foreach ($LG2 as $c2) { ?>
                                 <?php if ($c2['t2'] != null) { ?>
                                     <li>2 <br>
+                                        <div class="stars">
+                                            <?php if ($c2['star2'] == 1) { ?>
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c2['star2'] == 2) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c2['star2'] == 3) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c2['star2'] == 4) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c2['star2'] == 5) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } ?>
+                                        </div>
                                         <?php if ($c2['EX_Flg'] == true) { ?>
                                             <img src="../../img/EX.png">
                                         <?php } else { ?>
@@ -90,13 +136,36 @@ if (isset($_GET['LGparty_id'])) {
                                         <?php echo special($c2['potential']) ?><br>
                                         <?php echo special($c2['luckyskill_name']) ?><br>
                                         <a href="<?php echo special($c2['URL2']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c2['LGparty_id'] ?>&trainer_id=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>"><button id="delete">Delete</button></a>
+                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&LG_id=<?= special($c2['LG_id']) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>"><button class="delete">Delete</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
                             <?php foreach ($LG3 as $c3) { ?>
                                 <?php if ($c3['t3'] != null) { ?>
                                     <li>3 <br>
+                                        <div class="stars">
+                                            <?php if ($c3['star3'] == 1) { ?>
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c3['star3'] == 2) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c3['star3'] == 3) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c3['star3'] == 4) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c3['star3'] == 5) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } ?>
+                                        </div>
                                         <?php if ($c3['EX_Flg'] == true) { ?>
                                             <img src="../../img/EX.png">
                                         <?php } else { ?>
@@ -107,7 +176,7 @@ if (isset($_GET['LGparty_id'])) {
                                         <?php echo special($c3['potential']) ?><br>
                                         <?php echo special($c3['luckyskill_name']) ?><br>
                                         <a href="<?php echo special($c3['URL3']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?LGparty_id=<?= $c3['LGparty_id'] ?>&trainer_id=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>"><button id="delete">Delete</button></a>
+                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&LG_id=<?= special($c2['LG_id']) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>"><button class="delete">Delete</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -118,6 +187,29 @@ if (isset($_GET['LGparty_id'])) {
                                 <?php if ($c1['t1'] != null) { ?>
                                     <li>
                                         <p>1</p>
+                                        <div class="stars">
+                                            <?php if ($c1['star1'] == 1) { ?>
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c1['star1'] == 2) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c1['star1'] == 3) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c1['star1'] == 4) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c1['star1'] == 5) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } ?>
+                                        </div>
                                         <div class="EX">
                                             <?php if ($c1['EX_Flg'] == true) { ?>
                                                 <img src="../../img/EX.png">
@@ -141,6 +233,29 @@ if (isset($_GET['LGparty_id'])) {
                             <?php foreach ($CS2 as $c2) { ?>
                                 <?php if ($c2['t2'] != null) { ?>
                                     <li>2 <br>
+                                        <div class="stars">
+                                            <?php if ($c2['star2'] == 1) { ?>
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c2['star2'] == 2) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c2['star2'] == 3) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c2['star2'] == 4) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c2['star2'] == 5) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } ?>
+                                        </div>
                                         <?php if ($c2['EX_Flg'] == true) { ?>
                                             <img src="../../img/EX.png">
                                         <?php } else { ?>
@@ -158,6 +273,29 @@ if (isset($_GET['LGparty_id'])) {
                             <?php foreach ($CS3 as $c3) { ?>
                                 <?php if ($c3['t3'] != null) { ?>
                                     <li>3 <br>
+                                        <div class="stars">
+                                            <?php if ($c3['star3'] == 1) { ?>
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c3['star3'] == 2) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c3['star3'] == 3) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c3['star3'] == 4) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } else if ($c3['star3'] == 5) { ?>
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                                <img src="../../img/star.png">
+                                            <?php } ?>
+                                        </div>
                                         <?php if ($c3['EX_Flg'] == true) { ?>
                                             <img src="../../img/EX.png">
                                         <?php } else { ?>

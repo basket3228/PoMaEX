@@ -5,6 +5,10 @@ $category_id = $_GET['category_id'];
 $LG_id = $_GET['LG_id'];
 $trainers = get_trainer();
 $luckyskills = get_luckyskill();
+$enemy1 = $_GET['enemy_id1'];
+$enemy2 = $_GET['enemy_id2'];
+$enemy3 = $_GET['enemy_id3'];
+$enemies = get_enemy();
 
 ?>
 <!DOCTYPE html>
@@ -55,7 +59,7 @@ $luckyskills = get_luckyskill();
                                     <?php } ?>
                                 </select>
                                 <label for="URL1">PoMaTool_URL</label>
-                                <input type="url" name="URL1" id="URL1">
+                                <input type="url" name="URL1" id="URL1" autocomplete="off">
                             </div>
                         </li>
                         <li>
@@ -75,7 +79,7 @@ $luckyskills = get_luckyskill();
                                     <?php } ?>
                                 </select>
                                 <label for="URL2">PoMaTool_URL</label>
-                                <input type="url" name="URL2" id="URL2">
+                                <input type="url" name="URL2" id="URL2" autocomplete="off">
                             </div>
                         </li>
                         <li>
@@ -95,10 +99,21 @@ $luckyskills = get_luckyskill();
                                     <?php } ?>
                                 </select>
                                 <label for="URL3">PoMaTool_URL</label>
-                                <input type="url" name="URL3" id="URL3">
+                                <input type="url" name="URL3" id="URL3" autocomplete="off">
                             </div>
                         <li>
                             <div class="content4">
+                                <select name="enemy" id="enemy">
+                                    <?php foreach ($enemies as $enemy) { ?>
+                                        <?php if ($enemy['enemy_id'] == $enemy1) { ?>
+                                            <option value="<?= special($enemy1) ?>"><?php echo special($enemy['enemy_name']) ?></option>
+                                        <?php } else if ($enemy['enemy_id'] == $enemy2) { ?>
+                                            <option value="<?= special($enemy2) ?>"><?php echo special($enemy['enemy_name']) ?></option>
+                                        <?php } else if ($enemy['enemy_id'] == $enemy3) { ?>
+                                            <option value="<?= special($enemy3) ?>"><?php echo special($enemy['enemy_name']) ?></option>
+                                        <?php } ?>
+                                    <?php } ?>
+                                </select>
                                 <input type="submit" value="追加">
                             </div>
                         </li>

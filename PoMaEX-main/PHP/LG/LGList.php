@@ -42,7 +42,7 @@ $category_id = $_GET['category_id'];
                                 <a href="LG-party-list.php?LG_id=<?= special($party['LG_id']) ?>&category_id=<?= $category_id ?>">
                                     <?= special($party['name']) ?></a>
                                 <img src="../../img/LG<?= $party['eventnumber'] ?>.png">
-                                <a href="delete-LG.php?LG_id=<?= special($party['LG_id']) ?>&category_id=<?= $category_id ?>"><button id="btn">削除</button></a>
+                                <a href="delete-LG.php?eventnumber=<?= special($party['eventnumber']) ?>&category_id=<?= $category_id ?>"><button id="btn">削除</button></a>
                             </li>
                         <?php } ?>
                     <?php } ?>

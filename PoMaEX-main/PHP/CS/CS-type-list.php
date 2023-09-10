@@ -38,8 +38,8 @@ $types = get_type();
                     <?php foreach ($types as $type) { ?>
                         <div class="type">
                             <li><a href="CS-party-list.php?type_id=<?= special($type['type_id']) ?>&category_id=<?= $category_id ?>">
-                                    <img src="../../type/<?= special($type['type_name']) ?>.png"></li>
-                            </a>
+                                    <img src="../../type/<?= special($type['type_name']) ?>.png">
+                                </a></li>
                         </div>
                     <?php } ?>
                 </ul>
