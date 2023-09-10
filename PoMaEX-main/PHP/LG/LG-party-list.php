@@ -37,7 +37,7 @@ $e3 = get_enemy3($LG_id);
         <main>
             <div class="content">
                 <h2><?= LG ?></h2>
-                <a href="add-LGparty.php?LG_id=<?= special($e1['LG_id']) ?>&category_id=<?= $category_id ?>"><button>追加</button></a>
+                <a href="add-LGparty.php?LG_id=<?= special($e1['LG_id']) ?>&category_id=<?= $category_id ?>&enemy_id1=<?= special($e1['enemy_id1']) ?>&enemy_id2=<?= special($e2['enemy_id2']) ?>&enemy_id3=<?= special($e3['enemy_id3']) ?>"><button>追加</button></a>
                 <ul class="party-list">
                     <li class="enemy">
                         <h2><a href="search.php?enemy_id=<?= special($e1['enemy_id1']) ?>"><button><?php echo special($e1['e1']) ?></button></a></h2>

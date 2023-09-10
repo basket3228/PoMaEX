@@ -3,6 +3,7 @@ require('../../function.php');
 
 $category_id = $_GET['category_id'];
 $LG_id = $_GET['LG_id'];
+$enemy = $_GET['enemy'];
 $trainer1 = $_GET['trainer1'];
 $trainer2 = $_GET['trainer2'];
 $trainer3 = $_GET['trainer3'];
@@ -16,6 +17,7 @@ $URL3 = $_GET['URL3'];
 $party = [];
 $party['category_id'] = $category_id;
 $party['LG_id'] = $LG_id;
+$party['enemy_id'] = $enemy;
 $party['trainer_id1'] = $trainer1;
 $party['trainer_id2'] = $trainer2;
 $party['trainer_id3'] = $trainer3;
