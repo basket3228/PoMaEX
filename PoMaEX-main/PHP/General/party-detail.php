@@ -55,7 +55,7 @@ if (isset($_GET['LGparty_id'])) {
                         <?php foreach ($LG1 as $c1) { ?>
                             <?php if ($LGparty_id == $c1['LGparty_id']) { ?>
                                 <?php if ($c1['t1'] != null) { ?>
-                                    <li>
+                                    <li data-type="<?= special($c1['tn1']) ?>">
                                         <p>1</p>
                                         <div class="stars">
                                             <?php if ($c1['star1'] == 1) { ?>
@@ -102,7 +102,8 @@ if (isset($_GET['LGparty_id'])) {
                             <?php } ?>
                             <?php foreach ($LG2 as $c2) { ?>
                                 <?php if ($c2['t2'] != null) { ?>
-                                    <li>2 <br>
+                                    <li data-type="<?= special($c2['tn2']) ?>">
+                                        <p>2</p>
                                         <div class="stars">
                                             <?php if ($c2['star2'] == 1) { ?>
                                                 <img src="../../img/star.png">
@@ -142,7 +143,8 @@ if (isset($_GET['LGparty_id'])) {
                             <?php } ?>
                             <?php foreach ($LG3 as $c3) { ?>
                                 <?php if ($c3['t3'] != null) { ?>
-                                    <li>3 <br>
+                                    <li data-type="<?= special($c3['tn3']) ?>">
+                                        <p>3</p>
                                         <div class="stars">
                                             <?php if ($c3['star3'] == 1) { ?>
                                                 <img src="../../img/star.png">
@@ -185,7 +187,7 @@ if (isset($_GET['LGparty_id'])) {
                         <?php foreach ($CS1 as $c1) { ?>
                             <?php if ($CSparty_id == $c1['CSparty_id']) { ?>
                                 <?php if ($c1['t1'] != null) { ?>
-                                    <li>
+                                    <li data-type="<?= special($c1['tn1']) ?>">
                                         <p>1</p>
                                         <div class="stars">
                                             <?php if ($c1['star1'] == 1) { ?>
@@ -232,7 +234,8 @@ if (isset($_GET['LGparty_id'])) {
                             <?php } ?>
                             <?php foreach ($CS2 as $c2) { ?>
                                 <?php if ($c2['t2'] != null) { ?>
-                                    <li>2 <br>
+                                    <li data-type="<?= special($c2['tn2']) ?>">
+                                        <p>2</p>
                                         <div class="stars">
                                             <?php if ($c2['star2'] == 1) { ?>
                                                 <img src="../../img/star.png">
@@ -272,7 +275,8 @@ if (isset($_GET['LGparty_id'])) {
                             <?php } ?>
                             <?php foreach ($CS3 as $c3) { ?>
                                 <?php if ($c3['t3'] != null) { ?>
-                                    <li>3 <br>
+                                    <li data-type="<?= special($c3['tn3']) ?>">
+                                        <p>3</p>
                                         <div class="stars">
                                             <?php if ($c3['star3'] == 1) { ?>
                                                 <img src="../../img/star.png">
