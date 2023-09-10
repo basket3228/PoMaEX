@@ -59,7 +59,7 @@ $enemies = get_enemy();
                                     <?php } ?>
                                 </select>
                                 <label for="URL1">PoMaTool_URL</label>
-                                <input type="url" name="URL1" id="URL1">
+                                <input type="url" name="URL1" id="URL1" autocomplete="off">
                             </div>
                         </li>
                         <li>
@@ -79,7 +79,7 @@ $enemies = get_enemy();
                                     <?php } ?>
                                 </select>
                                 <label for="URL2">PoMaTool_URL</label>
-                                <input type="url" name="URL2" id="URL2">
+                                <input type="url" name="URL2" id="URL2" autocomplete="off">
                             </div>
                         </li>
                         <li>
@@ -99,7 +99,7 @@ $enemies = get_enemy();
                                     <?php } ?>
                                 </select>
                                 <label for="URL3">PoMaTool_URL</label>
-                                <input type="url" name="URL3" id="URL3">
+                                <input type="url" name="URL3" id="URL3" autocomplete="off">
                             </div>
                         <li>
                             <div class="content4">

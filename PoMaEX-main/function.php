@@ -115,7 +115,7 @@ function get_LGParty($LG_id)
     $pdo = get_connection();
     $st = $pdo->prepare("select distinct LGparty.LGparty_id, trainer.trainer_name, enemy_id from LG
     left join LGparty on LGparty.LG_id = LG.LG_id
-    left join trainer on trainer.trainer_id = LGparty.trainer_id1
+    left join trainer on trainer.trainer_id = LGparty.trainer_id2
     where LG.LG_id = ?");
     $st->bindValue(1, $LG_id);
     $st->execute();
