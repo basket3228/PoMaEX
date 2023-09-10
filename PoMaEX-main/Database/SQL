@@ -986,5 +986,6 @@ insert into LGparty (category_id, LG_id, enemy_id, trainer_id1, trainer_id2, tra
     (1, 1, 12, 60, 53, 12, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', 'https://ng-pomatools.web.app/pairs/9201/63500', 'https://ng-pomatools.web.app/pairs/19300/38200'),
     (1, 1, 4, 3, 18, 97, 7, 8, 9, 'https://ng-pomatools.web.app/pairs/19401/48400', 'https://ng-pomatools.web.app/pairs/2600/24100', 'https://ng-pomatools.web.app/pairs/2601/58603'),
     (1, 1, 7, 95, 123, 64, 10, 11, 12, 'https://ng-pomatools.web.app/pairs/19100/60100', 'https://ng-pomatools.web.app/pairs/19800/33600', 'https://ng-pomatools.web.app/pairs/2900/32400'),
-    (1, 1, 7, 56, 253, 312, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', 'https://ng-pomatools.web.app/pairs/9201/63500', 'https://ng-pomatools.web.app/pairs/19300/38200')
+    (1, 1, 7, 56, 253, 312, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', 'https://ng-pomatools.web.app/pairs/9201/63500', 'https://ng-pomatools.web.app/pairs/19300/38200'),
+    (1, 1, 7, null, 253, null, null, 5, null, 'https://ng-pomatools.web.app/pairs/9202/80400', 'https://ng-pomatools.web.app/pairs/9201/63500', 'https://ng-pomatools.web.app/pairs/19300/38200')
 
