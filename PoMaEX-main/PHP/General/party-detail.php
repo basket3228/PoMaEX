@@ -96,12 +96,15 @@ if (isset($_GET['LGparty_id'])) {
                                             <?php echo special($c1['luckyskill_name']) ?>
                                         </div>
                                         <a href="<?php echo special($c1['URL1']) ?>"><button>ボード情報</button></a>
-                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&LG_id=<?= special($c1['LG_id']) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= $category_id ?>"><button class="delete">Delete</button></a>
+                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= $category_id ?>"><button class="delete">削除</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
                             <?php foreach ($LG2 as $c2) { ?>
-                                <?php if ($c2['t2'] != null) { ?>
+                                <?php if ($c2['t2'] == null) { ?>
+                                    <p>トレーナーを選択してください。</p>
+                                    <button>選択する</button>
+                                <?php } else if ($c2['t2'] != null) { ?>
                                     <li data-type="<?= special($c2['tn2']) ?>">
                                         <p>2</p>
                                         <div class="stars">
@@ -137,7 +140,7 @@ if (isset($_GET['LGparty_id'])) {
                                         <?php echo special($c2['potential']) ?><br>
                                         <?php echo special($c2['luckyskill_name']) ?><br>
                                         <a href="<?php echo special($c2['URL2']) ?>"><button>ボード情報</button></a>
-                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&LG_id=<?= special($c2['LG_id']) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>"><button class="delete">Delete</button></a>
+                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>"><button class="delete">削除</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -178,7 +181,7 @@ if (isset($_GET['LGparty_id'])) {
                                         <?php echo special($c3['potential']) ?><br>
                                         <?php echo special($c3['luckyskill_name']) ?><br>
                                         <a href="<?php echo special($c3['URL3']) ?>"><button>ボード情報</button></a>
-                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&LG_id=<?= special($c2['LG_id']) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>"><button class="delete">Delete</button></a>
+                                        <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>"><button class="delete">削除</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -228,12 +231,15 @@ if (isset($_GET['LGparty_id'])) {
                                             <?php echo special($c1['luckyskill_name']) ?>
                                         </div>
                                         <a href="<?php echo special($c1['URL1']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?CSparty_id=<?= $c1['CSparty_id'] ?>&trainer_id=<?= special($c1['ti1']) ?>&category_id=<?= $category_id ?>" <button id="delete">Delete</a></button>
+                                        <a href="../CS/delete-CSparty.php?CSparty_id=<?= $c1['CSparty_id'] ?>&category_id=<?= $category_id ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
                             <?php foreach ($CS2 as $c2) { ?>
-                                <?php if ($c2['t2'] != null) { ?>
+                                <?php if ($c2['t2'] == null) { ?>
+                                    <p>トレーナーを選択してください。</p>
+                                    <button>選択する</button>
+                                <?php } else if ($c2['t2'] != null) { ?>
                                     <li data-type="<?= special($c2['tn2']) ?>">
                                         <p>2</p>
                                         <div class="stars">
@@ -269,7 +275,7 @@ if (isset($_GET['LGparty_id'])) {
                                         <?php echo special($c2['potential']) ?><br>
                                         <?php echo special($c2['luckyskill_name']) ?><br>
                                         <a href="<?php echo special($c2['URL2']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?CSparty_id=<?= $c2['CSparty_id'] ?>&trainer_id=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>" <button id="delete">Delete</a></button>
+                                        <a href="../CS/delete-CSparty.php?CSparty_id=<?= $c1['CSparty_id'] ?>&category_id=<?= $category_id ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -310,7 +316,7 @@ if (isset($_GET['LGparty_id'])) {
                                         <?php echo special($c3['potential']) ?><br>
                                         <?php echo special($c3['luckyskill_name']) ?><br>
                                         <a href="<?php echo special($c3['URL3']) ?>"><button>ボード情報</button></a>
-                                        <a href="../CLUD/delete-party.php?CSparty_id=<?= $c3['CSparty_id'] ?>&trainer_id=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>" <button id="delete">Delete</a></button>
+                                        <a href="../CS/delete-CSparty.php?CSparty_id=<?= $c1['CSparty_id'] ?>&category_id=<?= $category_id ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
