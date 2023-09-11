@@ -1,9 +1,10 @@
 <?php
 require('../../function.php');
 $category_id = $_GET['category_id'];
-$type_id = $_GET['type_id'];
-$parties = get_CSList($type_id);
-$types = get_type();
+$LG_id = $_GET['LG_id'];
+$enemy_id = $_GET['enemy_id'];
+$parties = get_party($LG_id, $enemy_id);
+$enemy = get_particular_enemy($enemy_id);
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +13,10 @@ $types = get_type();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS:Party-list</title>
+    <title>LG:Party-List</title>
     <link rel="icon" href="../../img/logo.ico" />
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="../../CSS/CS/CS-party.css">
+    <link rel="stylesheet" href="../../CSS/LG/LGsearch.css">
 </head>
 
 <body>
@@ -31,22 +32,18 @@ $types = get_type();
                 </ul>
             </nav>
         </header>
-        <main class="main">
+
+        <main>
             <div class="content">
-                <h2>
-                    <?php foreach ($types as $type) { ?>
-                        <?php if ($type['type_id'] == $type_id) { ?>
-                            <img src="../../type/<?= special($type['type_name']) ?>.png">
-                        <?php } ?>
-                    <?php } ?>
-                </h2>
+                <h2><?= LG ?></h2>
+                <h2><?php echo special($enemy['enemy_name']) ?></h2>
                 <ul>
                     <?php foreach ($parties as $party) { ?>
-                        <?php if ($party['CSparty_id'] != null) { ?>
+                        <?php if ($party['trainer_name'] != null) { ?>
                             <li>
-                                <a href="../General/party-detail.php?CSparty_id=<?= special($party['CSparty_id']) ?>&category_id=<?= $category_id ?>">編成詳細へ</a>
+                                <a href="../General/party-detail.php?LGparty_id=<?= special($party['LGparty_id']) ?>&category_id=<?= $category_id ?>">編成詳細へ</a>
                                 <img src="../../trainer/<?= special($party['trainer_name']) ?>.png">
-                                <a href="delete-CS-list.php?type_id=<?= $type_id ?>&category_id=<?= $category_id ?>&CSparty_id=<?= $party['CSparty_id'] ?>"><button class="delete">削除</button></a>
+                                <a href="delete-LG-list.php?LGparty_id=<?= $party['LGparty_id'] ?>&LG_id=<?= $LG_id ?>&category_id=<?= $category_id ?>"><button class="delete">削除</button></a>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -55,7 +52,7 @@ $types = get_type();
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="../../JS/CS/CS-party.js"></script>
+    <script src="../JS/LG/LG-party-list.js"></script>
 </body>
 
 </html>
