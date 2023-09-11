@@ -44,7 +44,19 @@ function get_enemy()
 
     $pdo = null;
     $st = null;
+    return $enemy;
+}
 
+function get_particular_enemy($enemy_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select enemy_id, enemy_name from enemy where enemy_id = ?");
+    $st->bindValue(1, $enemy_id);
+    $st->execute();
+    $enemy = $st->fetch();
+
+    $pdo = null;
+    $st = null;
     return $enemy;
 }
 
@@ -110,6 +122,26 @@ function get_luckyskill()
     return $lucky_skill;
 }
 
+function get_party($LG_id, $enemy_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select distinct LGparty.LGparty_id, trainer.trainer_name, LGparty.enemy_id, enemy.enemy_name from LG
+    left join LGparty on LGparty.LG_id = LG.LG_id
+    left join enemy on enemy.enemy_id = LGparty.enemy_id
+    left join trainer on trainer.trainer_id = LGparty.trainer_id2
+    where LG.LG_id = ?
+    and LGparty.enemy_id = ?");
+    $st->bindValue(1, $LG_id);
+    $st->bindValue(2, $enemy_id);
+    $st->execute();
+    $party = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $party;
+}
+
 function get_LGParty($LG_id)
 {
     $pdo = get_connection();
@@ -132,7 +164,7 @@ function get_CSList($type_id)
     $pdo = get_connection();
     $st = $pdo->prepare("select CSparty.CSparty_id, trainer.trainer_name, CSparty.type_id, type_name from CSparty
     left join type on type.type_id = CSparty.type_id
-    left join trainer on trainer.trainer_id = CSparty.trainer_id3
+    left join trainer on trainer.trainer_id = CSparty.trainer_id2
     where CSparty.type_id = ?");
     $st->bindValue(1, $type_id);
     $st->execute();
@@ -244,7 +276,6 @@ function get_technical()
 
     return $trainer;
 }
-
 
 function get_support()
 {
@@ -428,6 +459,50 @@ function deleteLGparty($LGparty_id)
     $pdo = get_connection();
     $st = $pdo->prepare("delete from LGparty where LGparty_id = ?");
     $st->bindValue(1, $LGparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function deleteCSDetail1($CSparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("update CSparty set trainer_id1 = null where CSparty_id = ?");
+    $st->bindValue(1, $CSparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function deleteCSDetail2($CSparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("update CSparty set trainer_id2 = null where CSparty_id = ?");
+    $st->bindValue(1, $CSparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function deleteCSDetail3($CSparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("update CSparty set trainer_id3 = null where CSparty_id = ?");
+    $st->bindValue(1, $CSparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function deleteCSparty($CSparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("delete from CSparty where CSparty_id = ?");
+    $st->bindValue(1, $CSparty_id);
     $st->execute();
 
     $pdo = null;
