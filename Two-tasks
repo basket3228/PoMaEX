@@ -19,10 +19,11 @@ create-random-party
 
 index.html
     ・現在PoMaEXの画像のところをかっこいいロゴに変える。
+    ・Twitterボタン。(仮でトップページに設置)
 
 add-LGparty
 ・トレーナー選択を押下で、トレーナー一覧が表示されるようにする。
     →選択したトレーナーがフォームに入力された状態となる。
 
 LG-party-list
-・imgの右に謎のmarginを消す。
+・imgの右にある謎のmarginを消す。
