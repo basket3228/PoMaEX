@@ -1,0 +1,22 @@
+ばりばりPクッキー1
+ばりばりPクッキー2
+ばりばりPクッキー3
+しっとりPクッキー3
+さくさくPクッキー2
+さくさくPクッキー3
+こんがりPクッキー3
+スペシャルPクッキー2
+スペシャルPクッキー3
+
+create table luckyskill (cookie_id int primary key auto_increment, cookie_name varchar(50) not null)
+create table pink_cookie1 (cookie_id int primary key auto_increment, cookie_name varchar(50) not null);
+create table pink_cookie2 (cookie_id int primary key auto_increment, cookie_name varchar(50) not null);
+create table pink_cookie3 (cookie_id int primary key auto_increment, cookie_name varchar(50) not null);
+create table blue_cookie3 (cookie_id int primary key auto_increment, cookie_name varchar(50) not null);
+create table yellow_cookie2 (cookie_id int primary key auto_increment, cookie_name varchar(50) not null);
+create table yellow_cookie3 (cookie_id int primary key auto_increment, cookie_name varchar(50) not null);
+create table gurad_cookie3 (cookie_id int primary key auto_increment, cookie_name varchar(50) not null);
+create table purple_cookie2 (cookie_id int primary key auto_increment, cookie_name varchar(50) not null);
+create table pueple_cookie3 (cookie_id int primary key auto_increment, cookie_name varchar(50) not null);
+
+
