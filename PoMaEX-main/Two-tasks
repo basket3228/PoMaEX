@@ -6,24 +6,30 @@ CSS調整
     CS→CS-type-listへ
     SA→未定
     その他→未定
-・パンくずリスト作成
+・パンくずリスト作成(一部の場所で欲しい、後日記載。)
 ・全ページの画像サイズ調整(必要であれば白の部分拡張OK)
 ・JS(ナブバーの挙動を調整)
 ・文字サイズ調整
-・白部分をきちんとデータを包んでね
+・白部分できちんとデータを包んでね
 ・トレーナーとポケモンを正方形にしてね(タイトルとの間隔とかも綺麗に)
 ・星を横に整列してね
+・画面レイアウト、イメージ変更。
+    →開発詳細 > 画面イメージ図参照。
+    または下記参照。
+    https://www.canva.com/design/DAFqdKX0vVQ/L7h0_THhkP800KqOgxtLrg/edit?utm_content=DAFqdKX0vVQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+・編成一覧ページを削除→編成一覧クリックで選択画面をポップアップで表示。
 
 create-random-party
 ・選びなおすボタンの実装(かなり厳しめ)
 
 index.html
     ・現在PoMaEXの画像のところをかっこいいロゴに変える。
-    ・Twitterボタン。(仮でトップページに設置)
+    ・Twitterボタン。(ナブバーに設置。用途の詳細は後日記載。)
 
 add-LGparty
-・トレーナー選択を押下で、トレーナー一覧が表示されるようにする。
-    →選択したトレーナーがフォームに入力された状態となる。
+・登録、更新はドラッグアンドドロップで行えるように。
+・削除は既存通りボタンで。
 
 LG-party-list
 ・imgの右にある謎のmarginを消す。
+
