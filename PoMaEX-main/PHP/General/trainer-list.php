@@ -34,7 +34,19 @@ $trainers = get_trainer();
         <h2>バディーズ一覧</h2>
         <ul>
           <?php foreach ($trainers as $trainer) { ?>
-            <li><img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
+            <li>
+              <?php if ($trainer['role_name'] == 'アタッカー') { ?>
+                <img src="../../img/アタッカー.png">
+              <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
+                <img src="../../img/テクニカル.png">
+              <?php } else if ($trainer['role_name'] == 'サポート') { ?>
+                <img src="../../img/サポート.png">
+              <?php } else if ($trainer['role_name'] == 'スピード') { ?>
+                <img src="../../img/スピード.png">
+              <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
+                <img src="../../img/フィールド.png">
+              <?php } ?>
+              <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
               <img src="../../sync/<?= special($trainer['sync_name']) ?>.png">
             </li>
           <?php } ?>

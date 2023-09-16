@@ -1,10 +1,8 @@
 <?php
 require('../../function.php');
+$parties = get_SApartyList();
 $category_id = $_GET['category_id'];
-$LG_id = $_GET['LG_id'];
-$enemy_id = $_GET['enemy_id'];
-$parties = get_party($LG_id, $enemy_id);
-$enemy = get_particular_enemy($enemy_id);
+
 ?>
 
 <!DOCTYPE html>
@@ -13,10 +11,10 @@ $enemy = get_particular_enemy($enemy_id);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LG:Party-List</title>
+    <title>SAList</title>
     <link rel="icon" href="../../img/logo.ico" />
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="../../CSS/LG/LGsearch.css">
+    <link rel="stylesheet" href="../../CSS/LG/LGList.css">
 </head>
 
 <body>
@@ -33,22 +31,18 @@ $enemy = get_particular_enemy($enemy_id);
             </nav>
         </header>
 
-        <main>
+        <main class="main">
             <div class="content">
-                <h2><?= LG ?></h2>
-                <!-- ↓文字を大きく画面中央に -->
-                <h2><?php echo special($enemy['enemy_name']) ?></h2>
+                <h2>編成一覧</h2>
+                <a href="add-LG.php?category_id=<?= $category_id ?>"><button id="btn">追加</button></a>
                 <ul>
                     <?php foreach ($parties as $party) { ?>
-                        <?php if ($party['t2'] != null) { ?>
+                        <?php if ($category_id == 3) { ?>
                             <li>
-                                <a href="../General/party-detail.php?LGparty_id=<?= special($party['LGparty_id']) ?>&category_id=<?= $category_id ?>">編成詳細へ</a>
-                                <!-- ↓トレーナーを横並びに、かつ一人一人離して -->
-                                <img src="../../trainer/<?= special($party['t1']) ?>.png">
-                                <img src="../../trainer/<?= special($party['t2']) ?>.png">
-                                <img src="../../trainer/<?= special($party['t3']) ?>.png">
-                            </li>
-                            <a href="delete-LG-list.php?LGparty_id=<?= $party['LGparty_id'] ?>&LG_id=<?= $LG_id ?>&category_id=<?= $category_id ?>"><button class="delete">削除</button></a>
+                                <a href="SA-party-list.php?SA_id=<?= special($party['SA_id']) ?>&category_id=<?= $category_id ?>">
+                                    <?= special($party['name']) ?></a>
+                                <img src="../../img/<?= $party['name'] ?>.png">
+                                <a href="delete-LG.php?SA_id=<?= $party['SA_id'] ?>&category_id=<?= $category_id ?>"><button id="btn">削除</button></a>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -57,7 +51,7 @@ $enemy = get_particular_enemy($enemy_id);
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="../JS/LG/LG-party-list.js"></script>
+    <script src="../../CSS/LG/LGList.css"></script>
 </body>
 
 </html>
