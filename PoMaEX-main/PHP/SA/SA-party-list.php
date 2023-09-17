@@ -1,8 +1,8 @@
 <?php
 require('../../function.php');
-$parties = get_LGpartyList();
 $category_id = $_GET['category_id'];
-
+$SA_id = $_GET['SA_id'];
+$parties = get_SAList($SA_id);
 ?>
 
 <!DOCTYPE html>
@@ -11,10 +11,10 @@ $category_id = $_GET['category_id'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LGList</title>
+    <title>SA:Party-list</title>
     <link rel="icon" href="../../img/logo.ico" />
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="../../CSS/LG/LGList.css">
+    <link rel="stylesheet" href="../../CSS/CS/CS-party.css">
 </head>
 
 <body>
@@ -30,20 +30,16 @@ $category_id = $_GET['category_id'];
                 </ul>
             </nav>
         </header>
-
         <main class="main">
             <div class="content">
-                <h2>編成一覧</h2>
-                <a href="info-list.php"><button>単騎情報</button></a>
-                <a href="add-LG.php?category_id=<?= $category_id ?>"><button id="btn">追加</button></a>
+                <h2></h2>
                 <ul>
                     <?php foreach ($parties as $party) { ?>
-                        <?php if ($category_id == 1) { ?>
+                        <?php if ($party['SAparty_id'] != null) { ?>
                             <li>
-                                <a href="LG-party-list.php?LG_id=<?= special($party['LG_id']) ?>&category_id=<?= $category_id ?>">
-                                    <?= special($party['name']) ?></a>
-                                <img src="../../img/LG<?= $party['eventnumber'] ?>.png">
-                                <a href="delete-LG.php?eventnumber=<?= special($party['eventnumber']) ?>&category_id=<?= $category_id ?>"><button id="btn">削除</button></a>
+                                <a href="../General/party-detail.php?SAparty_id=<?= special($party['SAparty_id']) ?>&category_id=<?= $category_id ?>">編成詳細へ</a>
+                                <img src="../../trainer/<?= special($party['trainer_name']) ?>.png">
+                                <a href="delete-SA-list.php?category_id=<?= $category_id ?>&SAparty_id=<?= $party['SAparty_id'] ?>"><button class="delete">削除</button></a>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -52,7 +48,7 @@ $category_id = $_GET['category_id'];
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="../../CSS/LG/LGList.css"></script>
+    <script src="../../JS/CS/CS-party.js"></script>
 </body>
 
 </html>

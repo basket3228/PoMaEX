@@ -1,6 +1,6 @@
 <?php
 require('../../function.php');
-$parties = get_LGpartyList();
+$parties = get_SApartyList();
 $category_id = $_GET['category_id'];
 
 ?>
@@ -11,7 +11,7 @@ $category_id = $_GET['category_id'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LGList</title>
+    <title>SAList</title>
     <link rel="icon" href="../../img/logo.ico" />
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
     <link rel="stylesheet" href="../../CSS/LG/LGList.css">
@@ -34,16 +34,15 @@ $category_id = $_GET['category_id'];
         <main class="main">
             <div class="content">
                 <h2>編成一覧</h2>
-                <a href="info-list.php"><button>単騎情報</button></a>
                 <a href="add-LG.php?category_id=<?= $category_id ?>"><button id="btn">追加</button></a>
                 <ul>
                     <?php foreach ($parties as $party) { ?>
-                        <?php if ($category_id == 1) { ?>
+                        <?php if ($category_id == 3) { ?>
                             <li>
-                                <a href="LG-party-list.php?LG_id=<?= special($party['LG_id']) ?>&category_id=<?= $category_id ?>">
+                                <a href="SA-party-list.php?SA_id=<?= special($party['SA_id']) ?>&category_id=<?= $category_id ?>">
                                     <?= special($party['name']) ?></a>
-                                <img src="../../img/LG<?= $party['eventnumber'] ?>.png">
-                                <a href="delete-LG.php?eventnumber=<?= special($party['eventnumber']) ?>&category_id=<?= $category_id ?>"><button id="btn">削除</button></a>
+                                <img src="../../img/<?= $party['name'] ?>.png">
+                                <a href="delete-LG.php?SA_id=<?= $party['SA_id'] ?>&category_id=<?= $category_id ?>"><button id="btn">削除</button></a>
                             </li>
                         <?php } ?>
                     <?php } ?>

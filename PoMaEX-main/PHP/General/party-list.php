@@ -40,11 +40,8 @@ $categories = get_category();
                         <a href="../CS/CS-type-list.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
                             <img src="../../img/CS.png"></a>
                     <?php } else if ($category['category_name'] == 'スコアアタック') { ?>
-                        <a href="../General/others.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
+                        <a href="../SA/SAList.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
                             <img src="../../img/SA.png"></a>
-                    <?php } else { ?>
-                        <a href="../General/others.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
-                            <img src="../../img/others.png"></a>
                     <?php } ?>
                 <?php } ?>
             </div>
