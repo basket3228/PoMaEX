@@ -321,7 +321,23 @@ function get_trainer()
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars from trainer
     left join sync on sync.sync_id = trainer.sync_id
-    left join role on role.role_id = trainer.role_id");
+    left join role on role.role_id = trainer.role_id where URL is not null");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+
+function get_mainTrainer()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join role on role.role_id = trainer.role_id where URL is null");
     $st->execute();
     $trainer = $st->fetchAll();
 

@@ -1,6 +1,7 @@
 <?php
 require('../../function.php');
 $trainers = get_trainer();
+$mainChars = get_mainTrainer();
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +33,11 @@ $trainers = get_trainer();
     <main class="main">
       <div class="content">
         <h2>バディーズ一覧</h2>
+        <!-- ↓ボタンはトレーナーアイコンと卵のアイコンがいい。押すと交互に切り替え。 -->
+        <button>表示切り替え</button>
         <ul>
+
+<!-- ↓初期表示(ボタンを押すと表示切り替え、下記に切り替え後あり。) -->
           <?php foreach ($trainers as $trainer) { ?>
             <li>
               <?php if ($trainer['role_name'] == 'アタッカー') { ?>
@@ -50,6 +55,25 @@ $trainers = get_trainer();
               <img src="../../sync/<?= special($trainer['sync_name']) ?>.png">
             </li>
           <?php } ?>
+          <!-- ↓クリックされたら下記を表示。 -->
+<!--
+          <?php foreach ($mainChars as $main) { ?>
+            <li>
+              <?php if ($main['role_name'] == 'アタッカー') { ?>
+                <img src="../../img/アタッカー.png">
+              <?php } else if ($main['role_name'] == 'テクニカル') { ?>
+                <img src="../../img/テクニカル.png">
+              <?php } else if ($main['role_name'] == 'サポート') { ?>
+                <img src="../../img/サポート.png">
+              <?php } else if ($main['role_name'] == 'スピード') { ?>
+                <img src="../../img/スピード.png">
+              <?php } else if ($main['role_name'] == 'フィールド') { ?>
+                <img src="../../img/フィールド.png">
+              <?php } ?>
+              <img src="../../trainer/<?= special($main['trainer_name']) ?>.png">
+              <img src="../../sync/<?= special($main['sync_name']) ?>.png">
+            </li>
+          <?php } ?> -->
         </ul>
       </div>
     </main>
