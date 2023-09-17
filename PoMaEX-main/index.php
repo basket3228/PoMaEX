@@ -1,6 +1,6 @@
-<?php require_once("../PHP/General/header.php") ?>
+<?php require_once("PHP/General/header.php") ?>
 <div class="container">
-  <?php require_once("../PHP/General/nav.php") ?>
+  <?php require_once("PHP/General/nav.php") ?>
   <main class="main">
     <div class="kv">
       <img src="../img/Pokemon-Masters-EX.jpeg" />
