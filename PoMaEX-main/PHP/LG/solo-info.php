@@ -1,6 +1,23 @@
 <?php
 require('../../function.php');
-$enemies = get_enemy();
+
+$enemy_id = $_GET['enemy_id'];
+
+$entei = get_entei($enemy_id);
+$raiko = get_raiko($enemy_id);
+$latios = get_latios($enemy_id);
+$latias = get_latias($enemy_id);
+$terrakion = get_terrakion($enemy_id);
+$cobalion = get_cobalion($enemy_id);
+$moltres = get_moltres($enemy_id);
+$cresselia = get_cresselia($enemy_id);
+$tornadus = get_tornadus($enemy_id);
+$tapu_bulu = get_tapu_bulu($enemy_id);
+$azelef = get_azelf($enemy_id);
+$uxie = get_uxie($enemy_id);
+$regirock = get_regirock($enemy_id);
+
+$enemy = get_particular_enemy($enemy_id);
 
 ?>
 <!DOCTYPE html>
@@ -9,22 +26,26 @@ $enemies = get_enemy();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legend-Gauntlet</title>
+    <title>Solo-Info</title>
     <link rel="icon" href="../../img/logo.ico" />
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
 </head>
 
 <body>
     <div class="container">
         <main>
+            <h2><?php echo special($enemy['enemy_name']) ?></h2>
             <div class="content">
-                <?php foreach ($enemies as $enemy) { ?>
-                    <img src="../../trainer/<?= special($enemy['enemy_name']) ?>.png">
-                <?php } ?>
+                <ul>
+                    <?php foreach ($entei as $solo) { ?>
+                        <li>
+                            <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
+                            <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        </li>
+                    <?php } ?>
+                </ul>
             </div>
         </main>
     </div>
-    <script></script>
 </body>
 
 </html>

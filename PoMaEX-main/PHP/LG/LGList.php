@@ -34,6 +34,7 @@ $category_id = $_GET['category_id'];
         <main class="main">
             <div class="content">
                 <h2>編成一覧</h2>
+                <a href="info-list.php"><button>単騎情報</button></a>
                 <a href="add-LG.php?category_id=<?= $category_id ?>"><button id="btn">追加</button></a>
                 <ul>
                     <?php foreach ($parties as $party) { ?>
