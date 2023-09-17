@@ -151,6 +151,10 @@ li {
   border-bottom: 0px;
 }
 
+.center {
+  text-align: center;
+}
+
 .kv img {
   width: 100%;
 }
@@ -243,4 +247,24 @@ li {
 
 .popup-btn:hover {
   opacity: 0.6;
+}
+
+.type-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.type-list li {
+  width: calc(100% / 7 - 8px);
+  max-width: 80px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0, 10, 30, 0.3);
+}
+
+.type-list li a {
+  vertical-align: bottom;
 }
