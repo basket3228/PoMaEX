@@ -434,6 +434,8 @@ $title = "PoMaEX | CS:Party-List";
             </ul>
         <?php } ?>
         </div>
+    </main>
+    <aside class="sidebar">
         <div class="URL">
             <form action="add-grids-info.php">
                 <input type="URL" name="URL">
@@ -445,14 +447,14 @@ $title = "PoMaEX | CS:Party-List";
                     <a href="add-grids-info?SAparty_id=<?= $SAparty_id ?>&category_id=<?= $category_id ?>"><button>ボード登録</button></a>
                 <?php } ?>
             </form>
+            <!-- 直で高さと幅入れてるのは仮だよ。 -->
             <?php if ($URL['URL'] != null) { ?>
-                <iframe src="<?= special($URL['URL']) ?>"></iframe>
+                <iframe src="<?= special($URL['URL']) ?>" height="600" width="320"></iframe>
             <?php } else { ?>
-                <iframe src="https://ng-pomatools.web.app/team"></iframe>
+                <iframe src="https://ng-pomatools.web.app/team" height="600" width="320"></iframe>
             <?php } ?>
         </div>
-    </main>
-    <aside class="sidebar">サブメニューです</aside>
+    </aside>
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="/PoMaEX-main/index.js"></script>
