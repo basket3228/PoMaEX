@@ -2,56 +2,32 @@
 require('../../function.php');
 $parties = get_SApartyList();
 $category_id = $_GET['category_id'];
-
+$title = "PoMaEX | SA:SA-List";
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAList</title>
-    <link rel="icon" href="../../img/logo.ico" />
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="../../CSS/LG/LGList.css">
-</head>
-
-<body>
-    <div class="container">
-        <header id="header">
-            <h1 class="h1"><a href="../../HTML/index.html"><img src="../../img/logo.png"></a></h1>
-            <nav>
-                <ul id="nav-list">
-                    <li id="list1"><a href="../General/party-list.php">編成一覧</a></li>
-                    <li id="list2"><a href="../General/trainer-list.php">バディーズ一覧</a></li>
-                    <li id="list3"><a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">PoMaTool</a></li>
-                    <li id="list4"><a href="../General/create-random-party.php">乱数編成生成</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="main">
-            <div class="content">
-                <h2>編成一覧</h2>
-                <a href="add-LG.php?category_id=<?= $category_id ?>"><button id="btn">追加</button></a>
-                <ul>
-                    <?php foreach ($parties as $party) { ?>
-                        <?php if ($category_id == 3) { ?>
-                            <li>
-                                <a href="SA-party-list.php?SA_id=<?= special($party['SA_id']) ?>&category_id=<?= $category_id ?>">
-                                    <?= special($party['name']) ?></a>
-                                <img src="../../img/<?= $party['name'] ?>.png">
-                                <a href="delete-LG.php?SA_id=<?= $party['SA_id'] ?>&category_id=<?= $category_id ?>"><button id="btn">削除</button></a>
-                            </li>
-                        <?php } ?>
+<?php require_once("../General/header.php") ?>
+<div class="container">
+    <?php require_once("../General/nav.php") ?>
+    <main class="main">
+        <div class="content">
+            <h2>編成一覧</h2>
+            <a href="add-LG.php?category_id=<?= $category_id ?>"><button id="btn">追加</button></a>
+            <ul>
+                <?php foreach ($parties as $party) { ?>
+                    <?php if ($category_id == 3) { ?>
+                        <li>
+                            <a href="SA-party-list.php?SA_id=<?= special($party['SA_id']) ?>&category_id=<?= $category_id ?>">
+                                <?= special($party['name']) ?></a>
+                            <img src="../../img/<?= $party['name'] ?>.png">
+                            <a href="delete-LG.php?SA_id=<?= $party['SA_id'] ?>&category_id=<?= $category_id ?>"><button id="btn">削除</button></a>
+                        </li>
                     <?php } ?>
-                </ul>
-            </div>
-        </main>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="../../CSS/LG/LGList.css"></script>
-</body>
-
-</html>
+                <?php } ?>
+            </ul>
+        </div>
+    </main>
+    <aside class="sidebar">サブメニューです</aside>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="/PoMaEX-main/index.js"></script>
+<?php require_once('../General/footer.php') ?>

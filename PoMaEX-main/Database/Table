@@ -210,3 +210,6 @@ create table SAparty (
     FOREIGN KEY (luckyskill_id2) REFERENCES luckyskill(luckyskill_id),
     FOREIGN KEY (luckyskill_id3) REFERENCES luckyskill(luckyskill_id)
     );
+
+
+

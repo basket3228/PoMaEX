@@ -1,31 +1,21 @@
 <?php
 require('../../function.php');
 $enemies = get_enemy();
-
+$title = "PoMaEX | LG:Info-List";
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legend-Battle</title>
-    <link rel="icon" href="../../img/logo.ico" />
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-</head>
+<?php require_once("../General/header.php") ?>
 
-<body>
-    <div class="container">
-        <main>
-            <div class="content">
-                <?php foreach ($enemies as $enemy) { ?>
-                    <a href="solo-info.php?enemy_id=<?= $enemy['enemy_id'] ?>"><button>ソロ情報</button></a>
-                    <img src="../../Legend_Battle/<?= special($enemy['enemy_name']) ?>.png">
-                <?php } ?>
-            </div>
-        </main>
-    </div>
-    <script></script>
-</body>
-
-</html>
+<div class="container">
+    <?php require_once("../General/nav.php") ?>
+    <main class="main">
+        <?php foreach ($enemies as $enemy) { ?>
+            <a href="solo-info.php?enemy_id=<?= $enemy['enemy_id'] ?>"><button>ソロ情報</button></a>
+            <img src="../../Legend_Battle/<?= special($enemy['enemy_name']) ?>.png">
+        <?php } ?>
+    </main>
+    <aside class="sidebar">サブメニューです</aside>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="/PoMaEX-main/index.js"></script>
+<?php require_once('../General/footer.php') ?>
