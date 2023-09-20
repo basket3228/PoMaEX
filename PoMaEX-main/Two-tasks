@@ -9,10 +9,6 @@ CSS調整
     https://www.canva.com/design/DAFqdKX0vVQ/L7h0_THhkP800KqOgxtLrg/edit?utm_content=DAFqdKX0vVQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 ・編成一覧ページを削除→編成一覧クリックで選択画面をポップアップで表示。
 ・削除ボタン押下時、確認メッセージが出るようにする。
-・ソート機能
-    タイプごと、ロールごと。
-・並び替え
-    トレーナーの名前ごと、ポケモンの名前ごと。
 
 create-random-party
 ・選びなおすボタンの実装(かなり厳しめ)
