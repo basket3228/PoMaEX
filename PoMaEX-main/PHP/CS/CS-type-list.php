@@ -16,7 +16,7 @@ $title = "PoMaEX | CS:Party-List";
         <ul class="type-list">
             <?php foreach ($types as $type) { ?>
                 <li>
-                    <a href="CS-party-list.php?type_id=<?= special($type['type_id']) ?>&category_id=<?= $category_id ?>">
+                    <a href="CS-party-list.php?type_id=<?= special($type['type_id']) ?>&category_id=<?= special($category_id) ?>">
                         <img src="../../type/<?= special($type['type_name']) ?>.png">
                     </a>
                 </li>

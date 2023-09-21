@@ -11,4 +11,4 @@ if (isset($_GET['trainer_id1'])) {
     deleteCSDetail3($CSparty_id);
 }
 
-redirect("PoMaEX-main/PHP/General/party-detail.php?CSparty_id=" . $CSparty_id . "&category_id=" . $category_id);
+redirect("PoMaEX-main/PHP/General/party-detail.php?CSparty_id=" . special($CSparty_id) . "&category_id=" . special($category_id));

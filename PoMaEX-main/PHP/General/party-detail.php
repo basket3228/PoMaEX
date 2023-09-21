@@ -80,7 +80,7 @@ $title = "PoMaEX | CS:Party-List";
                                 <div class="skill">
                                     <?php echo special($c1['luckyskill_name']) ?>
                                 </div>
-                                <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= $category_id ?>"><button class="delete">削除</button></a>
+                                <a href="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"><button class="delete">削除</button></a>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -123,7 +123,7 @@ $title = "PoMaEX | CS:Party-List";
                                 <img src="../../sync/<?= special($c2['s2']) ?>.png">
                                 <?php echo special($c2['potential']) ?><br>
                                 <?php echo special($c2['luckyskill_name']) ?><br>
-                                <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= $category_id ?>"><button class="delete">削除</button></a>
+                                <a href="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"><button class="delete">削除</button></a>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -163,7 +163,7 @@ $title = "PoMaEX | CS:Party-List";
                                 <img src="../../sync/<?= special($c3['s3']) ?>.png">
                                 <?php echo special($c3['potential']) ?><br>
                                 <?php echo special($c3['luckyskill_name']) ?><br>
-                                <a href="../LG/delete-LGparty.php?LGparty_id=<?= $LGparty_id ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= $category_id ?>"><button class="delete">削除</button></a>
+                                <a href="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"><button class="delete">削除</button></a>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -211,7 +211,7 @@ $title = "PoMaEX | CS:Party-List";
                                     <div class="skill">
                                         <?php echo special($c1['luckyskill_name']) ?>
                                     </div>
-                                    <a href="../CS/delete-CSparty.php?CSparty_id=<?= $CSparty_id ?>&category_id=<?= $category_id ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
+                                    <a href="../CS/delete-CSparty.php?CSparty_id=<?= special($CSparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -254,7 +254,7 @@ $title = "PoMaEX | CS:Party-List";
                                     <img src="../../sync/<?= special($c2['s2']) ?>.png">
                                     <?php echo special($c2['potential']) ?><br>
                                     <?php echo special($c2['luckyskill_name']) ?><br>
-                                    <a href="../CS/delete-CSparty.php?CSparty_id=<?= $CSparty_id ?>&category_id=<?= $category_id ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
+                                    <a href="../CS/delete-CSparty.php?CSparty_id=<?= special($CSparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -294,7 +294,7 @@ $title = "PoMaEX | CS:Party-List";
                                     <img src="../../sync/<?= special($c3['s3']) ?>.png">
                                     <?php echo special($c3['potential']) ?><br>
                                     <?php echo special($c3['luckyskill_name']) ?><br>
-                                    <a href="../CS/delete-CSparty.php?CSparty_id=<?= $CSparty_id ?>&category_id=<?= $category_id ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
+                                    <a href="../CS/delete-CSparty.php?CSparty_id=<?= special($CSparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -343,7 +343,7 @@ $title = "PoMaEX | CS:Party-List";
                                     <div class="skill">
                                         <?php echo special($c1['luckyskill_name']) ?>
                                     </div>
-                                    <a href="../SA/delete-SAparty.php?SAparty_id=<?= $SAparty_id ?>&category_id=<?= $category_id ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
+                                    <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -386,7 +386,7 @@ $title = "PoMaEX | CS:Party-List";
                                     <img src="../../sync/<?= special($c2['s2']) ?>.png">
                                     <?php echo special($c2['potential']) ?><br>
                                     <?php echo special($c2['luckyskill_name']) ?><br>
-                                    <a href="../SA/delete-SAparty.php?SAparty_id=<?= $SAparty_id ?>&category_id=<?= $category_id ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
+                                    <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -426,7 +426,7 @@ $title = "PoMaEX | CS:Party-List";
                                     <img src="../../sync/<?= special($c3['s3']) ?>.png">
                                     <?php echo special($c3['potential']) ?><br>
                                     <?php echo special($c3['luckyskill_name']) ?><br>
-                                    <a href="../SA/delete-SAparty.php?SAparty_id=<?= $SAparty_id ?>&category_id=<?= $category_id ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
+                                    <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -440,11 +440,11 @@ $title = "PoMaEX | CS:Party-List";
             <form action="add-grids-info.php">
                 <input type="URL" name="URL">
                 <?php if ($category_id == 1) { ?>
-                    <a href="add-grids-info?LGparty_id=<?= $LGparty_id ?>&category_id=<?= $category_id ?>"><button>ボード登録</button></a>
+                    <a href="add-grids-info?LGparty_id=<?= special($LGparty_id) ?>&category_id=<?= special($category_id) ?>"><button>ボード登録</button></a>
                 <?php } else if ($category_id == 2) { ?>
-                    <a href="add-grids-info?CSparty_id=<?= $CSparty_id ?>&category_id=<?= $category_id ?>"><button>ボード登録</button></a>
+                    <a href="add-grids-info?CSparty_id=<?= special($CSparty_id) ?>&category_id=<?= special($category_id) ?>"><button>ボード登録</button></a>
                 <?php } else if ($category_id == 3) { ?>
-                    <a href="add-grids-info?SAparty_id=<?= $SAparty_id ?>&category_id=<?= $category_id ?>"><button>ボード登録</button></a>
+                    <a href="add-grids-info?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>"><button>ボード登録</button></a>
                 <?php } ?>
             </form>
             <!-- 直で高さと幅入れてるのは仮だよ。 -->
