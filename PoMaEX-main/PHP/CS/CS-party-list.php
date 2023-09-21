@@ -25,7 +25,7 @@ $title = "PoMaEX | CS:Party-List";
                         <li>
                             <a href="../General/party-detail.php?CSparty_id=<?= special($party['CSparty_id']) ?>&category_id=<?= $category_id ?>">編成詳細へ</a>
                             <img src="../../trainer/<?= special($party['trainer_name']) ?>.png">
-                            <a href="delete-CS-list.php?type_id=<?= $type_id ?>&category_id=<?= $category_id ?>&CSparty_id=<?= $party['CSparty_id'] ?>"><button class="delete">削除</button></a>
+                            <a href="delete-CS-list.php?type_id=<?= special($type_id) ?>&category_id=<?= special($category_id) ?>&CSparty_id=<?= special($party['CSparty_id']) ?>"><button class="delete">削除</button></a>
                         </li>
                     <?php } ?>
                 <?php } ?>
