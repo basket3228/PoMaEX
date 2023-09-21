@@ -27,7 +27,7 @@ if (isset($_GET['LGparty_id'])) {
         $URL = get_SAURL($SAparty_id);
     }
 }
-$title = "PoMaEX | CS:Party-List";
+$title = "PoMaEX | CS:Party-detail";
 ?>
 
 <?php require_once("../General/header.php") ?>
@@ -436,7 +436,7 @@ $title = "PoMaEX | CS:Party-List";
         </div>
     </main>
     <aside class="sidebar">
-        <div class="URL">
+        <div class="URL pomatool">
             <form action="add-grids-info.php">
                 <input type="URL" name="URL">
                 <?php if ($category_id == 1) { ?>
@@ -449,13 +449,11 @@ $title = "PoMaEX | CS:Party-List";
             </form>
             <!-- 直で高さと幅入れてるのは仮だよ。 -->
             <?php if ($URL['URL'] != null) { ?>
-                <iframe src="<?= special($URL['URL']) ?>" height="600" width="320"></iframe>
+                <iframe src="<?= special($URL['URL']) ?>" class="pomatool-frame"></iframe>
             <?php } else { ?>
-                <iframe src="https://ng-pomatools.web.app/team" height="600" width="320"></iframe>
+                <iframe src="https://ng-pomatools.web.app/team" class="pomatool-frame"></iframe>
             <?php } ?>
         </div>
     </aside>
 </div>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="/PoMaEX-main/index.js"></script>
 <?php require_once('../General/footer.php') ?>
