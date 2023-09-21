@@ -1,53 +1,30 @@
 <?php
+
 require('../../function.php');
 $category_id = $_GET['category_id'];
 $types = get_type();
+$title = "PoMaEX | CS:Party-List";
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS:Party-List</title>
-    <link rel="icon" href="../../img/logo.ico" />
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="../../CSS/CS/CS-type-list.css">
-</head>
-
-<body>
-    <div class="container">
-        <header id="header">
-            <h1 class="h1"><a href="../../HTML/index.html"><img src="../../img/logo.png"></a></h1>
-            <nav>
-                <ul id="nav-list">
-                    <li id="list1"><a href="../General/party-list.php">編成一覧</a></li>
-                    <li id="list2"><a href="../General/trainer-list.php">バディーズ一覧</a></li>
-                    <li id="list3"><a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">PoMaTool</a></li>
-                    <li id="list4"><a href="../General/create-random-party.php">乱数編成生成</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <div class="content">
-                <h2><?= CS ?></h2>
-                <ul>
-                    <?php foreach ($types as $type) { ?>
-                        <div class="type">
-                            <li><a href="CS-party-list.php?type_id=<?= special($type['type_id']) ?>&category_id=<?= $category_id ?>">
-                                    <img src="../../type/<?= special($type['type_name']) ?>.png">
-                                </a></li>
-                        </div>
-                    <?php } ?>
-                </ul>
-            </div>
-        </main>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="../../JS/CS/CS-type-list.js"></script>
-</body>
-
-</html>
+<?php require_once("../General/header.php") ?>
+<div class="container">
+    <?php require_once("../General/nav.php") ?>
+    <main class="main">
+        <h2 class="kv">
+            <img src="../../img/CS.png" alt="チャンピオンバトル">
+        </h2>
+        <ul class="type-list">
+            <?php foreach ($types as $type) { ?>
+                <li>
+                    <a href="CS-party-list.php?type_id=<?= special($type['type_id']) ?>&category_id=<?= $category_id ?>">
+                        <img src="../../type/<?= special($type['type_name']) ?>.png">
+                    </a>
+                </li>
+            <?php } ?>
+        </ul>
+    </main>
+    <aside class="sidebar">サブメニューです</aside>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="/PoMaEX-main/index.js"></script>
+<?php require_once('../General/footer.php') ?>
