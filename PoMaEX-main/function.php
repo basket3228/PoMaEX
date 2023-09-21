@@ -554,6 +554,37 @@ function get_trainer()
     return $trainer;
 }
 
+function get_trainerByType($type_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join role on role.role_id = trainer.role_id where URL is not null and sync.type_id = ?");
+    $st->bindValue(1, $type_id);
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function get_trainerByRole($role_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join role on role.role_id = trainer.role_id where URL is not null and trainer.role_id = ?");
+    $st->bindValue(1, $role_id);
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
 
 function get_mainTrainer()
 {

@@ -12,7 +12,7 @@ $title = "PoMaEX | LG:Party-List";
     <?php require_once("../General/nav.php") ?>
     <main class="main">
         <h2><?= LG ?></h2>
-        <!-- ↓文字を大きく画面中央に -->
+        <!-- ↓文字を大きく中央に -->
         <h2><?php echo special($enemy['enemy_name']) ?></h2>
         <ul>
             <?php foreach ($parties as $party) { ?>
