@@ -27,15 +27,15 @@ $title = "PoMaEX | CS:Party-List";
 
                         <?php for ($i = 0; $i < 5; $i++) { ?><!-- テスト用 --->
                             <li class="party CS-<?= $pageType ?>">
-                                <a href="../General/party-detail.php?CSparty_id=<?= special($party['CSparty_id']) ?>&category_id=<?= $category_id ?>">
+                                <a href="../General/party-detail.php?CSparty_id=<?= special($party['CSparty_id']) ?>&category_id=<?= special($category_id) ?>">
                                     <img src="../../trainer/<?= special($party['trainer_name']) ?>.png">
                                 </a>
-                                <button class="party-delete" data-delete="delete-CS-list.php?type_id=<?= $type_id ?>&category_id=<?= $category_id ?>&CSparty_id=<?= $party['CSparty_id'] ?>"></button>
+                                <button class="party-delete" data-delete="delete-CS-list.php?type_id=<?= special($type_id) ?>&category_id=<?= special($category_id) ?>&CSparty_id=<?= special($party['CSparty_id']) ?>"></button>
                             </li>
                         <?php } ?>
 
                         <li>
-                            <a href="../General/party-detail.php?CSparty_id=<?= special($party['CSparty_id']) ?>&category_id=<?= $category_id ?>">編成詳細へ</a>
+                            <a href="../General/party-detail.php?CSparty_id=<?= special($party['CSparty_id']) ?>&category_id=<?= special($category_id) ?>">編成詳細へ</a>
                             <img src="../../trainer/<?= special($party['trainer_name']) ?>.png">
                             <a href="delete-CS-list.php?type_id=<?= special($type_id) ?>&category_id=<?= special($category_id) ?>&CSparty_id=<?= special($party['CSparty_id']) ?>"><button class="delete">削除</button></a>
                         </li>
