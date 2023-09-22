@@ -1,5 +1,4 @@
 CSS調整
-全ページ共通
 ・パンくずリスト作成(一部の場所で欲しい、LG、SAのページのみ。)
     レジェンドアドベンチャー>第何回>(パーティ詳細画面上)敵の名前
     スコアアタック>名前(〜をすべるもの)
@@ -7,8 +6,6 @@ CSS調整
     →開発詳細 > 画面イメージ図参照。
     または下記参照。
     https://www.canva.com/design/DAFqdKX0vVQ/L7h0_THhkP800KqOgxtLrg/edit?utm_content=DAFqdKX0vVQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-・編成一覧ページを削除→編成一覧クリックで選択画面をポップアップで表示。
-・削除ボタン押下時、確認メッセージが出るようにする。
 
 create-random-party
 ・選びなおすボタンの実装(かなり厳しめ)
