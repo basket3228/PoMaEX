@@ -20,10 +20,6 @@ if (isset($_GET['LGparty_id'])) {
     if ($category_id == 3) {
         $URL = $_GET['URL'];
         add_SA_grids($URL, $SAparty_id);
-        redirect("PoMaEX-main/PHP/General/party-detail.php?SAparty_id" . $SAparty_id . "category_id=" . $category_id);
+        redirect("PoMaEX-main/PHP/General/party-detail.php?SAparty_id" . special($SAparty_id) . "category_id=" . special($category_id));
     }
 }
-
-
-
-

@@ -28,4 +28,4 @@ $party['URL1'] = $URL1;
 $party['URL2'] = $URL2;
 $party['URL3'] = $URL3;
 add_LGparty($party);
-redirect("PoMaEX-main/PHP/LG/LG-party-list.php?category_id=" . $category_id . "&LG_id=" . $LG_id);
+redirect("PoMaEX-main/PHP/LG/LG-party-list.php?category_id=" . special($category_id) . "&LG_id=" . special($LG_id));

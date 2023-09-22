@@ -16,9 +16,9 @@ $title = "PoMaEX | SA:Party-List";
                 <?php foreach ($parties as $party) { ?>
                     <?php if ($party['SAparty_id'] != null) { ?>
                         <li>
-                            <a href="../General/party-detail.php?SAparty_id=<?= special($party['SAparty_id']) ?>&category_id=<?= $category_id ?>">編成詳細へ</a>
+                            <a href="../General/party-detail.php?SAparty_id=<?= special($party['SAparty_id']) ?>&category_id=<?= special($category_id) ?>">編成詳細へ</a>
                             <img src="../../trainer/<?= special($party['trainer_name']) ?>.png">
-                            <a href="delete-SA-list.php?category_id=<?= $category_id ?>&SAparty_id=<?= $party['SAparty_id'] ?>"><button class="delete">削除</button></a>
+                            <a href="delete-SA-list.php?category_id=<?= special($category_id) ?>&SAparty_id=<?= special($party['SAparty_id']) ?>"><button class="delete">削除</button></a>
                         </li>
                     <?php } ?>
                 <?php } ?>
