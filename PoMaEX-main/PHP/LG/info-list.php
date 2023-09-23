@@ -10,7 +10,7 @@ $title = "PoMaEX | LG:Info-List";
     <?php require_once("../General/nav.php") ?>
     <main class="main">
         <?php foreach ($enemies as $enemy) { ?>
-            <a href="solo-info.php?enemy_id=<?= $enemy['enemy_id'] ?>"><button>ソロ情報</button></a>
+            <a href="solo-info.php?enemy_id=<?= special($enemy['enemy_id']) ?>"><button>ソロ情報</button></a>
             <img src="../../Legend_Battle/<?= special($enemy['enemy_name']) ?>.png">
         <?php } ?>
     </main>

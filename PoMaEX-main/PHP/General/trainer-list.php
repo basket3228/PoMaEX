@@ -2,6 +2,8 @@
 require('../../function.php');
 $trainers = get_trainer();
 $mainChars = get_mainTrainer();
+$types = get_type();
+$roles = get_role();
 $title = "PoMaEX | Trainer-List";
 ?>
 
@@ -10,6 +12,18 @@ $title = "PoMaEX | Trainer-List";
   <?php require_once("../General/nav.php") ?>
   <main class="main">
     <h2>バディーズ一覧</h2>
+    <button>フィルター</button>
+    <!-- ↓フィルターボタン押下時に表示 -->
+    <?php foreach ($types as $type) { ?>
+      <a href="filter.php?type_id=<?= special($type['type_id']) ?>"><button>
+          <img src="../../type/<?= special($type['type_name']) ?>.png">
+        </button></a>
+    <?php } ?>
+    <?php foreach ($roles as $role) { ?>
+      <a href="filter.php?role_id=<?= special($role['role_id']) ?>"><button>
+          <img src="../../img/<?= special($role['role_name']) ?>.png">
+        </button></a>
+    <?php } ?>
     <ul>
       <?php foreach ($trainers as $trainer) { ?>
         <li>
