@@ -259,6 +259,13 @@ li {
   opacity: 0.6;
 }
 
+.sub-title {
+  color: #fff;
+  text-shadow: #27636e 1px 0px, #27636e -1px 0px, #27636e 0px -1px, #27636e 0px 1px, #27636e 1px 1px, #27636e -1px 1px,
+    #27636e 1px -1px, #27636e -1px -1px;
+  margin-bottom: 32px;
+}
+
 .type-list {
   display: flex;
   flex-wrap: wrap;
@@ -375,92 +382,110 @@ li {
   opacity: 0.6;
 }
 
-.CS-ノーマル a {
+.CS-ノーマル a,
+.CS-ノーマル-detail {
   border: 8px #7d7874 solid;
   background-color: #afaeab;
 }
 
-.CS-ほのお a {
+.CS-ほのお a,
+.CS-ほのお-detail {
   border: 8px #c94a4f solid;
   background-color: #ed605f;
 }
 
-.CS-みず a {
+.CS-みず a,
+.CS-みず-detail {
   border: 8px #3090b4 solid;
   background-color: #60c3ec;
 }
 
-.CS-でんき a {
+.CS-でんき a,
+.CS-でんき-detail {
   border: 8px #b09002 solid;
   background-color: #fed93c;
 }
 
-.CS-くさ a {
+.CS-くさ a,
+.CS-くさ-detail {
   border: 8px #3f9849 solid;
   background-color: #50ca5d;
 }
 
-.CS-こおり a {
+.CS-こおり a,
+.CS-こおり-detail {
   border: 8px #4c9da3 solid;
   background-color: #78c8d0;
 }
 
-.CS-かくとう a {
+.CS-かくとう a,
+.CS-かくとう-detail {
   border: 8px #c55f23 solid;
   background-color: #f9915a;
 }
 
-.CS-どく a {
+.CS-どく a,
+.CS-どく-detail {
   border: 8px #8f52b3 solid;
   background-color: #c773da;
 }
 
-.CS-じめん a {
+.CS-じめん a,
+.CS-じめん-detail {
   border: 8px #a06546 solid;
   background-color: #d28346;
 }
 
-.CS-ひこう a {
+.CS-ひこう a,
+.CS-ひこう-detail {
   border: 8px #4d73e0 solid;
   background-color: #819ff0;
 }
 
-.CS-エスパー a {
+.CS-エスパー a,
+.CS-エスパー-detail {
   border: 8px #d34b7d solid;
   background-color: #f682af;
 }
 
-.CS-むし a {
+.CS-むし a,
+.CS-むし-detail {
   border: 8px #6a9001 solid;
   background-color: #aad23c;
 }
 
-.CS-いわ a {
+.CS-いわ a,
+.CS-いわ-detail {
   border: 8px #8e6b47 solid;
   background-color: #be9877;
 }
 
-.CS-ゴースト a {
+.CS-ゴースト a,
+.CS-ゴースト-detail {
   border: 8px #8c6587 solid;
   background-color: #c89cc2;
 }
 
-.CS-ドラゴン a {
+.CS-ドラゴン a,
+.CS-ドラゴン-detail {
   border: 8px #109cab solid;
   background-color: #31abcc;
 }
 
-.CS-あく a {
+.CS-あく a,
+.CS-あく-detail {
   border: 8px #636286 solid;
   background-color: #9695b4;
 }
 
-.CS-はがね a {
+.CS-はがね a,
+.CS-はがね-detail {
   border: 8px #62759d solid;
   background-color: #95aad6;
 }
 
-.CS-フェアリー a {
+.CS-フェアリー a,
+.CS-フェアリー-detail {
   border: 8px #d34b7d solid;
   background-color: #fa9dad;
 }
@@ -482,4 +507,92 @@ li {
 
 .pomatool input {
   width: 100%;
+}
+
+.detail-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.party-detail {
+  position: relative;
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+}
+
+.party-detail img {
+  width: 100%;
+}
+
+.stars {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 55%;
+}
+
+.stars img {
+  position: absolute;
+  width: 33%;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+}
+
+.stars img:first-child {
+  left: 0;
+}
+
+.stars img:nth-child(2) {
+  left: 33%;
+  transform: translateX(-25%);
+}
+
+.stars img:nth-child(3) {
+  left: 66%;
+  transform: translateX(-50%);
+}
+
+.stars img:nth-child(4) {
+  left: 15%;
+  transform: translate(-15%, 80%);
+}
+
+.stars img:last-child {
+  left: 50%;
+  transform: translate(-50%, 80%);
+}
+
+.EX {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 25%;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+}
+
+.party-detail-sync {
+  position: absolute;
+  bottom: -12%;
+  right: -12%;
+  width: 50% !important;
+  height: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #666;
+  background-color: #fff;
+}
+
+.skill,
+.potential {
+  position: absolute;
+  bottom: calc(-10px + -1em + -12px);
+}
+
+.skill {
+  bottom: calc(-10px + -2.25em + -12px);
+}
+
+.party-detail p {
+  display: none;
 }
