@@ -2,8 +2,9 @@
 require('../../function.php');
 
 $category_id = $_GET['category_id'];
-$pageType = $_GET['type'];
-
+if (isset($_GET['type'])) {
+    $pageType = $_GET['type'];
+}
 if (isset($_GET['LGparty_id'])) {
     $LGparty_id = $_GET['LGparty_id'];
     if ($category_id == 1) {
@@ -42,7 +43,7 @@ $title = "PoMaEX | CS:Party-detail";
                 <?php if ($category_id == 1) { ?>
                     <?php foreach ($LG1 as $c1) { ?>
                         <?php if ($c1['t1'] != null) { ?>
-                            <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c1['tn1']) ?>">
+                            <li class="party-detail" data-type="<?= special($c1['tn1']) ?>">
                                 <p>1</p>
                                 <div class="stars">
                                     <?php if ($c1['star1'] == 1) { ?>
@@ -91,7 +92,7 @@ $title = "PoMaEX | CS:Party-detail";
                             <p>トレーナーを選択してください。</p>
                             <button>選択する</button>
                         <?php } else if ($c2['t2'] != null) { ?>
-                            <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c2['tn2']) ?>">
+                            <li class="party-detail" data-type="<?= special($c2['tn2']) ?>">
                                 <p>2</p>
                                 <div class="stars">
                                     <?php if ($c2['star2'] == 1) { ?>
@@ -133,7 +134,7 @@ $title = "PoMaEX | CS:Party-detail";
                     <?php } ?>
                     <?php foreach ($LG3 as $c3) { ?>
                         <?php if ($c3['t3'] != null) { ?>
-                            <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c3['tn3']) ?>">
+                            <li class="party-detail" data-type="<?= special($c3['tn3']) ?>">
                                 <p>3</p>
                                 <div class="stars">
                                     <?php if ($c3['star3'] == 1) { ?>
@@ -313,7 +314,7 @@ $title = "PoMaEX | CS:Party-detail";
                     <?php foreach ($SA1 as $c1) { ?>
                         <?php if ($SAparty_id == $c1['SAparty_id']) { ?>
                             <?php if ($c1['t1'] != null) { ?>
-                                <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c1['tn1']) ?>">
+                                <li class="party-detail" data-type="<?= special($c1['tn1']) ?>">
                                     <p>1</p>
                                     <div class="stars">
                                         <?php if ($c1['star1'] == 1) { ?>
@@ -362,7 +363,7 @@ $title = "PoMaEX | CS:Party-detail";
                                 <p>トレーナーを選択してください。</p>
                                 <button>選択する</button>
                             <?php } else if ($c2['t2'] != null) { ?>
-                                <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c2['tn2']) ?>">
+                                <li class="party-detail" data-type="<?= special($c2['tn2']) ?>">
                                     <p>2</p>
                                     <div class="stars">
                                         <?php if ($c2['star2'] == 1) { ?>
@@ -404,7 +405,7 @@ $title = "PoMaEX | CS:Party-detail";
                         <?php } ?>
                         <?php foreach ($SA3 as $c3) { ?>
                             <?php if ($c3['t3'] != null) { ?>
-                                <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c3['tn3']) ?>">
+                                <li class="party-detail" data-type="<?= special($c3['tn3']) ?>">
                                     <p>3</p>
                                     <div class="stars">
                                         <?php if ($c3['star3'] == 1) { ?>
