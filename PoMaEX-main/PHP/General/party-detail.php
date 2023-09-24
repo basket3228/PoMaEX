@@ -2,6 +2,8 @@
 require('../../function.php');
 
 $category_id = $_GET['category_id'];
+$pageType = $_GET['type'];
+
 if (isset($_GET['LGparty_id'])) {
     $LGparty_id = $_GET['LGparty_id'];
     if ($category_id == 1) {
@@ -35,12 +37,12 @@ $title = "PoMaEX | CS:Party-detail";
     <?php require_once("../General/nav.php") ?>
     <main class="main">
         <div class="trainer">
-            <h2>パーティ詳細</h2>
-            <ul>
+            <h2 class="sub-title">パーティ詳細</h2>
+            <ul class="detail-list">
                 <?php if ($category_id == 1) { ?>
                     <?php foreach ($LG1 as $c1) { ?>
                         <?php if ($c1['t1'] != null) { ?>
-                            <li data-type="<?= special($c1['tn1']) ?>">
+                            <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c1['tn1']) ?>">
                                 <p>1</p>
                                 <div class="stars">
                                     <?php if ($c1['star1'] == 1) { ?>
@@ -73,14 +75,14 @@ $title = "PoMaEX | CS:Party-detail";
                                     <?php } ?>
                                 </div>
                                 <img src="../../trainer/<?= special($c1['t1']) ?>.png">
-                                <img src="../../sync/<?= special($c1['s1']) ?>.png">
+                                <img class="party-detail-sync" src="../../sync/<?= special($c1['s1']) ?>.png">
                                 <div class="potential">
                                     <?php echo special($c1['potential']) ?>
                                 </div>
                                 <div class="skill">
                                     <?php echo special($c1['luckyskill_name']) ?>
                                 </div>
-                                <a href="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"><button class="delete">削除</button></a>
+                                <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -89,7 +91,7 @@ $title = "PoMaEX | CS:Party-detail";
                             <p>トレーナーを選択してください。</p>
                             <button>選択する</button>
                         <?php } else if ($c2['t2'] != null) { ?>
-                            <li data-type="<?= special($c2['tn2']) ?>">
+                            <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c2['tn2']) ?>">
                                 <p>2</p>
                                 <div class="stars">
                                     <?php if ($c2['star2'] == 1) { ?>
@@ -114,22 +116,24 @@ $title = "PoMaEX | CS:Party-detail";
                                         <img src="../../img/star.png">
                                     <?php } ?>
                                 </div>
-                                <?php if ($c2['EX_Flg'] == true) { ?>
-                                    <img src="../../img/EX.png">
-                                <?php } else { ?>
-                                    <img src="../../img/NotEX.png">
-                                <?php } ?>
+                                <div class="EX">
+                                    <?php if ($c2['EX_Flg'] == true) { ?>
+                                        <img src="../../img/EX.png">
+                                    <?php } else { ?>
+                                        <img src="../../img/NotEX.png">
+                                    <?php } ?>
+                                </div>
                                 <img src="../../trainer/<?= special($c2['t2']) ?>.png">
-                                <img src="../../sync/<?= special($c2['s2']) ?>.png">
-                                <?php echo special($c2['potential']) ?><br>
-                                <?php echo special($c2['luckyskill_name']) ?><br>
-                                <a href="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"><button class="delete">削除</button></a>
+                                <img class="party-detail-sync" src="../../sync/<?= special($c2['s2']) ?>.png">
+                                <div class="potential"><?php echo special($c2['potential']) ?></div>
+                                <div class="skill"><?php echo special($c2['luckyskill_name']) ?></div>
+                                <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
                     <?php } ?>
                     <?php foreach ($LG3 as $c3) { ?>
                         <?php if ($c3['t3'] != null) { ?>
-                            <li data-type="<?= special($c3['tn3']) ?>">
+                            <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c3['tn3']) ?>">
                                 <p>3</p>
                                 <div class="stars">
                                     <?php if ($c3['star3'] == 1) { ?>
@@ -154,16 +158,18 @@ $title = "PoMaEX | CS:Party-detail";
                                         <img src="../../img/star.png">
                                     <?php } ?>
                                 </div>
-                                <?php if ($c3['EX_Flg'] == true) { ?>
-                                    <img src="../../img/EX.png">
-                                <?php } else { ?>
-                                    <img src="../../img/NotEX.png">
-                                <?php } ?>
+                                <div class="EX">
+                                    <?php if ($c3['EX_Flg'] == true) { ?>
+                                        <img src="../../img/EX.png">
+                                    <?php } else { ?>
+                                        <img src="../../img/NotEX.png">
+                                    <?php } ?>
+                                </div>
                                 <img src="../../trainer/<?= special($c3['t3']) ?>.png">
-                                <img src="../../sync/<?= special($c3['s3']) ?>.png">
-                                <?php echo special($c3['potential']) ?><br>
-                                <?php echo special($c3['luckyskill_name']) ?><br>
-                                <a href="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"><button class="delete">削除</button></a>
+                                <img class="party-detail-sync" src="../../sync/<?= special($c3['s3']) ?>.png">
+                                <div class="potential"><?php echo special($c3['potential']) ?></div>
+                                <div class="skill"><?php echo special($c3['luckyskill_name']) ?></div>
+                                <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -171,7 +177,7 @@ $title = "PoMaEX | CS:Party-detail";
                     <?php foreach ($CS1 as $c1) { ?>
                         <?php if ($CSparty_id == $c1['CSparty_id']) { ?>
                             <?php if ($c1['t1'] != null) { ?>
-                                <li data-type="<?= special($c1['tn1']) ?>">
+                                <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c1['tn1']) ?>">
                                     <p>1</p>
                                     <div class="stars">
                                         <?php if ($c1['star1'] == 1) { ?>
@@ -204,14 +210,14 @@ $title = "PoMaEX | CS:Party-detail";
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png">
-                                    <img src="../../sync/<?= special($c1['s1']) ?>.png">
+                                    <img class="party-detail-sync" src="../../sync/<?= special($c1['s1']) ?>.png">
                                     <div class="potential">
                                         <?php echo special($c1['potential']) ?>
                                     </div>
                                     <div class="skill">
                                         <?php echo special($c1['luckyskill_name']) ?>
                                     </div>
-                                    <a href="../CS/delete-CSparty.php?CSparty_id=<?= special($CSparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
+                                    <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -220,7 +226,7 @@ $title = "PoMaEX | CS:Party-detail";
                                 <p>トレーナーを選択してください。</p>
                                 <button>選択する</button>
                             <?php } else if ($c2['t2'] != null) { ?>
-                                <li data-type="<?= special($c2['tn2']) ?>">
+                                <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c2['tn2']) ?>">
                                     <p>2</p>
                                     <div class="stars">
                                         <?php if ($c2['star2'] == 1) { ?>
@@ -245,22 +251,24 @@ $title = "PoMaEX | CS:Party-detail";
                                             <img src="../../img/star.png">
                                         <?php } ?>
                                     </div>
-                                    <?php if ($c2['EX_Flg'] == true) { ?>
-                                        <img src="../../img/EX.png">
-                                    <?php } else { ?>
-                                        <img src="../../img/NotEX.png">
-                                    <?php } ?>
+                                    <div class="EX">
+                                        <?php if ($c2['EX_Flg'] == true) { ?>
+                                            <img src="../../img/EX.png">
+                                        <?php } else { ?>
+                                            <img src="../../img/NotEX.png">
+                                        <?php } ?>
+                                    </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png">
-                                    <img src="../../sync/<?= special($c2['s2']) ?>.png">
-                                    <?php echo special($c2['potential']) ?><br>
-                                    <?php echo special($c2['luckyskill_name']) ?><br>
-                                    <a href="../CS/delete-CSparty.php?CSparty_id=<?= special($CSparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
+                                    <img class="party-detail-sync" src="../../sync/<?= special($c2['s2']) ?>.png">
+                                    <div class="potential"><?php echo special($c2['potential']) ?></div>
+                                    <div class="skill"><?php echo special($c2['luckyskill_name']) ?></div>
+                                    <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
                         <?php foreach ($CS3 as $c3) { ?>
                             <?php if ($c3['t3'] != null) { ?>
-                                <li data-type="<?= special($c3['tn3']) ?>">
+                                <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c3['tn3']) ?>">
                                     <p>3</p>
                                     <div class="stars">
                                         <?php if ($c3['star3'] == 1) { ?>
@@ -285,16 +293,18 @@ $title = "PoMaEX | CS:Party-detail";
                                             <img src="../../img/star.png">
                                         <?php } ?>
                                     </div>
-                                    <?php if ($c3['EX_Flg'] == true) { ?>
-                                        <img src="../../img/EX.png">
-                                    <?php } else { ?>
-                                        <img src="../../img/NotEX.png">
-                                    <?php } ?>
+                                    <div class="EX">
+                                        <?php if ($c3['EX_Flg'] == true) { ?>
+                                            <img src="../../img/EX.png">
+                                        <?php } else { ?>
+                                            <img src="../../img/NotEX.png">
+                                        <?php } ?>
+                                    </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png">
-                                    <img src="../../sync/<?= special($c3['s3']) ?>.png">
-                                    <?php echo special($c3['potential']) ?><br>
-                                    <?php echo special($c3['luckyskill_name']) ?><br>
-                                    <a href="../CS/delete-CSparty.php?CSparty_id=<?= special($CSparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
+                                    <img class="party-detail-sync" src="../../sync/<?= special($c3['s3']) ?>.png">
+                                    <div class="potential"><?php echo special($c3['potential']) ?></div>
+                                    <div class="skill"><?php echo special($c3['luckyskill_name']) ?></div>
+                                    <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -303,7 +313,7 @@ $title = "PoMaEX | CS:Party-detail";
                     <?php foreach ($SA1 as $c1) { ?>
                         <?php if ($SAparty_id == $c1['SAparty_id']) { ?>
                             <?php if ($c1['t1'] != null) { ?>
-                                <li data-type="<?= special($c1['tn1']) ?>">
+                                <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c1['tn1']) ?>">
                                     <p>1</p>
                                     <div class="stars">
                                         <?php if ($c1['star1'] == 1) { ?>
@@ -336,7 +346,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png">
-                                    <img src="../../sync/<?= special($c1['s1']) ?>.png">
+                                    <img class="party-detail-sync" src="../../sync/<?= special($c1['s1']) ?>.png">
                                     <div class="potential">
                                         <?php echo special($c1['potential']) ?>
                                     </div>
@@ -352,7 +362,7 @@ $title = "PoMaEX | CS:Party-detail";
                                 <p>トレーナーを選択してください。</p>
                                 <button>選択する</button>
                             <?php } else if ($c2['t2'] != null) { ?>
-                                <li data-type="<?= special($c2['tn2']) ?>">
+                                <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c2['tn2']) ?>">
                                     <p>2</p>
                                     <div class="stars">
                                         <?php if ($c2['star2'] == 1) { ?>
@@ -377,22 +387,24 @@ $title = "PoMaEX | CS:Party-detail";
                                             <img src="../../img/star.png">
                                         <?php } ?>
                                     </div>
-                                    <?php if ($c2['EX_Flg'] == true) { ?>
-                                        <img src="../../img/EX.png">
-                                    <?php } else { ?>
-                                        <img src="../../img/NotEX.png">
-                                    <?php } ?>
+                                    <div class="EX">
+                                        <?php if ($c2['EX_Flg'] == true) { ?>
+                                            <img src="../../img/EX.png">
+                                        <?php } else { ?>
+                                            <img src="../../img/NotEX.png">
+                                        <?php } ?>
+                                    </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png">
-                                    <img src="../../sync/<?= special($c2['s2']) ?>.png">
-                                    <?php echo special($c2['potential']) ?><br>
-                                    <?php echo special($c2['luckyskill_name']) ?><br>
+                                    <img class="party-detail-sync" src="../../sync/<?= special($c2['s2']) ?>.png">
+                                    <div class="potential"><?php echo special($c2['potential']) ?></div>
+                                    <div class="skill"><?php echo special($c2['luckyskill_name']) ?></div>
                                     <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
                         <?php } ?>
                         <?php foreach ($SA3 as $c3) { ?>
                             <?php if ($c3['t3'] != null) { ?>
-                                <li data-type="<?= special($c3['tn3']) ?>">
+                                <li class="party-detail CS-<?= $pageType ?>-detail" data-type="<?= special($c3['tn3']) ?>">
                                     <p>3</p>
                                     <div class="stars">
                                         <?php if ($c3['star3'] == 1) { ?>
@@ -417,15 +429,17 @@ $title = "PoMaEX | CS:Party-detail";
                                             <img src="../../img/star.png">
                                         <?php } ?>
                                     </div>
-                                    <?php if ($c3['EX_Flg'] == true) { ?>
-                                        <img src="../../img/EX.png">
-                                    <?php } else { ?>
-                                        <img src="../../img/NotEX.png">
-                                    <?php } ?>
+                                    <div class="EX">
+                                        <?php if ($c3['EX_Flg'] == true) { ?>
+                                            <img src="../../img/EX.png">
+                                        <?php } else { ?>
+                                            <img src="../../img/NotEX.png">
+                                        <?php } ?>
+                                    </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png">
-                                    <img src="../../sync/<?= special($c3['s3']) ?>.png">
-                                    <?php echo special($c3['potential']) ?><br>
-                                    <?php echo special($c3['luckyskill_name']) ?><br>
+                                    <img class="party-detail-sync" src="../../sync/<?= special($c3['s3']) ?>.png">
+                                    <div class="potential"><?php echo special($c3['potential']) ?></div>
+                                    <div class="skill"><?php echo special($c3['luckyskill_name']) ?></div>
                                     <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
