@@ -14,22 +14,24 @@ $title = "PoMaEX | Random-Party";
 <div class="container">
     <?php require_once("../General/nav.php") ?>
     <main class="main">
-        <h2>ランダム編成生成</h2>
-        <ul>
+        <h2 class="sub-title">ランダム編成生成</h2>
+        <ul class="detail-list">
             <!-- 選びなおすボタンでそれぞれで再度乱数生成をする(JSで操作)
                     初期表示はロール被りなし、主人公被りは二枠までという条件で表示(主人公二枠なら残りは必ずEXキャラ) -->
-            <li><img src="../../trainer/<?= special($attacker['trainer_name']) ?>.png">
-                <img src="../../sync/<?= special($attacker['sync_name']) ?>.png">
-                <button class="btn">選びなおす</button>
+            <li class="party-detail">
+                <img src="../../trainer/<?= special($attacker['trainer_name']) ?>.png">
+                <img class="party-detail-sync" src="../../sync/<?= special($attacker['sync_name']) ?>.png">
+                <button class="btn main-btn random-btn">選びなおす</button>
             </li>
-            <li>
+            <li class="party-detail">
                 <img src="../../trainer/<?= special($technical['trainer_name']) ?>.png">
-                <img src="../../sync/<?= special($technical['sync_name']) ?>.png">
-                <button class="btn">選びなおす</button>
+                <img class="party-detail-sync" src="../../sync/<?= special($technical['sync_name']) ?>.png">
+                <button class="btn main-btn random-btn">選びなおす</button>
             </li>
-            <li><img src="../../trainer/<?= special($support['trainer_name']) ?>.png">
-                <img src="../../sync/<?= special($support['sync_name']) ?>.png">
-                <button class="btn">選びなおす</button>
+            <li class="party-detail">
+                <img src="../../trainer/<?= special($support['trainer_name']) ?>.png">
+                <img class="party-detail-sync" src="../../sync/<?= special($support['sync_name']) ?>.png">
+                <button class="btn main-btn random-btn">選びなおす</button>
             </li>
         </ul>
     </main>
