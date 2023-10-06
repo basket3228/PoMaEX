@@ -82,7 +82,8 @@ li {
 
 .main,
 .nav,
-.sidebar {
+.sidebar,
+.layer {
   height: 100%;
   padding: 32px calc(16px + 1vw);
   overflow: auto;
@@ -92,6 +93,16 @@ li {
 }
 
 .main {
+}
+
+.layer {
+  position: absolute;
+  bottom: calc((16px + 2vw) * 2);
+  left: 50%;
+  translate: -50% 0;
+  width: 40%;
+  height: 30%;
+  border: 2px solid #95aad6;
 }
 
 .nav {
