@@ -46,20 +46,22 @@ $title = "PoMaEX | Trainer-List";
   </main>
   <aside class="sidebar">
     <?php foreach ($mainChars as $main) { ?>
-      <li>
-        <?php if ($main['role_name'] == 'アタッカー') { ?>
-          <img src="../../img/アタッカー.png">
-        <?php } else if ($main['role_name'] == 'テクニカル') { ?>
-          <img src="../../img/テクニカル.png">
-        <?php } else if ($main['role_name'] == 'サポート') { ?>
-          <img src="../../img/サポート.png">
-        <?php } else if ($main['role_name'] == 'スピード') { ?>
-          <img src="../../img/スピード.png">
-        <?php } else if ($main['role_name'] == 'フィールド') { ?>
-          <img src="../../img/フィールド.png">
-        <?php } ?>
-        <img src="../../sync/<?= special($main['sync_name']) ?>.png">
-      </li>
+      <?php if ($main['trainer_name'] == '主人公') { ?>
+        <li>
+          <?php if ($main['role_name'] == 'アタッカー') { ?>
+            <img src="../../img/アタッカー.png">
+          <?php } else if ($main['role_name'] == 'テクニカル') { ?>
+            <img src="../../img/テクニカル.png">
+          <?php } else if ($main['role_name'] == 'サポート') { ?>
+            <img src="../../img/サポート.png">
+          <?php } else if ($main['role_name'] == 'スピード') { ?>
+            <img src="../../img/スピード.png">
+          <?php } else if ($main['role_name'] == 'フィールド') { ?>
+            <img src="../../img/フィールド.png">
+          <?php } ?>
+          <img src="../../sync/<?= special($main['sync_name']) ?>.png">
+        </li>
+      <?php } ?>
     <?php } ?>
   </aside>
 </div>
