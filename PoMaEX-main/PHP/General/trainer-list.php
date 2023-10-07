@@ -26,9 +26,9 @@ $title = "PoMaEX | Trainer-List";
           </button></a>
       <?php } ?>
     </div>
-    <ul class="party-list">
+    <ul class="detail-list">
       <?php foreach ($trainers as $trainer) { ?>
-        <li class="party-detail">
+        <li class="party-detail CS-<?php echo special($trainer['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
           <div class="role">
             <?php if ($trainer['role_name'] == 'アタッカー') { ?>
               <img src="../../img/アタッカー.png">
@@ -43,7 +43,7 @@ $title = "PoMaEX | Trainer-List";
             <?php } ?>
           </div>
           <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
-          <img class="party-detail-sync CS-<?php echo special($trainer['type']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
+          <img class="party-detail-sync CS-<?php echo special($trainer['type_name']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
         </li>
       <?php } ?>
     </ul>
