@@ -505,6 +505,12 @@ li {
   bottom: calc(-10px + -1em + -12px);
 }
 
+.role {
+  position: absolute;
+  top: 0;
+  width: 40%;
+}
+
 .skill {
   bottom: calc(-10px + -2.25em + -12px);
 }
