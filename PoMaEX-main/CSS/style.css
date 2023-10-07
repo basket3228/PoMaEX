@@ -48,6 +48,18 @@ li {
   margin: 0;
 }
 
+.main-btn {
+  display: block;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(0deg, #94c0c9 0%, #6ea9b7 100%);
+  border: #c3dbdd 4px solid;
+  box-shadow: 2px 2px 4px -2px #6793a0;
+  border-radius: 2rem;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -82,7 +94,8 @@ li {
 
 .main,
 .nav,
-.sidebar {
+.sidebar,
+.layer {
   height: 100%;
   padding: 32px calc(16px + 1vw);
   overflow: auto;
@@ -92,6 +105,16 @@ li {
 }
 
 .main {
+}
+
+.layer {
+  position: absolute;
+  bottom: calc((16px + 2vw) * 2);
+  left: 50%;
+  translate: -50% 0;
+  width: 40%;
+  height: 30%;
+  border: 2px solid #95aad6;
 }
 
 .nav {
@@ -382,6 +405,125 @@ li {
   opacity: 0.6;
 }
 
+.pomatool {
+  height: calc(100% - 32px);
+}
+
+.pomatool-frame {
+  display: block;
+  width: 100%;
+  height: calc(100% - 100px);
+  border: none;
+}
+
+.pomatool form {
+  margin-bottom: 32px;
+}
+
+.pomatool input {
+  width: 100%;
+}
+
+.detail-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.party-detail {
+  position: relative;
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  border: 8px #7d7874 solid;
+}
+
+.party-detail img {
+  width: 100%;
+}
+
+.stars {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 55%;
+}
+
+.stars img {
+  position: absolute;
+  width: 33%;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+}
+
+.stars img:first-child {
+  left: 0;
+}
+
+.stars img:nth-child(2) {
+  left: 33%;
+  transform: translateX(-25%);
+}
+
+.stars img:nth-child(3) {
+  left: 66%;
+  transform: translateX(-50%);
+}
+
+.stars img:nth-child(4) {
+  left: 15%;
+  transform: translate(-15%, 80%);
+}
+
+.stars img:last-child {
+  left: 50%;
+  transform: translate(-50%, 80%);
+}
+
+.EX {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 25%;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+}
+
+.party-detail-sync {
+  position: absolute;
+  bottom: -12%;
+  right: -12%;
+  width: 50% !important;
+  height: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #666;
+  background-color: #fff;
+}
+
+.skill,
+.potential {
+  position: absolute;
+  bottom: calc(-10px + -1em + -12px);
+}
+
+.skill {
+  bottom: calc(-10px + -2.25em + -12px);
+}
+
+.party-detail p {
+  display: none;
+}
+
+.party-detail a {
+  width: 100%;
+}
+
+.random-btn {
+  position: absolute;
+  bottom: -5em;
+  left: 0;
+  width: 100%;
+}
+
 .CS-ノーマル a,
 .CS-ノーマル-detail {
   border: 8px #7d7874 solid;
@@ -488,111 +630,4 @@ li {
 .CS-フェアリー-detail {
   border: 8px #d34b7d solid;
   background-color: #fa9dad;
-}
-
-.pomatool {
-  height: calc(100% - 32px);
-}
-
-.pomatool-frame {
-  display: block;
-  width: 100%;
-  height: calc(100% - 100px);
-  border: none;
-}
-
-.pomatool form {
-  margin-bottom: 32px;
-}
-
-.pomatool input {
-  width: 100%;
-}
-
-.detail-list {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.party-detail {
-  position: relative;
-  width: 30%;
-  aspect-ratio: 1 / 1;
-  border-radius: 10px;
-}
-
-.party-detail img {
-  width: 100%;
-}
-
-.stars {
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 55%;
-}
-
-.stars img {
-  position: absolute;
-  width: 33%;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
-}
-
-.stars img:first-child {
-  left: 0;
-}
-
-.stars img:nth-child(2) {
-  left: 33%;
-  transform: translateX(-25%);
-}
-
-.stars img:nth-child(3) {
-  left: 66%;
-  transform: translateX(-50%);
-}
-
-.stars img:nth-child(4) {
-  left: 15%;
-  transform: translate(-15%, 80%);
-}
-
-.stars img:last-child {
-  left: 50%;
-  transform: translate(-50%, 80%);
-}
-
-.EX {
-  position: absolute;
-  top: 0;
-  left: 25%;
-  width: 25%;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
-}
-
-.party-detail-sync {
-  position: absolute;
-  bottom: -12%;
-  right: -12%;
-  width: 50% !important;
-  height: 50%;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 6px solid #666;
-  background-color: #fff;
-}
-
-.skill,
-.potential {
-  position: absolute;
-  bottom: calc(-10px + -1em + -12px);
-}
-
-.skill {
-  bottom: calc(-10px + -2.25em + -12px);
-}
-
-.party-detail p {
-  display: none;
 }

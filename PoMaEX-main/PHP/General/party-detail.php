@@ -450,6 +450,9 @@ $title = "PoMaEX | CS:Party-detail";
         <?php } ?>
         </div>
     </main>
+    <aside class="layer">
+        ああ
+    </aside>
     <aside class="sidebar">
         <div class="URL pomatool">
             <form action="add-grids-info.php">
