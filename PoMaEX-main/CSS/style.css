@@ -435,7 +435,7 @@ li {
   width: 30%;
   aspect-ratio: 1 / 1;
   border-radius: 10px;
-  border: 8px #7d7874 solid;
+  border-width: 10px !important;
 }
 
 .party-detail img {

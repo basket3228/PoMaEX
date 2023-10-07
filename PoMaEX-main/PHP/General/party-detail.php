@@ -215,7 +215,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png">
-                                    <img class="party-detail-sync" src="../../sync/<?= special($c1['s1']) ?>.png">
+                                    <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png">
                                     <div class="potential">
                                         <?php echo special($c1['potential']) ?>
                                     </div>
@@ -264,7 +264,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png">
-                                    <img class="party-detail-sync" src="../../sync/<?= special($c2['s2']) ?>.png">
+                                    <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png">
                                     <div class="potential"><?php echo special($c2['potential']) ?></div>
                                     <div class="skill">
                                         <?php echo special($c2['luckyskill_name']) ?>
@@ -308,7 +308,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png">
-                                    <img class="party-detail-sync" src="../../sync/<?= special($c3['s3']) ?>.png">
+                                    <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png">
                                     <div class="potential"><?php echo special($c3['potential']) ?></div>
                                     <div class="skill">
                                         <?php echo special($c3['luckyskill_name']) ?>
