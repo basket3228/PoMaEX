@@ -428,6 +428,7 @@ li {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .party-detail {
@@ -435,7 +436,7 @@ li {
   width: 30%;
   aspect-ratio: 1 / 1;
   border-radius: 10px;
-  border: 8px #7d7874 solid;
+  border-width: 10px !important;
 }
 
 .party-detail img {
@@ -503,6 +504,12 @@ li {
 .potential {
   position: absolute;
   bottom: calc(-10px + -1em + -12px);
+}
+
+.role {
+  position: absolute;
+  top: 0;
+  width: 40%;
 }
 
 .skill {
