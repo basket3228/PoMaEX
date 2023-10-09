@@ -545,7 +545,7 @@ function get_trainer()
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join type on type.type_id = sync.type_id
-    left join role on role.role_id = trainer.role_id where URL is not null limit 9");
+    left join role on role.role_id = trainer.role_id where URL is not null");
     $st->execute();
     $trainer = $st->fetchAll();
 

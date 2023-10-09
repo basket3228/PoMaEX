@@ -82,7 +82,7 @@ $title = "PoMaEX | CS:Party-detail";
                                 </div>
                                 <div class="skill">
                                     <?php echo special($c1['luckyskill_name']) ?>
-                                    <?php echo special($c1['type_name']) ?>
+                                    <?php echo special($c1['tn1']) ?>
                                 </div>
                                 <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
@@ -130,7 +130,7 @@ $title = "PoMaEX | CS:Party-detail";
                                 <div class="potential"><?php echo special($c2['potential']) ?></div>
                                 <div class="skill">
                                     <?php echo special($c2['luckyskill_name']) ?>
-                                    <?php echo special($c2['type_name']) ?>
+                                    <?php echo special($c2['tn2']) ?>
                                 </div>
                                 <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
@@ -173,7 +173,10 @@ $title = "PoMaEX | CS:Party-detail";
                                 <img src="../../trainer/<?= special($c3['t3']) ?>.png">
                                 <img class="party-detail-sync" src="../../sync/<?= special($c3['s3']) ?>.png">
                                 <div class="potential"><?php echo special($c3['potential']) ?></div>
-                                <div class="skill"><?php echo special($c3['luckyskill_name']) ?></div>
+                                <div class="skill">
+                                    <?php echo special($c3['luckyskill_name']) ?>
+                                    <?php echo special($c3['tn3']) ?>
+                                </div>
                                 <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
