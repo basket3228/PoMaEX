@@ -85,7 +85,7 @@ li {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 2fr 5fr 3fr;
   gap: calc(8px + 1vw);
   height: calc(100vh - (16px + 2vw) - 100px - (16px + 2vw));
   margin-top: calc(16px + 2vw);
@@ -427,8 +427,9 @@ li {
 .detail-list {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 5%;
 }
 
 .party-detail {
@@ -637,4 +638,28 @@ li {
 .CS-フェアリー-detail {
   border: 8px #d34b7d solid;
   background-color: #fa9dad;
+}
+
+.sync-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sync {
+  width: 48%;
+  background: #fff;
+  margin-bottom: 4%;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sync img {
+  width: 100%;
+  margin: 0;
+}
+
+.sync:hover {
+  opacity: 0.6;
 }

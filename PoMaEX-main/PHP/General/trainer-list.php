@@ -5,14 +5,16 @@ $mainChars = get_mainTrainer();
 $types = get_type();
 $roles = get_role();
 $title = "PoMaEX | Trainer-List";
+$syncIndex = 0;
 ?>
 
 <?php require_once("../General/header.php") ?>
 <div class="container">
-  <?php require_once("../General/nav.php") ?>
+  <aside class="sidebar">あ</aside>
+  <!-- <?php require_once("../General/nav.php") ?> -->
   <main class="main">
     <h2 class="sub-title">バディーズ一覧</h2>
-    <div class="a" style="display: none">
+    <div class="" style="display: none">
       <button>フィルター</button>
       <!-- ↓フィルターボタン押下時に表示 -->
       <?php foreach ($types as $type) { ?>
@@ -49,7 +51,19 @@ $title = "PoMaEX | Trainer-List";
     </ul>
   </main>
   <aside class="sidebar">
-    <?php foreach ($mainChars as $main) { ?>
+    <ul class="sync-list">
+      <?php foreach ($mainChars as $main) { ?>
+        <?php if ($main['trainer_name'] == '主人公') { ?>
+          <?php if ($syncIndex % 3 === 0) { ?>
+            <li class="sync">
+              <img src="../../sync/<?= special($main['sync_name']) ?>.png">
+            </li>
+          <?php } ?>
+        <?php } ?>
+        <?php $syncIndex += 1 ?>
+      <?php } ?>
+    </ul>
+    <!-- <?php foreach ($mainChars as $main) { ?>
       <?php if ($main['trainer_name'] == '主人公') { ?>
         <li>
           <?php if ($main['role_name'] == 'アタッカー') { ?>
@@ -66,7 +80,7 @@ $title = "PoMaEX | Trainer-List";
           <img src="../../sync/<?= special($main['sync_name']) ?>.png">
         </li>
       <?php } ?>
-    <?php } ?>
+    <?php } ?> -->
   </aside>
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
