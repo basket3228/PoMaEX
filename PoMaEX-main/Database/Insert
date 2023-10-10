@@ -1359,6 +1359,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('クチナシ', 76, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/5600/5301'),
     ('グラジオ', 82, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/11900/77300'),
     ('グリーン', 83, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/2100/5900'),
+    ('グリーン', 85, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/2100/1800'),
     ('グリーン', 84, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/2100/10300'),
     ('グリーン(アナザー)', 86, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/2102/14200'),
     ('クリス', 78, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/1800/16000'),
@@ -1542,6 +1543,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('マツブサ', 244, 1, false, 20, 5, 'https://ng-pomatools.web.app/pairs/19200/38300'),
     ('マツリカ', 245, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/3400/21000'),
     ('マリィ', 248, 2, true, 20, 5, 'https://ng-pomatools.web.app/pairs/24500/87700'),
+    ('マリィ', 247, 2, false, 0, 4, 'https://ng-pomatools.web.app/pairs/24500/45400')
     ('マリィ(21)', 250, 2, true, 20, 5, 'https://ng-pomatools.web.app/pairs/24501/86100'),
     ('マリィ(22)', 251, 2, true, 20, 5, 'https://ng-pomatools.web.app/pairs/24502/30300'),
     ('マリィ(ネオチャンピオン)', 249, 1, true, 20, 5, 'https://ng-pomatools.web.app/pairs/24503/14601'),
@@ -1778,14 +1780,8 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('主人公', 380, 2, false, 0, 4, null),
     ('主人公', 380, 3, false, 0, 4, null),
     ('主人公', 381, 1, false, 0, 4, null),
-    ('主人公', 381, 2, false, 0, 4, null),
-    ('主人公', 381, 3, false, 0, 4, null),
-    ('主人公', 382, 1, false, 0, 4, null),
-    ('主人公', 382, 2, false, 0, 4, null),
     ('主人公', 382, 3, false, 0, 4, null),
-    ('主人公', 383, 1, false, 0, 4, null),
     ('主人公', 383, 2, false, 0, 4, null),
-    ('主人公', 383, 3, false, 0, 4, null),
     ('主人公', 384, 1, false, 0, 4, null),
     ('主人公', 384, 2, false, 0, 4, null),
     ('主人公', 384, 3, false, 0, 4, null),
@@ -1835,9 +1831,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('主人公', 404, 3, false, 0, 4, null),
     ('主人公', 405, 1, false, 0, 4, null),
     ('主人公', 405, 2, false, 0, 4, null),
-    ('主人公', 405, 3, false, 0, 4, null),
-    ('グリーン', 85, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/2100/1800'),
-    ('マリィ', 247, 2, false, 0, 4, 'https://ng-pomatools.web.app/pairs/24500/45400');
+    ('主人公', 405, 3, false, 0, 4, null);
 
 insert into CSparty (category_id, type_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL, memo)values
     (2, 1, 304, 131, 73, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=000000014300&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDRAaHB8iJCYo&v1=009003050801&s1=1&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBgcICQoMERITFRobHB0jJCUmJyg&v2=011900077300&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgsOEBUYGSMlLi8', 'サンプル'),
