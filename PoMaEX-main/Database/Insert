@@ -1429,7 +1429,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('デンジ', 162, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/11500/40500'),
     ('デンジ(22)', 163, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/11501/46600'),
     ('トウキ', 164, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/4300/29700'),
-    ('トウコ', 165, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/400/50000'),
+    ('トウコ', 165, 1, false, 20, 5, 'https://ng-pomatools.web.app/pairs/400/50000'),
     ('トウコ(22)', 168, 3, true, 20, 5, 'https://ng-pomatools.web.app/pairs/402/85301'),
     ('トウコ(スペシャル)', 166, 1, true, 20, 5, 'https://ng-pomatools.web.app/pairs/401/71900'),
     ('トウヤ', 169, 3, true, 20, 5, 'https://ng-pomatools.web.app/pairs/2000/50300'),
@@ -1535,9 +1535,9 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('マチエール', 236, 1, false, 15, 5, 'https://ng-pomatools.web.app/pairs/22000/16900'),
     ('マチス', 237, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/3500/10100'),
     ('マチス', 238, 3, true, 20, 5, 'https://ng-pomatools.web.app/pairs/3500/2600'),
-    ('マツバ', 239, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14800/42600'),
-    ('マツバ', 240, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14800/42900'),
-    ('マツバ', 241, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14800/9200'),
+    ('マツバ', 239, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14800/42900'),
+    ('マツバ', 240, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14800/42600'),
+    ('マツバ', 241, 3, true, 20, 5, 'https://ng-pomatools.web.app/pairs/14800/9200'),
     ('マツバ(21)', 243, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14801/35400'),
     ('マツブサ', 244, 1, false, 20, 5, 'https://ng-pomatools.web.app/pairs/19200/38300'),
     ('マツリカ', 245, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/3400/21000'),
@@ -1808,7 +1808,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('主人公', 390, 2, false, 0, 4, null),
     ('主人公', 390, 3, false, 0, 4, null),
     ('レッド(ネオチャンピオン)', 391, 1, true, 20, 5, 'https://ng-pomatools.web.app/pairs/3/14400'),
-    ('リーフ(ネオチャンピオン)', 392, 2, true, 20, 5, 'https://ng-pomatools.web.app/pairs/1701/14600'),
+    ('リーフ(ネオチャンピオン)', 392, 2, false, 20, 5, 'https://ng-pomatools.web.app/pairs/1701/14600'),
     ('グリーン(ネオチャンピオン)', 393, 3, true, 20, 5, 'https://ng-pomatools.web.app/pairs/2103/14500'),
     ('マジコススイレン', 395, 1, false, 20, 5, 'https://ng-pomatools.web.app/pairs/16001/78600'),
     ('ラジュルネ', 396, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/20600/37800'),
@@ -1817,8 +1817,8 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('キリヤ', 399, 4, false, 0, 5, 'https://ng-pomatools.web.app/pairs/6400/74502'),
     ('サカキ', 400, 5, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14000/11200'),
     ('クロツグ', 401, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/13400/48600'),
-    ('ケイト', 402, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/20300/22700'),
-    ('ジュン', 175, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/9900/40700'),
+    ('ケイト', 402, 3, true, 20, 5, 'https://ng-pomatools.web.app/pairs/20300/22700'),
+    ('ジュン', 175, 3, true, 20, 5, 'https://ng-pomatools.web.app/pairs/9900/40700'),
     ('マーシュ', 251, 1, false, 0, 4, 'https://ng-pomatools.web.app/pairs/15700/30300'),
     ('ハヤト', 85, 2, false, 0, 4, 'https://ng-pomatools.web.app/pairs/15000/1800'),
     ('リーフ', 357, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/1700/3600'),
@@ -1826,7 +1826,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('リッカ', 33, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/10500/13600'),
     ('アテナ', 61, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14200/2400'),
     ('ラムダ', 93, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14300/11000'),
-    ('ランス', 329, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/14400/4200'),
+    ('ランス', 329, 3, true, 20, 5, 'https://ng-pomatools.web.app/pairs/14400/4200'),
     ('主人公', 403, 1, false, 0, 4, null),
     ('主人公', 403, 2, false, 0, 4, null),
     ('主人公', 403, 3, false, 0, 4, null),
@@ -1840,56 +1840,55 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
     ('マリィ', 247, 2, false, 0, 4, 'https://ng-pomatools.web.app/pairs/24500/45400');
 
 insert into CSparty (category_id, type_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL, memo)values
-    (2, 1, 304, 131, 73, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=000000014300&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDRAaHB8iJCYo&v1=009003050801&s1=1&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBgcICQoMERITFRobHB0jJCUmJyg&v2=011900077300&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgsOEBUYGSMlLi8', null),
-    (2, 2, 240, 524, 233, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=014802025001&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFExYXGhwfIiQmKCs&v1=001701014600&s1=2&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggKCwwNDx0eHyMlJygp&v2=000403049400&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBg8QERQWFxodHiE0', null),
-    (2, 3, 221, 123, 239, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=001801024500&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFERIUFxgZJikqKw&v1=013003065800&s1=3&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFBggKCwwPECMpLC0u&v2=019601072100&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgwPEhUjJCcrLjEz', null),
-    (2, 4, 526, 247, 97, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=002103014500&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDhARExQVGhwfIiUm&v1=000002002500&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggKCwwODxAUFRYj&v2=026400002500&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDA8UFxobHyIoKy4v', null),
-    (2, 5, 214, 119, 222, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=000701078700&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgkfICUoKjU&v1=000201025100&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggJCwwNDhUdHyMlJygpLA&v2=028400047000&s2=3&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFHSAiIyUpLC0u', null),
-    (2, 6, 525, 30, 523, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=001700013300&s0=5&l0=140&r0=5&p0=0&a0=0&t0=1111&g0=AAECAwQFBgcICRocHyEiJC4v&v1=028500047100&s1=3&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFBgcKDA0OExQVHSAi&v2=000003014400&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDB8hIiQoKy0u', null),
-    (2, 7, 228, 199, 49, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=009103044800&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBhkaGxweJigqKy0v&v1=024401014501&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggLDA0OEB0fISIj&v2=015801064701&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBggLDhAVGCksLg', null),
-    (2, 8, 220, 248, 29, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=009501030200&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFCw4TFhcYJiksLg&v1=022000016900&s1=2&l1=140&r1=5&p1=0&a1=0&t1=111&g1=AAECAwQFCQwNDhEUFxobHB0iJCwuLzA&v2=026300056900&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkRFC8wMjQ1', null),
-    (2, 9, 159, 32, 224, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=010800053000&s0=2&l0=140&r0=5&p0=0&a0=0&t0=1111&g0=AAECAwQFExUWFyUnKCor&v1=022200032300&s1=5&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFBggJCg0PFRgZLi8&v2=014002003400&s2=5&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFBgkKCw4PECgpKg', null),
-    (2, 10, 526, 188, 238, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=024601014401&s0=2&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgcKDQ8TFBcaHB8hJSY&v1=001602064101&s1=3&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFCw4QExUYGSMlLi8&v2=011201024900&s2=1&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgcICQoLERITFBUWHB0eHyUmJyg', null),
-    (2, 11, 228, 526, 230, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=011602048800&s0=3&l0=140&r0=5&p0=0&a0=0&t0=1111&g0=AAECAwQFBggaGx0gIyQsLg&v1=016001078600&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBhcaHR4gISQxMw&v2=009002038600&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBggJCgsNDg8QKSwv', null),
-    (2, 12, 125, 160, 71, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=025900083500&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFGhwfIiQmKCssLQ&v1=010801061700&s1=2&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBgcJCgsMDRodHyEjJCYnKA&v2=010901058900&s2=2&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkKCwwREhMeICcoKSor', null),
-    (2, 13, 159, 70, 218, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=010800053000&s0=2&l0=140&r0=5&p0=0&a0=0&t0=1111&g0=AAECAwQFExUWFyUnKCor&v1=010900056700&s1=3&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFBgcJDA8QERIfIicpLA&v2=015802071902&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDBEUGx4pKisvMjQ1', null),
-    (2, 14, 28, 227, 223, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=025101071100&s0=2&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLExUWFxocHyEj&v1=009102048700&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFGB0gIiMlKSwtLw&v2=001201080200&s2=3&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFBggLDQ4QFRYZIyUpKg', null),
-    (2, 15, 237, 81, 229, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=001901038100&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDhAmKSssLQ&v1=016200048300&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggLDQ4dICIjJCYoKw&v2=013002071800&s2=3&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFBgcIHiAjKCkrLC0u', null),
-    (2, 16, 52, 176, 260, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=000301065802&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFExYXGCYpKywt&v1=012902082800&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFEx0gIiMlJygrLS4v&v2=024503014601&s2=1&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgcICQoLERITFBUWHB0eHyUmJyg', null),
-    (2, 17, 172, 259, 279, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=024601014401&s0=2&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgcKDQ8TFBcaHB8hJSY&v1=024502030300&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFCxgdICMkJSksLi8&v2=024300088801&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkRFCgtLi8wMTI0', null),
-    (2, 18, 241, 242, 48, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=003401078800&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgkOERQiJSgq&v1=012801028202&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBxkcHikrMjM0NQ&v2=015800028200&s2=4&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkKDBEUFxgbKCsxNA', null);
+    (2, 1, 304, 131, 73, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=000000014300&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDRAaHB8iJCYo&v1=009003050801&s1=1&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBgcICQoMERITFRobHB0jJCUmJyg&v2=011900077300&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgsOEBUYGSMlLi8', 'サンプル'),
+    (2, 2, 240, 524, 233, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=014802025001&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFExYXGhwfIiQmKCs&v1=001701014600&s1=2&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggKCwwNDx0eHyMlJygp&v2=000403049400&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBg8QERQWFxodHiE0', 'サンプル'),
+    (2, 3, 221, 123, 239, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=001801024500&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFERIUFxgZJikqKw&v1=013003065800&s1=3&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFBggKCwwPECMpLC0u&v2=019601072100&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgwPEhUjJCcrLjEz', 'サンプル'),
+    (2, 4, 526, 247, 97, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=002103014500&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDhARExQVGhwfIiUm&v1=000002002500&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggKCwwODxAUFRYj&v2=026400002500&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDA8UFxobHyIoKy4v', 'サンプル'),
+    (2, 5, 214, 119, 222, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=000701078700&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgkfICUoKjU&v1=000201025100&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggJCwwNDhUdHyMlJygpLA&v2=028400047000&s2=3&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFHSAiIyUpLC0u', 'サンプル'),
+    (2, 6, 525, 30, 523, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=001700013300&s0=5&l0=140&r0=5&p0=0&a0=0&t0=1111&g0=AAECAwQFBgcICRocHyEiJC4v&v1=028500047100&s1=3&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFBgcKDA0OExQVHSAi&v2=000003014400&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDB8hIiQoKy0u', 'サンプル'),
+    (2, 7, 228, 199, 49, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=009103044800&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBhkaGxweJigqKy0v&v1=024401014501&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggLDA0OEB0fISIj&v2=015801064701&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBggLDhAVGCksLg', 'サンプル'),
+    (2, 8, 220, 248, 29, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=009501030200&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFCw4TFhcYJiksLg&v1=022000016900&s1=2&l1=140&r1=5&p1=0&a1=0&t1=111&g1=AAECAwQFCQwNDhEUFxobHB0iJCwuLzA&v2=026300056900&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkRFC8wMjQ1', 'サンプル'),
+    (2, 9, 159, 32, 224, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=010800053000&s0=2&l0=140&r0=5&p0=0&a0=0&t0=1111&g0=AAECAwQFExUWFyUnKCor&v1=022200032300&s1=5&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFBggJCg0PFRgZLi8&v2=014002003400&s2=5&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFBgkKCw4PECgpKg', 'サンプル'),
+    (2, 10, 526, 188, 238, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=024601014401&s0=2&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgcKDQ8TFBcaHB8hJSY&v1=001602064101&s1=3&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFCw4QExUYGSMlLi8&v2=011201024900&s2=1&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgcICQoLERITFBUWHB0eHyUmJyg', 'サンプル'),
+    (2, 11, 228, 526, 230, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=011602048800&s0=3&l0=140&r0=5&p0=0&a0=0&t0=1111&g0=AAECAwQFBggaGx0gIyQsLg&v1=016001078600&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBhcaHR4gISQxMw&v2=009002038600&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBggJCgsNDg8QKSwv', 'サンプル'),
+    (2, 12, 125, 160, 71, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=025900083500&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFGhwfIiQmKCssLQ&v1=010801061700&s1=2&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBgcJCgsMDRodHyEjJCYnKA&v2=010901058900&s2=2&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkKCwwREhMeICcoKSor', 'サンプル'),
+    (2, 13, 159, 70, 218, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=010800053000&s0=2&l0=140&r0=5&p0=0&a0=0&t0=1111&g0=AAECAwQFExUWFyUnKCor&v1=010900056700&s1=3&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFBgcJDA8QERIfIicpLA&v2=015802071902&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDBEUGx4pKisvMjQ1', 'サンプル'),
+    (2, 14, 28, 227, 223, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=025101071100&s0=2&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLExUWFxocHyEj&v1=009102048700&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFGB0gIiMlKSwtLw&v2=001201080200&s2=3&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFBggLDQ4QFRYZIyUpKg', 'サンプル'),
+    (2, 15, 237, 81, 229, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=001901038100&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDhAmKSssLQ&v1=016200048300&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggLDQ4dICIjJCYoKw&v2=013002071800&s2=3&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFBgcIHiAjKCkrLC0u', 'サンプル'),
+    (2, 16, 52, 176, 260, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=000301065802&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFExYXGCYpKywt&v1=012902082800&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFEx0gIiMlJygrLS4v&v2=024503014601&s2=1&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgcICQoLERITFBUWHB0eHyUmJyg', 'サンプル'),
+    (2, 17, 172, 259, 279, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=024601014401&s0=2&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgcKDQ8TFBcaHB8hJSY&v1=024502030300&s1=3&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFCxgdICMkJSksLi8&v2=024300088801&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkRFCgtLi8wMTI0', 'サンプル'),
+    (2, 18, 241, 242, 48, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=003401078800&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgkOERQiJSgq&v1=012801028202&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBxkcHikrMjM0NQ&v2=015800028200&s2=4&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkKDBEUFxgbKCsxNA', 'サンプル');
 
 
 insert into LG(LG_id, name, eventnumber, enemy_id1, enemy_id2, enemy_id3) values
     (1, '第10回', 10, 12, 4, 7),
-    (2, '第11回', 11, 1, 3, 9),
-    (3, '第12回', 12, 10, 2, 6);
+    (2, '第11回', 11, 1, 3, 9);
 
 insert into LGparty (category_id, LG_id, enemy_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL, memo) values
-    (1, 1, 12, 4, 5, 6, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', null),
-    (1, 2, 3, 7, 8, 9, 7, 8, 9, 'https://ng-pomatools.web.app/pairs/19401/48400', null),
-    (1, 3, 6, 10, 11, 12, 10, 11, 12, 'https://ng-pomatools.web.app/pairs/19100/60100', null),
-    (1, 1, 12, 60, 53, 12, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', null),
-    (1, 1, 4, 3, 18, 97, 7, 8, 9, 'https://ng-pomatools.web.app/pairs/19401/48400', null),
-    (1, 1, 7, 95, 123, 64, 10, 11, 12, 'https://ng-pomatools.web.app/pairs/19100/60100', null),
-    (1, 1, 7, 56, 253, 312, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', null),
-    (1, 1, 7, null, 259, null, null, 5, null, 'https://ng-pomatools.web.app/pairs/9202/80400', null);
+    (1, 1, 12, 4, 5, 6, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', 'サンプル'),
+    (1, 2, 3, 7, 8, 9, 7, 8, 9, 'https://ng-pomatools.web.app/pairs/19401/48400', 'サンプル'),
+    (1, 3, 6, 10, 11, 12, 10, 11, 12, 'https://ng-pomatools.web.app/pairs/19100/60100', 'サンプル'),
+    (1, 1, 12, 60, 53, 12, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', 'サンプル'),
+    (1, 1, 4, 3, 18, 97, 7, 8, 9, 'https://ng-pomatools.web.app/pairs/19401/48400', 'サンプル'),
+    (1, 1, 7, 95, 123, 64, 10, 11, 12, 'https://ng-pomatools.web.app/pairs/19100/60100', 'サンプル'),
+    (1, 1, 7, 56, 253, 312, 4, 5, 6, 'https://ng-pomatools.web.app/pairs/9202/80400', 'サンプル'),
+    (1, 1, 7, null, 259, null, null, 5, null, 'https://ng-pomatools.web.app/pairs/9202/80400', 'サンプル');
 
 insert into SA (SA_id, type_id, name) values
     (1, 3, "みずを統べるもの"),
     (2, 4, "でんきを統べるもの");
 
 insert into SAparty (SAparty_id, category_id, SA_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL, memo) values
-    (1, 3, 1, 221, 302, 6, 56, 1, 39, 'https://ng-pomatools.web.app/team?v0=001801024500&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFERIUFxgZJikqKw&v1=024900083400&s1=5&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFCw4VFhcYICMlLi8&v2=019300038200&s2=2&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgcKCwwNDhESExQWGScoKSs', null),
-    (2, 3, 1, 220, 398, 123, 4, 25, 4, 'https://ng-pomatools.web.app/team?v0=002101000900&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBhETFiYnKDIzNDU&v1=013040&s1=1&l1=140&r1=1&p1=0&a1=0&t1=11&n1=1&f1=0&v2=013003065800&s2=5&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFBgcICQwPEBUWKSwu', null),
-    (3, 3, 1, 118, 167, 239, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=028400013400&s0=5&l0=140&r0=4&p0=0&a0=0&t0=1111&g0=AAECAwQFBggLDg8QExQXHywu&v1=012600026000&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggKDQ8VFhkdHyI&v2=019601072100&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkPEBITFSssLzI', null),
-    (4, 3, 1, 37, 284, 267, 4, 2, 1, 'https://ng-pomatools.web.app/team?v0=011001005400&s0=5&l0=140&r0=4&p0=0&a0=0&t0=1111&g0=AAECAwQFBggTFBUYGhweJScqLC0u&v1=012200073000&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggJCg0OExQVGhseICMk&v2=021600024501&s2=3&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFFxodICgqLjAzNQ', null),
-    (5, 3, 1, 112, 36, 282, 52, 4, 1, 'https://ng-pomatools.web.app/team?v0=016000075200&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggKCwwODxAaGx4mKQ&v1=011000012100&s1=5&l1=140&r1=3&p1=0&a1=0&t1=1111&g1=AAECAwQFERITFRglJicoKywt&v2=024302089201&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFCw4QIyUnKSwtLg', null),
-    (6, 3, 2, 43, 142, 247 , 63, 22, 1, 'https://ng-pomatools.web.app/team?v0=013100008200&s0=5&l0=140&r0=4&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDRAaHB8iJCYoKg&v1=011500040500&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFFRgdHyEjJCUnKSot&v2=000002002500&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFCx0gIyUpKywtLi8', null),
-    (7, 3, 2, 104, 250, 257, 53, 22, 1, 'https://ng-pomatools.web.app/team?v0=010600059500&s0=5&l0=140&r0=4&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDg8QGhseICIjJA&v1=003500002600&s1=5&l1=140&r1=4&p1=0&a1=0&t1=11111&g1=AAECAwQFBggLDhAaHB4mJygpLA&v2=024500087700&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFGBkpLC0uLzAz', null),
-    (8, 3, 2, 125, 45, 42, 53, 50, 1, 'https://ng-pomatools.web.app/team?v0=025900083500&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFGhwfIiQmKCssLQ&v1=010601058700&s1=1&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBgcICQoMERITFRobHB0jJCUmJyg&v2=008900064400&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDA0dHh8hJCgqLC0uMA', null),
-    (9, 3, 2, 525, 103, 97, 43, 1, 1, 'https://ng-pomatools.web.app/team?v0=002103014500&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDhARExQaGxwdHyIlJg&v1=010600052300&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFERQXGhwoKywtMDM1&v2=026400002500&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDA8UFxobHyIoKy4v', null),
-    (10, 3, 2, 217, 262, 235, 54, 4, 1, 'https://ng-pomatools.web.app/team?v0=010610047900&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgcICgsODxAaJiks&v1=011302018100&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFGhweICEiIyQlKCs&v2=009801078500&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFCR4fIiQlKCk1', null);
+    (1, 3, 1, 221, 302, 6, 56, 1, 39, 'https://ng-pomatools.web.app/team?v0=001801024500&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFERIUFxgZJikqKw&v1=024900083400&s1=5&l1=140&r1=5&p1=0&a1=0&t1=1111&g1=AAECAwQFCw4VFhcYICMlLi8&v2=019300038200&s2=2&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgcKCwwNDhESExQWGScoKSs', 'サンプル'),
+    (2, 3, 1, 220, 398, 123, 4, 25, 4, 'https://ng-pomatools.web.app/team?v0=002101000900&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBhETFiYnKDIzNDU&v1=013040&s1=1&l1=140&r1=1&p1=0&a1=0&t1=11&n1=1&f1=0&v2=013003065800&s2=5&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFBgcICQwPEBUWKSwu', 'サンプル'),
+    (3, 3, 1, 118, 167, 239, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=028400013400&s0=5&l0=140&r0=4&p0=0&a0=0&t0=1111&g0=AAECAwQFBggLDg8QExQXHywu&v1=012600026000&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggKDQ8VFhkdHyI&v2=019601072100&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgkPEBITFSssLzI', 'サンプル'),
+    (4, 3, 1, 37, 284, 267, 4, 2, 1, 'https://ng-pomatools.web.app/team?v0=011001005400&s0=5&l0=140&r0=4&p0=0&a0=0&t0=1111&g0=AAECAwQFBggTFBUYGhweJScqLC0u&v1=012200073000&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBggJCg0OExQVGhseICMk&v2=021600024501&s2=3&l2=140&r2=5&p2=0&a2=0&t2=1111&g2=AAECAwQFFxodICgqLjAzNQ', 'サンプル'),
+    (5, 3, 1, 112, 36, 282, 52, 4, 1, 'https://ng-pomatools.web.app/team?v0=016000075200&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggKCwwODxAaGx4mKQ&v1=011000012100&s1=5&l1=140&r1=3&p1=0&a1=0&t1=1111&g1=AAECAwQFERITFRglJicoKywt&v2=024302089201&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFCw4QIyUnKSwtLg', 'サンプル'),
+    (6, 3, 2, 43, 142, 247 , 63, 22, 1, 'https://ng-pomatools.web.app/team?v0=013100008200&s0=5&l0=140&r0=4&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDRAaHB8iJCYoKg&v1=011500040500&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFFRgdHyEjJCUnKSot&v2=000002002500&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFCx0gIyUpKywtLi8', 'サンプル'),
+    (7, 3, 2, 104, 250, 257, 53, 22, 1, 'https://ng-pomatools.web.app/team?v0=010600059500&s0=5&l0=140&r0=4&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDg8QGhseICIjJA&v1=003500002600&s1=5&l1=140&r1=4&p1=0&a1=0&t1=11111&g1=AAECAwQFBggLDhAaHB4mJygpLA&v2=024500087700&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFGBkpLC0uLzAz', 'サンプル'),
+    (8, 3, 2, 125, 45, 42, 53, 50, 1, 'https://ng-pomatools.web.app/team?v0=025900083500&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFGhwfIiQmKCssLQ&v1=010601058700&s1=1&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBgcICQoMERITFRobHB0jJCUmJyg&v2=008900064400&s2=3&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDA0dHh8hJCgqLC0uMA', 'サンプル'),
+    (9, 3, 2, 525, 103, 97, 43, 1, 1, 'https://ng-pomatools.web.app/team?v0=002103014500&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDhARExQaGxwdHyIlJg&v1=010600052300&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFERQXGhwoKywtMDM1&v2=026400002500&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFDA8UFxobHyIoKy4v', 'サンプル'),
+    (10, 3, 2, 217, 262, 235, 54, 4, 1, 'https://ng-pomatools.web.app/team?v0=010610047900&s0=5&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBgcICgsODxAaJiks&v1=011302018100&s1=5&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFGhweICEiIyQlKCs&v2=009801078500&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFCR4fIiQlKCk1', 'サンプル');
 
 
 
