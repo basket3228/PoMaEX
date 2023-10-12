@@ -55,7 +55,7 @@ $syncIndex = 0;
       <?php foreach ($mainChars as $main) { ?>
         <?php if ($main['trainer_name'] == '主人公') { ?>
           <?php if ($syncIndex % 3 === 0) { ?>
-            <li class="sync">
+            <li class="sync clickable" data-syncName="<?= $main['sync_name'] ?>">
               <img src="../../sync/<?= special($main['sync_name']) ?>.png">
             </li>
           <?php } ?>
@@ -63,24 +63,31 @@ $syncIndex = 0;
         <?php $syncIndex += 1 ?>
       <?php } ?>
     </ul>
-    <!-- <?php foreach ($mainChars as $main) { ?>
-      <?php if ($main['trainer_name'] == '主人公') { ?>
-        <li>
-          <?php if ($main['role_name'] == 'アタッカー') { ?>
-            <img src="../../img/アタッカー.png">
-          <?php } else if ($main['role_name'] == 'テクニカル') { ?>
-            <img src="../../img/テクニカル.png">
-          <?php } else if ($main['role_name'] == 'サポート') { ?>
-            <img src="../../img/サポート.png">
-          <?php } else if ($main['role_name'] == 'スピード') { ?>
-            <img src="../../img/スピード.png">
-          <?php } else if ($main['role_name'] == 'フィールド') { ?>
-            <img src="../../img/フィールド.png">
+    <div class="popup-sync">
+      <div class="popup-inner">
+        <?php foreach ($mainChars as $main) { ?>
+          <?php if ($main['trainer_name'] == '主人公') { ?>
+            <li class="sync sync-popup" data-syncName="<?= $main['sync_name'] ?>">
+              <?php if ($main['role_name'] == 'アタッカー') { ?>
+                <img class="sync-role" src="../../img/アタッカー.png">
+              <?php } else if ($main['role_name'] == 'テクニカル') { ?>
+                <img class="sync-role" src="../../img/テクニカル.png">
+              <?php } else if ($main['role_name'] == 'サポート') { ?>
+                <img class="sync-role" src="../../img/サポート.png">
+              <?php } else if ($main['role_name'] == 'スピード') { ?>
+                <img class="sync-role" src="../../img/スピード.png">
+              <?php } else if ($main['role_name'] == 'フィールド') { ?>
+                <img class="sync-role" src="../../img/フィールド.png">
+              <?php } ?>
+              <img src="../../sync/<?= special($main['sync_name']) ?>.png">
+            </li>
           <?php } ?>
-          <img src="../../sync/<?= special($main['sync_name']) ?>.png">
-        </li>
-      <?php } ?>
-    <?php } ?> -->
+        <?php } ?>
+      </div>
+      <div class="popup-btn">
+        閉じる
+      </div>
+    </div>
   </aside>
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

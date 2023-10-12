@@ -219,7 +219,8 @@ li {
   cursor: pointer;
 }
 
-.popup {
+.popup,
+.popup-sync {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +235,8 @@ li {
   z-index: 999;
 }
 
-.popup.display {
+.popup.display,
+.popup-sync.display {
   opacity: 1;
   visibility: visible;
 }
@@ -647,11 +649,15 @@ li {
 }
 
 .sync {
+  position: relative;
   width: 48%;
   background: #fff;
   margin-bottom: 4%;
   border-radius: 8px;
   transition: 0.3s;
+}
+
+.sync.clickable {
   cursor: pointer;
 }
 
@@ -660,6 +666,27 @@ li {
   margin: 0;
 }
 
-.sync:hover {
+.sync.clickable:hover {
   opacity: 0.6;
+}
+
+.sync-popup {
+  display: none;
+  margin-bottom: 0;
+}
+
+.sync-popup.display {
+  display: block;
+}
+
+.sync-role {
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 40% !important;
+}
+
+.popup-sync .popup-btn {
+  max-width: 25%;
 }
