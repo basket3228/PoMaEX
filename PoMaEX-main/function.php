@@ -418,8 +418,10 @@ function get_CSList($type_id)
 function get_SAList($SA_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select SAparty.SAparty_id, trainer.trainer_name from SAparty
-    left join trainer on trainer.trainer_id = SAparty.trainer_id2
+    $st = $pdo->prepare("select SAparty.SAparty_id, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3 from SAparty
+    left join trainer as t1 on t1.trainer_id = SAparty.trainer_id1
+    left join trainer as t2 on t2.trainer_id = SAparty.trainer_id2
+    left join trainer as t3 on t3.trainer_id = SAparty.trainer_id3
     where SAparty.SA_id = ?");
     $st->bindValue(1, $SA_id);
     $st->execute();
