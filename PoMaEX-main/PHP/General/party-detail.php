@@ -78,11 +78,11 @@ $title = "PoMaEX | CS:Party-detail";
                                 <img src="../../trainer/<?= special($c1['t1']) ?>.png">
                                 <img class="party-detail-sync" src="../../sync/<?= special($c1['s1']) ?>.png">
                                 <div class="potential">
-                                    <?php echo special($c1['potential']) ?>
+                                    のびしろ：<?php echo special($c1['potential']) ?>
                                 </div>
                                 <div class="skill">
-                                    <?php echo special($c1['luckyskill_name']) ?>
-                                    <?php echo special($c1['tn1']) ?>
+                                    ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
+                                    <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
                                 </div>
                                 <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
@@ -127,10 +127,11 @@ $title = "PoMaEX | CS:Party-detail";
                                 </div>
                                 <img src="../../trainer/<?= special($c2['t2']) ?>.png">
                                 <img class="party-detail-sync" src="../../sync/<?= special($c2['s2']) ?>.png">
-                                <div class="potential"><?php echo special($c2['potential']) ?></div>
+                                <div class="potential">
+                                    のびしろ：<?php echo special($c2['potential']) ?></div>
                                 <div class="skill">
-                                    <?php echo special($c2['luckyskill_name']) ?>
-                                    <?php echo special($c2['tn2']) ?>
+                                    ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
+                                    <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
                                 </div>
                                 <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
@@ -172,10 +173,11 @@ $title = "PoMaEX | CS:Party-detail";
                                 </div>
                                 <img src="../../trainer/<?= special($c3['t3']) ?>.png">
                                 <img class="party-detail-sync" src="../../sync/<?= special($c3['s3']) ?>.png">
-                                <div class="potential"><?php echo special($c3['potential']) ?></div>
+                                <div class="potential">
+                                    のびしろ：<?php echo special($c3['potential']) ?></div>
                                 <div class="skill">
-                                    <?php echo special($c3['luckyskill_name']) ?>
-                                    <?php echo special($c3['tn3']) ?>
+                                    ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
+                                    <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
                                 </div>
                                 <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
@@ -220,10 +222,10 @@ $title = "PoMaEX | CS:Party-detail";
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png">
                                     <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png">
                                     <div class="potential">
-                                        <?php echo special($c1['potential']) ?>
+                                        のびしろ：<?php echo special($c1['potential']) ?>
                                     </div>
                                     <div class="skill">
-                                        <?php echo special($c1['luckyskill_name']) ?>
+                                        ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                     </div>
                                     <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
@@ -268,9 +270,11 @@ $title = "PoMaEX | CS:Party-detail";
                                     </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png">
                                     <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png">
-                                    <div class="potential"><?php echo special($c2['potential']) ?></div>
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c2['potential']) ?>
+                                    </div>
                                     <div class="skill">
-                                        <?php echo special($c2['luckyskill_name']) ?>
+                                        ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                     </div>
                                     <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
@@ -312,9 +316,11 @@ $title = "PoMaEX | CS:Party-detail";
                                     </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png">
                                     <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png">
-                                    <div class="potential"><?php echo special($c3['potential']) ?></div>
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c3['potential']) ?>
+                                    </div>
                                     <div class="skill">
-                                        <?php echo special($c3['luckyskill_name']) ?>
+                                        ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                     </div>
                                     <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
@@ -360,10 +366,10 @@ $title = "PoMaEX | CS:Party-detail";
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png">
                                     <img class="party-detail-sync" src="../../sync/<?= special($c1['s1']) ?>.png">
                                     <div class="potential">
-                                        <?php echo special($c1['potential']) ?>
+                                        のびしろ：<?php echo special($c1['potential']) ?>
                                     </div>
                                     <div class="skill">
-                                        <?php echo special($c1['luckyskill_name']) ?>
+                                        ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                     </div>
                                     <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
                                 </li>
@@ -408,8 +414,12 @@ $title = "PoMaEX | CS:Party-detail";
                                     </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png">
                                     <img class="party-detail-sync" src="../../sync/<?= special($c2['s2']) ?>.png">
-                                    <div class="potential"><?php echo special($c2['potential']) ?></div>
-                                    <div class="skill"><?php echo special($c2['luckyskill_name']) ?></div>
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c2['potential']) ?>
+                                    </div>
+                                    <div class="skill">
+                                        ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
+                                    </div>
                                     <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
@@ -450,8 +460,12 @@ $title = "PoMaEX | CS:Party-detail";
                                     </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png">
                                     <img class="party-detail-sync" src="../../sync/<?= special($c3['s3']) ?>.png">
-                                    <div class="potential"><?php echo special($c3['potential']) ?></div>
-                                    <div class="skill"><?php echo special($c3['luckyskill_name']) ?></div>
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c3['potential']) ?>
+                                    </div>
+                                    <div class="skill">
+                                        ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
+                                    </div>
                                     <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
                                 </li>
                             <?php } ?>
@@ -462,7 +476,7 @@ $title = "PoMaEX | CS:Party-detail";
         </div>
     </main>
     <aside class="layer">
-        ああ
+        何入れるかは検討中。
     </aside>
     <aside class="sidebar">
         <div class="URL pomatool">
@@ -476,7 +490,6 @@ $title = "PoMaEX | CS:Party-detail";
                     <a href="add-grids-info?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>"><button>ボード登録</button></a>
                 <?php } ?>
             </form>
-            <!-- 直で高さと幅入れてるのは仮だよ。 -->
             <?php if ($URL['URL'] != null) { ?>
                 <iframe src="<?= special($URL['URL']) ?>" class="pomatool-frame"></iframe>
             <?php } else { ?>
