@@ -85,7 +85,7 @@ li {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 2fr 5fr 3fr;
   gap: calc(8px + 1vw);
   height: calc(100vh - (16px + 2vw) - 100px - (16px + 2vw));
   margin-top: calc(16px + 2vw);
@@ -219,7 +219,8 @@ li {
   cursor: pointer;
 }
 
-.popup {
+.popup,
+.popup-sync {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +235,8 @@ li {
   z-index: 999;
 }
 
-.popup.display {
+.popup.display,
+.popup-sync.display {
   opacity: 1;
   visibility: visible;
 }
@@ -427,8 +429,9 @@ li {
 .detail-list {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 5%;
 }
 
 .party-detail {
@@ -637,4 +640,53 @@ li {
 .CS-フェアリー-detail {
   border: 8px #d34b7d solid;
   background-color: #fa9dad;
+}
+
+.sync-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sync {
+  position: relative;
+  width: 48%;
+  background: #fff;
+  margin-bottom: 4%;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sync.clickable {
+  cursor: pointer;
+}
+
+.sync img {
+  width: 100%;
+  margin: 0;
+}
+
+.sync.clickable:hover {
+  opacity: 0.6;
+}
+
+.sync-popup {
+  display: none;
+  margin-bottom: 0;
+}
+
+.sync-popup.display {
+  display: block;
+}
+
+.sync-role {
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 40% !important;
+}
+
+.popup-sync .popup-btn {
+  max-width: 25%;
 }
