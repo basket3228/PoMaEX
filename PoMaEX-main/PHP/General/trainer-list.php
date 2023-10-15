@@ -6,6 +6,7 @@ $types = get_type();
 $roles = get_role();
 $title = "PoMaEX | Trainer-List";
 $syncIndex = 0;
+$tempSync = "";
 ?>
 
 <?php require_once("../General/header.php") ?>
@@ -54,10 +55,11 @@ $syncIndex = 0;
     <ul class="sync-list">
       <?php foreach ($mainChars as $main) { ?>
         <?php if ($main['trainer_name'] == '主人公') { ?>
-          <?php if ($syncIndex % 3 === 0) { ?>
+          <?php if ($tempSync != $main['sync_name']) { ?>
             <li class="sync clickable" data-syncName="<?= $main['sync_name'] ?>">
               <img src="../../sync/<?= special($main['sync_name']) ?>.png">
             </li>
+            <?php $tempSync = $main['sync_name'] ?>
           <?php } ?>
         <?php } ?>
         <?php $syncIndex += 1 ?>
