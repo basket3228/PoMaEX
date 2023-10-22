@@ -53,7 +53,7 @@ li {
   padding: 0.8rem;
   text-align: center;
   font-weight: bold;
-  color: #fff;
+  color: #fff !important;
   background: linear-gradient(0deg, #94c0c9 0%, #6ea9b7 100%);
   border: #c3dbdd 4px solid;
   box-shadow: 2px 2px 4px -2px #6793a0;
@@ -61,6 +61,8 @@ li {
 }
 
 .header {
+  display: flex;
+  gap: 32px;
   position: sticky;
   top: 0;
   left: 0;
@@ -150,6 +152,49 @@ li {
 
 .nav-down a {
   flex: 1;
+}
+
+.nav-new {
+  position: relative;
+  font-weight: bold;
+  flex: 1;
+  box-shadow: none;
+}
+
+.nav-new .nav-list {
+  display: flex;
+  height: 100%;
+}
+
+.nav-new .nav-list li:not(.nav-toggle) {
+  flex: 1;
+  height: 100%;
+}
+
+.nav-new .nav-toggle {
+  position: fixed;
+  top: 100px;
+  left: calc(4% + 139px + 32px);
+  z-index: 1;
+}
+
+.nav-new .nav-sublist.open {
+  max-height: calc((16px * 2 * 3) + (50px * 3));
+}
+
+.nav-new ul li a {
+  height: 100%;
+  border-bottom: 0;
+  line-height: 50px;
+}
+
+.nav-new .nav-down {
+  border-top: 0;
+}
+
+.nav-new .nav-down-arrow {
+  border: 1px solid #eee;
+  line-height: 50px;
 }
 
 /* .nav-fixed {
@@ -689,4 +734,25 @@ li {
 
 .popup-sync .popup-btn {
   max-width: 25%;
+}
+
+.LG-list {
+  margin-top: 48px;
+}
+
+.LG {
+  margin-bottom: 32px;
+}
+
+.LG-add-btn {
+  margin-top: 16px;
+}
+
+.LG img {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.LG a {
+  width: 100%;
 }
