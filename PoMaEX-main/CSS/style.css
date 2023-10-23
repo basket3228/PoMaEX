@@ -112,7 +112,7 @@ li {
 .layer {
   position: absolute;
   bottom: calc((16px + 2vw) * 2);
-  left: 50%;
+  left: 45.5%;
   translate: -50% 0;
   width: 40%;
   height: 30%;
@@ -552,6 +552,7 @@ li {
 .potential {
   position: absolute;
   bottom: calc(-10px + -1em + -12px);
+  line-height: 1.25;
 }
 
 .role {
@@ -561,7 +562,7 @@ li {
 }
 
 .skill {
-  bottom: calc(-10px + -2.25em + -12px);
+  bottom: calc(-10px + -3em + -32px);
 }
 
 .party-detail p {
@@ -755,4 +756,50 @@ li {
 
 .LG a {
   width: 100%;
+}
+
+.info {
+  margin-bottom: 48px;
+}
+
+.info img {
+  width: 100%;
+}
+
+.info .main-btn {
+  margin-top: 8px;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.two-columns li {
+  width: calc(50% - 8px);
+}
+
+.two-columns li:nth-of-type(odd) {
+  margin-right: 16px;
+}
+
+.info-img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.info-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info:first-of-type .info-img img {
+  width: 140%;
+  height: 140%;
+  object-position: top left;
 }

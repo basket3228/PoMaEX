@@ -25,96 +25,97 @@ $title = "PoMaEX | LG:Solo-Info";
 <div class="container">
     <?php require_once("../General/nav.php") ?>
     <main class="main">
-        <h2><?php echo special($enemy['enemy_name']) ?></h2>
-        <ul>
+        <h2 class="sub-title"><?php echo special($enemy['enemy_name']) ?></h2>
+        <ul class="detail-list">
             <?php if ($enemy_id == 1) { ?>
                 <?php foreach ($raiko as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 2) { ?>
                 <?php foreach ($entei as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 3) { ?>
                 <?php foreach ($latios as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
-                    </li><?php } ?>
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                    </li>
+                <?php } ?>
             <?php } else if ($enemy_id == 4) { ?>
                 <?php foreach ($latias as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 5) { ?>
                 <?php foreach ($terrakion as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 6) { ?>
                 <?php foreach ($cobalion as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 7) { ?>
                 <?php foreach ($moltres as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 8) { ?>
                 <?php foreach ($cresselia as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 9) { ?>
                 <?php foreach ($tornadus as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 10) { ?>
                 <?php foreach ($tapu_bulu as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 11) { ?>
                 <?php foreach ($azelf as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 12) { ?>
                 <?php foreach ($uxie as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 13) { ?>
                 <?php foreach ($regirock as $solo) { ?>
-                    <li>
+                    <li class="party-detail CS-ノーマル-detail" style="margin-bottom: calc(16px + 1vw)">
                         <img src="../../trainer/<?= special($solo['trainer_name']) ?>.png">
-                        <img src="../../sync/<?= special($solo['sync_name']) ?>.png">
+                        <img class="party-detail-sync" src="../../sync/<?= special($solo['sync_name']) ?>.png">
                     </li>
                 <?php } ?>
             <?php } ?>
