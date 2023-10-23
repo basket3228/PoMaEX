@@ -110,10 +110,11 @@ function get_enemy3($LG_id)
 function get_entei($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloEntei as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloEntei as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -124,14 +125,14 @@ function get_entei($enemy_id)
     return $enemy;
 }
 
-
 function get_raiko($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloRaiko as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloRaiko as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -145,10 +146,11 @@ function get_raiko($enemy_id)
 function get_latios($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloLatios as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloLatios as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -162,10 +164,11 @@ function get_latios($enemy_id)
 function get_latias($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloLatias as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloLatias as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -179,10 +182,11 @@ function get_latias($enemy_id)
 function get_terrakion($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloTerrakion as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloTerrakion as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -196,10 +200,11 @@ function get_terrakion($enemy_id)
 function get_cobalion($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloCobalion as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloCobalion as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -213,10 +218,11 @@ function get_cobalion($enemy_id)
 function get_cresselia($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloCresselia as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloCresselia as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -230,10 +236,11 @@ function get_cresselia($enemy_id)
 function get_tornadus($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloTornadus as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloTornadus as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -247,10 +254,11 @@ function get_tornadus($enemy_id)
 function get_tapu_Bulu($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloTapu_Bulu as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloTapu_Bulu as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -264,10 +272,11 @@ function get_tapu_Bulu($enemy_id)
 function get_azelf($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloAzelf as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloAzelf as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -281,10 +290,11 @@ function get_azelf($enemy_id)
 function get_uxie($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloUxie as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloUxie as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -298,10 +308,11 @@ function get_uxie($enemy_id)
 function get_regirock($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloRegirock as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloRegirock as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
@@ -315,10 +326,11 @@ function get_regirock($enemy_id)
 function get_moltres($enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name from soloMoltres as t1
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloMoltres as t1
     left join enemy on enemy.enemy_id = t1.enemy_id
     left join trainer on trainer.trainer_id = t1.trainer_id
     left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
     where t1.enemy_id = ?");
     $st->bindValue(1, $enemy_id);
     $st->execute();
