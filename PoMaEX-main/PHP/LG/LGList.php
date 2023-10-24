@@ -20,7 +20,7 @@ $title = "PoMaEX | LG:LG-List";
                             <?= special($party['name']) ?>
                             <img src="../../img/LG<?= special($party['eventnumber']) ?>.png">
                         </a>
-                        <a class="main-btn" href="delete-LG.php?eventnumber=<?= special($party['eventnumber']) ?>&category_id=<?= special($category_id) ?>">削除</a>
+                        <button class="party-delete LG-delete delete-btn" data-delete="delete-LG.php?eventnumber=<?= special($party['eventnumber']) ?>&category_id=<?= special($category_id) ?>"></button>
                     </li>
                 <?php } ?>
             <?php } ?>

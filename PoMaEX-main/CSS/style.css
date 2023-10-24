@@ -742,6 +742,7 @@ li {
 }
 
 .LG {
+  position: relative;
   margin-bottom: 32px;
 }
 
@@ -756,6 +757,14 @@ li {
 
 .LG a {
   width: 100%;
+}
+
+.LG-delete {
+  top: 0.25em;
+  right: -3%;
+  width: 10%;
+  height: auto;
+  aspect-ratio: 1;
 }
 
 .info {
@@ -802,4 +811,11 @@ li {
   width: 140%;
   height: 140%;
   object-position: top left;
+}
+
+.SA {
+}
+
+.SA-list {
+  margin-top: 48px;
 }
