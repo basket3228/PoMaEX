@@ -29,7 +29,7 @@ $title = "PoMaEX | CS:Party-List";
                             <a href="../General/party-detail.php?CSparty_id=<?= special($party['CSparty_id']) ?>&category_id=<?= special($category_id) ?>&type=<?= $pageType ?>">
                                 <img src="../../trainer/<?= special($party['trainer_name']) ?>.png">
                             </a>
-                            <button class="party-delete" data-delete="delete-CS-list.php?type_id=<?= special($type_id) ?>&category_id=<?= special($category_id) ?>&CSparty_id=<?= special($party['CSparty_id']) ?>"></button>
+                            <button class="party-delete delete-btn" data-delete="delete-CS-list.php?type_id=<?= special($type_id) ?>&category_id=<?= special($category_id) ?>&CSparty_id=<?= special($party['CSparty_id']) ?>"></button>
                         </li>
 
                     <?php } ?>
