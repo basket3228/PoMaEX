@@ -48,7 +48,21 @@ li {
   margin: 0;
 }
 
+.main-btn {
+  display: block;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff !important;
+  background: linear-gradient(0deg, #94c0c9 0%, #6ea9b7 100%);
+  border: #c3dbdd 4px solid;
+  box-shadow: 2px 2px 4px -2px #6793a0;
+  border-radius: 2rem;
+}
+
 .header {
+  display: flex;
+  gap: 32px;
   position: sticky;
   top: 0;
   left: 0;
@@ -73,7 +87,7 @@ li {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 2fr 5fr 3fr;
   gap: calc(8px + 1vw);
   height: calc(100vh - (16px + 2vw) - 100px - (16px + 2vw));
   margin-top: calc(16px + 2vw);
@@ -82,7 +96,8 @@ li {
 
 .main,
 .nav,
-.sidebar {
+.sidebar,
+.layer {
   height: 100%;
   padding: 32px calc(16px + 1vw);
   overflow: auto;
@@ -92,6 +107,16 @@ li {
 }
 
 .main {
+}
+
+.layer {
+  position: absolute;
+  bottom: calc((16px + 2vw) * 2);
+  left: 45.5%;
+  translate: -50% 0;
+  width: 40%;
+  height: 30%;
+  border: 2px solid #95aad6;
 }
 
 .nav {
@@ -127,6 +152,49 @@ li {
 
 .nav-down a {
   flex: 1;
+}
+
+.nav-new {
+  position: relative;
+  font-weight: bold;
+  flex: 1;
+  box-shadow: none;
+}
+
+.nav-new .nav-list {
+  display: flex;
+  height: 100%;
+}
+
+.nav-new .nav-list li:not(.nav-toggle) {
+  flex: 1;
+  height: 100%;
+}
+
+.nav-new .nav-toggle {
+  position: fixed;
+  top: 100px;
+  left: calc(4% + 139px + 32px);
+  z-index: 1;
+}
+
+.nav-new .nav-sublist.open {
+  max-height: calc((16px * 2 * 3) + (50px * 3));
+}
+
+.nav-new ul li a {
+  height: 100%;
+  border-bottom: 0;
+  line-height: 50px;
+}
+
+.nav-new .nav-down {
+  border-top: 0;
+}
+
+.nav-new .nav-down-arrow {
+  border: 1px solid #eee;
+  line-height: 50px;
 }
 
 /* .nav-fixed {
@@ -196,7 +264,8 @@ li {
   cursor: pointer;
 }
 
-.popup {
+.popup,
+.popup-sync {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,7 +280,8 @@ li {
   z-index: 999;
 }
 
-.popup.display {
+.popup.display,
+.popup-sync.display {
   opacity: 1;
   visibility: visible;
 }
@@ -257,6 +327,13 @@ li {
 
 .popup-btn:hover {
   opacity: 0.6;
+}
+
+.sub-title {
+  color: #fff;
+  text-shadow: #27636e 1px 0px, #27636e -1px 0px, #27636e 0px -1px, #27636e 0px 1px, #27636e 1px 1px, #27636e -1px 1px,
+    #27636e 1px -1px, #27636e -1px -1px;
+  margin-bottom: 32px;
 }
 
 .type-list {
@@ -375,96 +452,6 @@ li {
   opacity: 0.6;
 }
 
-.CS-ノーマル a {
-  border: 8px #7d7874 solid;
-  background-color: #afaeab;
-}
-
-.CS-ほのお a {
-  border: 8px #c94a4f solid;
-  background-color: #ed605f;
-}
-
-.CS-みず a {
-  border: 8px #3090b4 solid;
-  background-color: #60c3ec;
-}
-
-.CS-でんき a {
-  border: 8px #b09002 solid;
-  background-color: #fed93c;
-}
-
-.CS-くさ a {
-  border: 8px #3f9849 solid;
-  background-color: #50ca5d;
-}
-
-.CS-こおり a {
-  border: 8px #4c9da3 solid;
-  background-color: #78c8d0;
-}
-
-.CS-かくとう a {
-  border: 8px #c55f23 solid;
-  background-color: #f9915a;
-}
-
-.CS-どく a {
-  border: 8px #8f52b3 solid;
-  background-color: #c773da;
-}
-
-.CS-じめん a {
-  border: 8px #a06546 solid;
-  background-color: #d28346;
-}
-
-.CS-ひこう a {
-  border: 8px #4d73e0 solid;
-  background-color: #819ff0;
-}
-
-.CS-エスパー a {
-  border: 8px #d34b7d solid;
-  background-color: #f682af;
-}
-
-.CS-むし a {
-  border: 8px #6a9001 solid;
-  background-color: #aad23c;
-}
-
-.CS-いわ a {
-  border: 8px #8e6b47 solid;
-  background-color: #be9877;
-}
-
-.CS-ゴースト a {
-  border: 8px #8c6587 solid;
-  background-color: #c89cc2;
-}
-
-.CS-ドラゴン a {
-  border: 8px #109cab solid;
-  background-color: #31abcc;
-}
-
-.CS-あく a {
-  border: 8px #636286 solid;
-  background-color: #9695b4;
-}
-
-.CS-はがね a {
-  border: 8px #62759d solid;
-  background-color: #95aad6;
-}
-
-.CS-フェアリー a {
-  border: 8px #d34b7d solid;
-  background-color: #fa9dad;
-}
-
 .pomatool {
   height: calc(100% - 32px);
 }
@@ -482,4 +469,353 @@ li {
 
 .pomatool input {
   width: 100%;
+}
+
+.detail-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.party-detail {
+  position: relative;
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  border-width: 10px !important;
+}
+
+.party-detail img {
+  width: 100%;
+}
+
+.stars {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 55%;
+}
+
+.stars img {
+  position: absolute;
+  width: 33%;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+}
+
+.stars img:first-child {
+  left: 0;
+}
+
+.stars img:nth-child(2) {
+  left: 33%;
+  transform: translateX(-25%);
+}
+
+.stars img:nth-child(3) {
+  left: 66%;
+  transform: translateX(-50%);
+}
+
+.stars img:nth-child(4) {
+  left: 15%;
+  transform: translate(-15%, 80%);
+}
+
+.stars img:last-child {
+  left: 50%;
+  transform: translate(-50%, 80%);
+}
+
+.EX {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 25%;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+}
+
+.party-detail-sync {
+  position: absolute;
+  bottom: -12%;
+  right: -12%;
+  width: 50% !important;
+  height: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #666;
+  background-color: #fff;
+}
+
+.skill,
+.potential {
+  position: absolute;
+  bottom: calc(-10px + -1em + -12px);
+  line-height: 1.25;
+}
+
+.role {
+  position: absolute;
+  top: 0;
+  width: 40%;
+}
+
+.skill {
+  bottom: calc(-10px + -3em + -32px);
+}
+
+.party-detail p {
+  display: none;
+}
+
+.party-detail a {
+  width: 100%;
+}
+
+.random-btn {
+  position: absolute;
+  bottom: -5em;
+  left: 0;
+  width: 100%;
+}
+
+.CS-ノーマル a,
+.CS-ノーマル-detail {
+  border: 8px #7d7874 solid;
+  background-color: #afaeab;
+}
+
+.CS-ほのお a,
+.CS-ほのお-detail {
+  border: 8px #c94a4f solid;
+  background-color: #ed605f;
+}
+
+.CS-みず a,
+.CS-みず-detail {
+  border: 8px #3090b4 solid;
+  background-color: #60c3ec;
+}
+
+.CS-でんき a,
+.CS-でんき-detail {
+  border: 8px #b09002 solid;
+  background-color: #fed93c;
+}
+
+.CS-くさ a,
+.CS-くさ-detail {
+  border: 8px #3f9849 solid;
+  background-color: #50ca5d;
+}
+
+.CS-こおり a,
+.CS-こおり-detail {
+  border: 8px #4c9da3 solid;
+  background-color: #78c8d0;
+}
+
+.CS-かくとう a,
+.CS-かくとう-detail {
+  border: 8px #c55f23 solid;
+  background-color: #f9915a;
+}
+
+.CS-どく a,
+.CS-どく-detail {
+  border: 8px #8f52b3 solid;
+  background-color: #c773da;
+}
+
+.CS-じめん a,
+.CS-じめん-detail {
+  border: 8px #a06546 solid;
+  background-color: #d28346;
+}
+
+.CS-ひこう a,
+.CS-ひこう-detail {
+  border: 8px #4d73e0 solid;
+  background-color: #819ff0;
+}
+
+.CS-エスパー a,
+.CS-エスパー-detail {
+  border: 8px #d34b7d solid;
+  background-color: #f682af;
+}
+
+.CS-むし a,
+.CS-むし-detail {
+  border: 8px #6a9001 solid;
+  background-color: #aad23c;
+}
+
+.CS-いわ a,
+.CS-いわ-detail {
+  border: 8px #8e6b47 solid;
+  background-color: #be9877;
+}
+
+.CS-ゴースト a,
+.CS-ゴースト-detail {
+  border: 8px #8c6587 solid;
+  background-color: #c89cc2;
+}
+
+.CS-ドラゴン a,
+.CS-ドラゴン-detail {
+  border: 8px #109cab solid;
+  background-color: #31abcc;
+}
+
+.CS-あく a,
+.CS-あく-detail {
+  border: 8px #636286 solid;
+  background-color: #9695b4;
+}
+
+.CS-はがね a,
+.CS-はがね-detail {
+  border: 8px #62759d solid;
+  background-color: #95aad6;
+}
+
+.CS-フェアリー a,
+.CS-フェアリー-detail {
+  border: 8px #d34b7d solid;
+  background-color: #fa9dad;
+}
+
+.sync-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sync {
+  position: relative;
+  width: 48%;
+  background: #fff;
+  margin-bottom: 4%;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sync.clickable {
+  cursor: pointer;
+}
+
+.sync img {
+  width: 100%;
+  margin: 0;
+}
+
+.sync.clickable:hover {
+  opacity: 0.6;
+}
+
+.sync-popup {
+  display: none;
+  margin-bottom: 0;
+}
+
+.sync-popup.display {
+  display: block;
+}
+
+.sync-role {
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 40% !important;
+}
+
+.popup-sync .popup-btn {
+  max-width: 25%;
+}
+
+.LG-list {
+  margin-top: 48px;
+}
+
+.LG {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.LG-add-btn {
+  margin-top: 16px;
+}
+
+.LG img {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.LG a {
+  width: 100%;
+}
+
+.LG-delete {
+  top: 0.25em;
+  right: -3%;
+  width: 10%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.info {
+  margin-bottom: 48px;
+}
+
+.info img {
+  width: 100%;
+}
+
+.info .main-btn {
+  margin-top: 8px;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.two-columns li {
+  width: calc(50% - 8px);
+}
+
+.two-columns li:nth-of-type(odd) {
+  margin-right: 16px;
+}
+
+.info-img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.info-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info:first-of-type .info-img img {
+  width: 140%;
+  height: 140%;
+  object-position: top left;
+}
+
+.SA {
+}
+
+.SA-list {
+  margin-top: 48px;
 }

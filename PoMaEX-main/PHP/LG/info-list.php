@@ -9,10 +9,14 @@ $title = "PoMaEX | LG:Info-List";
 <div class="container">
     <?php require_once("../General/nav.php") ?>
     <main class="main">
-        <?php foreach ($enemies as $enemy) { ?>
-            <a href="solo-info.php?enemy_id=<?= special($enemy['enemy_id']) ?>"><button>ソロ情報</button></a>
-            <img src="../../Legend_Battle/<?= special($enemy['enemy_name']) ?>.png">
-        <?php } ?>
+        <ul class="two-columns">
+            <?php foreach ($enemies as $enemy) { ?>
+                <li class="info">
+                    <div class="info-img"><img src="../../Legend_Battle/<?= special($enemy['enemy_name']) ?>.png"></div>
+                    <a class="main-btn" href="solo-info.php?enemy_id=<?= special($enemy['enemy_id']) ?>">ソロ情報</a>
+                </li>
+            <?php } ?>
+        </ul>
     </main>
     <aside class="sidebar">サブメニューです</aside>
 </div>
