@@ -1,12 +1,12 @@
-$(".party-delete").click(function () {
+$(".delete-btn").on("click", function () {
   const url = $(this).data("delete");
 
   if (confirm("パーティを削除しますか？")) {
     location.href = url;
     return;
-  } else {
-    return;
   }
+
+  $(".delete-btn").off("click");
 });
 
 $(".sync.clickable").on("click", function () {
