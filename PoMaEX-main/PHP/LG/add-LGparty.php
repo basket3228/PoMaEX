@@ -36,8 +36,6 @@ $title = "PoMaEX | LG:Add-LG-Party";
                                 <option value="<?= special($luckyskill['luckyskill_id']) ?>"><?= special($luckyskill['luckyskill_name']) ?></option>
                             <?php } ?>
                         </select>
-                        <label for="URL1">PoMaTool_URL</label>
-                        <input type="url" name="URL1" id="URL1" autocomplete="off">
                     </div>
                 </li>
                 <li>
@@ -56,8 +54,6 @@ $title = "PoMaEX | LG:Add-LG-Party";
                                 <option value="<?= special($luckyskill['luckyskill_id']) ?>"><?= special($luckyskill['luckyskill_name']) ?></option>
                             <?php } ?>
                         </select>
-                        <label for="URL2">PoMaTool_URL</label>
-                        <input type="url" name="URL2" id="URL2" autocomplete="off">
                     </div>
                 </li>
                 <li>
@@ -76,8 +72,6 @@ $title = "PoMaEX | LG:Add-LG-Party";
                                 <option value="<?= special($luckyskill['luckyskill_id']) ?>"><?= special($luckyskill['luckyskill_name']) ?></option>
                             <?php } ?>
                         </select>
-                        <label for="URL3">PoMaTool_URL</label>
-                        <input type="url" name="URL3" id="URL3" autocomplete="off">
                     </div>
                 <li>
                     <div class="content4">
@@ -92,6 +86,8 @@ $title = "PoMaEX | LG:Add-LG-Party";
                                 <?php } ?>
                             <?php } ?>
                         </select>
+                        <label for="URL">PoMaTool_URL</label>
+                        <input type="url" name="URL" id="URL" autocomplete="off">
                         <input type="submit" value="追加">
                     </div>
                 </li>
@@ -99,7 +95,8 @@ $title = "PoMaEX | LG:Add-LG-Party";
             </ul>
         </form>
     </main>
-    <aside class="sidebar">サブメニューです</aside>
+    <aside class="sidebar">
+    </aside>
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="/PoMaEX-main/index.js"></script>

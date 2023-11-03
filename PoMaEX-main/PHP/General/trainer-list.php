@@ -11,8 +11,8 @@ $tempSync = "";
 
 <?php require_once("../General/header.php") ?>
 <div class="container">
-  <aside class="sidebar">あ</aside>
-  <!-- <?php require_once("../General/nav.php") ?> -->
+  <!-- <aside class="sidebar">あ</aside> -->
+  <?php require_once("../General/nav.php") ?>
   <main class="main">
     <h2 class="sub-title">バディーズ一覧</h2>
     <div class="" style="display: none">

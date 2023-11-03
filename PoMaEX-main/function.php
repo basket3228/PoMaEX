@@ -513,6 +513,48 @@ function get_SAURL($SAparty_id)
     return $URL;
 }
 
+function get_LGmemo($LGparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select LGparty_id, category_id, memo from LGparty where LGparty_id = ?");
+    $st->bindValue(1, $LGparty_id);
+    $st->execute();
+    $memo = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+
+    return $memo;
+}
+
+function get_CSmemo($CSparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select CSparty_id, category_id, memo from CSparty where CSparty_id = ?");
+    $st->bindValue(1, $CSparty_id);
+    $st->execute();
+    $memo = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+
+    return $memo;
+}
+
+function get_SAmemo($SAparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select SAparty_id, category_id, memo from SAparty where SAparty_id = ?");
+    $st->bindValue(1, $SAparty_id);
+    $st->execute();
+    $memo = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+
+    return $memo;
+}
+
 function get_category()
 {
     $pdo = get_connection();
