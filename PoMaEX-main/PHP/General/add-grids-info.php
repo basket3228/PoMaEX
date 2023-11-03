@@ -25,3 +25,4 @@ if (isset($_GET['LGparty_id'])) {
         redirect("PoMaEX-main/PHP/General/party-detail.php?SAparty_id=" . special($SAparty_id) . "&category_id=" . special($category_id));
     }
 }
+
