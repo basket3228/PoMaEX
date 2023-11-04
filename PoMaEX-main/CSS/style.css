@@ -819,3 +819,17 @@ li {
 .SA-list {
   margin-top: 48px;
 }
+
+.edit-trainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.edit-trainer .party-detail {
+  width: calc(100% / 3 - 16px);
+}
+
+/* .edit-trainer .party-detail:nth-child() {
+  margin-left: 16px;
+} */
