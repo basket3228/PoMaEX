@@ -42,7 +42,7 @@ $title = "PoMaEX | CS:Party-detail";
     <main class="main">
         <div class="trainer">
             <h2 class="sub-title">パーティ詳細</h2>
-            <a href="party-edit.php?LGparty=<?= special($LGparty_id) ?>&category_id=<?= special($category_id) ?>">パーティ編集へ</a>
+            <a href="party-edit.php?LGparty_id=<?= special($LGparty_id) ?>&category_id=<?= special($category_id) ?>">パーティ編集へ</a>
             <ul class="detail-list">
                 <?php if ($category_id == 1) { ?>
                     <?php foreach ($LG1 as $c1) { ?>
