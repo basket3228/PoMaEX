@@ -42,12 +42,12 @@ $title = "PoMaEX | CS:Party-detail";
     <main class="main">
         <div class="trainer">
             <h2 class="sub-title">パーティ詳細</h2>
+            <a href="party-edit.php?LGparty=<?= special($LGparty_id) ?>&category_id=<?= special($category_id) ?>">パーティ編集へ</a>
             <ul class="detail-list">
                 <?php if ($category_id == 1) { ?>
                     <?php foreach ($LG1 as $c1) { ?>
                         <?php if ($c1['t1'] != null) { ?>
                             <li class="party-detail" data-type="<?= special($c1['tn1']) ?>">
-                                <p>1</p>
                                 <div class="stars">
                                     <?php if ($c1['star1'] == 1) { ?>
                                         <img src="../../img/star.png">
