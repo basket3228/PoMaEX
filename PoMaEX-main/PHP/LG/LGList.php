@@ -9,8 +9,8 @@ $title = "PoMaEX | LG:LG-List";
 <div class="container">
     <?php require_once("../General/nav.php") ?>
     <main class="main">
-        <h2 class="sub-title">編成一覧</h2>
-        <a class="main-btn LG-add-btn" href="add-LG.php?category_id=<?= special($category_id) ?>">追加</a>
+        <h2 class="sub-title">レジェンドアドベンチャー</h2>
+        <!-- <a class="main-btn LG-add-btn" href="add-LG.php?category_id=<?= special($category_id) ?>">追加</a> -->
         <ul class="LG-list">
             <?php foreach ($parties as $party) { ?>
                 <?php if ($category_id == 1) { ?>
