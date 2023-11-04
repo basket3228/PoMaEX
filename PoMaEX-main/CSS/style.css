@@ -99,7 +99,7 @@ li {
 .sidebar,
 .layer {
   height: 100%;
-  padding: 32px calc(16px + 1vw);
+  padding: 32px calc(16px + 2vw);
   overflow: auto;
   background: #fff;
   box-shadow: 2px 2px 8px -4px rgba(0, 10, 30, 0.4);
