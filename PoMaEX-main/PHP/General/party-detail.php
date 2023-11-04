@@ -87,7 +87,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                     <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
                                 </div>
-                                <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -136,7 +136,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                     <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
                                 </div>
-                                <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -182,7 +182,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                     <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
                                 </div>
-                                <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -230,7 +230,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     <div class="skill">
                                         ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                     </div>
-                                    <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -279,7 +279,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     <div class="skill">
                                         ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                     </div>
-                                    <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -325,7 +325,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     <div class="skill">
                                         ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                     </div>
-                                    <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -498,10 +498,12 @@ $title = "PoMaEX | CS:Party-detail";
                 <button>ボード登録</button>
             </form>
         </div>
-        <?php if ($URL != null && $URL != "") { ?>
-            <iframe src="<?= special($URL['URL']) ?>" class="pomatool-frame"></iframe>
-        <?php } else { ?>
+        <?php if ($URL == null) { ?>
             <iframe src="https://ng-pomatools.web.app/team" class="pomatool-frame"></iframe>
+        <?php } else if ($URL['URL'] == "") { ?>
+            <iframe src="https://ng-pomatools.web.app/team" class="pomatool-frame"></iframe>
+        <?php } else { ?>
+            <iframe src="<?= special($URL['URL']) ?>" class="pomatool-frame"></iframe>
         <?php } ?>
     </aside>
 </div>
