@@ -56,6 +56,9 @@
           <a href="/PoMaEX-main/PHP/General/trainer-list.php">バディーズ一覧</a>
         </li>
         <li>
+          <a href="/PoMaEX-main/PHP/General/info-list.php">単騎情報</a>
+        </li>
+        <li>
           <a href="/PoMaEX-main/PHP/General/create-random-party.php">乱数編成作成</a>
         </li>
       </ul>

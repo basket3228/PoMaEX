@@ -12,6 +12,7 @@ if (isset($_GET['LGparty_id'])) {
         $LG2 = LG2($LGparty_id);
         $LG3 = LG3($LGparty_id);
         $URL = get_LGURL($LGparty_id);
+        $memo = get_LGmemo($LGparty_id);
     }
 } else if (isset($_GET['CSparty_id'])) {
     $CSparty_id = $_GET['CSparty_id'];
@@ -20,6 +21,7 @@ if (isset($_GET['LGparty_id'])) {
         $CS2 = CS2($CSparty_id);
         $CS3 = CS3($CSparty_id);
         $URL = get_CSURL($CSparty_id);
+        $memo = get_CSmemo($CSparty_id);
     }
 } else if (isset($_GET['SAparty_id'])) {
     $SAparty_id = $_GET['SAparty_id'];
@@ -28,6 +30,7 @@ if (isset($_GET['LGparty_id'])) {
         $SA2 = SA2($SAparty_id);
         $SA3 = SA3($SAparty_id);
         $URL = get_SAURL($SAparty_id);
+        $memo = get_SAmemo($SAparty_id);
     }
 }
 $title = "PoMaEX | CS:Party-detail";
@@ -84,7 +87,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                     <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
                                 </div>
-                                <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -133,7 +136,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                     <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
                                 </div>
-                                <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -179,7 +182,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                     <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
                                 </div>
-                                <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
                             </li>
                         <?php } ?>
                     <?php } ?>
@@ -227,7 +230,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     <div class="skill">
                                         ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                     </div>
-                                    <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -276,7 +279,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     <div class="skill">
                                         ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                     </div>
-                                    <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -322,7 +325,7 @@ $title = "PoMaEX | CS:Party-detail";
                                     <div class="skill">
                                         ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                     </div>
-                                    <button class="party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -476,26 +479,32 @@ $title = "PoMaEX | CS:Party-detail";
         </div>
     </main>
     <aside class="layer">
-        何入れるかは検討中。
+        <?php if ($memo['memo'] != null) { ?>
+            <?php echo special($memo['memo']) ?>
+        <?php } ?>
     </aside>
     <aside class="sidebar">
-        <div class="URL pomatool">
+        <div>
             <form action="add-grids-info.php">
-                <input type="URL" name="URL">
+                <input type="URL" name="URL" autocomplete="off">
+                <input type="hidden" name="category_id" value="<?= special($category_id) ?>">
                 <?php if ($category_id == 1) { ?>
-                    <a href="add-grids-info?LGparty_id=<?= special($LGparty_id) ?>&category_id=<?= special($category_id) ?>"><button>ボード登録</button></a>
+                    <input type="hidden" name="LGparty_id" value="<?= special($LGparty_id) ?>">
                 <?php } else if ($category_id == 2) { ?>
-                    <a href="add-grids-info?CSparty_id=<?= special($CSparty_id) ?>&category_id=<?= special($category_id) ?>"><button>ボード登録</button></a>
+                    <input type="hidden" name="LGparty_id" value="<?= special($CSparty_id) ?>">
                 <?php } else if ($category_id == 3) { ?>
-                    <a href="add-grids-info?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>"><button>ボード登録</button></a>
+                    <input type="hidden" name="LGparty_id" value="<?= special($SAparty_id) ?>">
                 <?php } ?>
+                <button>ボード登録</button>
             </form>
-            <?php if ($URL['URL'] != null) { ?>
-                <iframe src="<?= special($URL['URL']) ?>" class="pomatool-frame"></iframe>
-            <?php } else { ?>
-                <iframe src="https://ng-pomatools.web.app/team" class="pomatool-frame"></iframe>
-            <?php } ?>
         </div>
+        <?php if ($URL == null) { ?>
+            <iframe src="https://ng-pomatools.web.app/team" class="pomatool-frame"></iframe>
+        <?php } else if ($URL['URL'] == "") { ?>
+            <iframe src="https://ng-pomatools.web.app/team" class="pomatool-frame"></iframe>
+        <?php } else { ?>
+            <iframe src="<?= special($URL['URL']) ?>" class="pomatool-frame"></iframe>
+        <?php } ?>
     </aside>
 </div>
 <?php require_once('../General/footer.php') ?>
