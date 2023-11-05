@@ -1084,3 +1084,41 @@ function add_SA_grids($URL, $SAparty_id)
     $pdo = null;
     $st = null;
 }
+
+function update_party1($trainer_id1, $LGparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("update LGparty set trainer_id1 = ? where LGparty_id");
+    $st->bindValue(1, $trainer_id1);
+    $st->bindValue(2, $LGparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function update_party2($trainer_id2, $LGparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("update LGparty set trainer_id2 = ? where LGparty_id");
+    $st->bindValue(1, $trainer_id2);
+    $st->bindValue(2, $LGparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function update_party3($trainer_id3, $LGparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("update LGparty set trainer_id3 = ? where LGparty_id");
+    $st->bindValue(1, $trainer_id3);
+    $st->bindValue(2, $LGparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+
