@@ -54,13 +54,11 @@ $tempSync = "";
   <aside class="sidebar">
     <ul class="sync-list">
       <?php foreach ($mainChars as $main) { ?>
-        <?php if ($main['trainer_name'] == '主人公') { ?>
           <?php if ($tempSync != $main['sync_name']) { ?>
             <li class="sync clickable" data-syncName="<?= $main['sync_name'] ?>">
               <img src="../../sync/<?= special($main['sync_name']) ?>.png">
             </li>
             <?php $tempSync = $main['sync_name'] ?>
-          <?php } ?>
         <?php } ?>
         <?php $syncIndex += 1 ?>
       <?php } ?>
@@ -68,7 +66,6 @@ $tempSync = "";
     <div class="popup-sync">
       <div class="popup-inner">
         <?php foreach ($mainChars as $main) { ?>
-          <?php if ($main['trainer_name'] == '主人公') { ?>
             <li class="sync sync-popup" data-syncName="<?= $main['sync_name'] ?>">
               <?php if ($main['role_name'] == 'アタッカー') { ?>
                 <img class="sync-role" src="../../img/アタッカー.png">
@@ -83,7 +80,6 @@ $tempSync = "";
               <?php } ?>
               <img src="../../sync/<?= special($main['sync_name']) ?>.png">
             </li>
-          <?php } ?>
         <?php } ?>
       </div>
       <div class="popup-btn">
