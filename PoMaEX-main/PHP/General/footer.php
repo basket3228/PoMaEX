@@ -1,17 +1,17 @@
 <div class="popup">
   <ul class="popup-inner">
     <li>
-      <a href="/PoMaEX-main/PHP/LG/LGList.php?category_id=1">
+      <a href="/PoMaEX-main/PHP/LG/LGList.php">
         <img src="/PoMaEX-main/img/LG.png" alt="LG">
       </a>
     </li>
     <li>
-      <a href="/PoMaEX-main/PHP/CS/CS-type-list.php?category_id=2">
+      <a href="/PoMaEX-main/PHP/CS/CS-type-list.php">
         <img src="/PoMaEX-main/img/CS.png" alt="CS">
       </a>
     </li>
     <li>
-      <a href="/PoMaEX-main/PHP/SA/SAList.php?category_id=3">
+      <a href="/PoMaEX-main/PHP/SA/SAList.php">
         <img src="/PoMaEX-main/img/SA.png" alt="SA">
       </a>
     </li>
