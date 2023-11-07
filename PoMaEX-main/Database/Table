@@ -157,6 +157,19 @@ CREATE TABLE trainer (
     FOREIGN KEY (role_id) REFERENCES role(role_id)
 );
 
+CREATE TABLE mainCharacter (
+    trainer_id INT PRIMARY KEY AUTO_INCREMENT,
+    trainer_name VARCHAR(50) NOT NULL,
+    sync_id INT NOT NULL,
+    role_id int not NULL,
+    EX_Flg boolean not null,
+    potential int not null,
+    stars int not null,
+    URL VARCHAR(510),
+    FOREIGN KEY (sync_id) REFERENCES sync(sync_id),
+    FOREIGN KEY (role_id) REFERENCES role(role_id)
+);
+
 create table CSparty (
     CSparty_id int PRIMARY KEY AUTO_INCREMENT,
     type_id int null,
