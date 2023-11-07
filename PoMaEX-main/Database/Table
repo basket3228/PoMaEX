@@ -159,7 +159,6 @@ CREATE TABLE trainer (
 
 create table CSparty (
     CSparty_id int PRIMARY KEY AUTO_INCREMENT,
-    category_id int not null,
     type_id int null,
     trainer_id1 int,
     trainer_id2 int,
@@ -193,7 +192,6 @@ create table LG(
 
 create table LGParty(
     LGparty_id int not null PRIMARY KEY AUTO_INCREMENT,
-    category_id int not null,
     LG_id int not null,
     enemy_id int not null,
     trainer_id1 int,
@@ -222,7 +220,6 @@ create table SA (
 
 create table SAparty (
     SAparty_id int PRIMARY KEY AUTO_INCREMENT,
-    category_id int not null,
     SA_id int not null,
     trainer_id1 int,
     trainer_id2 int,
