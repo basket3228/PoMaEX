@@ -29,7 +29,7 @@ function redirect($path)
 
 function show_error_message()
 {
-    header('location' . DOMAIN . 'HTML/index.html');
+    header('location' . DOMAIN . 'HTML/index.php');
     exit();
 }
 
