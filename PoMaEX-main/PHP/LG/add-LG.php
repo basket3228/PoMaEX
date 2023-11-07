@@ -2,9 +2,9 @@
 require('../../function.php');
 
 $enemies = get_enemy();
-$categories = get_category();
 $title = "PoMaEX | LG:Add-LG";
 ?>
+
 <?php require_once("../General/header.php") ?>
 <div class="container">
     <?php require_once("../General/nav.php") ?>
