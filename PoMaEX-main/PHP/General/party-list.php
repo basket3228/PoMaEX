@@ -10,13 +10,13 @@ $title = "PoMaEX | Party-List";
     <main class="main">
         <?php foreach ($categories as $category) { ?>
             <?php if ($category['category_name'] == 'レジェンドアドベンチャー') { ?>
-                <a href="../LG/LGList.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
+                <a href="../LG/LGList.php>
                     <img src="../../img/LG.png"></a>
             <?php } else if ($category['category_name'] == 'チャンピオンバトル') { ?>
-                <a href="../CS/CS-type-list.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
+                <a href="../CS/CS-type-list.php>
                     <img src="../../img/CS.png"></a>
             <?php } else if ($category['category_name'] == 'スコアアタック') { ?>
-                <a href="../SA/SAList.php?category_id=<?= special($category['category_id']) ?>"><?= special($category['category_name']) ?>
+                <a href="../SA/SAList.php>
                     <img src="../../img/SA.png"></a>
             <?php } ?>
         <?php } ?>

@@ -1,10 +1,10 @@
 <?php
 require('../../function.php');
+
 $enemies = get_enemy();
-$category_id = $_GET['category_id'];
-$categories = get_category();
 $title = "PoMaEX | LG:Add-LG";
 ?>
+
 <?php require_once("../General/header.php") ?>
 <div class="container">
     <?php require_once("../General/nav.php") ?>
@@ -32,7 +32,6 @@ $title = "PoMaEX | LG:Add-LG";
                     <option value="<?= special($enemy['enemy_id']) ?>"><?= special($enemy['enemy_name']) ?></option>
                 <?php } ?>
             </select>
-            <input type="hidden" value="1" name="category_id">
             <input type="submit" value="登録">
         </form>
     </main>

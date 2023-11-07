@@ -1,7 +1,6 @@
 <?php
 require('../../function.php');
 
-$category_id = $_GET['category_id'];
 $LG_id = $_GET['LG_id'];
 $enemy = $_GET['enemy'];
 $trainer1 = $_GET['trainer1'];
@@ -13,7 +12,6 @@ $luckyskill3 = $_GET['luckyskill3'];
 $URL = $_GET['URL'];
 
 $party = [];
-$party['category_id'] = $category_id;
 $party['LG_id'] = $LG_id;
 $party['enemy_id'] = $enemy;
 $party['trainer_id1'] = $trainer1;
@@ -24,4 +22,5 @@ $party['luckyskill_id2'] = $luckyskill2;
 $party['luckyskill_id3'] = $luckyskill3;
 $party['URL'] = $URL;
 add_LGparty($party);
-redirect("PoMaEX-main/PHP/LG/LG-party-list.php?category_id=" . special($category_id) . "&LG_id=" . special($LG_id));
+
+redirect("PoMaEX-main/PHP/LG/LG-party-list.php?LG_id=" . special($LG_id));

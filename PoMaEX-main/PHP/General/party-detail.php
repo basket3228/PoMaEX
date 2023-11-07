@@ -1,37 +1,30 @@
 <?php
 require('../../function.php');
 
-$category_id = $_GET['category_id'];
 if (isset($_GET['type'])) {
     $pageType = $_GET['type'];
 }
 if (isset($_GET['LGparty_id'])) {
     $LGparty_id = $_GET['LGparty_id'];
-    if ($category_id == 1) {
         $LG1 = LG1($LGparty_id);
         $LG2 = LG2($LGparty_id);
         $LG3 = LG3($LGparty_id);
         $URL = get_LGURL($LGparty_id);
         $memo = get_LGmemo($LGparty_id);
-    }
 } else if (isset($_GET['CSparty_id'])) {
     $CSparty_id = $_GET['CSparty_id'];
-    if ($category_id == 2) {
         $CS1 = CS1($CSparty_id);
         $CS2 = CS2($CSparty_id);
         $CS3 = CS3($CSparty_id);
         $URL = get_CSURL($CSparty_id);
         $memo = get_CSmemo($CSparty_id);
-    }
 } else if (isset($_GET['SAparty_id'])) {
     $SAparty_id = $_GET['SAparty_id'];
-    if ($category_id == 3) {
         $SA1 = SA1($SAparty_id);
         $SA2 = SA2($SAparty_id);
         $SA3 = SA3($SAparty_id);
         $URL = get_SAURL($SAparty_id);
         $memo = get_SAmemo($SAparty_id);
-    }
 }
 $title = "PoMaEX | CS:Party-detail";
 ?>
@@ -42,9 +35,9 @@ $title = "PoMaEX | CS:Party-detail";
     <main class="main">
         <div class="trainer">
             <h2 class="sub-title">パーティ詳細</h2>
-            <a class="main-btn mb32" href="party-edit.php?LGparty_id=<?= special($LGparty_id) ?>&category_id=<?= special($category_id) ?>">パーティ編集へ</a>
+            <a class="main-btn mb32" href="party-edit.php?LGparty_id=<?= special($LGparty_id) ?>">パーティ編集へ</a>
             <ul class="detail-list">
-                <?php if ($category_id == 1) { ?>
+                <?php if (isset($_GET['LGparty_id'])) { ?>
                     <div class="party-wrap">
                         <?php foreach ($LG1 as $c1) { ?>
                             <?php if ($c1['t1'] != null) { ?>
@@ -88,7 +81,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
                                     </div>
-                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -139,7 +132,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
                                     </div>
-                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
@@ -187,12 +180,12 @@ $title = "PoMaEX | CS:Party-detail";
                                         ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
                                     </div>
-                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                    <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($LGparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"></button>
                                 </li>
                             <?php } ?>
                         <?php } ?>
                     </div>
-                <?php } else if ($category_id == 2) { ?>
+                <?php } else if (isset($_GET['CSparty_id'])) { ?>
                     <div class="party-wrap">
                         <?php foreach ($CS1 as $c1) { ?>
                             <?php if ($CSparty_id == $c1['CSparty_id']) { ?>
@@ -237,7 +230,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         <div class="skill">
                                             ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                         </div>
-                                        <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                        <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>"></button>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -286,7 +279,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         <div class="skill">
                                             ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                         </div>
-                                        <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                        <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"></button>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -332,13 +325,13 @@ $title = "PoMaEX | CS:Party-detail";
                                         <div class="skill">
                                             ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                         </div>
-                                        <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>&category_id=<?= special($category_id) ?>"></button>
+                                        <button class="delete-btn party-delete" data-delete="../LG/delete-LGparty.php?LGparty_id=<?= special($CSparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"></button>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
                         <?php } ?>
                     </div>
-                <?php } else if ($category_id == 3) { ?>
+                <?php } else if (isset($_GET['SAparty_id'])) { ?>
                     <div class="party-wrap">
                         <?php foreach ($SA1 as $c1) { ?>
                             <?php if ($SAparty_id == $c1['SAparty_id']) { ?>
@@ -383,7 +376,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         <div class="skill">
                                             ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                         </div>
-                                        <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
+                                        <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -432,7 +425,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         <div class="skill">
                                             ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                         </div>
-                                        <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
+                                        <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -478,7 +471,7 @@ $title = "PoMaEX | CS:Party-detail";
                                         <div class="skill">
                                             ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                         </div>
-                                        <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&category_id=<?= special($category_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
+                                        <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
                                     </li>
                                 <?php } ?>
                             <?php } ?>
@@ -497,12 +490,11 @@ $title = "PoMaEX | CS:Party-detail";
         <div>
             <form action="add-grids-info.php">
                 <input type="URL" name="URL" autocomplete="off">
-                <input type="hidden" name="category_id" value="<?= special($category_id) ?>">
-                <?php if ($category_id == 1) { ?>
+                <?php if (isset($_GET['LGparty_id'])) { ?>
                     <input type="hidden" name="LGparty_id" value="<?= special($LGparty_id) ?>">
-                <?php } else if ($category_id == 2) { ?>
+                <?php } else if (isset($_GET['CSparty_id'])) { ?>
                     <input type="hidden" name="LGparty_id" value="<?= special($CSparty_id) ?>">
-                <?php } else if ($category_id == 3) { ?>
+                <?php } else if (isset($_GET['SAparty_id'])) { ?>
                     <input type="hidden" name="LGparty_id" value="<?= special($SAparty_id) ?>">
                 <?php } ?>
                 <button>ボード登録</button>
