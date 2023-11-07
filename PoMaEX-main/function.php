@@ -29,7 +29,7 @@ function redirect($path)
 
 function show_error_message()
 {
-    header('location' . DOMAIN . 'HTML/index.html');
+    header('location' . DOMAIN . 'HTML/index.php');
     exit();
 }
 
@@ -474,7 +474,7 @@ function get_SApartyList()
 function get_LGURL($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty_id, category_id, URL from LGparty where LGparty_id = ?");
+    $st = $pdo->prepare("select LGparty_id, URL from LGparty where LGparty_id = ?");
     $st->bindValue(1, $LGparty_id);
     $st->execute();
     $URL = $st->fetch();
@@ -488,7 +488,7 @@ function get_LGURL($LGparty_id)
 function get_CSURL($CSparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select CSparty_id, category_id, URL from CSparty where CSparty_id = ?");
+    $st = $pdo->prepare("select CSparty_id, URL from CSparty where CSparty_id = ?");
     $st->bindValue(1, $CSparty_id);
     $st->execute();
     $URL = $st->fetch();
@@ -502,7 +502,7 @@ function get_CSURL($CSparty_id)
 function get_SAURL($SAparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select SAparty_id, category_id, URL from SAparty where SAparty_id = ?");
+    $st = $pdo->prepare("select SAparty_id, URL from SAparty where SAparty_id = ?");
     $st->bindValue(1, $SAparty_id);
     $st->execute();
     $URL = $st->fetch();
@@ -516,7 +516,7 @@ function get_SAURL($SAparty_id)
 function get_LGmemo($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty_id, category_id, memo from LGparty where LGparty_id = ?");
+    $st = $pdo->prepare("select LGparty_id, memo from LGparty where LGparty_id = ?");
     $st->bindValue(1, $LGparty_id);
     $st->execute();
     $memo = $st->fetch();
@@ -530,7 +530,7 @@ function get_LGmemo($LGparty_id)
 function get_CSmemo($CSparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select CSparty_id, category_id, memo from CSparty where CSparty_id = ?");
+    $st = $pdo->prepare("select CSparty_id, memo from CSparty where CSparty_id = ?");
     $st->bindValue(1, $CSparty_id);
     $st->execute();
     $memo = $st->fetch();
@@ -544,7 +544,7 @@ function get_CSmemo($CSparty_id)
 function get_SAmemo($SAparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select SAparty_id, category_id, memo from SAparty where SAparty_id = ?");
+    $st = $pdo->prepare("select SAparty_id, memo from SAparty where SAparty_id = ?");
     $st->bindValue(1, $SAparty_id);
     $st->execute();
     $memo = $st->fetch();
@@ -648,7 +648,7 @@ function get_mainTrainer()
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars from trainer
     left join sync on sync.sync_id = trainer.sync_id
-    left join role on role.role_id = trainer.role_id where URL is null");
+    left join role on role.role_id = trainer.role_id where trainer_name == '主人公'");
     $st->execute();
     $trainer = $st->fetchAll();
 
@@ -795,7 +795,6 @@ function CS1($CSparty_id)
 
     return $CS1;
 }
-
 
 function CS2($CSparty_id)
 {
@@ -1031,9 +1030,8 @@ function add_LG($LG)
 function add_LGparty($party)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("insert into LGparty (category_id, LG_id, LGparty.enemy_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL) values
-    (:category_id, :LG_id, :enemy_id, :trainer_id1, :trainer_id2, :trainer_id3, :luckyskill_id1, :luckyskill_id2, :luckyskill_id3, :URL)");
-    $st->bindValue(':category_id', $party['category_id']);
+    $st = $pdo->prepare("insert into LGparty (LG_id, LGparty.enemy_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL) values
+    (:LG_id, :enemy_id, :trainer_id1, :trainer_id2, :trainer_id3, :luckyskill_id1, :luckyskill_id2, :luckyskill_id3, :URL)");
     $st->bindValue(':LG_id', $party['LG_id']);
     $st->bindValue(':enemy_id', $party['enemy_id']);
     $st->bindValue(':trainer_id1', $party['trainer_id1']);
@@ -1084,3 +1082,41 @@ function add_SA_grids($URL, $SAparty_id)
     $pdo = null;
     $st = null;
 }
+
+function update_party1($trainer_id1, $LGparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("update LGparty set trainer_id1 = ? where LGparty_id");
+    $st->bindValue(1, $trainer_id1);
+    $st->bindValue(2, $LGparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function update_party2($trainer_id2, $LGparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("update LGparty set trainer_id2 = ? where LGparty_id");
+    $st->bindValue(1, $trainer_id2);
+    $st->bindValue(2, $LGparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+function update_party3($trainer_id3, $LGparty_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("update LGparty set trainer_id3 = ? where LGparty_id");
+    $st->bindValue(1, $trainer_id3);
+    $st->bindValue(2, $LGparty_id);
+    $st->execute();
+
+    $pdo = null;
+    $st = null;
+}
+
+

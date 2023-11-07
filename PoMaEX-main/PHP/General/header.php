@@ -42,13 +42,13 @@
         <li class="nav-toggle">
           <ul class="nav-sublist">
             <li>
-              <a href="/PoMaEX-main/PHP/LG/LGList.php?category_id=1">レジェンドアドベンチャー</a>
+              <a href="/PoMaEX-main/PHP/LG/LGList.php">レジェンドアドベンチャー</a>
             </li>
             <li>
-              <a href="/PoMaEX-main/PHP/CS/CS-type-list.php?category_id=2">チャンピオンバトル</a>
+              <a href="/PoMaEX-main/PHP/CS/CS-type-list.php">チャンピオンバトル</a>
             </li>
             <li>
-              <a href="/PoMaEX-main/PHP/SA/SAList.php?category_id=3">スコアアタック</a>
+              <a href="/PoMaEX-main/PHP/SA/SAList.php">スコアアタック</a>
             </li>
           </ul>
         </li>

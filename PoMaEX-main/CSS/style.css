@@ -48,6 +48,14 @@ li {
   margin: 0;
 }
 
+input[type="text"] {
+  border: 0;
+}
+
+.mb32 {
+  margin-bottom: 32px;
+}
+
 .main-btn {
   display: block;
   padding: 0.8rem;
@@ -99,7 +107,7 @@ li {
 .sidebar,
 .layer {
   height: 100%;
-  padding: 32px calc(16px + 1vw);
+  padding: 32px calc(16px + 2vw);
   overflow: auto;
   background: #fff;
   box-shadow: 2px 2px 8px -4px rgba(0, 10, 30, 0.4);
@@ -115,7 +123,8 @@ li {
   left: 45.5%;
   translate: -50% 0;
   width: 40%;
-  height: 30%;
+  height: auto;
+  padding: 1em;
   border: 2px solid #95aad6;
 }
 
@@ -479,9 +488,19 @@ li {
   gap: 5%;
 }
 
+.party-wrap {
+  width: 30%;
+}
+
+.party-wrap.edit {
+  aspect-ratio: 1;
+  padding: 16px;
+  border: 1px solid;
+}
+
 .party-detail {
   position: relative;
-  width: 30%;
+  width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 10px;
   border-width: 10px !important;
@@ -818,4 +837,30 @@ li {
 
 .SA-list {
   margin-top: 48px;
+}
+
+.edit-trainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.edit-trainer .party-detail {
+  width: calc(100% / 3 - 16px);
+}
+
+/* .edit-trainer .party-detail:nth-child() {
+  margin-left: 16px;
+} */
+
+.edit-frame {
+}
+
+.edit-memo {
+  display: block;
+  width: 100%;
+}
+
+.edit-memo:focus {
+  outline: none;
 }

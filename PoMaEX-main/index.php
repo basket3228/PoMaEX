@@ -24,3 +24,4 @@
   <aside class="sidebar">サブメニューです</aside>
 </div>
 <?php require_once("PHP/General/footer.php");
+
