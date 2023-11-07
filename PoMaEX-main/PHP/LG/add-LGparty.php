@@ -1,7 +1,6 @@
 <?php
 require('../../function.php');
 
-$category_id = $_GET['category_id'];
 $LG_id = $_GET['LG_id'];
 $trainers = get_trainer();
 $luckyskills = get_luckyskill();
@@ -20,7 +19,6 @@ $title = "PoMaEX | LG:Add-LG-Party";
             <ul>
                 <li>
                     <div class="content1">
-                        <input type="hidden" name="category_id" value="<?= $category_id ?>">
                         <input type="hidden" name="LG_id" value="<?= $LG_id ?>">
                         <label for="trainer1">トレーナー1</label>
                         <select name="trainer1" id="trainer1">
