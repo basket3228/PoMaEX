@@ -87,38 +87,14 @@ create table soloRaiko (
     trainer_id int not null
 );
 
-CREATE TABLE cookie (
-    cookie_id INT PRIMARY KEY AUTO_INCREMENT,
-    cookie_name VARCHAR(255) not NULL
+create table soloRegisteel (
+    soloRegisteel_id int PRIMARY KEY AUTO_INCREMENT,
+    enemy_id int not null,
+    trainer_id int not null
 );
 
-CREATE TABLE luckyskill1 (
+CREATE TABLE luckyskill (
     luckyskill_id INT PRIMARY KEY AUTO_INCREMENT,
-    cookie_id INT not null,
-    luckyskill_name VARCHAR(255) not NULL
-);
-
-CREATE TABLE luckyskill2 (
-    luckyskill_id INT PRIMARY KEY AUTO_INCREMENT,
-    cookie_id INT not null,    
-    luckyskill_name VARCHAR(255) not NULL
-);
-
-CREATE TABLE luckyskill3 (
-    luckyskill_id INT PRIMARY KEY AUTO_INCREMENT,
-    cookie_id INT not null,
-    luckyskill_name VARCHAR(255) not NULL
-);
-
-CREATE TABLE luckyskill4 (
-    luckyskill_id INT PRIMARY KEY AUTO_INCREMENT,
-    cookie_id INT not null,
-    luckyskill_name VARCHAR(255) not NULL
-);
-
-CREATE TABLE luckyskill5 (
-    luckyskill_id INT PRIMARY KEY AUTO_INCREMENT,
-    cookie_id INT not null,
     luckyskill_name VARCHAR(255) not NULL
 );
 
@@ -168,7 +144,6 @@ create table CSparty (
     luckyskill_id3 int not null,
     URL VARCHAR(510),
     memo VARCHAR(510),
-    FOREIGN KEY (category_id) REFERENCES category(category_id),
     FOREIGN KEY (type_id) REFERENCES type(type_id),
     FOREIGN KEY (trainer_id1) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id2) REFERENCES trainer(trainer_id),
@@ -202,7 +177,6 @@ create table LGParty(
     luckyskill_id3 int,
     URL VARCHAR(510),
     memo VARCHAR(510),
-    FOREIGN KEY (category_id) REFERENCES category(category_id),
     FOREIGN KEY (enemy_id) REFERENCES enemy(enemy_id),
     FOREIGN KEY (trainer_id1) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id2) REFERENCES trainer(trainer_id),
@@ -229,7 +203,6 @@ create table SAparty (
     luckyskill_id3 int,
     URL VARCHAR(510),
     memo VARCHAR(510),
-    FOREIGN KEY (category_id) REFERENCES category(category_id),
     FOREIGN KEY (trainer_id1) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id2) REFERENCES trainer(trainer_id),
     FOREIGN KEY (trainer_id3) REFERENCES trainer(trainer_id),
