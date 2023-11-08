@@ -74,7 +74,6 @@ function get_enemy1($LG_id)
     return $enemy;
 }
 
-
 function get_enemy2($LG_id)
 {
     $pdo = get_connection();
@@ -674,7 +673,6 @@ function get_attacker()
     return $trainer;
 }
 
-
 function get_technical()
 {
     $pdo = get_connection();
@@ -1118,3 +1116,190 @@ function update_party3($trainer_id3, $LGparty_id)
     $pdo = null;
     $st = null;
 }
+
+function sort_by_trainer_name1()
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where URL is not null
+    order by trainer_name asc");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function sort_by_trainer_name2()
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where URL is not null
+    order by trainer_name desc");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function sort_by_sync_name1()
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where URL is not null
+    order by sync_name asc");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function sort_by_sync_name2()
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where URL is not null
+    order by sync_name desc");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function sort_by_type1()
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where URL is not null
+    order by type_id asc");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function sort_by_type2()
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where URL is not null
+    order by type_id desc");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function filter_by_type_name($type_id)
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where type_id = ?");
+    $st->bindValue(1, $type_id);
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function filter_by_stars($stars)
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where stars = ?");
+    $st->bindValue(1, $stars);
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function filter_by_role($role_id)
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where role_id = ?");
+    $st->bindValue(1, $role_id);
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function filter_by_EX_flg()
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where EX_flg = true");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+function filter_by_EX_flg()
+    {
+    $pdo = get_connection();
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    left join role on role.role_id = trainer.role_id where EX_flg = false");
+    $st->execute();
+    $trainer = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainer;
+}
+
+
