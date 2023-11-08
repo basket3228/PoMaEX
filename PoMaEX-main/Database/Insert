@@ -1298,7 +1298,8 @@ INSERT INTO sync (sync_name, type_id) VALUES
     ('ストリンダー(ローなすがた)', '4'),
     ('バクガメス', '15'),
     ('エーフィ', '11'),
-    ('ダグトリオ', '9');
+    ('ダグトリオ', '9'),
+    ('レイスポス', '14');
 
 INSERT INTO category (category_name)
 VALUES
