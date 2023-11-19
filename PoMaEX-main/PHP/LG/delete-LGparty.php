@@ -2,7 +2,6 @@
 require('../../function.php');
 
 $LGparty_id = $_GET['LGparty_id'];
-$category_id = $_GET['category_id'];
 if (isset($_GET['trainer_id1'])) {
     deleteLGDetail1($LGparty_id);
 } else if (isset($_GET['trainer_id2'])) {
@@ -11,4 +10,4 @@ if (isset($_GET['trainer_id1'])) {
     deleteLGDetail3($LGparty_id);
 }
 
-redirect("PoMaEX-main/PHP/General/party-detail.php?LGparty_id=" . special($LGparty_id) . "&category_id=" . special($category_id));
+redirect("PoMaEX-main/PHP/General/party-detail.php?LGparty_id=" . special($LGparty_id));
