@@ -14,13 +14,12 @@ $title = "PoMaEX | SA:SA-List";
             <a class="main-btn" href="add-LG.php">追加</a>
             <ul class="two-columns SA-list">
                 <?php foreach ($parties as $party) { ?>
-                        <li class="SA">
-                            <a href="SA-party-list.php?SA_id=<?= special($party['SA_id']) ?>">
-                                <img src="../../img/<?= special($party['name']) ?>.png">
-                            </a>
-                            <button class="party-delete LG-delete delete-btn" data-delete="delete-LG.php?SA_id=<?= special($party['SA_id']) ?>"></button>
-                        </li>
-                    <?php } ?>
+                    <li class="SA">
+                        <a href="SA-party-list.php?SA_id=<?= special($party['SA_id']) ?>">
+                            <img src="../../img/<?= special($party['name']) ?>.png">
+                        </a>
+                        <button class="party-delete LG-delete delete-btn" data-delete="delete-LG.php?SA_id=<?= special($party['SA_id']) ?>"></button>
+                    </li>
                 <?php } ?>
             </ul>
         </div>

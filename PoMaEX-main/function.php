@@ -597,7 +597,7 @@ function get_sync()
 function get_trainer()
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    $st = $pdo->prepare("select distinct trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join type on type.type_id = sync.type_id
     left join role on role.role_id = trainer.role_id where URL is not null");
@@ -647,7 +647,7 @@ function get_mainTrainer()
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars from trainer
     left join sync on sync.sync_id = trainer.sync_id
-    left join role on role.role_id = trainer.role_id where trainer_name == '主人公'");
+    left join role on role.role_id = trainer.role_id where trainer_name = '主人公'");
     $st->execute();
     $trainer = $st->fetchAll();
 
@@ -1118,7 +1118,7 @@ function update_party3($trainer_id3, $LGparty_id)
 }
 
 function sort_by_trainer_name1()
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1135,7 +1135,7 @@ function sort_by_trainer_name1()
 }
 
 function sort_by_trainer_name2()
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1152,7 +1152,7 @@ function sort_by_trainer_name2()
 }
 
 function sort_by_sync_name1()
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1169,7 +1169,7 @@ function sort_by_sync_name1()
 }
 
 function sort_by_sync_name2()
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1186,7 +1186,7 @@ function sort_by_sync_name2()
 }
 
 function sort_by_type1()
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1203,7 +1203,7 @@ function sort_by_type1()
 }
 
 function sort_by_type2()
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1220,7 +1220,7 @@ function sort_by_type2()
 }
 
 function filter_by_type_name($type_id)
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1237,7 +1237,7 @@ function filter_by_type_name($type_id)
 }
 
 function filter_by_stars($stars)
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1254,7 +1254,7 @@ function filter_by_stars($stars)
 }
 
 function filter_by_role($role_id)
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1271,7 +1271,7 @@ function filter_by_role($role_id)
 }
 
 function filter_by_EX_flg()
-    {
+{
     $pdo = get_connection();
     $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
@@ -1285,21 +1285,3 @@ function filter_by_EX_flg()
 
     return $trainer;
 }
-
-function filter_by_EX_flg()
-    {
-    $pdo = get_connection();
-    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
-    left join sync on sync.sync_id = trainer.sync_id
-    left join type on type.type_id = sync.type_id
-    left join role on role.role_id = trainer.role_id where EX_flg = false");
-    $st->execute();
-    $trainer = $st->fetchAll();
-
-    $pdo = null;
-    $st = null;
-
-    return $trainer;
-}
-
-
