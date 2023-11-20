@@ -12,15 +12,13 @@ $title = "PoMaEX | LG:LG-List";
         <!-- <a class="main-btn LG-add-btn" href="add-LG.php">追加</a> -->
         <ul class="LG-list">
             <?php foreach ($parties as $party) { ?>
-                <?php if ($category_id == 1) { ?>
-                    <li class="LG">
-                        <a href="LG-party-list.php?LG_id=<?= special($party['LG_id']) ?>">
-                            <?= special($party['name']) ?>
-                            <img src="../../img/LG<?= special($party['eventnumber']) ?>.png">
-                        </a>
-                        <!-- <button class="party-delete LG-delete delete-btn" data-delete="delete-LG.php?eventnumber=<?= special($party['eventnumber']) ?>"></button> -->
-                    </li>
-                <?php } ?>
+                <li class="LG">
+                    <a href="LG-party-list.php?LG_id=<?= special($party['LG_id']) ?>">
+                        <?= special($party['name']) ?>
+                        <img src="../../img/LG<?= special($party['eventnumber']) ?>.png">
+                    </a>
+                    <!-- <button class="party-delete LG-delete delete-btn" data-delete="delete-LG.php?eventnumber=<?= special($party['eventnumber']) ?>"></button> -->
+                </li>
             <?php } ?>
         </ul>
     </main>
