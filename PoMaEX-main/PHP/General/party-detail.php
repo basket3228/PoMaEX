@@ -488,9 +488,9 @@ $title = "PoMaEX | CS:Party-detail";
         </div>
     </main>
     <aside class="layer">
-        <!-- <?php if ($memo['memo'] != null) { ?>
+        <?php if ($memo['memo'] != null) { ?>
             <?php echo special($memo['memo']) ?>
-        <?php } ?> -->
+        <?php } ?>
     </aside>
     <aside class="sidebar">
         <div>
