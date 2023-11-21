@@ -378,7 +378,7 @@ function get_party($LG_id, $enemy_id)
 function get_LGParty($LG_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct LGparty.LGparty_id, trainer.trainer_name, enemy_id from LG
+    $st = $pdo->prepare("select distinct LGparty.LGparty_id, trainer.trainer_name, trainer.level, enemy_id from LG
     left join LGparty on LGparty.LG_id = LG.LG_id
     left join trainer on trainer.trainer_id = LGparty.trainer_id2
     where LG.LG_id = ?");
@@ -395,7 +395,7 @@ function get_LGParty($LG_id)
 function get_SAParty($SA_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct SAparty.SAparty_id, trainer.trainer_name from SA
+    $st = $pdo->prepare("select distinct SAparty.SAparty_id, trainer.trainer_name, trainer.level from SA
     left join SAparty on SAparty.SA_id = SA.SA_id
     left join trainer on trainer.trainer_id = SAparty.trainer_id2
     where SA.SA_id = ?");
@@ -597,7 +597,7 @@ function get_sync()
 function get_trainer()
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, type.type_name, URL from trainer
+    $st = $pdo->prepare("select distinct trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, level, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join type on type.type_id = sync.type_id
     left join role on role.role_id = trainer.role_id where URL is not null");
@@ -613,7 +613,7 @@ function get_trainer()
 function get_trainerByType($type_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, URL from trainer
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, level, stars, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join role on role.role_id = trainer.role_id where URL is not null and sync.type_id = ?");
     $st->bindValue(1, $type_id);
@@ -629,7 +629,7 @@ function get_trainerByType($type_id)
 function get_trainerByRole($role_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars, URL from trainer
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, level, stars, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join role on role.role_id = trainer.role_id where URL is not null and trainer.role_id = ?");
     $st->bindValue(1, $role_id);
@@ -645,7 +645,7 @@ function get_trainerByRole($role_id)
 function get_mainTrainer()
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, stars from trainer
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, level, stars from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join role on role.role_id = trainer.role_id where trainer_name = '主人公'");
     $st->execute();
@@ -660,10 +660,11 @@ function get_mainTrainer()
 function get_attacker()
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, role.role_name, EX_flg, potential, stars from trainer
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, role.role_name, EX_flg, potential, level, stars from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join role on role.role_id = trainer.role_id
-    where trainer.role_id = 1");
+    where trainer.role_id = 1
+    and where trainer.owned_Flg = true");
     $st->execute();
     $trainer = $st->fetchAll();
 
@@ -676,10 +677,11 @@ function get_attacker()
 function get_technical()
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, role.role_name, EX_flg, potential, stars from trainer
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, role.role_name, EX_flg, potential, level, stars from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join role on role.role_id = trainer.role_id
-    where trainer.role_id = 2");
+    where trainer.role_id = 2
+    and where trainer.owned_Flg = true");
     $st->execute();
     $trainer = $st->fetchAll();
 
@@ -692,10 +694,11 @@ function get_technical()
 function get_support()
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, role.role_name, EX_flg, potential, stars from trainer
+    $st = $pdo->prepare("select trainer_id, trainer_name, sync.sync_name, role.role_name, EX_flg, potential, level, stars from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join role on role.role_id = trainer.role_id
-    where trainer.role_id = 3");
+    where trainer.role_id = 3
+    and where trainer.owned_Flg = true");
     $st->execute();
     $trainer = $st->fetchAll();
 
@@ -721,7 +724,7 @@ function get_type()
 function LG1($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty.LGparty_id, LGparty.LG_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, luckyskill.luckyskill_name, t1.potential from LGparty
+    $st = $pdo->prepare("select LGparty.LGparty_id, LGparty.LG_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, t1.level, luckyskill.luckyskill_name, t1.potential from LGparty
     left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join type on type.type_id = s1.type_id
@@ -740,7 +743,7 @@ function LG1($LGparty_id)
 function LG2($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty.LGparty_id, LGparty.LG_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, type.type_name as tn2, t2.EX_Flg, luckyskill.luckyskill_name, t2.potential from LGparty
+    $st = $pdo->prepare("select LGparty.LGparty_id, LGparty.LG_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, type.type_name as tn2, t2.EX_Flg, t2.level, luckyskill.luckyskill_name, t2.potential from LGparty
     left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
     left join sync as s2 on s2.sync_id = t2.sync_id
     left join type on type.type_id = s2.type_id
@@ -759,7 +762,7 @@ function LG2($LGparty_id)
 function LG3($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty.LGparty_id, LGparty.LG_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, type.type_name as tn3, t3.EX_Flg, luckyskill.luckyskill_name, t3.potential from LGparty
+    $st = $pdo->prepare("select LGparty.LGparty_id, LGparty.LG_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, type.type_name as tn3, t3.EX_Flg, t3.level, luckyskill.luckyskill_name, t3.potential from LGparty
     left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
     left join sync as s3 on s3.sync_id = t3.sync_id
     left join type on type.type_id = s3.type_id
@@ -778,7 +781,7 @@ function LG3($LGparty_id)
 function CS1($CSparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select CSparty.CSparty_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, luckyskill.luckyskill_name, t1.potential from CSparty
+    $st = $pdo->prepare("select CSparty.CSparty_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, t1.level, luckyskill.luckyskill_name, t1.potential from CSparty
     left join trainer as t1 on t1.trainer_id = CSparty.trainer_id1
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join type on type.type_id = s1.type_id
@@ -797,7 +800,7 @@ function CS1($CSparty_id)
 function CS2($CSparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select CSparty.CSparty_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, type.type_name as tn2, t2.EX_Flg, luckyskill.luckyskill_name, t2.potential from CSparty
+    $st = $pdo->prepare("select CSparty.CSparty_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, type.type_name as tn2, t2.EX_Flg, t2.level, luckyskill.luckyskill_name, t2.potential from CSparty
     left join trainer as t2 on t2.trainer_id = CSparty.trainer_id2
     left join sync as s2 on s2.sync_id = t2.sync_id
     left join type on type.type_id = s2.type_id
@@ -816,7 +819,7 @@ function CS2($CSparty_id)
 function CS3($CSparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select CSparty.CSparty_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, type.type_name as tn3, t3.EX_Flg, luckyskill.luckyskill_name, t3.potential from CSparty
+    $st = $pdo->prepare("select CSparty.CSparty_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, type.type_name as tn3, t3.EX_Flg, t3.level, luckyskill.luckyskill_name, t3.potential from CSparty
     left join trainer as t3 on t3.trainer_id = CSparty.trainer_id3
     left join sync as s3 on s3.sync_id = t3.sync_id
     left join type on type.type_id = s3.type_id
@@ -835,7 +838,7 @@ function CS3($CSparty_id)
 function SA1($SAparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select SAparty.SAparty_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, luckyskill.luckyskill_name, t1.potential from SAparty
+    $st = $pdo->prepare("select SAparty.SAparty_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, t1.level, luckyskill.luckyskill_name, t1.potential from SAparty
     left join trainer as t1 on t1.trainer_id = SAparty.trainer_id1
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join type on type.type_id = s1.type_id
@@ -854,7 +857,7 @@ function SA1($SAparty_id)
 function SA2($SAparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select SAparty.SAparty_id, SAparty.SA_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, type.type_name as tn2, t2.EX_Flg, luckyskill.luckyskill_name, t2.potential from SAparty
+    $st = $pdo->prepare("select SAparty.SAparty_id, SAparty.SA_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, type.type_name as tn2, t2.EX_Flg, t2.level, luckyskill.luckyskill_name, t2.potential from SAparty
     left join trainer as t2 on t2.trainer_id = SAparty.trainer_id2
     left join sync as s2 on s2.sync_id = t2.sync_id
     left join type on type.type_id = s2.type_id
@@ -873,7 +876,7 @@ function SA2($SAparty_id)
 function SA3($SAparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select SAparty.SAparty_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, type.type_name as tn3, t3.EX_Flg, luckyskill.luckyskill_name, t3.potential from SAparty
+    $st = $pdo->prepare("select SAparty.SAparty_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, type.type_name as tn3, t3.EX_Flg, t3.level, luckyskill.luckyskill_name, t3.potential from SAparty
     left join trainer as t3 on t3.trainer_id = SAparty.trainer_id3
     left join sync as s3 on s3.sync_id = t3.sync_id
     left join type on type.type_id = s3.type_id
