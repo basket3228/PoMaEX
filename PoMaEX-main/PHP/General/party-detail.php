@@ -35,7 +35,13 @@ $title = "PoMaEX | CS:Party-detail";
     <main class="main">
         <div class="trainer">
             <h2 class="sub-title">パーティ詳細</h2>
+            <?php if(isset($_GET['LGparty_id'])) { ?>
             <a class="main-btn mb32" href="party-edit.php?LGparty_id=<?= special($LGparty_id) ?>">パーティ編集へ</a>
+                                                <?php } else if(isset($_GET['CSparty_id'])) { ?>
+                                                  <a class="main-btn mb32" href="party-edit.php?CSparty_id=<?= special($CSparty_id) ?>">パーティ編集へ</a>
+            <?php } else if(isset($_GET['SAparty_id'])) { ?>
+                                                  <a class="main-btn mb32" href="party-edit.php?SAparty_id=<?= special($SAparty_id) ?>">パーティ編集へ</a>
+            <?php } ?>
             <ul class="detail-list">
                 <?php if (isset($_GET['LGparty_id'])) { ?>
                     <div class="party-wrap">
