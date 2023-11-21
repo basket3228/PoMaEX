@@ -937,7 +937,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
 ('リュウキ', 416, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/19000/77600'),
 ('ボタン', 252, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/29300/70000'),
 ('アユミ', 289, 3, false, 0, 5, 'https://ng-pomatools.web.app/pairs/26900/13300'),
-('イブ', 289, 2, false, 0, 3, 'https://ng-pomatools.web.app/pairs/65600/13300'),
+('イブ(ポケマスごっこ)', 289, 2, false, 0, 3, 'https://ng-pomatools.web.app/pairs/65600/13300'),
 ('ミヅキ(バラエティ)', 50, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/12300/19700'),
 ('ヨウ(バラエティ)', 417, 2, false, 0, 5, 'https://ng-pomatools.web.app/pairs/12200/19600'),
 ('主人公', 324, 1, false, 0, 1, null),
