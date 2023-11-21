@@ -127,6 +127,8 @@ CREATE TABLE trainer (
     role_id int not NULL,
     EX_Flg boolean not null,
     potential int not null,
+    level int default 1 not null,
+    owned_Flg boolean default 1 not null,
     stars int not null,
     URL VARCHAR(510),
     FOREIGN KEY (sync_id) REFERENCES sync(sync_id),
