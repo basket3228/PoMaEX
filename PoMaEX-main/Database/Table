@@ -17,85 +17,99 @@ CREATE TABLE enemy (
 create table soloEntei (
     soloEntei_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloCobalion (
     soloCobalion_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloLatios (
     soloLatios_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloAzelf (
     soloAzelf_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloTapu_Bulu (
     soloTapu_Bulu_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloRegirock (
     soloRegirock_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloCresselia (
     soloCresselia_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloLatias (
     soloLatias_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloTornadus (
     soloTornadus_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloMoltres (
     soloMoltres_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloUxie (
     soloUxie_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloTerrakion (
     soloTerrakion_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloRaiko (
     soloRaiko_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 create table soloRegisteel (
     soloRegisteel_id int PRIMARY KEY AUTO_INCREMENT,
     enemy_id int not null,
-    trainer_id int not null
+    trainer_id int not null,
+    last_update datetime default current_timestamp
 );
 
 CREATE TABLE luckyskill (
