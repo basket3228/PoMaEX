@@ -169,8 +169,7 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                             <?php } ?>
                         <?php } ?>
                     </div>
-                <?php } ?>
-     <?php else if (isset($_GET['CSparty_id'])) { ?>
+                <?php } else if (isset($_GET['CSparty_id'])) { ?>
                     <div class="party-wrap edit" data-partynum="1">
                         <?php foreach ($CS1 as $c1) { ?>
                             <?php if ($c1['t1'] != null) { ?>
@@ -307,8 +306,7 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                             <?php } ?>
                         <?php } ?>
                     </div>
-                <?php } ?>
-     <?php else if (isset($_GET['SAparty_id'])) { ?>
+                <?php } else if (isset($_GET['SAparty_id'])) { ?>
                     <div class="party-wrap edit" data-partynum="1">
                         <?php foreach ($SA1 as $c1) { ?>
                             <?php if ($c1['t1'] != null) { ?>
@@ -463,7 +461,7 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                 <input type="hidden" name="trainer_id3" value="">
                 <input type="button" value="送信" class="party-edit-submit">
             </form>
-     <?php } else if (isset($_GET['CSparty_id'])) { ?>
+        <?php } else if (isset($_GET['CSparty_id'])) { ?>
             <form method="post" class="party-edit">
                 <aside class="layer">
                     <?php if ($memo['memo'] != null) { ?>
@@ -478,7 +476,7 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                 <input type="hidden" name="trainer_id3" value="">
                 <input type="button" value="送信" class="party-edit-submit">
             </form>
-     <?php } else if (isset($_GET['SAparty_id'])) { ?>
+        <?php } else if (isset($_GET['SAparty_id'])) { ?>
             <form method="post" class="party-edit">
                 <aside class="layer">
                     <?php if ($memo['memo'] != null) { ?>
