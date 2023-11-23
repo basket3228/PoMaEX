@@ -833,7 +833,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
 ('エリカ(BP)', 24, 2, false, 0, 4, 'https://ng-pomatools.web.app/pairs/800/11400'),
 ('カリン(BP)', 50, 1, false, 0, 4, 'https://ng-pomatools.web.app/pairs/6200/19700'),
 ('ヒガナ(BP)', 200, 2, False, 0, 4, 'https://ng-pomatools.web.app/pairs/12900/37300'),
-('マツバ(BP)', 239, 3, False, 0, 4, 'https://ng-pomatools.web.app/pairs/14800/42900'),
+('マツバ(BP)', 241, 3, False, 0, 4, 'https://ng-pomatools.web.app/pairs/14800/42900'),
 ('マツブサ', 244, 1, False, 0, 5, 'https://ng-pomatools.web.app/pairs/19200/38300'),
 ('アオギリ', 4, 1, false, 0, 5, 'https://ng-pomatools.web.app/pairs/19300/38200'),
 ('スイレン', 128, 3, False, 0, 5, 'https://ng-pomatools.web.app/pairs/16000/75200'),
