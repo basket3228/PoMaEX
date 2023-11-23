@@ -6,7 +6,7 @@ use pokemas;
 
 create table user (
     user_id int primary key auto_increment,
-    user_name varchar(255) not null,
+    user_name varchar(255) not null
 );
 
 CREATE TABLE enemy (
