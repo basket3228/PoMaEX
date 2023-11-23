@@ -21,6 +21,7 @@ if (isset($_GET['LGparty_id'])) {
     $memo = get_SAmemo($SAparty_id);
 }
 $trainers = get_trainer();
+$luckyskills = get_luckyskill();
 
 $title = "PoMaEX | CS:Party-detail edit-frame";
 ?>
@@ -69,8 +70,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png" draggable="false">
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c1['potential']) ?>/20</div>
                                     <div class="skill">
+                                        ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
+                                        <?php echo special($c1['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
                                 </li>
@@ -116,8 +121,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png" draggable="false">
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c2['potential']) ?>/20</div>
                                     <div class="skill">
+                                        ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
+                                        <?php echo special($c2['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
                                 </li>
@@ -161,8 +170,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png" draggable="false">
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c3['potential']) ?>/20</div>
                                     <div class="skill">
+                                        ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
+                                        <?php echo special($c3['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
                                 </li>
@@ -206,8 +219,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png" draggable="false">
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c1['potential']) ?>/20</div>
                                     <div class="skill">
+                                        ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
+                                        <?php echo special($c1['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
                                 </li>
@@ -253,8 +270,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png" draggable="false">
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c2['potential']) ?>/20</div>
                                     <div class="skill">
+                                        ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
+                                        <?php echo special($c2['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
                                 </li>
@@ -298,8 +319,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png" draggable="false">
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c3['potential']) ?>/20</div>
                                     <div class="skill">
+                                        ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
+                                        <?php echo special($c3['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
                                 </li>
@@ -343,8 +368,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png" draggable="false">
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c1['potential']) ?>/20</div>
                                     <div class="skill">
+                                        ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
+                                        <?php echo special($c1['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
                                 </li>
@@ -390,8 +419,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png" draggable="false">
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c2['potential']) ?>/20</div>
                                     <div class="skill">
+                                        ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
+                                        <?php echo special($c2['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
                                 </li>
@@ -435,8 +468,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png" draggable="false">
+                                    <div class="potential">
+                                        のびしろ：<?php echo special($c3['potential']) ?>/20</div>
                                     <div class="skill">
+                                        ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
+                                        <?php echo special($c3['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
                                 </li>
@@ -447,15 +484,30 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
             </ul>
         </div>
         <?php if (isset($_GET['LGparty_id'])) { ?>
+            <aside class="layer">
+                <?php if ($memo['memo'] != null) { ?>
+                    <input class="edit-memo" type="text" value="<?php echo special($memo['memo']) ?>">
+                <?php } else { ?>
+                    <input class="edit-memo" type="text" value="">
+                <?php } ?>
+            </aside>
             <form method="post" class="party-edit">
-                <aside class="layer">
-                    <?php if ($memo['memo'] != null) { ?>
-                        <input class="edit-memo" type="text" value="<?php echo special($memo['memo']) ?>">
-                    <?php } else { ?>
-                        <input class="edit-memo" type="text" value="">
-                    <?php } ?>
-                </aside>
                 <input type="hidden" name="LGparty_id" value="<?= special($LGparty_id) ?>">
+                <select name="luckyskill_id1">
+                    <?php foreach ($luckyskills as $c1) { ?>
+                        <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
+                    <?php } ?>
+                </select>
+                <select name="luckyskill_id2">
+                    <?php foreach ($luckyskills as $c2) { ?>
+                        <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
+                        <?php } ?>
+                </select>
+                <select name="luckyskill_id3">
+                    <?php foreach ($luckyskills as $c3) { ?>
+                        <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
+                        <?php } ?>
+                </select>
                 <input type="hidden" name="trainer_id1" value="">
                 <input type="hidden" name="trainer_id2" value="">
                 <input type="hidden" name="trainer_id3" value="">
@@ -471,6 +523,23 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                     <?php } ?>
                 </aside>
                 <input type="hidden" name="LGparty_id" value="<?= special($CSparty_id) ?>">
+                <select name="luckyskill_id1">
+                    <?php foreach ($luckyskills as $c1) { ?>
+                        <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
+                        <?php } ?>
+                </select>
+                <select name="luckyskill_id2">
+                    <?php foreach ($luckyskills as $c2) { ?>
+                        <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
+                        <?php } ?>
+                </select>
+                <select name="luckyskill_id3">
+                    <?php foreach ($luckyskills as $c3) { ?>
+                        <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
+                        <?php } ?>
+                </select>
+                <input type="number" name="potential">
+                <input type="text" name="memo">
                 <input type="hidden" name="trainer_id1" value="">
                 <input type="hidden" name="trainer_id2" value="">
                 <input type="hidden" name="trainer_id3" value="">
@@ -486,6 +555,21 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                     <?php } ?>
                 </aside>
                 <input type="hidden" name="LGparty_id" value="<?= special($SAparty_id) ?>">
+                <select name="luckyskill_id1">
+                    <?php foreach ($luckyskills as $c1) { ?>
+                        <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
+                        <?php } ?>
+                </select>
+                <select name="luckyskill_id2">
+                    <?php foreach ($luckyskills as $c2) { ?>
+                        <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
+                        <?php } ?>
+                </select>
+                <select name="luckyskill_id3">
+                    <?php foreach ($luckyskills as $c3) { ?>
+                        <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
+                        <?php } ?>
+                </select>
                 <input type="hidden" name="trainer_id1" value="">
                 <input type="hidden" name="trainer_id2" value="">
                 <input type="hidden" name="trainer_id3" value="">
