@@ -24,6 +24,18 @@ $(".popup-btn").click(() => {
   $(".popup-sync").removeClass("display");
 });
 
+//スクロール上下
+document.querySelector(".down").addEventListener("click", () => {
+  let scrollArea = document.querySelector(".main");
+  let scrollAreaHeight = scrollArea.scrollHeight;
+  scrollArea.scrollTop = scrollAreaHeight;
+});
+document.querySelector(".up").addEventListener("click", () => {
+  let scrollArea = document.querySelector(".main");
+  scrollArea.scrollTop = 0;
+});
+
+//ドラッグ&ドロップの編集
 const draggableItems = document.querySelectorAll(".edit-drag");
 const editFrame = document.querySelectorAll(".party-wrap");
 const editDeleteBtn = document.querySelectorAll(".edit-delete-btn");
@@ -92,11 +104,18 @@ function edit(element, event) {
   const starsEl = document.createElement("div");
   starsEl.classList.add("stars");
 
-  for (i = 0; i <= Number(stars); i++) {
+  for (i = 0; i < Number(stars); i++) {
     const starImg = document.createElement("img");
     starImg.src = "../../img/star.png";
     starImg.setAttribute("draggable", "false");
     starsEl.appendChild(starImg);
+  }
+
+  for (i = 0; i < 5 - Number(stars); i++) {
+    const nonStarImg = document.createElement("img");
+    nonStarImg.src = "../../img/non_star.png";
+    nonStarImg.setAttribute("draggable", "false");
+    starsEl.appendChild(nonStarImg);
   }
 
   const exEl = document.createElement("div");
