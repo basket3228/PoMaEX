@@ -1,6 +1,8 @@
 <?php
 require('../../function.php');
 
+global $titleParameter;
+
 if (isset($_GET['type'])) {
     $pageType = $_GET['type'];
 }
@@ -11,6 +13,7 @@ if (isset($_GET['LGparty_id'])) {
     $LG3 = LG3($LGparty_id);
     $URL = get_LGURL($LGparty_id);
     $memo = get_LGmemo($LGparty_id);
+    $titleParameter = "LG";
 } else if (isset($_GET['CSparty_id'])) {
     $CSparty_id = $_GET['CSparty_id'];
     $CS1 = CS1($CSparty_id);
@@ -18,6 +21,7 @@ if (isset($_GET['LGparty_id'])) {
     $CS3 = CS3($CSparty_id);
     $URL = get_CSURL($CSparty_id);
     $memo = get_CSmemo($CSparty_id);
+    $titleParameter = "CS";
 } else if (isset($_GET['SAparty_id'])) {
     $SAparty_id = $_GET['SAparty_id'];
     $SA1 = SA1($SAparty_id);
@@ -25,8 +29,9 @@ if (isset($_GET['LGparty_id'])) {
     $SA3 = SA3($SAparty_id);
     $URL = get_SAURL($SAparty_id);
     $memo = get_SAmemo($SAparty_id);
+    $titleParameter = "SA";
 }
-$title = "PoMaEX | CS:Party-detail";
+$title = "PoMaEX | " . $titleParameter . ":Party-detail";
 ?>
 
 <?php require_once("../General/header.php") ?>
@@ -450,18 +455,28 @@ $title = "PoMaEX | CS:Party-detail";
                                         <div class="stars">
                                             <?php if ($c3['star3'] == 1) { ?>
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c3['star3'] == 2) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c3['star3'] == 3) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c3['star3'] == 4) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c3['star3'] == 5) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">

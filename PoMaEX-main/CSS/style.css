@@ -136,8 +136,18 @@ input[type="text"] {
 .nav li a {
   display: block;
   padding: 16px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ededed;
   color: #3f3f3f;
+}
+
+.nav li a.bread-now {
+  background-color: #daf2ec;
+}
+
+.nav li a.bread-now:hover {
+  background: #daf2ec;
+  box-shadow: none;
+  opacity: 1;
 }
 
 .nav li a:hover,
@@ -178,6 +188,15 @@ input[type="text"] {
 .nav-new .nav-list li:not(.nav-toggle) {
   flex: 1;
   height: 100%;
+}
+
+.nav-new .nav-list img {
+  width: auto;
+  height: 100%;
+}
+
+.nav-new .nav-list .flex-unset {
+  flex: unset !important;
 }
 
 .nav-new .nav-toggle {
@@ -542,7 +561,7 @@ input[type="text"] {
   transform: translate(-15%, 80%);
 }
 
-.stars img:last-child {
+.stars img:nth-child(5) {
   left: 50%;
   transform: translate(-50%, 80%);
 }
@@ -833,6 +852,7 @@ input[type="text"] {
 }
 
 .SA {
+  position: relative;
 }
 
 .SA-list {
@@ -863,4 +883,38 @@ input[type="text"] {
 
 .edit-memo:focus {
   outline: none;
+}
+
+.flex-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.down,
+.up {
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.up {
+  margin-top: 32px;
+}
+
+.relative {
+  position: relative;
+}
+
+.nav-pomatools {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 25%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.nav-pomatools a {
+  padding: 8px 12px;
 }

@@ -5,7 +5,7 @@ $LG_id = $_GET['LG_id'];
 $enemy_id = $_GET['enemy_id'];
 $parties = get_party($LG_id, $enemy_id);
 $enemy = get_particular_enemy($enemy_id);
-$title = "PoMaEX | LG:Party-List";
+$title = "PoMaEX | LG:search";
 ?>
 <?php require_once("../General/header.php") ?>
 <div class="container">

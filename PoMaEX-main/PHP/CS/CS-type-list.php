@@ -2,7 +2,7 @@
 require('../../function.php');
 
 $types = get_type();
-$title = "PoMaEX | CS:Party-List";
+$title = "PoMaEX | CS:Type-List";
 
 ?>
 <?php require_once("../General/header.php") ?>
