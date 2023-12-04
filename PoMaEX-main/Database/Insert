@@ -682,7 +682,7 @@ INSERT INTO role (role_name) VALUES
 INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, URL) VALUES
 ('主人公(ピカチュウ)', 322, 1, false, 0, 3, 'https://ng-pomatools.web.app/pairs/900000/2500'),
 ('タケシ', 144, 2, False, 0, 3, 'https://ng-pomatools.web.app/pairs/1500/9500'),
-('マジコスタケシ', 145, 1, False, 0, 5, 'https://ng-pomatools.web.app/pairs/1501/24800'),
+('マジコスタケシ', 145, 1, False, 0, 3, 'https://ng-pomatools.web.app/pairs/1501/24800'),
 ('カスミ', 38, 3, false, 0, 3, 'https://ng-pomatools.web.app/pairs/11000/12100'),
 ('エリカ', 23, 2, false, 0, 3, 'https://ng-pomatools.web.app/pairs/800/4500'),
 ('カンナ', 59, 2, false, 0, 4, 'https://ng-pomatools.web.app/pairs/500/13100'),
@@ -971,7 +971,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, U
 ('ビート(ネオチャンピオン)', 209, 3, False, 0, 5, 'https://ng-pomatools.web.app/pairs/24601/14401'),
 ('ボールガイ', 227, 3, False, 0, 5, 'https://ng-pomatools.web.app/pairs/28200/59100'),
 ('ダイゴ(スペシャル)', 148, 2, False, 0, 5, 'https://ng-pomatools.web.app/pairs/9003/50801'),
-('ダイゴ(サロン))', 147, 2, False, 0, 4, 'https://ng-pomatools.web.app/pairs/9000/34600'),
+('ダイゴ(サロン)', 147, 2, False, 0, 4, 'https://ng-pomatools.web.app/pairs/9000/34600'),
 ('サナ(スペシャル)', 110, 3, False, 0, 5, 'https://ng-pomatools.web.app/pairs/13901/70700'),
 ('ヒガナ(スペシャル)', 202, 2, False, 0, 5, 'https://ng-pomatools.web.app/pairs/12902/82800'),
 ('コトネ(スペシャル)', 96, 3, False, 0, 5, 'https://ng-pomatools.web.app/pairs/202/23100'),
