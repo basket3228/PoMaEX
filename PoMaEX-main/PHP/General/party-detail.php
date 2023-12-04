@@ -56,18 +56,28 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                     <div class="stars">
                                         <?php if ($c1['star1'] == 1) { ?>
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c1['star1'] == 2) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c1['star1'] == 3) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c1['star1'] == 4) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c1['star1'] == 5) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
@@ -109,18 +119,28 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                     <div class="stars">
                                         <?php if ($c2['star2'] == 1) { ?>
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c2['star2'] == 2) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c2['star2'] == 3) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c2['star2'] == 4) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c2['star2'] == 5) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
@@ -158,18 +178,28 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                     <div class="stars">
                                         <?php if ($c3['star3'] == 1) { ?>
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c3['star3'] == 2) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c3['star3'] == 3) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c3['star3'] == 4) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
+                                            <img src="../../img/non_star.png">
                                         <?php } else if ($c3['star3'] == 5) { ?>
                                             <img src="../../img/star.png">
                                             <img src="../../img/star.png">
@@ -209,18 +239,28 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                         <div class="stars">
                                             <?php if ($c1['star1'] == 1) { ?>
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c1['star1'] == 2) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c1['star1'] == 3) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c1['star1'] == 4) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c1['star1'] == 5) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
@@ -259,18 +299,28 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                         <div class="stars">
                                             <?php if ($c2['star2'] == 1) { ?>
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c2['star2'] == 2) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c2['star2'] == 3) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c2['star2'] == 4) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c2['star2'] == 5) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
@@ -306,18 +356,28 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                         <div class="stars">
                                             <?php if ($c3['star3'] == 1) { ?>
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c3['star3'] == 2) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c3['star3'] == 3) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c3['star3'] == 4) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c3['star3'] == 5) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
@@ -349,27 +409,37 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                         <?php } ?>
                     </div>
                 <?php } else if (isset($_GET['SAparty_id'])) { ?>
-                    <div class="party-wrap">
-                        <?php foreach ($SA1 as $c1) { ?>
-                            <?php if ($SAparty_id == $c1['SAparty_id']) { ?>
-                                <?php if ($c1['t1'] != null) { ?>
-                                    <li class="party-detail CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>">
+                    <?php foreach ($SA1 as $c1) { ?>
+                        <?php if ($SAparty_id == $c1['SAparty_id']) { ?>
+                            <?php if ($c1['t1'] != null) { ?>
+                                <li class="party-wrap">
+                                    <div class="party-detail CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>">
                                         <p>1</p>
                                         <div class="stars">
                                             <?php if ($c1['star1'] == 1) { ?>
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c1['star1'] == 2) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c1['star1'] == 3) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c1['star1'] == 4) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c1['star1'] == 5) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
@@ -395,31 +465,43 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                         </div>
                                         <?php echo special($c1['level']) ?>
                                         <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&trainer_id1=<?= special($c1['ti1']) ?>"><button id="delete">削除</button></a>
-                                    </li>
-                                <?php } ?>
+                                    </div>
+                                </li>
                             <?php } ?>
-                            <?php foreach ($SA2 as $c2) { ?>
-                                <?php if ($c2['t2'] == null) { ?>
-                                    <p>トレーナーを選択してください。</p>
-                                    <button>選択する</button>
-                                <?php } else if ($c2['t2'] != null) { ?>
-                                    <li class="party-detail CS-<?= special($c2['tn2']) ?>-detail" data-type="<?= special($c2['tn2']) ?>">
+                        <?php } ?>
+                        <?php foreach ($SA2 as $c2) { ?>
+                            <?php if ($c2['t2'] == null) { ?>
+                                <p>トレーナーを選択してください。</p>
+                                <button>選択する</button>
+                            <?php } else if ($c2['t2'] != null) { ?>
+                                <li class="party-wrap">
+                                    <div class="party-detail CS-<?= special($c2['tn2']) ?>-detail" data-type="<?= special($c2['tn2']) ?>">
                                         <p>2</p>
                                         <div class="stars">
                                             <?php if ($c2['star2'] == 1) { ?>
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c2['star2'] == 2) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c2['star2'] == 3) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c2['star2'] == 4) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
+                                                <img src="../../img/non_star.png">
                                             <?php } else if ($c2['star2'] == 5) { ?>
                                                 <img src="../../img/star.png">
                                                 <img src="../../img/star.png">
@@ -445,12 +527,14 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                         </div>
                                         <?php echo special($c2['level']) ?>
                                         <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&trainer_id2=<?= special($c2['ti2']) ?>"><button id="delete">削除</button></a>
-                                    </li>
-                                <?php } ?>
+                                    </div>
+                                </li>
                             <?php } ?>
-                            <?php foreach ($SA3 as $c3) { ?>
-                                <?php if ($c3['t3'] != null) { ?>
-                                    <li class="party-detail CS-<?= special($c3['tn3']) ?>-detail" data-type="<?= special($c3['tn3']) ?>">
+                        <?php } ?>
+                        <?php foreach ($SA3 as $c3) { ?>
+                            <?php if ($c3['t3'] != null) { ?>
+                                <li class="party-wrap">
+                                    <div class="party-detail CS-<?= special($c3['tn3']) ?>-detail" data-type="<?= special($c3['tn3']) ?>">
                                         <p>3</p>
                                         <div class="stars">
                                             <?php if ($c3['star3'] == 1) { ?>
@@ -502,11 +586,11 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                         </div>
                                         <?php echo special($c3['level']) ?>
                                         <a href="../SA/delete-SAparty.php?SAparty_id=<?= special($SAparty_id) ?>&trainer_id3=<?= special($c3['ti3']) ?>"><button id="delete">削除</button></a>
-                                    </li>
-                                <?php } ?>
+                                    </div>
+                                </li>
                             <?php } ?>
                         <?php } ?>
-                    </div>
+                    <?php } ?>
             </ul>
         <?php } ?>
         </div>
