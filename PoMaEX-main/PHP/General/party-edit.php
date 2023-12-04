@@ -190,6 +190,7 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     <div class="stars">
                                         <?php if ($c1['star1'] == 1) { ?>
                                             <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/non_star.png" draggable="false">
                                         <?php } else if ($c1['star1'] == 2) { ?>
                                             <img src="../../img/star.png" draggable="false">
                                             <img src="../../img/star.png" draggable="false">
@@ -331,156 +332,160 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                             <?php } ?>
                         <?php } ?>
                     </div>
+
+                    <!-- /////////////
+ここからSAです
+////////////// -->
                 <?php } else if (isset($_GET['SAparty_id'])) { ?>
-                    <div class="party-wrap edit" data-partynum="1">
+                    <li class="party-wrap edit" data-partynum="1">
                         <?php foreach ($SA1 as $c1) { ?>
                             <?php if ($c1['t1'] != null) { ?>
-                                <li class="party-detail edit-frame CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>" data-id="<?= special($c1['ti1']) ?>" draggable="false">
-                                    <div class="stars">
-                                        <?php if ($c1['star1'] == 1) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c1['star1'] == 2) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c1['star1'] == 3) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c1['star1'] == 4) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c1['star1'] == 5) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } ?>
-                                    </div>
-                                    <div class="EX">
-                                        <?php if ($c1['EX_Flg'] == true) { ?>
-                                            <img src="../../img/EX.png" draggable="false">
-                                        <?php } else { ?>
-                                            <img src="../../img/NotEX.png" draggable="false">
-                                        <?php } ?>
-                                    </div>
-                                    <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
-                                    <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png" draggable="false">
-                                    <div class="potential">
-                                        のびしろ：<?php echo special($c1['potential']) ?>/20</div>
-                                    <div class="skill">
-                                        ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
-                                        <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
-                                        <?php echo special($c1['level']) ?>
-                                    </div>
-                                    <button class="edit-delete-btn party-delete"></button>
-                                </li>
+                    <li class="party-detail edit-frame CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>" data-id="<?= special($c1['ti1']) ?>" draggable="false">
+                        <div class="stars">
+                            <?php if ($c1['star1'] == 1) { ?>
+                                <img src="../../img/star.png" draggable="false">
+                            <?php } else if ($c1['star1'] == 2) { ?>
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
+                            <?php } else if ($c1['star1'] == 3) { ?>
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
+                            <?php } else if ($c1['star1'] == 4) { ?>
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
+                            <?php } else if ($c1['star1'] == 5) { ?>
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
+                                <img src="../../img/star.png" draggable="false">
                             <?php } ?>
-                        <?php } ?>
-                    </div>
-                    <div class="party-wrap edit" data-partynum="2">
-                        <?php foreach ($SA2 as $c2) { ?>
-                            <?php if ($c2['t2'] == null) { ?>
-                                <p>トレーナーを選択してください。</p>
-                            <?php } else if ($c2['t2'] != null) { ?>
-                                <li class="party-detail edit-frame CS-<?= special($c2['tn2']) ?>-detail data-type=" <?= special($c2['tn2']) ?>" data-id="<?= special($c2['ti2']) ?>" draggable="false">
-                                    <p>2</p>
-                                    <div class="stars">
-                                        <?php if ($c2['star2'] == 1) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c2['star2'] == 2) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c2['star2'] == 3) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c2['star2'] == 4) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c2['star2'] == 5) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } ?>
-                                    </div>
-                                    <div class="EX">
-                                        <?php if ($c2['EX_Flg'] == true) { ?>
-                                            <img src="../../img/EX.png" draggable="false">
-                                        <?php } else { ?>
-                                            <img src="../../img/NotEX.png" draggable="false">
-                                        <?php } ?>
-                                    </div>
-                                    <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
-                                    <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png" draggable="false">
-                                    <div class="potential">
-                                        のびしろ：<?php echo special($c2['potential']) ?>/20</div>
-                                    <div class="skill">
-                                        ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
-                                        <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
-                                        <?php echo special($c2['level']) ?>
-                                    </div>
-                                    <button class="edit-delete-btn party-delete"></button>
-                                </li>
+                        </div>
+                        <div class="EX">
+                            <?php if ($c1['EX_Flg'] == true) { ?>
+                                <img src="../../img/EX.png" draggable="false">
+                            <?php } else { ?>
+                                <img src="../../img/NotEX.png" draggable="false">
                             <?php } ?>
-                        <?php } ?>
-                    </div>
-                    <div class="party-wrap edit" data-partynum="3">
-                        <?php foreach ($SA3 as $c3) { ?>
-                            <?php if ($c3['t3'] != null) { ?>
-                                <li class="party-detail edit-frame CS-<?= special($c3['tn3']) ?>-detail" data-type="<?= special($c3['tn3']) ?>" data-id="<?= special($c3['ti3']) ?>" draggable="false">
-                                    <p>3</p>
-                                    <div class="stars">
-                                        <?php if ($c3['star3'] == 1) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c3['star3'] == 2) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c3['star3'] == 3) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c3['star3'] == 4) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c3['star3'] == 5) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } ?>
-                                    </div>
-                                    <div class="EX">
-                                        <?php if ($c3['EX_Flg'] == true) { ?>
-                                            <img src="../../img/EX.png" draggable="false">
-                                        <?php } else { ?>
-                                            <img src="../../img/NotEX.png" draggable="false">
-                                        <?php } ?>
-                                    </div>
-                                    <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
-                                    <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png" draggable="false">
-                                    <div class="potential">
-                                        のびしろ：<?php echo special($c3['potential']) ?>/20</div>
-                                    <div class="skill">
-                                        ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
-                                        <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
-                                        <?php echo special($c3['level']) ?>
-                                    </div>
-                                    <button class="edit-delete-btn party-delete"></button>
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </div>
+                        </div>
+                        <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
+                        <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png" draggable="false">
+                        <div class="potential">
+                            のびしろ：<?php echo special($c1['potential']) ?>/20</div>
+                        <div class="skill">
+                            ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
+                            <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
+                            <?php echo special($c1['level']) ?>
+                        </div>
+                        <button class="edit-delete-btn party-delete"></button>
+                    </li>
                 <?php } ?>
+            <?php } ?>
+            </li>
+            <li class="party-wrap edit" data-partynum="2">
+                <?php foreach ($SA2 as $c2) { ?>
+                    <?php if ($c2['t2'] == null) { ?>
+                        <p>トレーナーを選択してください。</p>
+                    <?php } else if ($c2['t2'] != null) { ?>
+            <li class="party-detail edit-frame CS-<?= special($c2['tn2']) ?>-detail data-type=" <?= special($c2['tn2']) ?>" data-id="<?= special($c2['ti2']) ?>" draggable="false">
+                <p>2</p>
+                <div class="stars">
+                    <?php if ($c2['star2'] == 1) { ?>
+                        <img src="../../img/star.png" draggable="false">
+                    <?php } else if ($c2['star2'] == 2) { ?>
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                    <?php } else if ($c2['star2'] == 3) { ?>
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                    <?php } else if ($c2['star2'] == 4) { ?>
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                    <?php } else if ($c2['star2'] == 5) { ?>
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                        <img src="../../img/star.png" draggable="false">
+                    <?php } ?>
+                </div>
+                <div class="EX">
+                    <?php if ($c2['EX_Flg'] == true) { ?>
+                        <img src="../../img/EX.png" draggable="false">
+                    <?php } else { ?>
+                        <img src="../../img/NotEX.png" draggable="false">
+                    <?php } ?>
+                </div>
+                <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
+                <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png" draggable="false">
+                <div class="potential">
+                    のびしろ：<?php echo special($c2['potential']) ?>/20</div>
+                <div class="skill">
+                    ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
+                    <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
+                    <?php echo special($c2['level']) ?>
+                </div>
+                <button class="edit-delete-btn party-delete"></button>
+            </li>
+        <?php } ?>
+    <?php } ?>
+    </li>
+    <li class="party-wrap edit" data-partynum="3">
+        <?php foreach ($SA3 as $c3) { ?>
+            <?php if ($c3['t3'] != null) { ?>
+    <li class="party-detail edit-frame CS-<?= special($c3['tn3']) ?>-detail" data-type="<?= special($c3['tn3']) ?>" data-id="<?= special($c3['ti3']) ?>" draggable="false">
+        <p>3</p>
+        <div class="stars">
+            <?php if ($c3['star3'] == 1) { ?>
+                <img src="../../img/star.png" draggable="false">
+            <?php } else if ($c3['star3'] == 2) { ?>
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+            <?php } else if ($c3['star3'] == 3) { ?>
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+            <?php } else if ($c3['star3'] == 4) { ?>
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+            <?php } else if ($c3['star3'] == 5) { ?>
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+                <img src="../../img/star.png" draggable="false">
+            <?php } ?>
+        </div>
+        <div class="EX">
+            <?php if ($c3['EX_Flg'] == true) { ?>
+                <img src="../../img/EX.png" draggable="false">
+            <?php } else { ?>
+                <img src="../../img/NotEX.png" draggable="false">
+            <?php } ?>
+        </div>
+        <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
+        <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png" draggable="false">
+        <div class="potential">
+            のびしろ：<?php echo special($c3['potential']) ?>/20</div>
+        <div class="skill">
+            ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
+            <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
+            <?php echo special($c3['level']) ?>
+        </div>
+        <button class="edit-delete-btn party-delete"></button>
+    </li>
+<?php } ?>
+<?php } ?>
+</li>
+<?php } ?>
             </ul>
         </div>
         <?php if (isset($_GET['LGparty_id'])) { ?>
@@ -501,12 +506,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                 <select name="luckyskill_id2">
                     <?php foreach ($luckyskills as $c2) { ?>
                         <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
-                        <?php } ?>
+                    <?php } ?>
                 </select>
                 <select name="luckyskill_id3">
                     <?php foreach ($luckyskills as $c3) { ?>
                         <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
-                        <?php } ?>
+                    <?php } ?>
                 </select>
                 <input type="hidden" name="trainer_id1" value="">
                 <input type="hidden" name="trainer_id2" value="">
@@ -526,17 +531,17 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                 <select name="luckyskill_id1">
                     <?php foreach ($luckyskills as $c1) { ?>
                         <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
-                        <?php } ?>
+                    <?php } ?>
                 </select>
                 <select name="luckyskill_id2">
                     <?php foreach ($luckyskills as $c2) { ?>
                         <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
-                        <?php } ?>
+                    <?php } ?>
                 </select>
                 <select name="luckyskill_id3">
                     <?php foreach ($luckyskills as $c3) { ?>
                         <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
-                        <?php } ?>
+                    <?php } ?>
                 </select>
                 <input type="number" name="potential">
                 <input type="text" name="memo">
@@ -558,17 +563,17 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                 <select name="luckyskill_id1">
                     <?php foreach ($luckyskills as $c1) { ?>
                         <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
-                        <?php } ?>
+                    <?php } ?>
                 </select>
                 <select name="luckyskill_id2">
                     <?php foreach ($luckyskills as $c2) { ?>
                         <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
-                        <?php } ?>
+                    <?php } ?>
                 </select>
                 <select name="luckyskill_id3">
                     <?php foreach ($luckyskills as $c3) { ?>
                         <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
-                        <?php } ?>
+                    <?php } ?>
                 </select>
                 <input type="hidden" name="trainer_id1" value="">
                 <input type="hidden" name="trainer_id2" value="">

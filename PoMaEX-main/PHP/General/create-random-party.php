@@ -18,17 +18,23 @@ $title = "PoMaEX | Random-Party";
         <!-- 選びなおすボタンでページを更新する -->
         <button class="btn main-btn random-btn">選びなおす</button>
         <ul class="detail-list">
-            <li class="party-detail">
-                <img src="../../trainer/<?= special($attacker['trainer_name']) ?>.png">
-                <img class="party-detail-sync" src="../../sync/<?= special($attacker['sync_name']) ?>.png">
+            <li class="party-wrap">
+                <div class="party-detail">
+                    <img src="../../trainer/<?= special($attacker['trainer_name']) ?>.png">
+                    <img class="party-detail-sync" src="../../sync/<?= special($attacker['sync_name']) ?>.png">
+                </div>
             </li>
-            <li class="party-detail">
-                <img src="../../trainer/<?= special($technical['trainer_name']) ?>.png">
-                <img class="party-detail-sync" src="../../sync/<?= special($technical['sync_name']) ?>.png">
+            <li class="party-wrap">
+                <div class="party-detail">
+                    <img src="../../trainer/<?= special($technical['trainer_name']) ?>.png">
+                    <img class="party-detail-sync" src="../../sync/<?= special($technical['sync_name']) ?>.png">
+                </div>
             </li>
-            <li class="party-detail">
-                <img src="../../trainer/<?= special($support['trainer_name']) ?>.png">
-                <img class="party-detail-sync" src="../../sync/<?= special($support['sync_name']) ?>.png">
+            <li class="party-wrap">
+                <div class="party-detail">
+                    <img src="../../trainer/<?= special($support['trainer_name']) ?>.png">
+                    <img class="party-detail-sync" src="../../sync/<?= special($support['sync_name']) ?>.png">
+                </div>
             </li>
         </ul>
     </main>

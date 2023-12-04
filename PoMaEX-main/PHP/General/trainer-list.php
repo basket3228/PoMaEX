@@ -13,7 +13,7 @@ $tempSync = "";
 <div class="container">
   <!-- <aside class="sidebar">あ</aside> -->
   <?php require_once("../General/nav.php") ?>
-  <main class="main">
+  <main class="main relative">
     <div class="flex-title">
       <h2 class="sub-title">バディーズ一覧</h2>
       <div class="down">

@@ -117,6 +117,12 @@
         <a class="popup-partylist">編成一覧</a>
       </li>
       <li>
+        <a href="/PoMaEX-main/PHP/LG/LGList.php">レジェンドアドベンチャー</a>
+      </li>
+      <li>
+        <a href="/PoMaEX-main/PHP/LG/LG-party-list.php?LG_id=<?php echo $LG_id ?>">パーティ一覧</a>
+      </li>
+      <li>
         <a class="bread-now">パーティ詳細</a>
       </li>
       <!-- 未完成 -->

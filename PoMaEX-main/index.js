@@ -25,15 +25,15 @@ $(".popup-btn").click(() => {
 });
 
 //スクロール上下
-document.querySelector(".down").addEventListener("click", () => {
-  let scrollArea = document.querySelector(".main");
-  let scrollAreaHeight = scrollArea.scrollHeight;
-  scrollArea.scrollTop = scrollAreaHeight;
-});
-document.querySelector(".up").addEventListener("click", () => {
-  let scrollArea = document.querySelector(".main");
-  scrollArea.scrollTop = 0;
-});
+// document.querySelector(".down").addEventListener("click", () => {
+//   let scrollArea = document.querySelector(".main");
+//   let scrollAreaHeight = scrollArea.scrollHeight;
+//   scrollArea.scrollTop = scrollAreaHeight;
+// });
+// document.querySelector(".up").addEventListener("click", () => {
+//   let scrollArea = document.querySelector(".main");
+//   scrollArea.scrollTop = 0;
+// });
 
 //ドラッグ&ドロップの編集
 const draggableItems = document.querySelectorAll(".edit-drag");
