@@ -14,7 +14,12 @@ $tempSync = "";
   <!-- <aside class="sidebar">あ</aside> -->
   <?php require_once("../General/nav.php") ?>
   <main class="main">
-    <h2 class="sub-title">バディーズ一覧</h2>
+    <div class="flex-title">
+      <h2 class="sub-title">バディーズ一覧</h2>
+      <div class="down">
+        <img src="../../img/down.png" alt="down">
+      </div>
+    </div>
     <div class="" style="display: none">
       <button>フィルター</button>
       <!-- ↓フィルターボタン押下時に表示 -->
@@ -31,34 +36,40 @@ $tempSync = "";
     </div>
     <ul class="detail-list">
       <?php foreach ($trainers as $trainer) { ?>
-        <li class="party-detail CS-<?php echo special($trainer['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
-          <div class="role">
-            <?php if ($trainer['role_name'] == 'アタッカー') { ?>
-              <img src="../../img/アタッカー.png">
-            <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
-              <img src="../../img/テクニカル.png">
-            <?php } else if ($trainer['role_name'] == 'サポート') { ?>
-              <img src="../../img/サポート.png">
-            <?php } else if ($trainer['role_name'] == 'スピード') { ?>
-              <img src="../../img/スピード.png">
-            <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
-              <img src="../../img/フィールド.png">
-            <?php } ?>
+        <li class="party-wrap">
+          <div class="party-detail CS-<?php echo special($trainer['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
+            <div class="role">
+              <?php if ($trainer['role_name'] == 'アタッカー') { ?>
+                <img src="../../img/アタッカー.png">
+              <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
+                <img src="../../img/テクニカル.png">
+              <?php } else if ($trainer['role_name'] == 'サポート') { ?>
+                <img src="../../img/サポート.png">
+              <?php } else if ($trainer['role_name'] == 'スピード') { ?>
+                <img src="../../img/スピード.png">
+              <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
+                <img src="../../img/フィールド.png">
+              <?php } ?>
+            </div>
+            <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
+            <img class="party-detail-sync CS-<?php echo special($trainer['type_name']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
           </div>
-          <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
-          <img class="party-detail-sync CS-<?php echo special($trainer['type_name']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
         </li>
       <?php } ?>
     </ul>
+    </ul>
+    <div class="up">
+      <img src="../../img/up.png" alt="up">
+    </div>
   </main>
   <aside class="sidebar">
     <ul class="sync-list">
       <?php foreach ($mainChars as $main) { ?>
-          <?php if ($tempSync != $main['sync_name']) { ?>
-            <li class="sync clickable" data-syncName="<?= $main['sync_name'] ?>">
-              <img src="../../sync/<?= special($main['sync_name']) ?>.png">
-            </li>
-            <?php $tempSync = $main['sync_name'] ?>
+        <?php if ($tempSync != $main['sync_name']) { ?>
+          <li class="sync clickable" data-syncName="<?= $main['sync_name'] ?>">
+            <img src="../../sync/<?= special($main['sync_name']) ?>.png">
+          </li>
+          <?php $tempSync = $main['sync_name'] ?>
         <?php } ?>
         <?php $syncIndex += 1 ?>
       <?php } ?>
@@ -66,20 +77,20 @@ $tempSync = "";
     <div class="popup-sync">
       <div class="popup-inner">
         <?php foreach ($mainChars as $main) { ?>
-            <li class="sync sync-popup" data-syncName="<?= $main['sync_name'] ?>">
-              <?php if ($main['role_name'] == 'アタッカー') { ?>
-                <img class="sync-role" src="../../img/アタッカー.png">
-              <?php } else if ($main['role_name'] == 'テクニカル') { ?>
-                <img class="sync-role" src="../../img/テクニカル.png">
-              <?php } else if ($main['role_name'] == 'サポート') { ?>
-                <img class="sync-role" src="../../img/サポート.png">
-              <?php } else if ($main['role_name'] == 'スピード') { ?>
-                <img class="sync-role" src="../../img/スピード.png">
-              <?php } else if ($main['role_name'] == 'フィールド') { ?>
-                <img class="sync-role" src="../../img/フィールド.png">
-              <?php } ?>
-              <img src="../../sync/<?= special($main['sync_name']) ?>.png">
-            </li>
+          <li class="sync sync-popup" data-syncName="<?= $main['sync_name'] ?>">
+            <?php if ($main['role_name'] == 'アタッカー') { ?>
+              <img class="sync-role" src="../../img/アタッカー.png">
+            <?php } else if ($main['role_name'] == 'テクニカル') { ?>
+              <img class="sync-role" src="../../img/テクニカル.png">
+            <?php } else if ($main['role_name'] == 'サポート') { ?>
+              <img class="sync-role" src="../../img/サポート.png">
+            <?php } else if ($main['role_name'] == 'スピード') { ?>
+              <img class="sync-role" src="../../img/スピード.png">
+            <?php } else if ($main['role_name'] == 'フィールド') { ?>
+              <img class="sync-role" src="../../img/フィールド.png">
+            <?php } ?>
+            <img src="../../sync/<?= special($main['sync_name']) ?>.png">
+          </li>
         <?php } ?>
       </div>
       <div class="popup-btn">

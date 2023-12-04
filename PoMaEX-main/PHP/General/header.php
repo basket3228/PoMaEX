@@ -61,6 +61,11 @@
         <li>
           <a href="/PoMaEX-main/PHP/General/create-random-party.php">乱数編成作成</a>
         </li>
+        <li class="flex-unset">
+          <a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">
+            <img src="/PoMaEX-main/img/pomatools_icon.png" alt="pomatools">
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
