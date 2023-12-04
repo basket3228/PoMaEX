@@ -502,13 +502,13 @@ input[type="text"] {
 .detail-list {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 5%;
+  gap: 8%;
 }
 
 .party-wrap {
-  width: 30%;
+  width: 25%;
 }
 
 .party-wrap.edit {
@@ -892,6 +892,10 @@ input[type="text"] {
 
 .down,
 .up {
+  position: fixed;
+  bottom: calc(16px + 2vw + 32px);
+  right: calc(4% + 16px + 2vw);
+  z-index: 5;
   width: 2rem;
   height: 2rem;
   margin-left: auto;
@@ -899,6 +903,7 @@ input[type="text"] {
 }
 
 .up {
+  top: calc(100px + 16px + 2vw + 32px);
   margin-top: 32px;
 }
 
