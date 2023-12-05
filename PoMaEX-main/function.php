@@ -1085,36 +1085,39 @@ function add_SA_grids($URL, $SAparty_id)
     $st = null;
 }
 
-function update_party1($trainer_id1, $LGparty_id)
+function update_party1($trainer_id1, $LGparty_id, $luckyskill_id1)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("update LGparty set trainer_id1 = ? where LGparty_id = ?");
+    $st = $pdo->prepare("update LGparty set trainer_id1 = ?, luckyskill_id1 = ? where LGparty_id = ?");
     $st->bindValue(1, $trainer_id1);
-    $st->bindValue(2, $LGparty_id);
+    $st->bindValue(2, $luckyskill_id1);
+    $st->bindValue(3, $LGparty_id);
     $st->execute();
 
     $pdo = null;
     $st = null;
 }
 
-function update_party2($trainer_id2, $LGparty_id)
+function update_party2($trainer_id2, $LGparty_id, $luckyskill_id2)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("update LGparty set trainer_id2 = ? where LGparty_id = ?");
+    $st = $pdo->prepare("update LGparty set trainer_id2 = ?, luckyskill_id2 = ? where LGparty_id = ?");
     $st->bindValue(1, $trainer_id2);
-    $st->bindValue(2, $LGparty_id);
+    $st->bindValue(2, $luckyskill_id2);
+    $st->bindValue(3, $LGparty_id);
     $st->execute();
 
     $pdo = null;
     $st = null;
 }
 
-function update_party3($trainer_id3, $LGparty_id)
+function update_party3($trainer_id3, $LGparty_id, $luckyskill_id3)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("update LGparty set trainer_id3 = ? where LGparty_id = ?");
+    $st = $pdo->prepare("update LGparty set trainer_id3 = ?, luckyskill_id3 = ? where LGparty_id = ?");
     $st->bindValue(1, $trainer_id3);
-    $st->bindValue(2, $LGparty_id);
+    $st->bindValue(2, $luckyskill_id3);
+    $st->bindValue(3, $LGparty_id);
     $st->execute();
 
     $pdo = null;
