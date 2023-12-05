@@ -488,14 +488,12 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
 <?php } ?>
             </ul>
         </div>
-        <?php if (isset($_GET['LGparty_id'])) { ?>
-            <aside class="layer">
+        <aside class="layer">
                 <?php if ($memo['memo'] != null) { ?>
-                    <input class="edit-memo" type="text" value="<?php echo special($memo['memo']) ?>">
-                <?php } else { ?>
-                    <input class="edit-memo" type="text" value="">
+                    <?php echo special($memo['memo']) ?>
                 <?php } ?>
             </aside>
+        <?php if (isset($_GET['LGparty_id'])) { ?>
             <form method="post" class="party-edit">
                 <input type="hidden" name="LGparty_id" value="<?= special($LGparty_id) ?>">
                 <select name="luckyskill_id1">
@@ -523,13 +521,6 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
             </form>
         <?php } else if (isset($_GET['CSparty_id'])) { ?>
             <form method="post" class="party-edit">
-                <aside class="layer">
-                    <?php if ($memo['memo'] != null) { ?>
-                        <input class="edit-memo" type="text" value="<?php echo special($memo['memo']) ?>">
-                    <?php } else { ?>
-                        <input class="edit-memo" type="text" value="">
-                    <?php } ?>
-                </aside>
                 <input type="hidden" name="LGparty_id" value="<?= special($CSparty_id) ?>">
                 <select name="luckyskill_id1">
                     <?php foreach ($luckyskills as $c1) { ?>
@@ -558,13 +549,6 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
             </form>
         <?php } else if (isset($_GET['SAparty_id'])) { ?>
             <form method="post" class="party-edit">
-                <aside class="layer">
-                    <?php if ($memo['memo'] != null) { ?>
-                        <input class="edit-memo" type="text" value="<?php echo special($memo['memo']) ?>">
-                    <?php } else { ?>
-                        <input class="edit-memo" type="text" value="">
-                    <?php } ?>
-                </aside>
                 <input type="hidden" name="LGparty_id" value="<?= special($SAparty_id) ?>">
                 <select name="luckyskill_id1">
                     <?php foreach ($luckyskills as $c1) { ?>
