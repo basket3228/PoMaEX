@@ -670,7 +670,8 @@ INSERT INTO category (category_name)
 VALUES
     ('レジェンドアドベンチャー'),
     ('チャンピオンバトル'),
-    ('スコアアタック');
+    ('スコアアタック'),
+    ('究極高難易度バトル');
 
 INSERT INTO role (role_name) VALUES
     ('アタッカー'),
