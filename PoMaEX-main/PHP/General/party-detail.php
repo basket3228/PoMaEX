@@ -87,7 +87,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                         <?php } ?>
                                     </div>
                                     <div class="EX">
-                                        <?php if ($c1['EX_Flg'] == true) { ?>
+                                        <?php if ($c1['EX_Flg'] && $c1['EXable'] == true) { ?>
                                             <img src="../../img/EX.png">
                                         <?php } else { ?>
                                             <img src="../../img/NotEX.png">
@@ -150,7 +150,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                         <?php } ?>
                                     </div>
                                     <div class="EX">
-                                        <?php if ($c2['EX_Flg'] == true) { ?>
+                                        <?php if ($c2['EX_Flg'] && $c2['EXable'] == true) { ?>
                                             <img src="../../img/General/EX.png">
                                         <?php } else { ?>
                                             <img src="../../img/General/NotEX.png">
@@ -209,7 +209,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                         <?php } ?>
                                     </div>
                                     <div class="EX">
-                                        <?php if ($c3['EX_Flg'] == true) { ?>
+                                        <?php if ($c3['EX_Flg'] && $c3['EXable'] == true) { ?>
                                             <img src="../../img/General/EX.png">
                                         <?php } else { ?>
                                             <img src="../../img/General/NotEX.png">
@@ -270,7 +270,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($c1['EX_Flg'] == true) { ?>
+                                            <?php if ($c1['EX_Flg'] && $c1['EXable'] == true) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -330,7 +330,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($c2['EX_Flg'] == true) { ?>
+                                            <?php if ($c2['EX_Flg'] && $c2['EXable'] == true) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -387,7 +387,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($c3['EX_Flg'] == true) { ?>
+                                            <?php if ($c3['EX_Flg'] && $c3['EXable'] == true) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -416,7 +416,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                     <div class="party-detail CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>">
                                         <p>1</p>
                                         <div class="stars">
-                                            <?php if ($c1['star1'] == 1) { ?>
+                                            <?php if ($c1['star1'] && $c1['EXable'] == 1) { ?>
                                                <img src="../../img/General/star.png">
                                             <img src="../../img/General/non_star.png">
                                             <img src="../../img/General/non_star.png">
@@ -449,7 +449,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($c1['EX_Flg'] == true) { ?>
+                                            <?php if ($c1['EX_Flg'] && $c1['EXable'] == true) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -511,7 +511,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($c2['EX_Flg'] == true) { ?>
+                                            <?php if ($c2['EX_Flg'] && $c2['EXable'] == true) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -570,7 +570,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($c3['EX_Flg'] == true) { ?>
+                                            <?php if ($c3['EX_Flg'] && $c3['EXable'] == true) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
