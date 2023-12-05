@@ -19,15 +19,15 @@ $title = "PoMaEX | Trainer-List";
             <?php foreach ($trainers as $trainer) { ?>
                 <li>
                     <?php if ($trainer['role_name'] == 'アタッカー') { ?>
-                        <img src="../../img/アタッカー.png">
+                        <img src="../../img/General/アタッカー.png">
                     <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
-                        <img src="../../img/テクニカル.png">
+                        <img src="../../img/General/テクニカル.png">
                     <?php } else if ($trainer['role_name'] == 'サポート') { ?>
-                        <img src="../../img/サポート.png">
+                        <img src="../../img/General/サポート.png">
                     <?php } else if ($trainer['role_name'] == 'スピード') { ?>
-                        <img src="../../img/スピード.png">
+                        <img src="../../img/General/スピード.png">
                     <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
-                        <img src="../../img/フィールド.png">
+                        <img src="../../img/General/フィールド.png">
                     <?php } ?>
                     <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
                     <img src="../../sync/<?= special($trainer['sync_name']) ?>.png">
