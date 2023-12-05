@@ -8,6 +8,8 @@ $title = "PoMaEX | Trainer-List";
 $syncIndex = 0;
 $tempSync = "";
 $trainerCount = get_trainerCount();
+$random1 = rand(1, 24);
+$random2 = rand(1, 24);
 ?>
 
 <?php require_once("../General/header.php") ?>
