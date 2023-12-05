@@ -28,7 +28,7 @@ $title = "PoMaEX | LG:Solo-Info";
         <div class="flex-title">
             <h2 class="sub-title"><?php echo special($enemy['enemy_name']) ?></h2>
             <div class="down">
-                <img src="../../img/down.png" alt="down">
+                <img src="../../img/General/down.png" alt="down">
             </div>
         </div>
         <ul class="detail-list">
@@ -152,7 +152,7 @@ $title = "PoMaEX | LG:Solo-Info";
             <?php } ?>
         </ul>
         <div class="up">
-            <img src="../../img/up.png" alt="up">
+            <img src="../../img/General/up.png" alt="up">
         </div>
     </main>
     <aside class="sidebar">サブメニューです</aside>
