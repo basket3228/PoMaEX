@@ -611,6 +611,20 @@ function get_trainer()
     return $trainer;
 }
 
+function get_trainerCount()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_name) as trainerCount from trainer
+    where URL is not null");
+    $st->execute();
+    $trainerCount = $st->fetchColumn();
+
+    $pdo = null;
+    $st = null;
+
+    return $trainerCount;
+}
+
 function get_trainerByType($type_id)
 {
     $pdo = get_connection();
