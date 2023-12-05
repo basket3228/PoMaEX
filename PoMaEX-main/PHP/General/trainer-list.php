@@ -7,6 +7,7 @@ $roles = get_role();
 $title = "PoMaEX | Trainer-List";
 $syncIndex = 0;
 $tempSync = "";
+$trainerCount = get_trainerCount();
 ?>
 
 <?php require_once("../General/header.php") ?>
