@@ -40,32 +40,42 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                 <li class="party-detail edit-frame CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>" data-id="<?= special($c1['ti1']) ?>" draggable="false">
                                     <div class="stars">
                                         <?php if ($c1['star1'] == 1) { ?>
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
                                         <?php } else if ($c1['star1'] == 2) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                         <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c1['star1'] == 3) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c1['star1'] == 4) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c1['star1'] == 5) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <div class="EX">
                                         <?php if ($c1['EX_Flg'] == true) { ?>
-                                            <img src="../../img/EX.png" draggable="false">
+                                            <img src="../../img/General/EX.png" draggable="false">
                                         <?php } else { ?>
-                                            <img src="../../img/NotEX.png" draggable="false">
+                                            <img src="../../img/General/NotEX.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
@@ -91,32 +101,43 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     <p>2</p>
                                     <div class="stars">
                                         <?php if ($c2['star2'] == 1) { ?>
-                                            <img src="../../img/star.png" draggable="false">
+                                            <?php if ($c2['star2'] == 1) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
                                         <?php } else if ($c2['star2'] == 2) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                         <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c2['star2'] == 3) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c2['star2'] == 4) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c2['star2'] == 5) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <div class="EX">
                                         <?php if ($c2['EX_Flg'] == true) { ?>
-                                            <img src="../../img/EX.png" draggable="false">
+                                            <img src="../../img/General/EX.png" draggable="false">
                                         <?php } else { ?>
-                                            <img src="../../img/NotEX.png" draggable="false">
+                                            <img src="../../img/General/NotEX.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
@@ -140,32 +161,43 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     <p>3</p>
                                     <div class="stars">
                                         <?php if ($c3['star3'] == 1) { ?>
-                                            <img src="../../img/star.png" draggable="false">
+                                           <?php if ($c3['star3'] == 1) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
                                         <?php } else if ($c3['star3'] == 2) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                         <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c3['star3'] == 3) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c3['star3'] == 4) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c3['star3'] == 5) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <div class="EX">
                                         <?php if ($c3['EX_Flg'] == true) { ?>
-                                            <img src="../../img/EX.png" draggable="false">
+                                            <img src="../../img/General/EX.png" draggable="false">
                                         <?php } else { ?>
-                                            <img src="../../img/NotEX.png" draggable="false">
+                                            <img src="../../img/General/NotEX.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
@@ -189,33 +221,43 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                 <li class="party-detail edit-frame CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>" data-id="<?= special($c1['ti1']) ?>" draggable="false">
                                     <div class="stars">
                                         <?php if ($c1['star1'] == 1) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/non_star.png" draggable="false">
+                                           <?php if ($c1['star1'] == 1) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
                                         <?php } else if ($c1['star1'] == 2) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                         <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c1['star1'] == 3) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c1['star1'] == 4) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c1['star1'] == 5) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <div class="EX">
                                         <?php if ($c1['EX_Flg'] == true) { ?>
-                                            <img src="../../img/EX.png" draggable="false">
+                                            <img src="../../img/General/EX.png" draggable="false">
                                         <?php } else { ?>
-                                            <img src="../../img/NotEX.png" draggable="false">
+                                            <img src="../../img/General/NotEX.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
@@ -241,32 +283,43 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     <p>2</p>
                                     <div class="stars">
                                         <?php if ($c2['star2'] == 1) { ?>
-                                            <img src="../../img/star.png" draggable="false">
+                                            <?php if ($c2['star2'] == 1) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
                                         <?php } else if ($c2['star2'] == 2) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                        <?php } else if ($c2['star2'] == 3) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                         <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c1['star1'] == 3) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c2['star2'] == 4) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c2['star2'] == 5) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <div class="EX">
                                         <?php if ($c2['EX_Flg'] == true) { ?>
-                                            <img src="../../img/EX.png" draggable="false">
+                                            <img src="../../img/General/EX.png" draggable="false">
                                         <?php } else { ?>
-                                            <img src="../../img/NotEX.png" draggable="false">
+                                            <img src="../../img/General/NotEX.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
@@ -290,32 +343,43 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     <p>3</p>
                                     <div class="stars">
                                         <?php if ($c3['star3'] == 1) { ?>
-                                            <img src="../../img/star.png" draggable="false">
+                                           <?php if ($c3['star3'] == 1) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
                                         <?php } else if ($c3['star3'] == 2) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                         <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c3['star3'] == 3) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c3['star3'] == 4) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
                                         <?php } else if ($c3['star3'] == 5) { ?>
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
-                                            <img src="../../img/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <div class="EX">
                                         <?php if ($c3['EX_Flg'] == true) { ?>
-                                            <img src="../../img/EX.png" draggable="false">
+                                            <img src="../../img/General/EX.png" draggable="false">
                                         <?php } else { ?>
-                                            <img src="../../img/NotEX.png" draggable="false">
+                                            <img src="../../img/General/NotEX.png" draggable="false">
                                         <?php } ?>
                                     </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
@@ -343,32 +407,43 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                     <li class="party-detail edit-frame CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>" data-id="<?= special($c1['ti1']) ?>" draggable="false">
                         <div class="stars">
                             <?php if ($c1['star1'] == 1) { ?>
-                                <img src="../../img/star.png" draggable="false">
-                            <?php } else if ($c1['star1'] == 2) { ?>
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
-                            <?php } else if ($c1['star1'] == 3) { ?>
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
-                            <?php } else if ($c1['star1'] == 4) { ?>
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
-                            <?php } else if ($c1['star1'] == 5) { ?>
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
-                                <img src="../../img/star.png" draggable="false">
+                               <?php if ($c1['star1'] == 1) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <?php } else if ($c1['star1'] == 2) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                         <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c1['star1'] == 3) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c1['star1'] == 4) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c1['star1'] == 5) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
                             <?php } ?>
                         </div>
                         <div class="EX">
                             <?php if ($c1['EX_Flg'] == true) { ?>
-                                <img src="../../img/EX.png" draggable="false">
+                                <img src="../../img/General/EX.png" draggable="false">
                             <?php } else { ?>
-                                <img src="../../img/NotEX.png" draggable="false">
+                                <img src="../../img/General/NotEX.png" draggable="false">
                             <?php } ?>
                         </div>
                         <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
@@ -393,33 +468,43 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
             <li class="party-detail edit-frame CS-<?= special($c2['tn2']) ?>-detail data-type=" <?= special($c2['tn2']) ?>" data-id="<?= special($c2['ti2']) ?>" draggable="false">
                 <p>2</p>
                 <div class="stars">
-                    <?php if ($c2['star2'] == 1) { ?>
-                        <img src="../../img/star.png" draggable="false">
-                    <?php } else if ($c2['star2'] == 2) { ?>
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
-                    <?php } else if ($c2['star2'] == 3) { ?>
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
-                    <?php } else if ($c2['star2'] == 4) { ?>
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
-                    <?php } else if ($c2['star2'] == 5) { ?>
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
-                        <img src="../../img/star.png" draggable="false">
+                   <?php if ($c2['star1'] == 1) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <?php } else if ($c2['star2'] == 2) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                         <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c2['star2'] == 3) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c2['star2'] == 4) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c2['star2'] == 5) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
                     <?php } ?>
                 </div>
                 <div class="EX">
                     <?php if ($c2['EX_Flg'] == true) { ?>
-                        <img src="../../img/EX.png" draggable="false">
+                        <img src="../../img/General/EX.png" draggable="false">
                     <?php } else { ?>
-                        <img src="../../img/NotEX.png" draggable="false">
+                        <img src="../../img/General/NotEX.png" draggable="false">
                     <?php } ?>
                 </div>
                 <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
@@ -443,32 +528,43 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
         <p>3</p>
         <div class="stars">
             <?php if ($c3['star3'] == 1) { ?>
-                <img src="../../img/star.png" draggable="false">
-            <?php } else if ($c3['star3'] == 2) { ?>
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
-            <?php } else if ($c3['star3'] == 3) { ?>
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
-            <?php } else if ($c3['star3'] == 4) { ?>
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
-            <?php } else if ($c3['star3'] == 5) { ?>
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
-                <img src="../../img/star.png" draggable="false">
+                <?php if ($c3['star3'] == 1) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <img src="../../img/General/non_star.png" draggable="false">
+                                        <?php } else if ($c3['star3'] == 2) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                         <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c3['star3'] == 3) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/non_tar.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c3['star3'] == 4) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                        <img src="../../img/General/non_tar.png" draggable="false">
+                                        <?php } else if ($c3['star3'] == 5) { ?>
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
+                                            <img src="../../img/General/star.png" draggable="false">
             <?php } ?>
         </div>
         <div class="EX">
             <?php if ($c3['EX_Flg'] == true) { ?>
-                <img src="../../img/EX.png" draggable="false">
+                <img src="../../img/General/EX.png" draggable="false">
             <?php } else { ?>
-                <img src="../../img/NotEX.png" draggable="false">
+                <img src="../../img/General/NotEX.png" draggable="false">
             <?php } ?>
         </div>
         <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
