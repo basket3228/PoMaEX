@@ -500,16 +500,19 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                 <input type="hidden" name="LGparty_id" value="<?= special($LGparty_id) ?>">
                 <select name="luckyskill_id1">
                     <?php foreach ($luckyskills as $c1) { ?>
+                                                         <option value="">--選択してください--</option>
                         <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
                     <?php } ?>
                 </select>
                 <select name="luckyskill_id2">
                     <?php foreach ($luckyskills as $c2) { ?>
+                                                         <option value="">--選択してください--</option>
                         <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
                     <?php } ?>
                 </select>
                 <select name="luckyskill_id3">
                     <?php foreach ($luckyskills as $c3) { ?>
+                                                         <option value="">--選択してください--</option>
                         <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
                     <?php } ?>
                 </select>
@@ -530,16 +533,19 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                 <input type="hidden" name="LGparty_id" value="<?= special($CSparty_id) ?>">
                 <select name="luckyskill_id1">
                     <?php foreach ($luckyskills as $c1) { ?>
+                                                         <option value="">--選択してください--</option>
                         <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
                     <?php } ?>
                 </select>
                 <select name="luckyskill_id2">
                     <?php foreach ($luckyskills as $c2) { ?>
+                                                         <option value="">--選択してください--</option>
                         <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
                     <?php } ?>
                 </select>
                 <select name="luckyskill_id3">
                     <?php foreach ($luckyskills as $c3) { ?>
+                                                         <option value="">--選択してください--</option>
                         <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
                     <?php } ?>
                 </select>
@@ -562,16 +568,19 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                 <input type="hidden" name="LGparty_id" value="<?= special($SAparty_id) ?>">
                 <select name="luckyskill_id1">
                     <?php foreach ($luckyskills as $c1) { ?>
+                                                         <option value="">--選択してください--</option>
                         <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
                     <?php } ?>
                 </select>
                 <select name="luckyskill_id2">
                     <?php foreach ($luckyskills as $c2) { ?>
+                                                         <option value="">--選択してください--</option>
                         <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
                     <?php } ?>
                 </select>
                 <select name="luckyskill_id3">
                     <?php foreach ($luckyskills as $c3) { ?>
+                                                         <option value="">--選択してください--</option>
                         <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
                     <?php } ?>
                 </select>
