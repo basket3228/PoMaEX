@@ -1,4 +1,4 @@
-INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, EXable, URL) VALUES
+INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, level, stars, EXable, URL) VALUES
 ('主人公(ピカチュウ)', 322, 1, false, 0, 3, false, 'https://ng-pomatools.web.app/pairs/900000/2500'),
 ('タケシ', 144, 2, False, 0, 3, false, 'https://ng-pomatools.web.app/pairs/1500/9500'),
 ('マジコスタケシ', 145, 1, False, 0, 5, true, 'https://ng-pomatools.web.app/pairs/1501/24800'),
