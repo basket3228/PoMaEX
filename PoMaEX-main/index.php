@@ -4,7 +4,7 @@
   <?php require_once("PHP/General/nav.php") ?>
   <main class="main">
     <div class="kv">
-      <img src="img/Pokemon-Masters-EX.jpeg" />
+      <img src="img/General/Pokemon-Masters-EX.jpeg" />
     </div>
     <ul class="index-btns">
       <li class="list-item">

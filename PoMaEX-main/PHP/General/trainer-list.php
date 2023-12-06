@@ -39,73 +39,75 @@ $random2 = rand(1, 24);
     </div>
     <ul class="detail-list">
       <?php foreach ($trainers as $trainer) { ?>
-                                             <?php if ($trainerCount / 3 == 0) { ?>
-        <li class="party-wrap">
-          <div class="party-detail CS-<?php echo special($trainer['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
-            <div class="role">
-              <?php if ($trainer['role_name'] == 'アタッカー') { ?>
-                <img src="../../img/General/アタッカー.png">
-              <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
-                <img src="../../img/General/テクニカル.png">
-              <?php } else if ($trainer['role_name'] == 'サポート') { ?>
-                <img src="../../img/General/サポート.png">
-              <?php } else if ($trainer['role_name'] == 'スピード') { ?>
-                <img src="../../img/General/スピード.png">
-              <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
-                <img src="../../img/General/フィールド.png">
-              <?php } ?>
+        <?php if ($trainerCount / 3 == 0) { ?>
+          <li class="party-wrap">
+            <div class="party-detail CS-<?php echo special($trainer['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
+              <div class="role">
+                <?php if ($trainer['role_name'] == 'アタッカー') { ?>
+                  <img src="../../img/General/アタッカー.png">
+                <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
+                  <img src="../../img/General/テクニカル.png">
+                <?php } else if ($trainer['role_name'] == 'サポート') { ?>
+                  <img src="../../img/General/サポート.png">
+                <?php } else if ($trainer['role_name'] == 'スピード') { ?>
+                  <img src="../../img/General/スピード.png">
+                <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
+                  <img src="../../img/General/フィールド.png">
+                <?php } ?>
+              </div>
+              <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
+              <img class="party-detail-sync CS-<?php echo special($trainer['type_name']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
             </div>
-            <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
-            <img class="party-detail-sync CS-<?php echo special($trainer['type_name']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
-          </div>
-        </li>
-      <?php } else if ($trainerCount / 3 == 1 )?>
-   <li class="party-wrap">
-          <div class="party-detail CS-<?php echo special($trainer['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
-            <div class="role">
-              <?php if ($trainer['role_name'] == 'アタッカー') { ?>
-                <img src="../../img/General/アタッカー.png">
-              <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
-                <img src="../../img/General/テクニカル.png">
-              <?php } else if ($trainer['role_name'] == 'サポート') { ?>
-                <img src="../../img/General/サポート.png">
-              <?php } else if ($trainer['role_name'] == 'スピード') { ?>
-                <img src="../../img/General/スピード.png">
-              <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
-                <img src="../../img/General/フィールド.png">
-              <?php } ?>
+          </li>
+        <?php } else if ($trainerCount / 3 == 1) { ?>
+          <li class="party-wrap">
+            <div class="party-detail CS-<?php echo special($trainer['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
+              <div class="role">
+                <?php if ($trainer['role_name'] == 'アタッカー') { ?>
+                  <img src="../../img/General/アタッカー.png">
+                <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
+                  <img src="../../img/General/テクニカル.png">
+                <?php } else if ($trainer['role_name'] == 'サポート') { ?>
+                  <img src="../../img/General/サポート.png">
+                <?php } else if ($trainer['role_name'] == 'スピード') { ?>
+                  <img src="../../img/General/スピード.png">
+                <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
+                  <img src="../../img/General/フィールド.png">
+                <?php } ?>
+              </div>
+              <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
+              <img class="party-detail-sync CS-<?php echo special($trainer['type_name']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
+              <img src="../../ball/ball<?= special($random1) ?>.png">
+              <img src="../../ball/ball<?= special($random2) ?>.png">
             </div>
-            <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
-            <img class="party-detail-sync CS-<?php echo special($trainer['type_name']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
-            <img src="../../ball/ball<?=special($random1) ?>.png">
-            <img src="../../ball/ball<?=special($random2) ?>.png">
-          </div>
-        </li>
- <?php } else if ($trainerCount / 3 == 2 )?>
-   <li class="party-wrap">
-          <div class="party-detail CS-<?php echo special($trainer['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
-            <div class="role">
-              <?php if ($trainer['role_name'] == 'アタッカー') { ?>
-                <img src="../../img/General/アタッカー.png">
-              <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
-                <img src="../../img/General/テクニカル.png">
-              <?php } else if ($trainer['role_name'] == 'サポート') { ?>
-                <img src="../../img/General/サポート.png">
-              <?php } else if ($trainer['role_name'] == 'スピード') { ?>
-                <img src="../../img/General/スピード.png">
-              <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
-                <img src="../../img/General/フィールド.png">
-              <?php } ?>
+          </li>
+        <?php } else if ($trainerCount / 3 == 2) { ?>
+          <li class="party-wrap">
+            <div class="party-detail CS-<?php echo special($trainer['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
+              <div class="role">
+                <?php if ($trainer['role_name'] == 'アタッカー') { ?>
+                  <img src="../../img/General/アタッカー.png">
+                <?php } else if ($trainer['role_name'] == 'テクニカル') { ?>
+                  <img src="../../img/General/テクニカル.png">
+                <?php } else if ($trainer['role_name'] == 'サポート') { ?>
+                  <img src="../../img/General/サポート.png">
+                <?php } else if ($trainer['role_name'] == 'スピード') { ?>
+                  <img src="../../img/General/スピード.png">
+                <?php } else if ($trainer['role_name'] == 'フィールド') { ?>
+                  <img src="../../img/General/フィールド.png">
+                <?php } ?>
+              </div>
+              <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
+              <img class="party-detail-sync CS-<?php echo special($trainer['type_name']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
+              <img src="../../ball/ball<?= special($random1) ?>.png">
             </div>
-            <img src="../../trainer/<?= special($trainer['trainer_name']) ?>.png">
-            <img class="party-detail-sync CS-<?php echo special($trainer['type_name']) ?>-detail" src="../../sync/<?= special($trainer['sync_name']) ?>.png">
-            <img src="../../ball/ball<?=special($random1) ?>.png">
-          </div>
-        </li>
+          </li>
+        <?php } ?>
     </ul>
-    <div class="up">
-      <img src="../../img/General/up.png" alt="up">
-    </div>
+  <?php } ?>
+  <div class="up">
+    <img src="../../img/General/up.png" alt="up">
+  </div>
   </main>
   <aside class="sidebar">
     <ul class="sync-list">

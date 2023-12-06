@@ -1099,13 +1099,14 @@ function add_SA_grids($URL, $SAparty_id)
     $st = null;
 }
 
-function update_party1($trainer_id1, $LGparty_id, $luckyskill_id1)
+function update_party1($trainer_id1, $LGparty_id, $luckyskill_id1, $memo)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("update LGparty set trainer_id1 = ?, luckyskill_id1 = ? where LGparty_id = ?");
+    $st = $pdo->prepare("update LGparty set trainer_id1 = ?, luckyskill_id1 = ?, memo = ? where LGparty_id = ?");
     $st->bindValue(1, $trainer_id1);
     $st->bindValue(2, $luckyskill_id1);
-    $st->bindValue(3, $LGparty_id);
+    $st->bindValue(3, $memo);
+    $st->bindValue(4, $LGparty_id);
     $st->execute();
 
     $pdo = null;
