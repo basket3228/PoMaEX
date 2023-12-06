@@ -2,7 +2,7 @@
   <ul class="popup-inner">
     <li>
       <a href="/PoMaEX-main/PHP/LG/LGList.php">
-        <img src="/PoMaEX-main/img/LG.png" alt="LG">
+        <img src="/PoMaEX-main/img/LG/LG.png" alt="LG">
       </a>
     </li>
     <li>
@@ -12,7 +12,7 @@
     </li>
     <li>
       <a href="/PoMaEX-main/PHP/SA/SAList.php">
-        <img src="/PoMaEX-main/img/SA.png" alt="SA">
+        <img src="/PoMaEX-main/img/SA/SA.png" alt="SA">
       </a>
     </li>
   </ul>

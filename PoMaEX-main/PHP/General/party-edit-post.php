@@ -10,7 +10,9 @@ $luckyskill_id1 = $_POST['luckyskill_id1'];
 $luckyskill_id2 = $_POST['luckyskill_id2'];
 $luckyskill_id3 = $_POST['luckyskill_id3'];
 
-update_party1($trainer_id1, $LGparty_id, $luckyskill_id1);
+$memo = $_POST['memo'];
+
+update_party1($trainer_id1, $LGparty_id, $luckyskill_id1, $memo);
 update_party2($trainer_id2, $LGparty_id, $luckyskill_id2);
 update_party3($trainer_id3, $LGparty_id, $luckyskill_id3);
 
