@@ -208,7 +208,7 @@
   </ul>
   <div class="nav-pomatools">
     <a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">
-      <img src="/PoMaEX-main/img/pomatools_icon.png" alt="pomatools">
+      <img src="/PoMaEX-main/img/General/pomatools_icon.png" alt="pomatools">
     </a>
   </div>
 </nav>

@@ -16,7 +16,7 @@ $title = "PoMaEX | SA:SA-List";
                 <?php foreach ($parties as $party) { ?>
                     <li class="SA">
                         <a href="SA-party-list.php?SA_id=<?= special($party['SA_id']) ?>">
-                            <img src="../../img/<?= special($party['name']) ?>.png">
+                            <img src="../../img/SA/<?= special($party['name']) ?>.png">
                         </a>
                         <button class="party-delete LG-delete delete-btn" data-delete="delete-LG.php?SA_id=<?= special($party['SA_id']) ?>"></button>
                     </li>
