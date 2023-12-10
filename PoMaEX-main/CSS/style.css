@@ -79,6 +79,7 @@ input[type="text"] {
   height: 100px;
   background: #fff;
   box-shadow: 0 0 6px rgba(0, 10, 30, 0.3);
+  z-index: 100;
 }
 
 .header .logo {
@@ -508,13 +509,15 @@ input[type="text"] {
 }
 
 .party-wrap {
+  position: relative;
   width: 25%;
 }
 
 .party-wrap.edit {
+  width: 28%;
   aspect-ratio: 1;
   padding: 16px;
-  border: 1px solid;
+  border: 1px solid #477784;
 }
 
 .party-detail {
@@ -522,7 +525,7 @@ input[type="text"] {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 10px;
-  border-width: 10px !important;
+  border-width: 6px !important;
 }
 
 .party-detail img {
@@ -589,8 +592,15 @@ input[type="text"] {
 .skill,
 .potential {
   position: absolute;
-  bottom: calc(-10px + -1em + -12px);
+  left: 0;
+  bottom: calc(-6px - 4px - 0.75vw);
+  translate: 0 100%;
   line-height: 1.25;
+}
+
+.skill span,
+.potential span {
+  font-weight: bold;
 }
 
 .role {
@@ -600,7 +610,43 @@ input[type="text"] {
 }
 
 .skill {
-  bottom: calc(-10px + -3em + -32px);
+  bottom: calc(-6px - 4px - 0.75vw - 1.75em);
+}
+
+.skill select {
+  width: 100%;
+  padding: 4px;
+  border-radius: 8px;
+  font-size: 16px !important;
+  box-shadow: 0px 2px 0 rgba(0, 0, 0, 0.6);
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.skill select:hover {
+  margin-top: 6px;
+  box-shadow: none;
+}
+
+.skill select:focus {
+  outline: none;
+}
+
+.level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 35%;
+  height: 35%;
+  background: url("../img/General/sync_icon.png") center center/contain no-repeat;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fff;
+  text-stroke: #477784 1.5px;
+  -webkit-text-stroke: #477784 1.5px;
 }
 
 .party-detail p {
@@ -620,110 +666,116 @@ input[type="text"] {
 
 .CS-ノーマル a,
 .CS-ノーマル-detail {
-  border: 8px #7d7874 solid;
+  border: 6px #7d7874 solid;
   background-color: #afaeab;
 }
 
 .CS-ほのお a,
 .CS-ほのお-detail {
-  border: 8px #c94a4f solid;
+  border: 6px #c94a4f solid;
   background-color: #ed605f;
 }
 
 .CS-みず a,
 .CS-みず-detail {
-  border: 8px #3090b4 solid;
+  border: 6px #3090b4 solid;
   background-color: #60c3ec;
 }
 
 .CS-でんき a,
 .CS-でんき-detail {
-  border: 8px #b09002 solid;
+  border: 6px #b09002 solid;
   background-color: #fed93c;
 }
 
 .CS-くさ a,
 .CS-くさ-detail {
-  border: 8px #3f9849 solid;
+  border: 6px #3f9849 solid;
   background-color: #50ca5d;
 }
 
 .CS-こおり a,
 .CS-こおり-detail {
-  border: 8px #4c9da3 solid;
+  border: 6px #4c9da3 solid;
   background-color: #78c8d0;
 }
 
 .CS-かくとう a,
 .CS-かくとう-detail {
-  border: 8px #c55f23 solid;
+  border: 6px #c55f23 solid;
   background-color: #f9915a;
 }
 
 .CS-どく a,
 .CS-どく-detail {
-  border: 8px #8f52b3 solid;
+  border: 6px #8f52b3 solid;
   background-color: #c773da;
 }
 
 .CS-じめん a,
 .CS-じめん-detail {
-  border: 8px #a06546 solid;
+  border: 6px #a06546 solid;
   background-color: #d28346;
 }
 
 .CS-ひこう a,
 .CS-ひこう-detail {
-  border: 8px #4d73e0 solid;
+  border: 6px #4d73e0 solid;
   background-color: #819ff0;
 }
 
 .CS-エスパー a,
 .CS-エスパー-detail {
-  border: 8px #d34b7d solid;
+  border: 6px #d34b7d solid;
   background-color: #f682af;
 }
 
 .CS-むし a,
 .CS-むし-detail {
-  border: 8px #6a9001 solid;
+  border: 6px #6a9001 solid;
   background-color: #aad23c;
 }
 
 .CS-いわ a,
 .CS-いわ-detail {
-  border: 8px #8e6b47 solid;
+  border: 6px #8e6b47 solid;
   background-color: #be9877;
 }
 
 .CS-ゴースト a,
 .CS-ゴースト-detail {
-  border: 8px #8c6587 solid;
+  border: 6px #8c6587 solid;
   background-color: #c89cc2;
 }
 
 .CS-ドラゴン a,
 .CS-ドラゴン-detail {
-  border: 8px #109cab solid;
+  border: 6px #109cab solid;
   background-color: #31abcc;
 }
 
 .CS-あく a,
 .CS-あく-detail {
-  border: 8px #636286 solid;
+  border: 6px #636286 solid;
   background-color: #9695b4;
 }
 
 .CS-はがね a,
 .CS-はがね-detail {
-  border: 8px #62759d solid;
+  border: 6px #62759d solid;
   background-color: #95aad6;
 }
 
 .CS-フェアリー a,
 .CS-フェアリー-detail {
-  border: 8px #d34b7d solid;
+  border: 6px #d34b7d solid;
   background-color: #fa9dad;
+}
+
+.CS-EX a,
+.CS-EX-detail {
+  background-image: url("../img/General/EX_background.png");
+  background-size: cover;
 }
 
 .sync-list {
@@ -922,4 +974,28 @@ input[type="text"] {
 
 .nav-pomatools a {
   padding: 8px 12px;
+}
+
+.pomatools_header {
+  padding: 8px 16px !important;
+}
+
+.pomatools_login {
+  display: flex !important;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+  height: calc(100% - 16px - 4px) !important;
+}
+
+.pomatools_login_img {
+  width: 20px !important;
+  height: auto !important;
+  border-radius: 0;
+}
+
+.pomatools_text {
+  font-size: 16px;
+  margin-top: 4px;
+  line-height: 1;
 }
