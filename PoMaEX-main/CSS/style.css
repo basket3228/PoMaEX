@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
-  background: url(../img/bg.png);
+  background: url(../img/General/background.png);
   background-size: 300px 300px;
   color: #3f3f3f;
   font-size: calc(16px + 0.25vw);
