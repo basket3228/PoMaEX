@@ -747,7 +747,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, E
 ('メイ(19)', 268, 3, False, 0, 5, true, 'https://ng-pomatools.web.app/pairs/10110/22500'),
 ('ズミ(19)', 133, 2, False, 0, 5, true, 'https://ng-pomatools.web.app/pairs/9610/22400'),
 ('ワタル', 309, 1, False, 0, 5, true, 'https://ng-pomatools.web.app/pairs/11100/14900'),
-('主人公(ソルガレオ)', 321, 1, false, 0, 5, 'true', 'https://ng-pomatools.web.app/pairs/900001/79100'),
+('主人公(ソルガレオ)', 321, 1, false, 0, 5, true, 'https://ng-pomatools.web.app/pairs/900001/79100'),
 ('シロナ', 122, 1, False, 0, 5, true, 'https://ng-pomatools.web.app/pairs/9100/44500'),
 ('ヒビキ', 203, 1, False, 0, 5, true, 'https://ng-pomatools.web.app/pairs/11200/15700'),
 ('リーフ', 289, 3, False, 0, 5, true, 'https://ng-pomatools.web.app/pairs/1700/13300'),
