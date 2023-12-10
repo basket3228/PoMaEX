@@ -10,7 +10,7 @@ $title = "PoMaEX | CS:Type-List";
     <?php require_once("../General/nav.php") ?>
     <main class="main">
         <h2 class="kv">
-            <img src="../../img/CS.png" alt="チャンピオンバトル">
+            <img src="../../img/CS/CS.png" alt="チャンピオンバトル">
         </h2>
         <ul class="type-list">
             <?php foreach ($types as $type) { ?>

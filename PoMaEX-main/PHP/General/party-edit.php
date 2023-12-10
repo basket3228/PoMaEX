@@ -23,7 +23,7 @@ if (isset($_GET['LGparty_id'])) {
 $trainers = get_trainer();
 $luckyskills = get_luckyskill();
 
-$title = "PoMaEX | CS:Party-detail edit-frame";
+$title = "PoMaEX | CS:Party-detail";
 ?>
 
 <?php require_once("../General/header.php") ?>
@@ -37,7 +37,11 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                     <div class="party-wrap edit" data-partynum="1">
                         <?php foreach ($LG1 as $c1) { ?>
                             <?php if ($c1['t1'] != null) { ?>
-                                <li class="party-detail edit-frame CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>" data-id="<?= special($c1['ti1']) ?>" draggable="false">
+                                <?php if ($c1['EX_Flg'] == true) { ?>
+                                    <li class="party-detail edit-frame CS-<?= special($c1['tn1']) ?>-detail CS-EX-detail" data-type="<?= special($c1['tn1']) ?>" data-id="<?= special($c1['ti1']) ?>" draggable="false">
+                                    <?php } else { ?>
+                                    <li class="party-detail edit-frame CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>" data-id="<?= special($c1['ti1']) ?>" draggable="false">
+                                    <?php } ?>
                                     <div class="stars">
                                         <?php if ($c1['star1'] == 1) { ?>
                                             <img src="../../img/General/star.png" draggable="false">
@@ -80,24 +84,37 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png" draggable="false">
-                                    <div class="potential">
-                                        のびしろ：<?php echo special($c1['potential']) ?>/20</div>
-                                    <div class="skill">
-                                        ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
-                                        <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
+                                    <div class="level">
                                         <?php echo special($c1['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
-                                </li>
+                                    </li>
+                                    <div class="potential">
+                                        <span>のびしろ：</span><?php echo special($c1['potential']) ?>/20
+                                    </div>
+                                    <div class="skill">
+                                        <span>ポテンシャル：<br></span>
+                                        <select class="luckyskill">
+                                            <option value="<?= special($c1['luckyskill_id']) ?>"><?php echo special($c1['luckyskill_name']) ?></option>
+                                            <?php foreach ($luckyskills as $c1) { ?>
+                                                <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
+                                            <?php } ?>
+                                        </select>
+                                        <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
+                                    </div>
+                                <?php } ?>
                             <?php } ?>
-                        <?php } ?>
                     </div>
                     <div class="party-wrap edit" data-partynum="2">
                         <?php foreach ($LG2 as $c2) { ?>
                             <?php if ($c2['t2'] == null) { ?>
                                 <p>トレーナーを選択してください。</p>
                             <?php } else if ($c2['t2'] != null) { ?>
-                                <li class="party-detail edit-frame CS-<?= special($c2['tn2']) ?>-detail data-type=" <?= special($c2['tn2']) ?>" data-id="<?= special($c2['ti2']) ?>" draggable="false">
+                                <?php if ($c2['EX_Flg'] == true) { ?>
+                                    <li class="party-detail edit-frame CS-<?= special($c2['tn2']) ?>-detail CS-EX-detail" data-type=" <?= special($c2['tn2']) ?>" data-id="<?= special($c2['ti2']) ?>" draggable="false">
+                                    <?php } else { ?>
+                                    <li class="party-detail edit-frame CS-<?= special($c2['tn2']) ?>-detail" data-type=" <?= special($c2['tn2']) ?>" data-id="<?= special($c2['ti2']) ?>" draggable="false">
+                                    <?php } ?>
                                     <p>2</p>
                                     <div class="stars">
                                         <?php if ($c2['star2'] == 1) { ?>
@@ -141,22 +158,35 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png" draggable="false">
-                                    <div class="potential">
-                                        のびしろ：<?php echo special($c2['potential']) ?>/20</div>
-                                    <div class="skill">
-                                        ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
-                                        <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
+                                    <div class="level">
                                         <?php echo special($c2['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
-                                </li>
+                                    </li>
+                                    <div class="potential">
+                                        <span>のびしろ：</span><?php echo special($c2['potential']) ?>/20
+                                    </div>
+                                    <div class="skill">
+                                        <span>ポテンシャル：<br></span>
+                                        <select class="luckyskill">
+                                            <option value="<?= special($c2['luckyskill_id']) ?>"><?php echo special($c2['luckyskill_name']) ?></option>
+                                            <?php foreach ($luckyskills as $c2) { ?>
+                                                <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
+                                            <?php } ?>
+                                        </select>
+                                        <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
+                                    </div>
+                                <?php } ?>
                             <?php } ?>
-                        <?php } ?>
                     </div>
                     <div class="party-wrap edit" data-partynum="3">
                         <?php foreach ($LG3 as $c3) { ?>
                             <?php if ($c3['t3'] != null) { ?>
-                                <li class="party-detail edit-frame CS-<?= special($c3['tn3']) ?>-detail" data-type="<?= special($c3['tn3']) ?>" data-id="<?= special($c3['ti3']) ?>" draggable="false">
+                                <?php if ($c3['EX_Flg'] == true) { ?>
+                                    <li class="party-detail edit-frame CS-<?= special($c3['tn3']) ?>-detail CS-EX-detail" data-type="<?= special($c3['tn3']) ?>" data-id="<?= special($c3['ti3']) ?>" draggable="false">
+                                    <?php } else { ?>
+                                    <li class="party-detail edit-frame CS-<?= special($c3['tn3']) ?>-detail" data-type="<?= special($c3['tn3']) ?>" data-id="<?= special($c3['ti3']) ?>" draggable="false">
+                                    <?php } ?>
                                     <p>3</p>
                                     <div class="stars">
                                         <?php if ($c3['star3'] == 1) { ?>
@@ -200,22 +230,37 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     </div>
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png" draggable="false">
-                                    <div class="potential">
-                                        のびしろ：<?php echo special($c3['potential']) ?>/20</div>
-                                    <div class="skill">
-                                        ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
-                                        <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
+                                    <div class="level">
                                         <?php echo special($c3['level']) ?>
                                     </div>
                                     <button class="edit-delete-btn party-delete"></button>
-                                </li>
+                                    </li>
+                                    <div class="potential">
+                                        <span>のびしろ：</span><?php echo special($c3['potential']) ?>/20
+                                    </div>
+                                    <div class="skill">
+                                        <span>ポテンシャル：<br></span>
+                                        <select class="luckyskill">
+                                            <option value="<?= special($c3['luckyskill_id']) ?>"><?php echo special($c3['luckyskill_name']) ?></option>
+                                            <?php foreach ($luckyskills as $c3) { ?>
+                                                <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
+                                            <?php } ?>
+                                        </select>
+                                        <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
+                                    </div>
+                                <?php } ?>
                             <?php } ?>
-                        <?php } ?>
                     </div>
                 <?php } else if (isset($_GET['CSparty_id'])) { ?>
                     <div class="party-wrap edit" data-partynum="1">
                         <?php foreach ($CS1 as $c1) { ?>
                             <?php if ($c1['t1'] != null) { ?>
+                                <!-- 
+
+                                        EXの背景をここから変えてくだし！！！！！！！！
+                                        要素の順番を上三つと揃えてください！！（level）
+
+                                    -->
                                 <li class="party-detail edit-frame CS-<?= special($c1['tn1']) ?>-detail" data-type="<?= special($c1['tn1']) ?>" data-id="<?= special($c1['ti1']) ?>" draggable="false">
                                     <div class="stars">
                                         <?php if ($c1['star1'] == 1) { ?>
@@ -260,9 +305,10 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png" draggable="false">
                                     <div class="potential">
-                                        のびしろ：<?php echo special($c1['potential']) ?>/20</div>
+                                        <span>のびしろ：</span><?php echo special($c1['potential']) ?>/20
+                                    </div>
                                     <div class="skill">
-                                        ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
+                                        <span>ポテンシャル：<br></span><?php echo special($c1['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
                                         <?php echo special($c1['level']) ?>
                                     </div>
@@ -321,9 +367,10 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png" draggable="false">
                                     <div class="potential">
-                                        のびしろ：<?php echo special($c2['potential']) ?>/20</div>
+                                        <span>のびしろ：</span><?php echo special($c2['potential']) ?>/20
+                                    </div>
                                     <div class="skill">
-                                        ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
+                                        <span>ポテンシャル：<br></span><?php echo special($c2['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
                                         <?php echo special($c2['level']) ?>
                                     </div>
@@ -380,9 +427,10 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                                     <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
                                     <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png" draggable="false">
                                     <div class="potential">
-                                        のびしろ：<?php echo special($c3['potential']) ?>/20</div>
+                                        <span>のびしろ：</span><?php echo special($c3['potential']) ?>/20
+                                    </div>
                                     <div class="skill">
-                                        ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
+                                        <span>ポテンシャル：<br></span><?php echo special($c3['luckyskill_name']) ?>
                                         <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
                                         <?php echo special($c3['level']) ?>
                                     </div>
@@ -442,9 +490,10 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                         <img src="../../trainer/<?= special($c1['t1']) ?>.png" draggable="false">
                         <img class="party-detail-sync CS-<?php echo special($c1['tn1']) ?>-detail" src="../../sync/<?= special($c1['s1']) ?>.png" draggable="false">
                         <div class="potential">
-                            のびしろ：<?php echo special($c1['potential']) ?>/20</div>
+                            <span>のびしろ：</span><?php echo special($c1['potential']) ?>/20
+                        </div>
                         <div class="skill">
-                            ポテンシャル：<?php echo special($c1['luckyskill_name']) ?>
+                            <span>ポテンシャル：<br></span><?php echo special($c1['luckyskill_name']) ?>
                             <!-- タイプ名<?php echo special($c1['tn1']) ?> -->
                             <?php echo special($c1['level']) ?>
                         </div>
@@ -503,9 +552,10 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
                 <img src="../../trainer/<?= special($c2['t2']) ?>.png" draggable="false">
                 <img class="party-detail-sync CS-<?php echo special($c2['tn2']) ?>-detail" src="../../sync/<?= special($c2['s2']) ?>.png" draggable="false">
                 <div class="potential">
-                    のびしろ：<?php echo special($c2['potential']) ?>/20</div>
+                    <span>のびしろ：</span><?php echo special($c2['potential']) ?>/20
+                </div>
                 <div class="skill">
-                    ポテンシャル：<?php echo special($c2['luckyskill_name']) ?>
+                    <span>ポテンシャル：<br></span><?php echo special($c2['luckyskill_name']) ?>
                     <!-- タイプ名<?php echo special($c2['tn2']) ?> -->
                     <?php echo special($c2['level']) ?>
                 </div>
@@ -562,9 +612,10 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
         <img src="../../trainer/<?= special($c3['t3']) ?>.png" draggable="false">
         <img class="party-detail-sync CS-<?php echo special($c3['tn3']) ?>-detail" src="../../sync/<?= special($c3['s3']) ?>.png" draggable="false">
         <div class="potential">
-            のびしろ：<?php echo special($c3['potential']) ?>/20</div>
+            <span>のびしろ：</span><?php echo special($c3['potential']) ?>/20
+        </div>
         <div class="skill">
-            ポテンシャル：<?php echo special($c3['luckyskill_name']) ?>
+            <span>ポテンシャル：<br></span><?php echo special($c3['luckyskill_name']) ?>
             <!-- タイプ名<?php echo special($c3['tn3']) ?> -->
             <?php echo special($c3['level']) ?>
         </div>
@@ -579,24 +630,9 @@ $title = "PoMaEX | CS:Party-detail edit-frame";
         <?php if (isset($_GET['LGparty_id'])) { ?>
             <form method="post" class="party-edit">
                 <input type="hidden" name="LGparty_id" value="<?= special($LGparty_id) ?>">
-                <select name="luckyskill_id1">
-                    <option value="">--選択してください--</option>
-                    <?php foreach ($luckyskills as $c1) { ?>
-                        <option value="<?= special($c1['luckyskill_id']) ?>"><?= special($c1['luckyskill_name']) ?></option>
-                    <?php } ?>
-                </select>
-                <select name="luckyskill_id2">
-                    <option value="">--選択してください--</option>
-                    <?php foreach ($luckyskills as $c2) { ?>
-                        <option value="<?= special($c2['luckyskill_id']) ?>"><?= special($c2['luckyskill_name']) ?></option>
-                    <?php } ?>
-                </select>
-                <select name="luckyskill_id3">
-                    <option value="">--選択してください--</option>
-                    <?php foreach ($luckyskills as $c3) { ?>
-                        <option value="<?= special($c3['luckyskill_id']) ?>"><?= special($c3['luckyskill_name']) ?></option>
-                    <?php } ?>
-                </select>
+                <input type="hidden" name="luckyskill_id1" value="">
+                <input type="hidden" name="luckyskill_id2" value="">
+                <input type="hidden" name="luckyskill_id3" value="">
                 <input type="hidden" name="trainer_id1" value="">
                 <input type="hidden" name="trainer_id2" value="">
                 <input type="hidden" name="trainer_id3" value="">

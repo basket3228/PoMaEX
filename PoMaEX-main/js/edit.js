@@ -1,39 +1,9 @@
-$(".delete-btn").on("click", function () {
-  const url = $(this).data("delete");
-
-  if (confirm("パーティを削除しますか？")) {
-    location.href = url;
-    return;
-  }
-
-  $(".delete-btn").off("click");
+$(document).ready(function () {
+  $(".luckyskill").select2({
+    language: "ja",
+    dropdownAutoWidth: true,
+  });
 });
-
-$(".sync.clickable").on("click", function () {
-  const clickedSync = $(this).attr("data-syncName");
-  $(".popup-sync").addClass("display");
-  $(".sync-popup").removeClass("display");
-  for (var i = 0; i < $(".sync-popup").length; i++) {
-    if ($(".sync-popup").eq(i).attr("data-syncName") === clickedSync) {
-      $(".sync-popup").eq(i).addClass("display");
-    }
-  }
-});
-
-$(".popup-btn").click(() => {
-  $(".popup-sync").removeClass("display");
-});
-
-//スクロール上下
-// document.querySelector(".down").addEventListener("click", () => {
-//   let scrollArea = document.querySelector(".main");
-//   let scrollAreaHeight = scrollArea.scrollHeight;
-//   scrollArea.scrollTop = scrollAreaHeight;
-// });
-// document.querySelector(".up").addEventListener("click", () => {
-//   let scrollArea = document.querySelector(".main");
-//   scrollArea.scrollTop = 0;
-// });
 
 //ドラッグ&ドロップの編集
 const draggableItems = document.querySelectorAll(".edit-drag");
@@ -48,6 +18,7 @@ partyEditSubmitBtn.addEventListener("click", (e) => {
   for (let index = 0; index < editFrame.length; index++) {
     if (editFrame[index].children[0] !== undefined) {
       $(`input[name="trainer_id${index + 1}"]`).val(editFrame[index].children[0].dataset.id);
+      $(`input[name="luckyskill_id${index + 1}"]`).val(Number(editFrame[index].querySelector(".luckyskill").value));
     }
   }
 

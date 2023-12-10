@@ -7,25 +7,11 @@
   <title><?= $title ?></title>
   <link rel="icon" href="/PoMaEX-main/img/General/logo.ico" />
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <link href="/PoMaEX-main/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/PoMaEX-main/CSS/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet" />
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      $(".nav-down-arrow").click(() => {
-        $(".nav-sublist").toggleClass("open");
-      });
-
-      $(".popup-partylist").click(() => {
-        $('.popup').addClass('display');
-      });
-
-      $(".popup-btn").click(() => {
-        $('.popup').removeClass('display');
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -61,9 +47,13 @@
         <li>
           <a href="/PoMaEX-main/PHP/General/create-random-party.php">乱数編成作成</a>
         </li>
-        <li class="flex-unset">
-          <a href="https://ng-pomatools.web.app/pairs/900000/2500" target="_blank">
-            <img src="/PoMaEX-main/img/General/pomatools_icon.png" alt="pomatools">
+        <li class="flex-unset relative">
+          <a href="https://ng-pomatools.web.app/pairs/900000/2500" class="pomatools_header" target="_blank">
+            <div class="pomatools_login">
+              <img src="/PoMaEX-main/img/General/login.png" class="pomatools_login_img" alt="">
+              <img src="/PoMaEX-main/img/General/pomatools_icon.png" alt="pomatools">
+            </div>
+            <div class="pomatools_text">PoMaTools</div>
           </a>
         </li>
       </ul>

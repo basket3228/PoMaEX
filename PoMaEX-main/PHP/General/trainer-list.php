@@ -59,12 +59,15 @@ $random2 = rand(1, 24);
           </div>
         </li>
       <?php } ?>
-      <?php if ($trainerCount / 3 == 1) { ?>
+      <?php if ($trainerCount % 3 == 1) { ?>
         <li class="party-wrap">
           <img src="../../ball/ball<?= special($random1) ?>.png">
+        </li>
+        <li class="party-wrap">
           <img src="../../ball/ball<?= special($random2) ?>.png">
         </li>
-      <?php } else if ($trainerCount % 3 == 2) { ?>
+      <?php } ?>
+      <?php if ($trainerCount % 3 == 2) { ?>
         <li class="party-wrap">
           <img src="../../ball/ball<?= special($random1) ?>.png">
         </li>
