@@ -134,6 +134,11 @@ CREATE TABLE category (
     category_name VARCHAR (50) not null
 );
 
+create table EB (
+    EB_id int primary key auto_increment,
+    name varchar (50) not null
+);
+
 CREATE table role (
     role_id int PRIMARY KEY AUTO_INCREMENT,
     role_name VARCHAR (50) not null
