@@ -673,6 +673,10 @@ VALUES
     ('スコアアタック'),
     ('究極高難易度バトル');
 
+Insert into EB (name) values
+    ('VSanabel'),
+    ('VSthorton');
+
 INSERT INTO role (role_name) VALUES
     ('アタッカー'),
     ('テクニカル'),
