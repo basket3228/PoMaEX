@@ -664,7 +664,12 @@ INSERT INTO sync (sync_name, type_id) VALUES
     ('バクガメス', '15'),
     ('エーフィ', '11'),
     ('ダグトリオ', '9'),
-    ('レイスポス', '14');
+    ('レイスポス', '14'),
+    ('オノノクス(色違い)', '15'),
+    ('コイル', '17'),
+    ('ビビヨン', '12'),
+    ('ゴーゴート', '5'),
+    ('メロエッタ', '11');
 
 INSERT INTO category (category_name)
 VALUES
@@ -1253,7 +1258,12 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, stars, E
 ('主人公', 50, 2, false, 0, 1, false, null),
 ('主人公', 40, 2, false, 0, 1, false, null),
 ('主人公', 417, 2, false, 0, 1, false, null),
-('アセロラ(サロン)', 13, 3, false, 0, 4, true, 'https://ng-pomatools.web.app/pairs/700/35400');
+('アセロラ(サロン)', 13, 3, false, 0, 4, true, 'https://ng-pomatools.web.app/pairs/700/35400'),
+('キョウヘイ(ネオチャンピオン)', , 1, false, 0, 5, true, 'https://ng-pomatools.web.app/pairs/10001/61201'),
+('ミカン(サロン)', , 3, false, 0, 4, true, 'https://ng-pomatools.web.app/pairs/11300/8100'),
+('ビオラ(23)', , 5, false, 0, 5, true, 'https://ng-pomatools.web.app/pairs/3901/66600'),
+('プラターヌ(23)', , 3, false, 0, 5, true, 'https://ng-pomatools.web.app/pairs/13602/67300'),
+('メイ(ネオチャンピオン)', , 3, false, 0, 5, true, 'https://ng-pomatools.web.app/pairs/10102/64800');
 
 insert into CSparty (type_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL, memo)values
     (1, 304, 131, 73, 4, 1, 1, 'https://ng-pomatools.web.app/team?v0=000000014300&s0=3&l0=140&r0=5&p0=0&a0=0&t0=11111&g0=AAECAwQFBggLDRAaHB8iJCYo&v1=009003050801&s1=1&l1=140&r1=5&p1=0&a1=0&t1=11111&g1=AAECAwQFBgcICQoMERITFRobHB0jJCUmJyg&v2=011900077300&s2=5&l2=140&r2=5&p2=0&a2=0&t2=11111&g2=AAECAwQFBgsOEBUYGSMlLi8', 'サンプル'),
