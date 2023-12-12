@@ -346,7 +346,7 @@ function get_tornadusSolo()
         return $tornadus;
     }
 
-function get_tapu_Bulu($enemy_id)
+function get_tapu_bulu($enemy_id)
 {
     $pdo = get_connection();
     $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloTapu_Bulu as t1
@@ -364,7 +364,7 @@ function get_tapu_Bulu($enemy_id)
     return $enemy;
 }
 
-function get_latiosTapu_Bulu()
+function get_tapu_bulu()
     {
         $pdo = get_connection();
         $st = $pdo->prepare("select count(distinct trainer_id) from soloTapu_Bulu");
