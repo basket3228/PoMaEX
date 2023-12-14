@@ -364,7 +364,7 @@ function get_tapu_bulu($enemy_id)
     return $enemy;
 }
 
-function get_tapu_bulu()
+function get_tapu_buluSolo()
     {
         $pdo = get_connection();
         $st = $pdo->prepare("select count(distinct trainer_id) from soloTapu_Bulu");
