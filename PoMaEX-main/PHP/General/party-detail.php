@@ -251,7 +251,7 @@ $title = "PoMaEX | " . $titleParameter . ":Party-detail";
                         <?php foreach ($CS1 as $c1) { ?>
                             <?php if ($CSparty_id == $c1['CSparty_id']) { ?>
                                 <?php if ($c1['t1'] != null) { ?>
-                                    <!-- 
+                                    <!--
 
                                         EXの背景をここから変えてくだし！！！！！！！！
                                         要素の順番を上三つと揃えてください！！（level）
