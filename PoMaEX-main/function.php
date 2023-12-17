@@ -531,12 +531,61 @@ function get_party($LG_id, $enemy_id)
     return $party;
 }
 
-function get_LGParty($LG_id)
+function get_LGParty1($LG_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct LGparty.LGparty_id, trainer.trainer_name, trainer.level, enemy_id from LG
-    left join LGparty on LGparty.LG_id = LG.LG_id
-    left join trainer on trainer.trainer_id = LGparty.trainer_id2
+    $st = $pdo->prepare("select distinct LGparty.LGparty_id, t1.EXable as fa1, t2.EXable as fa2, t3.EXable as fa3, t1.EX_Flg as f1, t2.EX_Flg as f2, t3.EX_Flg as f3, t1.stars as ts1, t2.stars as ts2, t3. stars as ts3, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, s1.sync_name as s1, s2.sync_name as s2, s3.sync_name as s3, t1.level as l1, t2.level as l2, t3.level as l3, LGParty.enemy_id from LGParty
+    left join LG on LG.LG_id = LGparty.LG_id
+    left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
+    left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
+    left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
+    left join sync as s1 on s1.sync_id = t1.sync_id
+    left join sync as s2 on s2.sync_id = t2.sync_id
+    left join sync as s3 on s3.sync_id = t3.sync_id
+    where LG.LG_id = ?");
+    $st->bindValue(1, $LG_id);
+    $st->execute();
+    $party = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $party;
+}
+
+function get_LGParty2($LG_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select distinct LGparty.LGparty_id, t1.EXable as fa1, t2.EXable as fa2, t3.EXable as fa3, t1.EX_Flg as f1, t2.EX_Flg as f2, t3.EX_Flg as f3, t1.stars as ts1, t2.stars as ts2, t3. stars as ts3, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, s1.sync_name as s1, s2.sync_name as s2, s3.sync_name as s3, t1.level as l1, t2.level as l2, t3.level as l3, LGParty.enemy_id from LGParty
+    left join LG on LG.LG_id = LGparty.LG_id
+    left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
+    left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
+    left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
+    left join sync as s1 on s1.sync_id = t1.sync_id
+    left join sync as s2 on s2.sync_id = t2.sync_id
+    left join sync as s3 on s3.sync_id = t3.sync_id
+    where LG.LG_id = ?");
+    $st->bindValue(1, $LG_id);
+    $st->execute();
+    $party = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+
+    return $party;
+}
+
+function get_LGParty3($LG_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select distinct LGparty.LGparty_id, t1.EXable as fa1, t2.EXable as fa2, t3.EXable as fa3, t1.EX_Flg as f1, t2.EX_Flg as f2, t3.EX_Flg as f3, t1.stars as ts1, t2.stars as ts2, t3. stars as ts3, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, s1.sync_name as s1, s2.sync_name as s2, s3.sync_name as s3, t1.level as l1, t2.level as l2, t3.level as l3, LGParty.enemy_id from LGParty
+    left join LG on LG.LG_id = LGparty.LG_id
+    left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
+    left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
+    left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
+    left join sync as s1 on s1.sync_id = t1.sync_id
+    left join sync as s2 on s2.sync_id = t2.sync_id
+    left join sync as s3 on s3.sync_id = t3.sync_id
     where LG.LG_id = ?");
     $st->bindValue(1, $LG_id);
     $st->execute();
