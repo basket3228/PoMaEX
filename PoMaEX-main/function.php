@@ -124,6 +124,18 @@ function get_entei($enemy_id)
     return $enemy;
 }
 
+function get_enteiSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloEntei");
+    $st->execute();
+    $entei = $st->fetchColumn();
+
+    $pdo = null;
+    $st = null;
+    return $entei;
+}
+
 function get_raiko($enemy_id)
 {
     $pdo = get_connection();
@@ -140,6 +152,18 @@ function get_raiko($enemy_id)
     $pdo = null;
     $st = null;
     return $enemy;
+}
+
+function get_raikoSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloRaiko");
+    $st->execute();
+    $raiko = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $raiko;
 }
 
 function get_latios($enemy_id)
@@ -160,6 +184,18 @@ function get_latios($enemy_id)
     return $enemy;
 }
 
+function get_latiosSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloLatios");
+    $st->execute();
+    $latios = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $latios;
+}
+
 function get_latias($enemy_id)
 {
     $pdo = get_connection();
@@ -176,6 +212,18 @@ function get_latias($enemy_id)
     $pdo = null;
     $st = null;
     return $enemy;
+}
+
+function get_latiasSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloLatias");
+    $st->execute();
+    $latias = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $latias;
 }
 
 function get_terrakion($enemy_id)
@@ -196,6 +244,18 @@ function get_terrakion($enemy_id)
     return $enemy;
 }
 
+function get_terrakionSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloTerrakion");
+    $st->execute();
+    $terrakion = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $terrakion;
+}
+
 function get_cobalion($enemy_id)
 {
     $pdo = get_connection();
@@ -212,6 +272,18 @@ function get_cobalion($enemy_id)
     $pdo = null;
     $st = null;
     return $enemy;
+}
+
+function get_cobalionSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloCobalion");
+    $st->execute();
+    $cobalion = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $cobalion;
 }
 
 function get_cresselia($enemy_id)
@@ -232,6 +304,18 @@ function get_cresselia($enemy_id)
     return $enemy;
 }
 
+function get_cresseliaSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloCresselia");
+    $st->execute();
+    $cresselia = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $cresselia;
+}
+
 function get_tornadus($enemy_id)
 {
     $pdo = get_connection();
@@ -250,7 +334,19 @@ function get_tornadus($enemy_id)
     return $enemy;
 }
 
-function get_tapu_Bulu($enemy_id)
+function get_tornadusSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloTornadus");
+    $st->execute();
+    $tornadus = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $tornadus;
+}
+
+function get_tapu_bulu($enemy_id)
 {
     $pdo = get_connection();
     $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloTapu_Bulu as t1
@@ -266,6 +362,18 @@ function get_tapu_Bulu($enemy_id)
     $pdo = null;
     $st = null;
     return $enemy;
+}
+
+function get_tapu_buluSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloTapu_Bulu");
+    $st->execute();
+    $tapu_bulu = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $tapu_bulu;
 }
 
 function get_azelf($enemy_id)
@@ -286,6 +394,18 @@ function get_azelf($enemy_id)
     return $enemy;
 }
 
+function get_azelfSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloAzelf");
+    $st->execute();
+    $azelf = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $azelf;
+}
+
 function get_uxie($enemy_id)
 {
     $pdo = get_connection();
@@ -302,6 +422,18 @@ function get_uxie($enemy_id)
     $pdo = null;
     $st = null;
     return $enemy;
+}
+
+function get_uxieSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloUxie");
+    $st->execute();
+    $uxie = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $uxie;
 }
 
 function get_regirock($enemy_id)
@@ -322,6 +454,18 @@ function get_regirock($enemy_id)
     return $enemy;
 }
 
+function get_regirockSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloRegirock");
+    $st->execute();
+    $regirock = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $regirock;
+}
+
 function get_moltres($enemy_id)
 {
     $pdo = get_connection();
@@ -338,6 +482,18 @@ function get_moltres($enemy_id)
     $pdo = null;
     $st = null;
     return $enemy;
+}
+
+function get_moltresSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloMoltres");
+    $st->execute();
+    $moltres = $st->fetch();
+
+    $pdo = null;
+    $st = null;
+    return $moltres;
 }
 
 function get_luckyskill()

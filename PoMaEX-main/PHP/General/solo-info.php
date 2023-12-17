@@ -17,6 +17,20 @@ $azelf = get_azelf($enemy_id);
 $uxie = get_uxie($enemy_id);
 $regirock = get_regirock($enemy_id);
 
+$enteiCount = get_enteiSolo();
+$raikoCount = get_raikoSolo();
+$latiosCount = get_latiosSolo();
+$latiasCount = get_latiasSolo();
+$terrakionCount = get_terrakionSolo();
+$cobalionCount = get_cobalionSolo();
+$moltresCount = get_moltresSolo();
+$cresseliaCount = get_cresseliaSolo();
+$tornadusCount = get_tornadusSolo();
+$tapu_buluCount = get_tapu_buluSolo();
+$azelfCount = get_azelfSolo();
+$uxieCount = get_uxieSolo();
+$regirockCount = get_regirockSolo();
+
 $enemy = get_particular_enemy($enemy_id);
 $title = "PoMaEX | LG:Solo-Info";
 ?>
@@ -33,6 +47,7 @@ $title = "PoMaEX | LG:Solo-Info";
         </div>
         <ul class="detail-list">
             <?php if ($enemy_id == 1) { ?>
+                <?php echo $enteiCount ?>
                 <?php foreach ($raiko as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -42,6 +57,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 2) { ?>
+                echo $raikoCount;
                 <?php foreach ($entei as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -51,6 +67,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 3) { ?>
+                echo $latiosCount;
                 <?php foreach ($latios as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -60,6 +77,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 4) { ?>
+                echo $latiasCount;
                 <?php foreach ($latias as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -69,6 +87,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 5) { ?>
+                echo $terrakionCount;
                 <?php foreach ($terrakion as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -78,6 +97,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 6) { ?>
+                echo $cobalionCount;
                 <?php foreach ($cobalion as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -87,6 +107,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 7) { ?>
+                echo $moltresCount;
                 <?php foreach ($moltres as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -96,6 +117,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 8) { ?>
+                echo $cresseliaCount;
                 <?php foreach ($cresselia as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -105,6 +127,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 9) { ?>
+                $tornadusCount;
                 <?php foreach ($tornadus as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -114,6 +137,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 10) { ?>
+                echo $tapu_buluCount;
                 <?php foreach ($tapu_bulu as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -123,6 +147,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 11) { ?>
+                echo $azelfCount;
                 <?php foreach ($azelf as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -132,6 +157,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 12) { ?>
+                echo $uxieCount;
                 <?php foreach ($uxie as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
@@ -141,6 +167,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 13) { ?>
+                echo $regirockCount;
                 <?php foreach ($regirock as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
