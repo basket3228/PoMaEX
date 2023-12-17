@@ -12,20 +12,23 @@ $title = "PoMaEX | LG:search";
     <?php require_once("../General/nav.php") ?>
     <main class="main">
         <h2><?= LG ?></h2>
-        <!-- ↓文字を大きく中央に -->
         <h2><?php echo special($enemy['enemy_name']) ?></h2>
         <ul>
             <?php foreach ($parties as $party) { ?>
-                <?php if ($party['t2'] != null) { ?>
-                    <li>
-                        <a href="../General/party-detail.php?LGparty_id=<?= special($party['LGparty_id']) ?>">編成詳細へ</a>
+                <li>
+                    <a href="../General/party-detail.php?LGparty_id=<?= special($party['LGparty_id']) ?>">編成詳細へ</a>
+                    <?php if ($party['t1'] != null) { ?>
                         <img src="../../trainer/<?= special($party['t1']) ?>.png">
+                    <?php } ?>
+                    <?php if ($party['t2'] != null) { ?>
                         <img src="../../trainer/<?= special($party['t2']) ?>.png">
+                    <?php } ?>
+                    <?php if ($party['t3'] != null) { ?>
                         <img src="../../trainer/<?= special($party['t3']) ?>.png">
-                    </li>
-                    <a href="delete-LG-list.php?LGparty_id=<?= $party['LGparty_id'] ?>&LG_id=<?= special($LG_id) ?>"><button class="delete">削除</button></a>
-                    </li>
-                <?php } ?>
+                    <?php } ?>
+                </li>
+                <a href="delete-LG-list.php?LGparty_id=<?= $party['LGparty_id'] ?>&LG_id=<?= special($LG_id) ?>"><button class="delete">削除</button></a>
+                </li>
             <?php } ?>
         </ul>
     </main>
