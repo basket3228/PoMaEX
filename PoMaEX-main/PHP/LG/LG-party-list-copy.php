@@ -58,7 +58,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <img src="../../img/General/star.png">
                                         <?php } ?>
                                         EX
-                                        <?php if ($party1['f1'] && $party1['fa1'] == true) { ?>
+                                        <?php if ($party1['f1'] && $party1['fa1'] == 1) { ?>
                                             <img src="../../img/General/EX.png">
                                         <?php } else { ?>
                                             <img src="../../img/General/NotEX.png">
@@ -100,7 +100,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <img src="../../img/General/star.png">
                                         <?php } ?>
                                         EX
-                                        <?php if ($party1['f1'] && $party1['fa1'] == true) { ?>
+                                        <?php if ($party1['f1'] && $party1['fa1'] == 1) { ?>
                                             <img src="../../img/General/EX.png">
                                         <?php } else { ?>
                                             <img src="../../img/General/NotEX.png">
@@ -143,7 +143,7 @@ $title = "PoMaEX | LG:Party-List";
                         <img src="../../img/General/star.png">
                     <?php } ?>
                     EX
-                    <?php if ($party1['f1'] && $party1['fa1'] == true) { ?>
+                    <?php if ($party1['f1'] && $party1['fa1'] == 1) { ?>
                         <img src="../../img/General/EX.png">
                     <?php } else { ?>
                         <img src="../../img/General/NotEX.png">
@@ -200,7 +200,7 @@ $title = "PoMaEX | LG:Party-List";
                             <img src="../../img/General/star.png">
                         <?php } ?>
                         EX
-                        <?php if ($party2['f2'] && $party2['fa2'] == true) { ?>
+                        <?php if ($party2['f2'] && $party2['fa2'] == 1) { ?>
                             <img src="../../img/General/EX.png">
                         <?php } else { ?>
                             <img src="../../img/General/NotEX.png">
@@ -243,7 +243,7 @@ $title = "PoMaEX | LG:Party-List";
                             <img src="../../img/General/star.png">
                         <?php } ?>
                         EX
-                        <?php if ($party2['f2'] && $party2['fa2'] == true) { ?>
+                        <?php if ($party2['f2'] && $party2['fa2'] == 1) { ?>
                             <img src="../../img/General/EX.png">
                         <?php } else { ?>
                             <img src="../../img/General/NotEX.png">
@@ -286,7 +286,7 @@ $title = "PoMaEX | LG:Party-List";
                             <img src="../../img/General/star.png">
                         <?php } ?>
                         EX
-                        <?php if ($party2['f2'] && $party2['fa2'] == true) { ?>
+                        <?php if ($party2['f2'] && $party2['fa2'] == 1) { ?>
                             <img src="../../img/General/EX.png">
                         <?php } else { ?>
                             <img src="../../img/General/NotEX.png">
@@ -342,7 +342,7 @@ $title = "PoMaEX | LG:Party-List";
                             <img src="../../img/General/star.png">
                         <?php } ?>
                         EX
-                        <?php if ($party3['f3'] && $party3['fa3'] == true) { ?>
+                        <?php if ($party3['f3'] && $party3['fa3'] == 1) { ?>
                             <img src="../../img/General/EX.png">
                         <?php } else { ?>
                             <img src="../../img/General/NotEX.png">
@@ -385,7 +385,7 @@ $title = "PoMaEX | LG:Party-List";
                             <img src="../../img/General/star.png">
                         <?php } ?>
                         EX
-                        <?php if ($party3['f3'] && $party3['fa3'] == true) { ?>
+                        <?php if ($party3['f3'] && $party3['fa3'] == 1) { ?>
                             <img src="../../img/General/EX.png">
                         <?php } else { ?>
                             <img src="../../img/General/NotEX.png">
@@ -428,7 +428,7 @@ $title = "PoMaEX | LG:Party-List";
                             <img src="../../img/General/star.png">
                         <?php } ?>
                         EX
-                        <?php if ($party3['f3'] && $party3['fa3'] == true) { ?>
+                        <?php if ($party3['f3'] && $party3['fa3'] == 1) { ?>
                             <img src="../../img/General/EX.png">
                         <?php } else { ?>
                             <img src="../../img/General/NotEX.png">

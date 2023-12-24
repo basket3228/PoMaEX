@@ -1281,8 +1281,8 @@ function add_LG($LG)
 function add_LGparty($party)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("insert into LGparty (LG_id, LGparty.enemy_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL) values
-    (:LG_id, :enemy_id, :trainer_id1, :trainer_id2, :trainer_id3, :luckyskill_id1, :luckyskill_id2, :luckyskill_id3, :URL)");
+    $st = $pdo->prepare("insert into LGparty (LG_id, LGparty.enemy_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3) values
+    (:LG_id, :enemy_id, :trainer_id1, :trainer_id2, :trainer_id3, :luckyskill_id1, :luckyskill_id2, :luckyskill_id3)");
     $st->bindValue(':LG_id', $party['LG_id']);
     $st->bindValue(':enemy_id', $party['enemy_id']);
     $st->bindValue(':trainer_id1', $party['trainer_id1']);
@@ -1291,7 +1291,7 @@ function add_LGparty($party)
     $st->bindValue(':luckyskill_id1', $party['luckyskill_id1']);
     $st->bindValue(':luckyskill_id2', $party['luckyskill_id2']);
     $st->bindValue(':luckyskill_id3', $party['luckyskill_id3']);
-    $st->bindValue(':URL', $party['URL']);
+    // $st->bindValue(':URL', $party['URL']); prepare文の中も修正
     $st->execute();
 
     $pdo = null;
