@@ -16,6 +16,7 @@ $title = "PoMaEX | LG:Party-List";
     <main class="main">
         <h2><?= LG ?></h2>
         <div class="LG-party">
+            <a href="add-LGparty.php?LG_id=<?= special($e1['LG_id']) ?>&enemy_id1=<?= special($e1['enemy_id1']) ?>&enemy_id2=<?= special($e2['enemy_id2']) ?>&enemy_id3=<?= special($e3['enemy_id3']) ?>"><button>追加</button></a>
             <ul class="LG-party-list">
                 <?php foreach ($p1 as $party1) { ?>
                     <?php if ($party1['enemy_id'] == $e1['enemy_id1']) { ?>
@@ -61,7 +62,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($party1['f1'] && $party1['fa1'] == true) { ?>
+                                            <?php if ($party1['f1'] && $party1['fa1'] == 1) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -108,7 +109,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($party1['f1'] && $party1['fa1'] == true) { ?>
+                                            <?php if ($party1['f2'] && $party1['fa2'] == 1) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -155,7 +156,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($party1['f1'] && $party1['fa1'] == true) { ?>
+                                            <?php if ($party1['f3'] && $party1['fa3'] == 1) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -215,7 +216,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($party2['f2'] && $party2['fa2'] == true) { ?>
+                                            <?php if ($party2['f1'] && $party2['fa1'] == 1) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -262,7 +263,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($party2['f2'] && $party2['fa2'] == true) { ?>
+                                            <?php if ($party2['f2'] && $party2['fa2'] == 1) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -309,7 +310,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($party2['f2'] && $party2['fa2'] == true) { ?>
+                                            <?php if ($party2['f3'] && $party2['fa3'] == 1) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -369,7 +370,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($party3['f3'] && $party3['fa3'] == true) { ?>
+                                            <?php if ($party3['f1'] && $party3['fa1'] == 1) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -416,7 +417,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($party3['f3'] && $party3['fa3'] == true) { ?>
+                                            <?php if ($party3['f2'] && $party3['fa2'] == 1) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
@@ -463,7 +464,7 @@ $title = "PoMaEX | LG:Party-List";
                                             <?php } ?>
                                         </div>
                                         <div class="EX">
-                                            <?php if ($party3['f3'] && $party3['fa3'] == true) { ?>
+                                            <?php if ($party3['f3'] && $party3['fa3'] == 1) { ?>
                                                 <img src="../../img/General/EX.png">
                                             <?php } else { ?>
                                                 <img src="../../img/General/NotEX.png">
