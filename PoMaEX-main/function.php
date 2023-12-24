@@ -159,7 +159,7 @@ function get_raikoSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloRaiko");
     $st->execute();
-    $raiko = $st->fetch();
+    $raiko = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -189,7 +189,7 @@ function get_latiosSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloLatios");
     $st->execute();
-    $latios = $st->fetch();
+    $latios = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -219,7 +219,7 @@ function get_latiasSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloLatias");
     $st->execute();
-    $latias = $st->fetch();
+    $latias = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -249,7 +249,7 @@ function get_terrakionSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloTerrakion");
     $st->execute();
-    $terrakion = $st->fetch();
+    $terrakion = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -279,7 +279,7 @@ function get_cobalionSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloCobalion");
     $st->execute();
-    $cobalion = $st->fetch();
+    $cobalion = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -309,7 +309,7 @@ function get_cresseliaSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloCresselia");
     $st->execute();
-    $cresselia = $st->fetch();
+    $cresselia = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -339,7 +339,7 @@ function get_tornadusSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloTornadus");
     $st->execute();
-    $tornadus = $st->fetch();
+    $tornadus = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -369,7 +369,7 @@ function get_tapu_buluSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloTapu_Bulu");
     $st->execute();
-    $tapu_bulu = $st->fetch();
+    $tapu_bulu = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -399,7 +399,7 @@ function get_azelfSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloAzelf");
     $st->execute();
-    $azelf = $st->fetch();
+    $azelf = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -429,7 +429,7 @@ function get_uxieSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloUxie");
     $st->execute();
-    $uxie = $st->fetch();
+    $uxie = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -459,7 +459,7 @@ function get_regirockSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloRegirock");
     $st->execute();
-    $regirock = $st->fetch();
+    $regirock = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -489,11 +489,41 @@ function get_moltresSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloMoltres");
     $st->execute();
-    $moltres = $st->fetch();
+    $moltres = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
     return $moltres;
+}
+
+function get_registeel($enemy_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloRegisteel as t1
+    left join enemy on enemy.enemy_id = t1.enemy_id
+    left join trainer on trainer.trainer_id = t1.trainer_id
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    where t1.enemy_id = ?");
+    $st->bindValue(1, $enemy_id);
+    $st->execute();
+    $enemy = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+    return $enemy;
+}
+
+function get_registeelSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloRegisteel");
+    $st->execute();
+    $registeel = $st->fetchColumn();
+
+    $pdo = null;
+    $st = null;
+    return $registeel;
 }
 
 function get_luckyskill()
