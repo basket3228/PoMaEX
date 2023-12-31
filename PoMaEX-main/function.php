@@ -14,7 +14,7 @@ function special($string)
 function get_connection()
 {
     try {
-        $pdo = new PDO(DB_CONNECTION_STRING, 'root', 'admin');
+        $pdo = new PDO(DB_CONNECTION_STRING, 'kasakasa', 'CT4m97KzSQ8Mm2f');
         return $pdo;
     } catch (PDOException $e) {
         show_error_message();
