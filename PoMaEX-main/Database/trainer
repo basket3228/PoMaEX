@@ -576,7 +576,7 @@ INSERT INTO trainer (trainer_name, sync_id, role_id, EX_Flg, potential, level, s
 ('主人公', 327, 1, false, 0, 1, 4, false, null),
 ('主人公', 327, 2, false, 0, 1, 4, false, null),
 ('主人公', 327, 3, false, 0, 1, 4, false, null),
-('主人公', 328, 1, false, 0, 1 4, false, null),
+('主人公', 328, 1, false, 0, 1, 4, false, null),
 ('主人公', 328, 2, false, 0, 1, 4, false, null),
 ('主人公', 328, 3, false, 0, 1, 4, false, null);
 
