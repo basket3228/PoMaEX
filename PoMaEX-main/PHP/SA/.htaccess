@@ -1,0 +1,5 @@
+# authenticate(Basic)
+AuthUserFile /PoMaEX-main/.htpasswd
+AuthName "許可されていません"
+AuthType Basic
+require valid-user

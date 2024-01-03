@@ -1036,3 +1036,22 @@ input[type="text"] {
   padding: 0.5vw 0.8vw;
   font-size: 1vw;
 }
+
+.detail-list-count {
+  position: absolute;
+  top: calc(-1em - 32px - 4px);
+  right: 0;
+  z-index: 2;
+  font-size: 2em;
+  color: #27636e;
+  text-shadow: #fff 1px 0px, #fff -1px 0px, #fff 0px -1px, #fff 0px 1px, #fff 1px 1px, #fff -1px 1px, #fff 1px -1px,
+    #fff -1px -1px, 0 0 4px #000;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.detail-list-count:after {
+  content: "組";
+  margin-left: 4px;
+  font-size: 1rem;
+}

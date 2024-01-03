@@ -27,7 +27,7 @@ $title = "PoMaEX | LG:Party-List";
                             </div>
                             <div class="LG-party-wrap-trainers">
                                 <?php if ($party1['t1'] != null) { ?>
-                                    <div class="party-detail CS-<?= special($party1['tn1']) ?>-detail">
+                                    <div class="party-detail CS-<?= special($party1['type1']) ?>-detail">
                                         <div class="stars">
                                             <?php if ($party1['ts1'] == 1) { ?>
                                                 <img src="../../img/General/star.png">
@@ -74,7 +74,7 @@ $title = "PoMaEX | LG:Party-List";
                                     </div>
                                 <?php } ?>
                                 <?php if ($party1['t2'] != null) { ?>
-                                    <div class="party-detail">
+                                    <div class="party-detail CS-<?= special($party1['type2']) ?>-detail">
                                         <div class="stars">
                                             <?php if ($party1['ts2'] == 1) { ?>
                                                 <img src="../../img/General/star.png">
@@ -121,7 +121,7 @@ $title = "PoMaEX | LG:Party-List";
                                     </div>
                                 <?php } ?>
                                 <?php if ($party1['t3'] != null) { ?>
-                                    <div class="party-detail">
+                                    <div class="party-detail CS-<?= special($party1['type3']) ?>-detail">
                                         <div class="stars">
                                             <?php if ($party1['ts3'] == 1) { ?>
                                                 <img src="../../img/General/star.png">
