@@ -79,7 +79,7 @@ $title = "PoMaEX | LG:Solo-Info";
                     </li>
                 <?php } ?>
             <?php } else if ($enemy_id == 4) { ?>
-                <?php cho $latiasCount ?>
+                <?php echo $latiasCount ?>
                 <?php foreach ($latias as $solo) { ?>
                     <li class="party-wrap">
                         <div class="party-detail CS-<?= special($solo['type_name']) ?>-detail" style="margin-bottom: calc(16px + 1vw)">
