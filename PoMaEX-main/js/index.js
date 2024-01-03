@@ -38,7 +38,7 @@ $(".popup-btn").click(() => {
   $(".popup-sync").removeClass("display");
 });
 
-スクロール上下;
+// スクロール上下;
 document.querySelector(".down").addEventListener("click", () => {
   let scrollArea = document.querySelector(".main");
   let scrollAreaHeight = scrollArea.scrollHeight;
