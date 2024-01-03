@@ -973,7 +973,7 @@ function get_type()
 function LG1($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGParty.LGparty_id, LGParty.LG_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, t1.EXable, t1.level, luckyskill.luckyskill_id, luckyskill.luckyskill_name, t1.potential from LGparty
+    $st = $pdo->prepare("select LGParty.LGparty_id, LGParty.LG_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, t1.EXable, t1.level, luckyskill.luckyskill_id, luckyskill.luckyskill_name, t1.potential from LGParty
     left join trainer as t1 on t1.trainer_id = LGParty.trainer_id1
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join type on type.type_id = s1.type_id
