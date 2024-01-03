@@ -159,7 +159,7 @@ function get_raikoSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloRaiko");
     $st->execute();
-    $raiko = $st->fetch();
+    $raiko = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -189,7 +189,7 @@ function get_latiosSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloLatios");
     $st->execute();
-    $latios = $st->fetch();
+    $latios = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -219,7 +219,7 @@ function get_latiasSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloLatias");
     $st->execute();
-    $latias = $st->fetch();
+    $latias = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -249,7 +249,7 @@ function get_terrakionSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloTerrakion");
     $st->execute();
-    $terrakion = $st->fetch();
+    $terrakion = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -279,7 +279,7 @@ function get_cobalionSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloCobalion");
     $st->execute();
-    $cobalion = $st->fetch();
+    $cobalion = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -309,7 +309,7 @@ function get_cresseliaSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloCresselia");
     $st->execute();
-    $cresselia = $st->fetch();
+    $cresselia = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -339,7 +339,7 @@ function get_tornadusSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloTornadus");
     $st->execute();
-    $tornadus = $st->fetch();
+    $tornadus = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -369,7 +369,7 @@ function get_tapu_buluSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloTapu_Bulu");
     $st->execute();
-    $tapu_bulu = $st->fetch();
+    $tapu_bulu = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -399,7 +399,7 @@ function get_azelfSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloAzelf");
     $st->execute();
-    $azelf = $st->fetch();
+    $azelf = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -429,7 +429,7 @@ function get_uxieSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloUxie");
     $st->execute();
-    $uxie = $st->fetch();
+    $uxie = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -459,7 +459,7 @@ function get_regirockSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloRegirock");
     $st->execute();
-    $regirock = $st->fetch();
+    $regirock = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
@@ -489,11 +489,41 @@ function get_moltresSolo()
     $pdo = get_connection();
     $st = $pdo->prepare("select count(distinct trainer_id) from soloMoltres");
     $st->execute();
-    $moltres = $st->fetch();
+    $moltres = $st->fetchColumn();
 
     $pdo = null;
     $st = null;
     return $moltres;
+}
+
+function get_registeel($enemy_id)
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select t1.enemy_id, enemy_name,trainer.trainer_name, sync.sync_name, type.type_name from soloRegisteel as t1
+    left join enemy on enemy.enemy_id = t1.enemy_id
+    left join trainer on trainer.trainer_id = t1.trainer_id
+    left join sync on sync.sync_id = trainer.sync_id
+    left join type on type.type_id = sync.type_id
+    where t1.enemy_id = ?");
+    $st->bindValue(1, $enemy_id);
+    $st->execute();
+    $enemy = $st->fetchAll();
+
+    $pdo = null;
+    $st = null;
+    return $enemy;
+}
+
+function get_registeelSolo()
+{
+    $pdo = get_connection();
+    $st = $pdo->prepare("select count(distinct trainer_id) from soloRegisteel");
+    $st->execute();
+    $registeel = $st->fetchColumn();
+
+    $pdo = null;
+    $st = null;
+    return $registeel;
 }
 
 function get_luckyskill()
@@ -512,14 +542,14 @@ function get_luckyskill()
 function get_party($LG_id, $enemy_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct LGparty.LGparty_id, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, LGparty.enemy_id, enemy.enemy_name from LG
-    left join LGparty on LGparty.LG_id = LG.LG_id
-    left join enemy on enemy.enemy_id = LGparty.enemy_id
-    left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
-    left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
-    left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
+    $st = $pdo->prepare("select distinct LGParty.LGparty_id, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, LGParty.enemy_id, enemy.enemy_name from LG
+    left join LGparty on LGParty.LG_id = LG.LG_id
+    left join enemy on enemy.enemy_id = LGParty.enemy_id
+    left join trainer as t1 on t1.trainer_id = LGParty.trainer_id1
+    left join trainer as t2 on t2.trainer_id = LGParty.trainer_id2
+    left join trainer as t3 on t3.trainer_id = LGParty.trainer_id3
     where LG.LG_id = ?
-    and LGparty.enemy_id = ?");
+    and LGParty.enemy_id = ?");
     $st->bindValue(1, $LG_id);
     $st->bindValue(2, $enemy_id);
     $st->execute();
@@ -534,14 +564,11 @@ function get_party($LG_id, $enemy_id)
 function get_LGParty1($LG_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct LGparty.LGparty_id, t1.type_name as type1, t2.type_name as type2, t3.type_name as type3, t1.EXable as fa1, t2.EXable as fa2, t3.EXable as fa3, t1.EX_Flg as f1, t2.EX_Flg as f2, t3.EX_Flg as f3, t1.stars as ts1, t2.stars as ts2, t3. stars as ts3, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, s1.sync_name as s1, s2.sync_name as s2, s3.sync_name as s3, t1.level as l1, t2.level as l2, t3.level as l3, LGParty.enemy_id from LGParty
-    left join LG on LG.LG_id = LGparty.LG_id
-    left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
-    left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
-    left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
-    left join t1 on t1.type_id = type.type_id
-    left join t2 on t2.type_id = type.type_id
-    left join t3 on t3.type_id = type.type_id
+    $st = $pdo->prepare("select distinct LGParty.LGparty_id, t1.EXable as fa1, t2.EXable as fa2, t3.EXable as fa3, t1.EX_Flg as f1, t2.EX_Flg as f2, t3.EX_Flg as f3, t1.stars as ts1, t2.stars as ts2, t3. stars as ts3, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, s1.sync_name as s1, s2.sync_name as s2, s3.sync_name as s3, t1.level as l1, t2.level as l2, t3.level as l3, LGParty.enemy_id from LGParty
+    left join LG on LG.LG_id = LGParty.LG_id
+    left join trainer as t1 on t1.trainer_id = LGParty.trainer_id1
+    left join trainer as t2 on t2.trainer_id = LGParty.trainer_id2
+    left join trainer as t3 on t3.trainer_id = LGParty.trainer_id3
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join sync as s2 on s2.sync_id = t2.sync_id
     left join sync as s3 on s3.sync_id = t3.sync_id
@@ -559,14 +586,11 @@ function get_LGParty1($LG_id)
 function get_LGParty2($LG_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct LGparty.LGparty_id, t1.type_name as type1, t2.type_name as type2, t3.type_name as type3, t1.EXable as fa1, t2.EXable as fa2, t3.EXable as fa3, t1.EX_Flg as f1, t2.EX_Flg as f2, t3.EX_Flg as f3, t1.stars as ts1, t2.stars as ts2, t3. stars as ts3, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, s1.sync_name as s1, s2.sync_name as s2, s3.sync_name as s3, t1.level as l1, t2.level as l2, t3.level as l3, LGParty.enemy_id from LGParty
-    left join LG on LG.LG_id = LGparty.LG_id
-    left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
-    left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
-    left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
-    left join t1 on t1.type_id = type.type_id
-    left join t2 on t2.type_id = type.type_id
-    left join t3 on t3.type_id = type.type_id
+    $st = $pdo->prepare("select distinct LGParty.LGparty_id, t1.EXable as fa1, t2.EXable as fa2, t3.EXable as fa3, t1.EX_Flg as f1, t2.EX_Flg as f2, t3.EX_Flg as f3, t1.stars as ts1, t2.stars as ts2, t3. stars as ts3, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, s1.sync_name as s1, s2.sync_name as s2, s3.sync_name as s3, t1.level as l1, t2.level as l2, t3.level as l3, LGParty.enemy_id from LGParty
+    left join LG on LG.LG_id = LGParty.LG_id
+    left join trainer as t1 on t1.trainer_id = LGParty.trainer_id1
+    left join trainer as t2 on t2.trainer_id = LGParty.trainer_id2
+    left join trainer as t3 on t3.trainer_id = LGParty.trainer_id3
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join sync as s2 on s2.sync_id = t2.sync_id
     left join sync as s3 on s3.sync_id = t3.sync_id
@@ -584,15 +608,11 @@ function get_LGParty2($LG_id)
 function get_LGParty3($LG_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select distinct LGparty.LGparty_id, t1.type_name as type1, t2.type_name as type2, t3.type_name as type3, t1.EXable as fa1, t2.EXable as fa2, t3.EXable as fa3, t1.EX_Flg as f1, t2.EX_Flg as f2, t3.EX_Flg as f3, t1.stars as ts1, t2.stars as ts2, t3. stars as ts3, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, s1.sync_name as s1, s2.sync_name as s2, s3.sync_name as s3, t1.level as l1, t2.level as l2, t3.level as l3, LGParty.enemy_id from LGParty
-    left join LG on LG.LG_id = LGparty.LG_id
-    left join t1 on t1.type_id = type.type_id
-    left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
-    left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
-    left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
-    left join t1 on t1.type_id = type.type_id
-    left join t2 on t2.type_id = type.type_id
-    left join t3 on t3.type_id = type.type_id
+    $st = $pdo->prepare("select distinct LGParty.LGparty_id, t1.EXable as fa1, t2.EXable as fa2, t3.EXable as fa3, t1.EX_Flg as f1, t2.EX_Flg as f2, t3.EX_Flg as f3, t1.stars as ts1, t2.stars as ts2, t3. stars as ts3, t1.trainer_name as t1, t2.trainer_name as t2, t3.trainer_name as t3, s1.sync_name as s1, s2.sync_name as s2, s3.sync_name as s3, t1.level as l1, t2.level as l2, t3.level as l3, LGParty.enemy_id from LGParty
+    left join LG on LG.LG_id = LGParty.LG_id
+    left join trainer as t1 on t1.trainer_id = LGParty.trainer_id1
+    left join trainer as t2 on t2.trainer_id = LGParty.trainer_id2
+    left join trainer as t3 on t3.trainer_id = LGParty.trainer_id3
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join sync as s2 on s2.sync_id = t2.sync_id
     left join sync as s3 on s3.sync_id = t3.sync_id
@@ -815,8 +835,7 @@ function get_trainer()
     $st = $pdo->prepare("select distinct trainer_id, trainer_name, sync.sync_name, sync.type_id, role.role_name, EX_flg, potential, level, stars, type.type_name, URL from trainer
     left join sync on sync.sync_id = trainer.sync_id
     left join type on type.type_id = sync.type_id
-    left join role on role.role_id = trainer.role_id where URL is not null
-    and trainer_id <> 101");
+    left join role on role.role_id = trainer.role_id where URL is not null");
     $st->execute();
     $trainer = $st->fetchAll();
 
@@ -954,12 +973,12 @@ function get_type()
 function LG1($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty.LGparty_id, LGparty.LG_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, t1.EXable, t1.level, luckyskill.luckyskill_id, luckyskill.luckyskill_name, t1.potential from LGparty
-    left join trainer as t1 on t1.trainer_id = LGparty.trainer_id1
+    $st = $pdo->prepare("select LGParty.LGparty_id, LGParty.LG_id, t1.trainer_id as ti1, t1.trainer_name as t1, t1.stars as star1, s1.sync_name as s1, type.type_name as tn1, t1.EX_Flg, t1.EXable, t1.level, luckyskill.luckyskill_id, luckyskill.luckyskill_name, t1.potential from LGparty
+    left join trainer as t1 on t1.trainer_id = LGParty.trainer_id1
     left join sync as s1 on s1.sync_id = t1.sync_id
     left join type on type.type_id = s1.type_id
-    left join luckyskill on luckyskill.luckyskill_id = LGparty.luckyskill_id1
-    where LGparty.LGparty_id = ?");
+    left join luckyskill on luckyskill.luckyskill_id = LGParty.luckyskill_id1
+    where LGParty.LGparty_id = ?");
     $st->bindValue(1, $LGparty_id);
     $st->execute();
     $LG1 = $st->fetchAll();
@@ -973,12 +992,12 @@ function LG1($LGparty_id)
 function LG2($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty.LGparty_id, LGparty.LG_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, type.type_name as tn2, t2.EX_Flg, t2.EXable, t2.level, luckyskill.luckyskill_id, luckyskill.luckyskill_name, t2.potential from LGparty
-    left join trainer as t2 on t2.trainer_id = LGparty.trainer_id2
+    $st = $pdo->prepare("select LGParty.LGparty_id, LGParty.LG_id, t2.trainer_id as ti2, t2.trainer_name as t2, t2.stars as star2, s2.sync_name as s2, type.type_name as tn2, t2.EX_Flg, t2.EXable, t2.level, luckyskill.luckyskill_id, luckyskill.luckyskill_name, t2.potential from LGparty
+    left join trainer as t2 on t2.trainer_id = LGParty.trainer_id2
     left join sync as s2 on s2.sync_id = t2.sync_id
     left join type on type.type_id = s2.type_id
-    left join luckyskill on luckyskill.luckyskill_id = LGparty.luckyskill_id2
-    where LGparty.LGparty_id = ?");
+    left join luckyskill on luckyskill.luckyskill_id = LGParty.luckyskill_id2
+    where LGParty.LGparty_id = ?");
     $st->bindValue(1, $LGparty_id);
     $st->execute();
     $LG2 = $st->fetchAll();
@@ -992,12 +1011,12 @@ function LG2($LGparty_id)
 function LG3($LGparty_id)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("select LGparty.LGparty_id, LGparty.LG_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, type.type_name as tn3, t3.EX_Flg, t3.EXable, t3.level, luckyskill.luckyskill_id, luckyskill.luckyskill_name, t3.potential from LGparty
-    left join trainer as t3 on t3.trainer_id = LGparty.trainer_id3
+    $st = $pdo->prepare("select LGParty.LGparty_id, LGParty.LG_id, t3.trainer_id as ti3, t3.trainer_name as t3, t3.stars as star3, s3.sync_name as s3, type.type_name as tn3, t3.EX_Flg, t3.EXable, t3.level, luckyskill.luckyskill_id, luckyskill.luckyskill_name, t3.potential from LGparty
+    left join trainer as t3 on t3.trainer_id = LGParty.trainer_id3
     left join sync as s3 on s3.sync_id = t3.sync_id
     left join type on type.type_id = s3.type_id
-    left join luckyskill on luckyskill.luckyskill_id = LGparty.luckyskill_id3
-    where LGparty.LGparty_id = ?");
+    left join luckyskill on luckyskill.luckyskill_id = LGParty.luckyskill_id3
+    where LGParty.LGparty_id = ?");
     $st->bindValue(1, $LGparty_id);
     $st->execute();
     $LG3 = $st->fetchAll();
@@ -1261,8 +1280,8 @@ function add_LG($LG)
 function add_LGparty($party)
 {
     $pdo = get_connection();
-    $st = $pdo->prepare("insert into LGparty (LG_id, LGparty.enemy_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3, URL) values
-    (:LG_id, :enemy_id, :trainer_id1, :trainer_id2, :trainer_id3, :luckyskill_id1, :luckyskill_id2, :luckyskill_id3, :URL)");
+    $st = $pdo->prepare("insert into LGparty (LG_id, LGParty.enemy_id, trainer_id1, trainer_id2, trainer_id3, luckyskill_id1, luckyskill_id2, luckyskill_id3) values
+    (:LG_id, :enemy_id, :trainer_id1, :trainer_id2, :trainer_id3, :luckyskill_id1, :luckyskill_id2, :luckyskill_id3)");
     $st->bindValue(':LG_id', $party['LG_id']);
     $st->bindValue(':enemy_id', $party['enemy_id']);
     $st->bindValue(':trainer_id1', $party['trainer_id1']);
@@ -1271,7 +1290,7 @@ function add_LGparty($party)
     $st->bindValue(':luckyskill_id1', $party['luckyskill_id1']);
     $st->bindValue(':luckyskill_id2', $party['luckyskill_id2']);
     $st->bindValue(':luckyskill_id3', $party['luckyskill_id3']);
-    $st->bindValue(':URL', $party['URL']);
+    // $st->bindValue(':URL', $party['URL']); prepare文の中も修正
     $st->execute();
 
     $pdo = null;

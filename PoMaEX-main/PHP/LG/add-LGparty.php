@@ -17,79 +17,92 @@ $title = "PoMaEX | LG:Add-LG-Party";
     <main class="main">
         <form action="add-LGparty-post.php">
             <ul>
-                <li>
-                    <div class="content1">
-                        <input type="hidden" name="LG_id" value="<?= $LG_id ?>">
-                        <label for="trainer1">トレーナー1</label>
-                        <select name="trainer1" id="trainer1">
-                            <option value="">--選択してください--</option>
-                            <?php foreach ($trainers as $trainer) { ?>
-                                <option value="<?= special($trainer['trainer_id']) ?>"><?= special($trainer['trainer_name']) ?></option>
-                            <?php } ?>
-                        </select>
-                        <label for="luckyskill1">ポテンシャル</label>
-                        <select name="luckyskill1" id="luckyskill1">
-                            <option value="">--選択してください--</option>
-                            <?php foreach ($luckyskills as $luckyskill) { ?>
-                                <option value="<?= special($luckyskill['luckyskill_id']) ?>"><?= special($luckyskill['luckyskill_name']) ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                </li>
-                <li>
-                    <div class="content2">
-                        <label for="trainer2">トレーナー2</label>
-                        <select name="trainer2" id="trainer2">
-                            <option value="">--選択してください--</option>
-                            <?php foreach ($trainers as $trainer) { ?>
-                                <option value="<?= special($trainer['trainer_id']) ?>"><?= special($trainer['trainer_name']) ?></option>
-                            <?php } ?>
-                        </select>
-                        <label for="luckyskill2">ポテンシャル</label>
-                        <select name="luckyskill2" id="luckyskill2">
-                            <option value="">--選択してください--</option>
-                            <?php foreach ($luckyskills as $luckyskill) { ?>
-                                <option value="<?= special($luckyskill['luckyskill_id']) ?>"><?= special($luckyskill['luckyskill_name']) ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                </li>
-                <li>
-                    <div class="content3">
-                        <label for="trainer3">トレーナー3</label>
-                        <select name="trainer3" id="trainer3">
-                            <option value="">--選択してください--</option>
-                            <?php foreach ($trainers as $trainer) { ?>
-                                <option value="<?= special($trainer['trainer_id']) ?>"><?= special($trainer['trainer_name']) ?></option>
-                            <?php } ?>
-                        </select>
-                        <label for="luckyskill3">ポテンシャル</label>
-                        <select name="luckyskill3" id="luckyskill3">
-                            <option value="">--選択してください--</option>
-                            <?php foreach ($luckyskills as $luckyskill) { ?>
-                                <option value="<?= special($luckyskill['luckyskill_id']) ?>"><?= special($luckyskill['luckyskill_name']) ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                <li>
-                    <div class="content4">
-                        <select name="enemy" id="enemy">
-                            <?php foreach ($enemies as $enemy) { ?>
-                                <?php if ($enemy['enemy_id'] == $enemy1) { ?>
-                                    <option value="<?= special($enemy1) ?>"><?php echo special($enemy['enemy_name']) ?></option>
-                                <?php } else if ($enemy['enemy_id'] == $enemy2) { ?>
-                                    <option value="<?= special($enemy2) ?>"><?php echo special($enemy['enemy_name']) ?></option>
-                                <?php } else if ($enemy['enemy_id'] == $enemy3) { ?>
-                                    <option value="<?= special($enemy3) ?>"><?php echo special($enemy['enemy_name']) ?></option>
+                <?php $N = 1; ?>
+                <?php $L = 101; ?>
+                <?php $E = 1001; ?>
+                <input type="hidden" name="LG_id" value="<?= $LG_id ?>">
+                <?php for ($i = 1; $i <= 25; $i++) { ?>
+                    <li>
+                        <div class="content1">
+                            <label for="trainer1">トレーナー1</label>
+                            <select name="<?= special($N) ?>" id="trainer1">
+                                <option value="">--選択してください--</option>
+                                <?php foreach ($trainers as $trainer) { ?>
+                                    <option value="<?= special($trainer['trainer_id']) ?>"><?= special($trainer['trainer_name']) ?></option>
                                 <?php } ?>
-                            <?php } ?>
-                        </select>
-                        <label for="URL">PoMaTool_URL</label>
-                        <input type="url" name="URL" id="URL" autocomplete="off">
-                        <input type="submit" value="追加">
-                    </div>
-                </li>
-                </li>
+                            </select>
+                            <label for="luckyskill1">ポテンシャル</label>
+                            <select name="<?= special($L) ?>" id="luckyskill1">
+                                <option value="">--選択してください--</option>
+                                <?php foreach ($luckyskills as $luckyskill) { ?>
+                                    <option value="<?= special($luckyskill['luckyskill_id']) ?>"><?= special($luckyskill['luckyskill_name']) ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <?php $N += 1; ?>
+                        <?php $L += 1; ?>
+                    </li>
+                    <li>
+                        <div class="content2">
+                            <label for="trainer2">トレーナー2</label>
+                            <select name="<?= special($N) ?>" id="trainer2">
+                                <option value="">--選択してください--</option>
+                                <?php foreach ($trainers as $trainer) { ?>
+                                    <option value="<?= special($trainer['trainer_id']) ?>"><?= special($trainer['trainer_name']) ?></option>
+                                <?php } ?>
+                            </select>
+                            <label for="luckyskill2">ポテンシャル</label>
+                            <select name="<?= special($L) ?>" id="luckyskill2">
+                                <option value="">--選択してください--</option>
+                                <?php foreach ($luckyskills as $luckyskill) { ?>
+                                    <option value="<?= special($luckyskill['luckyskill_id']) ?>"><?= special($luckyskill['luckyskill_name']) ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <?php $N += 1; ?>
+                        <?php $L += 1; ?>
+                    </li>
+                    <li>
+                        <div class="content3">
+                            <label for="trainer3">トレーナー3</label>
+                            <select name="<?= special($N) ?>" id="trainer3">
+                                <option value="">--選択してください--</option>
+                                <?php foreach ($trainers as $trainer) { ?>
+                                    <option value="<?= special($trainer['trainer_id']) ?>"><?= special($trainer['trainer_name']) ?></option>
+                                <?php } ?>
+                            </select>
+                            <label for="luckyskill3">ポテンシャル</label>
+                            <select name="<?= special($L) ?>" id="luckyskill3">
+                                <option value="">--選択してください--</option>
+                                <?php foreach ($luckyskills as $luckyskill) { ?>
+                                    <option value="<?= special($luckyskill['luckyskill_id']) ?>"><?= special($luckyskill['luckyskill_name']) ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <?php $N += 1; ?>
+                        <?php $L += 1; ?>
+                    </li>
+                    <li>
+                        <div class="content4">
+                            <select name="<?= special($E) ?>" id="enemy">
+                                <?php foreach ($enemies as $enemy) { ?>
+                                    <?php if ($enemy['enemy_id'] == $enemy1) { ?>
+                                        <option value="<?= special($enemy1) ?>"><?php echo special($enemy['enemy_name']) ?></option>
+                                    <?php } else if ($enemy['enemy_id'] == $enemy2) { ?>
+                                        <option value="<?= special($enemy2) ?>"><?php echo special($enemy['enemy_name']) ?></option>
+                                    <?php } else if ($enemy['enemy_id'] == $enemy3) { ?>
+                                        <option value="<?= special($enemy3) ?>"><?php echo special($enemy['enemy_name']) ?></option>
+                                    <?php } ?>
+                                <?php } ?>
+                            </select>
+                            <!-- <label for="URL">PoMaTool_URL</label> -->
+                            <!-- <input type="url" name="URL" id="URL" autocomplete="off"> -->
+                            <?php $E += 1; ?>
+                        </div>
+                    </li>
+
+                <?php } ?>
+                <input type="submit" value="パーティ追加">
             </ul>
         </form>
     </main>
